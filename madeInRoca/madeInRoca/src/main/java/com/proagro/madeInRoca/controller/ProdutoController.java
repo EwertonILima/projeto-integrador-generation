@@ -15,47 +15,47 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.proagro.madeInRoca.model.Categoria;
-import com.proagro.madeInRoca.repository.CategoriaRepository;
+import com.proagro.madeInRoca.model.Produto;
+import com.proagro.madeInRoca.repository.ProdutoRepository;
 
 @RestController
-@RequestMapping("/categoria")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
-public class CategoriaController {
+@RequestMapping("/produto")
+@CrossOrigin("*")
+public class ProdutoController {
 
 	@Autowired
-	private CategoriaRepository repository;
+	private ProdutoRepository repository;
 	
 	@GetMapping
-	public ResponseEntity<List <Categoria>> GetAll()
+	public ResponseEntity<List<Produto>> GetAll()
 	{
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Categoria> GetById(@PathVariable long id)
+	public ResponseEntity<Produto> GetById(@PathVariable long id)
 	{
 		return repository.findById(id)
-				.map(resp -> ResponseEntity.ok(resp)).
-				orElse(ResponseEntity.notFound().build());
+				.map(resp -> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.notFound().build());
 	}
 	
 	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<Categoria>> GetByNome(@PathVariable String nome)
+	public ResponseEntity<List<Produto>> GetByNome(@PathVariable String nome)
 	{
 		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
 	}
 	
 	@PostMapping
-	public ResponseEntity<Categoria> post (@RequestBody Categoria categoria)
+	public ResponseEntity<Produto> post (@RequestBody Produto produto)
 	{
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(categoria));
+		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(produto));
 	}
 	
 	@PutMapping
-	public ResponseEntity<Categoria> put (@RequestBody Categoria categoria)
+	public ResponseEntity<Produto> put (@RequestBody Produto produto)
 	{
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(categoria));
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(produto));
 	}
 	
 	@DeleteMapping("/{id}")
@@ -63,5 +63,4 @@ public class CategoriaController {
 	{
 		repository.deleteById(id);
 	}
-	
 }
