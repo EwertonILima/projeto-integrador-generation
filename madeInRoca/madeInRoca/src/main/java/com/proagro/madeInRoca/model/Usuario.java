@@ -15,23 +15,23 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	@NotNull
 	@Size(min = 3, max = 100)
 	private String nome;
-	
+
 	@NotNull
 	@Size (min= 3, max=10)
 	private String tipoUsuario;
-	
+
 	@NotNull
 	@Size(min = 3, max = 20)
-	private String user;
-	
+	private String usuario;
+
 	@NotNull
-	@Size(min = 8, max = 20)
+	@Size(min = 8, max = 60)
 	private String senha;
-	
+
 	@NotNull
 	@Size(max = 100)
 	private String email;
@@ -51,7 +51,7 @@ public class Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public String getTipoUsuario() {
 		return tipoUsuario;
 	}
@@ -61,12 +61,12 @@ public class Usuario {
 	}
 
 
-	public String getUser() {
-		return user;
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getSenha() {
@@ -76,7 +76,7 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
+
 	public String getEmail() {
 		return email;
 	}
