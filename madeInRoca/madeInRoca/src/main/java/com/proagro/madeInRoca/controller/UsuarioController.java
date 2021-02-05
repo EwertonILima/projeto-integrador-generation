@@ -69,9 +69,9 @@ public class UsuarioController {
 
 	}
 
-	@PutMapping("/cadastrar")
+	@PutMapping("/atualizar")
 	public ResponseEntity<Usuario> Put(@RequestBody Usuario usuario) {
-		Optional<Usuario> user = usuarioService.CadastrarUsuario(usuario);
+		Optional<Usuario> user = usuarioService.AtualizarUsuario(usuario);
 		try {
 			return ResponseEntity.ok(user.get());
 		} catch (Exception e) {
