@@ -12,6 +12,7 @@ CREATE TABLE `tb_usuario` (
 	`tipo_usuario` varchar(255) NOT NULL,
 	`user` varchar(255) NOT NULL UNIQUE,
 	`senha` varchar(255) NOT NULL,
+	`email` varchar(100) NOT NULL,
 	PRIMARY KEY (`id_usuario`)
 );
 
