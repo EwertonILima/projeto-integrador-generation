@@ -1,0 +1,18 @@
+
+.card-forms{
+    border-radius: 10px;
+    padding: 20px;
+    border: #0E5411 solid 2px;
+    background-color: #e9ecef;
+
+}
+
+.card-forms h1{
+    color: #0E5411;
+}
+
+@media (max-width: 360px){
+    .row-externa{
+        height: 100%;
+    }
+}
