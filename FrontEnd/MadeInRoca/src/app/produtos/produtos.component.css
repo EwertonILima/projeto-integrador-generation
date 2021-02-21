@@ -1,0 +1,13 @@
+.negrito {
+    font-weight: bold;
+}
+
+.efeitoFruta {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.efeitoFruta:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
