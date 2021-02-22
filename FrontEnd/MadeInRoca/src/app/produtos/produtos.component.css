@@ -11,3 +11,37 @@
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
      filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
 }
+
+.corRodape {
+    background-color: #89A61F;
+}
+
+.american-express {
+    width: 60px;
+    height: 60px;
+}
+
+.elo {
+    width: 60px;
+    height: 60px;
+}
+
+.mastercard {
+    width: 60px;
+    height: 60px;
+}
+
+
+.paypal {
+    width: 70px;
+    height: 60px;
+}
+
+.visa {
+    width: 60px;
+    height: 60px;
+}
+
+.facebook {
+    background-color: green;
+}
