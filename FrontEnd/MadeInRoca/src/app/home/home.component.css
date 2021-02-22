@@ -1,0 +1,106 @@
+.box-container{
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.card-saiba-mais-barra{
+    height: 25px;
+    margin: 0;
+    background-color: #0E5411;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-saiba-mais-corpo{
+    border-radius: 10px;
+    border: #000 solid 1px;
+}
+
+.card-svg{
+    height: 75px;
+    padding: 0;
+}
+
+.equipe-e-parceria{
+    background-color: #0E5411;
+    color: white;
+
+}
+
+.equipe-e-parceria h1{
+    font-size: 48px;
+    position: relative;
+    top: 20px;
+}
+
+.equipe-e-parceria h2{
+    font-size: 40px;
+}
+
+.equipe-e-parceria svg{
+    height:  150px;
+}
+
+.btn-produtos{
+    position: relative; 
+    top: 140px;
+}
+
+.card-produto{
+    overflow: hidden;
+    color: #0E5411;
+    max-width: 250px; 
+    max-height: 300px;
+}
+
+.card-produto h5, .card-produto p{
+    color: #0E5411;
+    text-decoration:dashed;
+    
+}
+
+.card-produto img {
+	max-width: 100%;
+	transition: 0.7s ease;
+}
+
+.card-produto:hover img{
+    transform: scale(1.2);
+}
+
+.card-header{
+
+    border: #0E5411 solid 1px;
+}
+
+.btn-link{
+    color: #fff;
+}
+
+#headingOne, #headingTwo, #headingThree{
+    border-radius: 5px;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+.efeitoFruta {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.efeitoFruta:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+
+.promo-icon{
+    max-width: 25px;
+}
+
+@media (max-width: 768px){
+
+    .equipe-e-parceria svg{
+        display: none;
+    }
+}
