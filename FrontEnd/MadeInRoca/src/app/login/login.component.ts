@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) =>{
       this.userLogin = resp
 
-    // Página home a ser direcionada  this.router.navigate(['/produtos'])
+      this.router.navigate(['/home'])
 
     }, erro => {
       if(erro.status == 500){
