@@ -4,8 +4,25 @@
     margin: 15px 10px;
 }
 
+.fa-fab:hover{
+    background-color: #3b5998;
+ }
+ 
+ .fa-insta:hover{
+     background-color: #c13584;
+     border-radius: 50%;
+ }
+ 
+ .fa-linkedin:hover{
+     background-color: #0072b1;
+ }
+
 .icon-redes-insta{
     height: 35px;
     width: 35px;
     margin: 15px 10px;
+}
+
+.fs-20{
+    font-size: 20px;
 }
