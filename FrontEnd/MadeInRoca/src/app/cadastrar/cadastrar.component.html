@@ -39,6 +39,15 @@
                         <option value="produtor">Produtor</option>
                     </select>
                 </div>
+
+                <div class="form-group">
+                    <label for="foto">Foto</label>
+                    
+                        <input [(ngModel)]='usuario.foto' name="foto" class="form-control" id="foto" 
+                        placeholder="Insira o link da sua foto">
+                        
+                    
+                </div>
     
                 <div class="d-flex justify-content-start">
                     <button type="submit" class="btn btn-success mr-5" (click)='cadastrar()'>Cadastrar nova conta</button>

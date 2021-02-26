@@ -11,6 +11,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { HomeComponent } from './home/home.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 
 
@@ -22,6 +23,7 @@ import { HomeComponent } from './home/home.component';
     ProdutosComponent,
     RodapeComponent,
     HomeComponent,
+    CategoriaComponent,
    
   ],
   imports: [
