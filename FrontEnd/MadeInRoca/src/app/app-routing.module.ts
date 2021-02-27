@@ -7,7 +7,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
 
 const routes: Routes = [
  
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'cadastrar', component: CadastrarComponent},
   {path: 'login', component: LoginComponent},
   {path: 'produtos', component: ProdutosComponent},
