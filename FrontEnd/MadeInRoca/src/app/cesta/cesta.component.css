@@ -1,6 +1,6 @@
-/* div{
-    border: red 1px solid;
-} */
+div{
+    /* border: red 1px solid; */
+}
 
 .rem5{
     font-size: 5rem;
@@ -49,7 +49,6 @@ svg{
     background-color: white; 
     color: green;
     
-    
 }
 
 .escolha-cesta{
@@ -73,6 +72,32 @@ svg{
     background: rgba(10, 116, 57, 0.52);
     z-index:-1;
 }
+
+.svg-lista-escolha svg path{
+    fill:  green;
+}
+
+.svg-lista-escolha svg{
+    height: 35px;
+    width: 45px;
+}
+
+.svg-lista-escolha{
+    background-color: white;
+    padding: 4px;
+    border-radius: 10px;
+    min-width: 135px;
+    border: 1px green solid;
+}
+
+.exceto{
+    background-color: #fff; 
+    width: fit-content; 
+    border-radius: 10px 10px 0 0;
+    border: 1px green solid;
+}
+
+
 
 @media(max-width: 700px){
     .teste{
