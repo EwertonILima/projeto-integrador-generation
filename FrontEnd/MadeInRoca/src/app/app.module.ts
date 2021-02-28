@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ProdutosComponent } from './produtos/produtos.component';
+import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
     LoginComponent,
     CadastrarComponent,
     ProdutosComponent,
+    FaleConoscoComponent,
    
   ],
   imports: [

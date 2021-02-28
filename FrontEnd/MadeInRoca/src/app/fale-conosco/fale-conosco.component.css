@@ -1,0 +1,22 @@
+.pointerCursor {
+    cursor: pointer;
+}
+
+.card-header {
+    background-color: #347322;
+}
+
+.btn {
+    color: azure;
+    box-shadow: none; 
+}
+
+.card-header:hover{
+    background-color: #89A61F;
+}
+
+.border{
+    background-color: #347322;
+}
+
+
