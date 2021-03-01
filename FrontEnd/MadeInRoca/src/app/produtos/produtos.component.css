@@ -1,17 +1,16 @@
-.negrito {
-    font-weight: bold;
+* {
+    font-family: "public sans", sans-serif;
+}
+
+
+.efeitoFruta:hover {
+    filter: drop-shadow(10px 10px 5px rgba(0,0,0,.5));
 }
 
 .efeitoFruta {
     transition: all 0.5s;
     cursor: pointer;
 }
-
-.efeitoFruta:hover {
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-}
-
 
 .tamanhoCategoria {
     width: 60px;
@@ -25,6 +24,16 @@
 
 .link {
     color: #000;
+    
 }
 
 
+.btn-comprar-carousel{
+    background-color: #57732D;
+    border: solid 2px #57732D;
+    color: white;
+}
+
+.card-title {
+    color: #402222;
+}
