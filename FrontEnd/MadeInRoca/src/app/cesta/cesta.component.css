@@ -1,6 +1,3 @@
-div{
-    /* border: red 1px solid; */
-}
 
 .rem5{
     font-size: 5rem;
@@ -103,6 +100,12 @@ svg{
     .teste{
         font-size: 1.8rem;
     }
+}
+
+.numInput{
+    width: 100px;
+    border-radius: 10px;
+    height: 30px;
 }
 
 
