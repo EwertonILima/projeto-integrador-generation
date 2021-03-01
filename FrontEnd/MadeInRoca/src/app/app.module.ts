@@ -12,6 +12,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { HomeComponent } from './home/home.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
 
 
 
@@ -24,6 +25,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
     RodapeComponent,
     HomeComponent,
     CategoriaComponent,
+    ProdutoShopComponent,
    
   ],
   imports: [
