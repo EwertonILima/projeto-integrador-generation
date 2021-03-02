@@ -20,6 +20,8 @@ export class CategoriaEditComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
+    
     if (environment.token == '') {
       this.router.navigate(['/home'])
     }

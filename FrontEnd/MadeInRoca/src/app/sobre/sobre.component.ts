@@ -10,5 +10,6 @@ export class SobreComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.scroll(0,0)
   }
 }

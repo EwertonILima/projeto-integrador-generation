@@ -11,14 +11,15 @@ h5{
    
 }
 .title-prod-rel{
-    font-family: 'Public Sans', sans-serif;
+
     color: #402222;
     margin-left: 30px;
 }
 
-.descricao-produto p {
+.descricao-produto{
     font-family: 'Public Sans', sans-serif;
     font-style: italic;
+    max-width: 600px;
 }
 
 .btn-comprar{
@@ -65,40 +66,14 @@ h5{
     top:50%;
 }
 
-
- .btn-next, .btn-prev{
+.btn-next, .btn-prev{
      border-radius: 100px;
      background-color: rgba(97, 95, 95, 0.384);
-     height: 25px;
-     
-   
-     
-     
- } 
-
+     height: 25px;  
  
-
- @media(max-width:400){
-
-    .product-single-info{
-        flex-direction: column;
-    } 
- }
-
-
-
-
+} 
 
 
 .form-group{
-
-   
     border-radius: 5px;
-    
-    
-
-}
-
-.form-control{
-    
 }

@@ -9,8 +9,8 @@ export class ProdutoShopComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    
+  ngOnInit(){
+    window.scroll(0,0)
   }
 
 }
