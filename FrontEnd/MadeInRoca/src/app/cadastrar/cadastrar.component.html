@@ -1,53 +1,68 @@
-<div class="container">
-
-    <div class="col-md-5 mb-5-mt-5">
+<div class="container-fluid">
+    <div class="row justify-content-center d-flex align-items-center row-externa">
+      <div class="col-md-5 mb-5 mt-5">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-10 align-items-center card-forms m-5">
-                
-                <h1 class="text-start">Cadastrar</h1>
-    
-                <div class="form-group">
-                    <label for="nome">Nome Completo</label>
-                    <input [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" id="nome"
-                    placeholder="Digite seu nome completo">
-                </div>
-    
-                <div class="form-group">
-                    <label for="Email">Usuário</label>
-                    <input [(ngModel)]='usuario.usuario' class="form-control" type="text" name="email" id="email"
-                    placeholder="Informe o seu usuário">
-                </div>
-    
-                <div class="form-group">
-                    <label for="Senha">Senha</label>
-                    <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
-                    placeholder="Digite sua senha">
-                </div>
-    
-                <div class="form-group">
-                    <label for="confirmSenha">Confirmar Senha</label>
-                    <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha"
-                    placeholder="Confirme sua senha">
-                </div>
-    
-    
-                <div class="form-group">
-                    <label for="tipo">Tipo de Usuário</label>
-                    <select name="tipo" class="form-control" id="tipo" (change) = 'tipoUser($event)'>
-                        <option>Selecione um tipo de usuário</option>
-                        <option value="cliente">Cliente</option>
-                        <option value="produtor">Produtor</option>
-                    </select>
-                </div>
-    
-                <div class="d-flex justify-content-start">
-                    <button type="submit" class="btn btn-success mr-5" (click)='cadastrar()'>Cadastrar nova conta</button>
-                    <button type="submit" class="btn btn-danger" routerLink='/login'>Cancelar</button>
-                </div>
-    
+          <div class="col-md-10 align-items-center card-forms mx-5">
+            <h1 class="text-start text-center font-weight-bold">Cadastrar</h1>
+            
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" id="nome"
+                placeholder="Insira seu nome completo">
             </div>
+
+            <div class="form-group">
+                <label for="Email">E-mail</label>
+                <input [(ngModel)]='usuario.usuario' class="form-control" type="text" name="email" id="email"
+                placeholder="Insira seu e-mail">
+            </div>
+
+            <div class="form-group">
+                <label for="Senha">Senha</label>
+                <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
+                placeholder="Digite sua senha">
+            </div>
+
+            <div class="form-group">
+                <label for="confirmSenha">Confirmar Senha</label>
+                <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+                placeholder="Confirme sua senha">
+            </div>
+
+                <div class="form-group">
+            <label for="foto">Foto</label>
+                                
+                <input [(ngModel)]='usuario.foto' name="foto" class="form-control" id="foto" 
+                placeholder="Insira o link da sua foto">
+                                    
+                                
+                            </div>
+            <div class="form-group">
+                <label for="tipo">Tipo de Usuário</label>
+                <select name="tipo" class="form-control" id="tipo" (change) = 'tipoUser($event)'>
+                    <option>Selecione um tipo de usuário</option>
+                    <option value="cliente">Cliente</option>
+                    <option value="produtor">Produtor</option>
+                </select>
+            </div>
+
+            <div class="mt-3 mb-3">
+                <p class="text-center" style=" margin-top:-5px; font-size:small">
+                  Já tem uma conta? <a routerLink="/login" >Entre aqui.</a>
+                </p>
+            </div>
+
+            
+
+            <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-entrar" style="height: 42px;" href="#" (click)='cadastrar()' routerLink='/login' ><span>Cadastrar</span></button> 
+            </div>
+            
+          </div>
         </div>
+      </div>
     </div>
 </div>
+
 
 

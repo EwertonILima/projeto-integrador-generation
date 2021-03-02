@@ -13,6 +13,8 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { HomeComponent } from './home/home.component';
 import { CestaComponent } from './cesta/cesta.component';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
 
 
 
@@ -29,6 +31,8 @@ import { CestaComponent } from './cesta/cesta.component';
     RodapeComponent,
     HomeComponent,
     CestaComponent,
+    CategoriaComponent,
+    ProdutoShopComponent,
   ],
   imports: [
     BrowserModule,

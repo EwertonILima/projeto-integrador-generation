@@ -1,0 +1,59 @@
+*{
+    
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.card-forms{
+    border-radius: 10px;
+    padding: 20px;
+    filter: drop-shadow(10px 10px 5px rgba(0,0,0,.5));
+    background-color: #e9ecef;
+
+}
+
+.text-start{
+
+    font-family: 'Playfair Display', serif;
+    color: #57732D;
+    
+}
+
+.btn-entrar{
+
+    background-color: #57732D;
+    border: solid 2px #57732D;
+    color: white;
+    border-radius: 100px;
+    padding: 0 30px;
+
+}
+
+.form-control {
+
+    background-color: white;
+
+}
+.btn-entrar span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .btn-entrar span:after {
+    content: '\00BB';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+  }
+  
+  .btn-entrar:hover span {
+    padding-right: 20px;
+  }
+  
+  .btn-entrar:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

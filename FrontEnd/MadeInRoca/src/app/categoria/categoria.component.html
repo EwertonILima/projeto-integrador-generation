@@ -1,0 +1,66 @@
+
+<div class="container-fluid">
+    <div class="row bg-secondary">
+        <div class="col-md-12 text-white">
+
+            <a routerLink='/inicio' class="text-white text-left">
+                <i class="fa fa-angle-double-left" aria-hidden="true"></i> Início
+            </a>
+
+            <h1 class="fs-54 text-center">Categorias</h1>
+            <h5 class="fs-18 text-center">Confira as categorias ou inclua uma nova:</h5>
+
+            <div class="row d-flex justify-content-center mt-4 mb-5">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <input [(ngModel)]="categoria.nome" type="text" class="form-control" id="nome" placeholder="Insira a categoria:">
+                        <input [(ngModel)]="categoria.descricao" type="text" class="form-control" id="descricao" placeholder="Digite a descrição:">
+                        <input [(ngModel)]="categoria.imagem" type="text" class="form-control" id="imagem" placeholder="Insira a imagem:">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-light" (click)='cadastrarCategoria()'>Cadastrar</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h2 class="text-center">Todas categorias:</h2>
+        </div>
+    </div>
+
+    <div class="row mt-3 mb-5 d-flex justify-content-center">
+        <div class="col-md-6">
+
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Categoria</th> 
+                    <th scope= "col">Descrição </th>
+                    <th scope="col" class="text-right">Modificações</th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor='let categoria of listaCategorias'>
+                    <th scope="row">{{ categoria.id }}</th>
+                    <td>{{ categoria.nome }}</td>
+                    <td> {{categoria.descricao}}</td>
+                    <td class="d-flex justify-content-end">
+                      <button class="btn btn-info mr-3" [routerLink]="['/categoria', categoria.id]" >Editar</button>
+                      <button class="btn btn-danger" [routerLink]="['/categoria', categoria.id]" routerLinkActive="router-link-active" >Apagar</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>
+    </div>
+</div>
