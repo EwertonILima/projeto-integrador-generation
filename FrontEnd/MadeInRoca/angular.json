@@ -1,7 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
+<<<<<<< HEAD
     "analytics": "cc93caa2-8e04-43dd-9270-0d30a8b24e21"
+=======
+    "analytics": "7a40e8f3-5c6e-47a7-9659-1ebb26c0dcd9"
+>>>>>>> origin/component-login-cadastrar
   },
   "version": 1,
   "newProjectRoot": "projects",
