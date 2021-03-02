@@ -1,9 +1,13 @@
-
+*{
+    margin:0;
+    padding:0;
+}
 
 .login-cesta svg{ 
-    max-width: 35px;
-    max-height: 33px;
+    max-width: 30px;
+    max-height: 30px;
     fill: white;
+    
 }
 
 .login-cesta{
@@ -13,11 +17,43 @@
 .login-cesta:hover{
     cursor:pointer;
     color:#c5c9ce;
-}
 
-a{
-    color: white;
 }
 
 
 
+.img-search{
+    width: 1.5vw;
+    margin-left: -2vw;
+    opacity: 0.5;
+    
+}
+
+.search{
+    background-color:#e9ecef;
+    border-radius:5px;
+    display: flex;
+    align-items: center;
+    border-color: transparent;
+  }
+  
+
+  .form-control{
+      
+      width: 45vw;
+      height: 30px;
+      background-color: #e9ecef;
+      font-style: italic;
+      border:none;
+
+      
+      }
+
+      .nav-item{
+          font-size: 16px;
+          
+          
+         
+      }
+
+    
