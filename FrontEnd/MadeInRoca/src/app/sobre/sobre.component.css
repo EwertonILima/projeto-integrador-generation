@@ -1,21 +1,44 @@
+.fs-20{
+    font-size: 20px;
+}
+
+.fs-40{
+    font-size: 40px;
+}
+
+#img-bg1{
+    background-image: url('../../assets/img/alvo.png');
+    min-height: 337px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img-bg2{
+    background-image: url('../../assets/img/binoculo.PNG');
+    min-height: 337px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img-bg3{
+    background-image: url('../../assets/img/teste1.png');
+    min-height: 337px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.min-h{
+    min-height: 240px;
+}
+
 .icon-redes{
     height: 30px;
     width: 30px;
     margin: 15px 10px;
 }
-
-.fa-fab:hover{
-    background-color: #3b5998;
- }
- 
- .fa-insta:hover{
-     background-color: #c13584;
-     border-radius: 50%;
- }
- 
- .fa-linkedin:hover{
-     background-color: #0072b1;
- }
 
 .icon-redes-insta{
     height: 35px;
@@ -23,6 +46,75 @@
     margin: 15px 10px;
 }
 
+.margin-l{
+    margin-right: 130px;
+}
+
 .fs-20{
     font-size: 20px;
+}
+
+.single-content{
+    position: relative;
+    transition: .3s;
+    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.8);
+}
+
+.single-content .text-content,
+.single-content::after {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+}
+
+.single-content::after{
+    content: '';
+    display: block;
+    background: #363636;
+    top: 20px;
+    bottom: 20px;
+    opacity: 0;
+    transform: rotate3d(-1,1,0,100deg);
+    transition: .4s;
+}
+
+.single-content:hover::after{
+    opacity: .9;
+    transform: rotate3d(0,0,0,0deg);
+}
+
+.single-content .w-100{
+    width: 100%;
+    height: auto;
+}
+
+.text-content{
+    top: 55%;
+    opacity: 0;
+    z-index: 1;
+    transform: translate(10%,-30%);
+    transition: .3s;
+    text-align: center;
+    color: #fff;
+}
+
+.text-content h4{
+    font-family: big john;
+}
+
+.single-content:hover .text-content{ /*Posição no centro do quadro vermelho*/
+    opacity: 1;
+    transform: translate(0,-50%);
+    transition-delay: .3s;
+}
+
+.fa-fab{
+    filter: invert(100%);
+}
+
+.img-sobre{
+    width: 450px;
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
