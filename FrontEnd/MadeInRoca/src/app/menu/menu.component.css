@@ -1,0 +1,19 @@
+
+
+.login-cesta svg{ 
+    max-width: 35px;
+    max-height: 33px;
+    fill: white;
+}
+
+.login-cesta{
+    color: white;
+}
+
+.login-cesta:hover{
+    cursor:pointer;
+    color:#c5c9ce;
+}
+
+
+
