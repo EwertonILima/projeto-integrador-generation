@@ -1,166 +1,404 @@
 <div class="container">
-  <div class="row ">
-    <div class="col-md-3 align-items-center mt-5 d-flex justify-content-center">
+  <div class="row">
+    <div class="col-md-12 justify-content-center d-flex">
 
-      <!--Cards-->
-      <div class="card efeitoFruta" style="width: 18rem;">
-        <img class="card-img-top" src="../../assets/img/maça.jpg" alt="maça">
-        <div class="card-body">
-          <h5 class="card-title">Maçã</h5>
-          <p class="card-text text-center">Um exemplo de texto rápido para construir o título do card e fazer preencher
-            o conteúdo do card.</p>
-          <div class="mb-2">
-            <p class="card-text negrito">Preço: R$2.50</p>
-          </div>
-          <div class="form-group mb-2">
-            <input class="form-control" type="number" name="qtdeMaca" id="qtdeMaca" placeholder="Quantidade">
-          </div>
-          <div class="d-flex justify-content-end">
-            <a href="#" class="btn btn-success">Comprar</a>
-          </div>
-
-        </div>
-      </div>
+      <ul class="nav justify-content-center mt-5">
+        <li class="nav-item">
+            
+          <a class="nav-link active" href="#"><img class="tamanhoCategoria categoriaPosicao" src="../../assets/svg/cesta.svg" alt="cesta">
+            <p class="text-center d-flex link">Todos os produtos</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mr-3" href="#"><img class="tamanhoCategoria" src="../../assets/svg/fruits.svg" alt="frutas">
+            <p class="text-center align-items-center ml-1 link">Frutas</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mr-3" href="#"><img class="tamanhoCategoria" src="../../assets/svg/vegetable.svg" alt="vegetais">
+            <p class="text-center link">Vegetais</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mr-3" href="#"><img class="tamanhoCategoria" src="../../assets/svg/cabbage.svg" alt="hortaliças">
+            <p class="text-center link">Hortaliças</p>
+          </a>
+        </li>
+      </ul>
     </div>
-    <div class="col-md-3 align-items-center mt-5 d-flex justify-content-center">
+
+  </div>
+  <div class="row">
+
+    <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
       <div class="card efeitoFruta" style="width: 18rem;">
-        <img class="card-img-top" src="../../assets/img/Uva.jpg" alt="Uva">
+        <img class="card-img-top w-100" src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Uva Itália">
         <div class="card-body">
-          <h5 class="card-title">Uva</h5>
-          <p class="card-text text-center">Um exemplo de texto rápido para construir o título do card e fazer preencher
-            o conteúdo do card.</p>
+          <h5 class="card-title">Uva Itália</h5>
+          
           <div class="mb-2">
             <p class="card-text negrito">Preço: R$2.50</p>
           </div>
-          <div class="form-group mb-2">
-            <input class="form-control" type="number" name="qtdeUva" id="qtdeUva" placeholder="Quantidade">
-          </div>
-          <div class="d-flex justify-content-end">
-            <a href="#" class="btn btn-success">Comprar</a>
-          </div>
-
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
         </div>
-
-      </div>
-    </div>
-    <div class="col-md-3 align-items-center mt-5 d-flex justify-content-center">
-      <div class="card efeitoFruta" style="width: 18rem;">
-        <img class="card-img-top" src="../../assets/img/Pessego.jpg" alt="Pessego">
-        <div class="card-body">
-          <h5 class="card-title">Pêssego</h5>
-          <p class="card-text text-center">Um exemplo de texto rápido para construir o título do card e fazer preencher
-            o conteúdo do card.</p>
-          <div class="mb-2">
-            <p class="card-text negrito">Preço: R$2.50</p>
-          </div>
-          <div class="form-group mb-2">
-            <input class="form-control" type="number" name="qtdeUva" id="qtdeUva" placeholder="Quantidade">
-          </div>
-          <div class="d-flex justify-content-end">
-            <a href="#" class="btn btn-success">Comprar</a>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="col-md-3 align-items-center mt-5 d-flex justify-content-center">
+    <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
       <div class="card efeitoFruta" style="width: 18rem;">
-        <img class="card-img-top" src="../../assets/img/laranja.jpg" alt="laranja">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
         <div class="card-body">
-          <h5 class="card-title">Laranja</h5>
-          <p class="card-text text-center">Um exemplo de texto rápido para construir o título do card e fazer preencher
-            o conteúdo do card.</p>
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
           <div class="mb-2">
             <p class="card-text negrito">Preço: R$2.50</p>
           </div>
-          <div class="form-group mb-2">
-            <input class="form-control" type="number" name="qtdeUva" id="qtdeUva" placeholder="Quantidade">
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
           </div>
-          <div class="d-flex justify-content-end">
-            <a href="#" class="btn btn-success">Comprar</a>
+          
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
+      <div class="card efeitoFruta" style="width: 18rem;">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
+        <div class="card-body">
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
+          <div class="mb-2">
+            <p class="card-text negrito">Preço: R$2.50</p>
+          </div>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
+      <div class="card efeitoFruta" style="width: 18rem;">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
+        <div class="card-body">
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
+          <div class="mb-2">
+            <p class="card-text negrito">Preço: R$2.50</p>
+          </div>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 align-items-center justify-content-center mt-4 d-flex">
+      <div class="card efeitoFruta" style="width: 18rem;">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
+        <div class="card-body">
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
+          <div class="mb-2">
+            <p class="card-text negrito">Preço: R$2.50</p>
+          </div>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 align-items-center justify-content-center mt-4 d-flex">
+      <div class="card efeitoFruta" style="width: 18rem;">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
+        <div class="card-body">
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
+          <div class="mb-2">
+            <p class="card-text negrito">Preço: R$2.50</p>
+          </div>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 align-items-center justify-content-center mt-4 d-flex">
+      <div class="card efeitoFruta" style="width: 18rem;">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
+        <div class="card-body">
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
+          <div class="mb-2">
+            <p class="card-text negrito">Preço: R$2.50</p>
+          </div>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 align-items-center justify-content-center mt-4 d-flex">
+      <div class="card efeitoFruta" style="width: 18rem;">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
+        <div class="card-body">
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
+          <div class="mb-2">
+            <p class="card-text negrito">Preço: R$2.50</p>
+          </div>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 align-items-center justify-content-center mt-4 d-flex">
+      <div class="card efeitoFruta" style="width: 18rem;">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
+        <div class="card-body">
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
+          <div class="mb-2">
+            <p class="card-text negrito">Preço: R$2.50</p>
+          </div>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 align-items-center justify-content-center mt-4 d-flex">
+      <div class="card efeitoFruta" style="width: 18rem;">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
+        <div class="card-body">
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
+          <div class="mb-2">
+            <p class="card-text negrito">Preço: R$2.50</p>
+          </div>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 align-items-center justify-content-center mt-4 d-flex">
+      <div class="card efeitoFruta" style="width: 18rem;">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
+        <div class="card-body">
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
+          <div class="mb-2">
+            <p class="card-text negrito">Preço: R$2.50</p>
+          </div>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 align-items-center justify-content-center mt-4 d-flex">
+      <div class="card efeitoFruta" style="width: 18rem;">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
+        <div class="card-body">
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
+          <div class="mb-2">
+            <p class="card-text negrito">Preço: R$2.50</p>
+          </div>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-3 align-items-center mt-5 d-flex justify-content-center">
+    <div class="col-md-3 align-items-center justify-content-center mt-4 d-flex">
       <div class="card efeitoFruta" style="width: 18rem;">
-        <img class="card-img-top" src="../../assets/img/brocolis (1).jpg" alt="Brocolis">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
         <div class="card-body">
-          <h5 class="card-title">Brócolis</h5>
-          <p class="card-text text-center">Um exemplo de texto rápido para construir o título do card e fazer preencher
-            o conteúdo do card.</p>
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
           <div class="mb-2">
-            <p class="card-text negrito">Preço: R$8.00</p>
+            <p class="card-text negrito">Preço: R$2.50</p>
           </div>
-          <div class="form-group mb-2">
-            <input class="form-control" type="number" name="qtdeUva" id="qtdeUva" placeholder="Quantidade">
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 align-items-center justify-content-center mt-4 d-flex">
+      <div class="card efeitoFruta" style="width: 18rem;">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
+        <div class="card-body">
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
+          <div class="mb-2">
+            <p class="card-text negrito">Preço: R$2.50</p>
           </div>
-          <div class="d-flex justify-content-end">
-            <a href="#" class="btn btn-success">Comprar</a>
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-3 align-items-center mt-5 d-flex justify-content-center">
+    <div class="col-md-3 align-items-center justify-content-center mt-4 d-flex">
       <div class="card efeitoFruta" style="width: 18rem;">
-        <img class="card-img-top" src="../../assets/img/alface.jpg" alt="alface">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
         <div class="card-body">
-          <h5 class="card-title">Alface</h5>
-          <p class="card-text text-center">Um exemplo de texto rápido para construir o título do card e fazer preencher
-            o conteúdo do card.</p>
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
           <div class="mb-2">
-            <p class="card-text negrito">Preço: R$8.00</p>
+            <p class="card-text negrito">Preço: R$2.50</p>
           </div>
-          <div class="form-group mb-2">
-            <input class="form-control" type="number" name="qtdeUva" id="qtdeUva" placeholder="Quantidade">
-          </div>
-          <div class="d-flex justify-content-end">
-            <a href="#" class="btn btn-success">Comprar</a>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
+        </div>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-3 align-items-center mt-5 d-flex justify-content-center">
+    <div class="col-md-3 align-items-center justify-content-center mt-4 d-flex">
       <div class="card efeitoFruta" style="width: 18rem;">
-        <img class="card-img-top" src="../../assets/img/pepino.jpg" alt="pepino">
+        <img class="card-img-top w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU" alt="Uva Itália">
         <div class="card-body">
-          <h5 class="card-title">Pepino</h5>
-          <p class="card-text text-center">Um exemplo de texto rápido para construir o título do card e fazer preencher
-            o conteúdo do card.</p>
+          <h5 class="card-title">Pimentão Vermelho</h5>
+          
           <div class="mb-2">
-            <p class="card-text negrito">Preço: R$8.00</p>
+            <p class="card-text negrito">Preço: R$2.50</p>
           </div>
-          <div class="form-group mb-2">
-            <input class="form-control" type="number" name="qtdeUva" id="qtdeUva" placeholder="Quantidade">
-          </div>
-          <div class="d-flex justify-content-end">
-            <a href="#" class="btn btn-success">Comprar</a>
-          </div>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          <div class="form-group my-auto w-50 mr-2">
+            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
+                placeholder="Qtd">
         </div>
-      </div>
-    </div>
-    <div class="col-md-3 align-items-center mt-5 d-flex justify-content-center">
-      <div class="card efeitoFruta" style="width: 18rem;">
-        <img class="card-img-top" src="../../assets/img/cenoura.jpg" alt="Cenoura">
-        <div class="card-body">
-          <h5 class="card-title">Cenoura</h5>
-          <p class="card-text text-center">Um exemplo de texto rápido para construir o título do card e fazer preencher
-            o conteúdo do card.</p>
-          <div class="mb-2">
-            <p class="card-text negrito">Preço: R$8.00</p>
-          </div>
-          <div class="form-group mb-2">
-            <input class="form-control" type="number" name="qtdeUva" id="qtdeUva" placeholder="Quantidade">
-          </div>
-          <div class="d-flex justify-content-end">
-            <a href="#" class="btn btn-success">Comprar</a>
+          
+             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" href="#" >Comprar</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!--/Cards-->
-</div>
+
+  </div>
+ 
+
 <hr style="background-color: #89A61F;">
