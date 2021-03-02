@@ -12,4 +12,14 @@ export class RodapeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  newsletter(){
+    if((<HTMLSelectElement>document.getElementById('nome')).value != '' &&
+        (<HTMLSelectElement>document.getElementById('email')).value != ''){
+          alert("Prontinho! Voce receberá as novidades por email.")
+        }else{
+          alert("Por favor, preencha os campos nome e email")
+        } 
+  }
+
 }

@@ -9,13 +9,13 @@
         <div class="row pt-3">
             <div class="col d-flex justify-content-center">
                 <div class="col-md-6">
-                    <input type="text" class="form-control" placeholder="Nome">
+                    <input id='nome' type="text" class="form-control" placeholder="Nome">
                 </div>
                 <div class="col-md-6 mb-4">
-                    <input type="text" class="form-control" placeholder="E-mail">
+                    <input id='email' type="email" class="form-control" placeholder="E-mail">
                 </div>
                 <div>
-                    <button type="button" class="btn" style="background-color: #89A61F;">Enviar</button>
+                    <button (click)='newsletter()' type="button" class="btn" style="background-color: #89A61F;">Enviar</button>
                 </div>
             </div>
         </div>
