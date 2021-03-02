@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { CestaComponent } from './cesta/cesta.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
+import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
+import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 
 
 
@@ -33,6 +35,8 @@ import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
     CestaComponent,
     CategoriaComponent,
     ProdutoShopComponent,
+    CategoriaDeleteComponent,
+    CategoriaEditComponent,
   ],
   imports: [
     BrowserModule,
