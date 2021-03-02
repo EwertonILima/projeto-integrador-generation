@@ -21,11 +21,12 @@ export class CategoriaComponent implements OnInit {
 
   ngOnInit(): void {
     window.scroll(0,0)
-    if (environment.token == '') {
-      alert('Sua sessão expirou, você que lute');
-      this.router.navigate(['/home']);
+    
+    //if (environment.token == '') {
+      //alert('Sua sessão expirou, você que lute');
+      //this.router.navigate(['/home']);
 
-    }
+    //}
     this.findAllCategoria();
   }
 

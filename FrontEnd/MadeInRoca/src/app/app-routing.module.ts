@@ -9,6 +9,7 @@ import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
+import { PostProdutoComponent } from './produtor/post-produto/post-produto.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreComponent } from './sobre/sobre.component';
 
@@ -28,7 +29,9 @@ const routes: Routes = [
   { path: 'categoria-edit/:id', component: CategoriaEditComponent },
   { path: 'categoria-delete/:id', component: CategoriaDeleteComponent },
 
-  { path: 'produtos/:id', component: ProdutoShopComponent }
+  {path: 'produtos/:id', component: ProdutoShopComponent},
+  {path: 'post-produto', component: PostProdutoComponent},
+  
 ];
 
 @NgModule({

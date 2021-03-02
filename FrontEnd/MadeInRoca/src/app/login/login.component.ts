@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
 
 
   userLogin: UserLogin = new UserLogin
+  
 
   constructor(
     private auth: AuthService,
@@ -28,8 +29,9 @@ export class LoginComponent implements OnInit {
       this.userLogin = resp
       environment.token = this.userLogin.token
       environment.foto = this.userLogin.foto
-      environment.nome =this.userLogin.nome
+      environment.nome = this.userLogin.nome
       environment.tipoUsuario = this.userLogin.tipoUsuario
+      environment.id = this.userLogin.id
 
       this.router.navigate(['/home'])
 
