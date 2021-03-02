@@ -2,10 +2,14 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "analytics": "cc93caa2-8e04-43dd-9270-0d30a8b24e21"
 =======
     "analytics": "7a40e8f3-5c6e-47a7-9659-1ebb26c0dcd9"
 >>>>>>> origin/component-login-cadastrar
+=======
+    "analytics": "4ef9ef65-7eaf-4c71-bf32-5ccb4d8824c4"
+>>>>>>> origin/sobre
   },
   "version": 1,
   "newProjectRoot": "projects",
