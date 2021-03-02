@@ -23,7 +23,7 @@
 }
 
 #img-bg3{
-    background-image: url('../../assets/img/teste1.png');
+    background-image: url('../../assets/img/mao.png');
     min-height: 337px;
     background-position: center;
     background-repeat: no-repeat;
@@ -54,11 +54,6 @@
     font-size: 20px;
 }
 
-.single-content{
-    position: relative;
-    transition: .3s;
-    box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.8);
-}
 
 .single-content .text-content,
 .single-content::after {
@@ -71,11 +66,15 @@
     content: '';
     display: block;
     background: #363636;
-    top: 20px;
-    bottom: 20px;
+    top: -5px;
+    bottom: -5px;
+    left: 15px;
+    right: 20px;
+    margin-right: 45px;
     opacity: 0;
     transform: rotate3d(-1,1,0,100deg);
     transition: .4s;
+    border-radius: 50%;
 }
 
 .single-content:hover::after{
@@ -83,9 +82,10 @@
     transform: rotate3d(0,0,0,0deg);
 }
 
-.single-content .w-100{
-    width: 100%;
+.single-content .w-ajuste{
+    width: 70%;
     height: auto;
+    margin-left: 30%;
 }
 
 .text-content{
@@ -106,6 +106,7 @@
     opacity: 1;
     transform: translate(0,-50%);
     transition-delay: .3s;
+    margin-right: 45px;
 }
 
 .fa-fab{
