@@ -1,51 +1,46 @@
-<nav class="navbar navbar-expand-lg navbar-light my-0 py-0" style="background-color: #57732D;">
+<nav class="navbar navbar-expand-lg navbar-light my-0 py-0" style="background-color: #57732d">
 
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto d-flex align-items-center ml-1">
-
-      <li class="nav-item active ">
-        <a routerLink='/home'>
-          <img src="https://i.imgur.com/XnkpS3j.png" alt="Logo Made In Roça" width="90px" class="img-fluid">
+      <li class="nav-item active">
+        <a routerLink="/home">
+          <img src="https://i.imgur.com/XnkpS3j.png" alt="Logo Made In Roça" width="90px" class="img-fluid p-1" />
         </a>
-
       </li>
 
       <li class="nav-item">
-        <a class="nav-link text-light" routerLink='/produtos'>Produtos</a>
+        <a class="nav-link text-light" routerLink="/produtos">Produtos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-light" routerLink='/cesta'>Assine</a>
+        <a class="nav-link text-light" routerLink="/cesta">Assine</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-light" routerLink='/sobre-nos'>Sobre nós</a>
+        <a class="nav-link text-light" routerLink="/sobre-nos">Sobre nós</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-light" routerLink='/fale-conosco'>Fale Conosco</a>
+        <a class="nav-link text-light" routerLink="/fale-conosco">Fale Conosco</a>
       </li>
+
+      <!-- BARRA SEARCH -->
 
       <div class="search ml-2">
-        <input class="form-control" type="search" placeholder=" Pesquisar produtos"/>
+        <input class="form-control" type="search" placeholder=" Pesquisar produtos" />
 
-
-        <a href=" #"> <img class="img-search" src="https://i.imgur.com/MCYlHQs.png" id="btn-search" alt="Buscar"
-            href="#" /></a>
-
-
+        <a href=" #">
+          <img class="img-search" src="https://i.imgur.com/MCYlHQs.png" id="btn-search" alt="Buscar" href="#" /></a>
       </div>
+
+      <!-- / BARRA SEARCH -->
 
     </ul>
   </div>
 
-
-
-
-  <div class="d-flex mt-3 ">
-
+  <div class="d-flex mt-3">
     <div class="d-flex flex-column align-items-center justify-content-center login-cesta mr-4">
-      <a class=' text-light d-flex flex-column align-items-center justify-content-center' routerLink='/login'>
+      <a class="text-light d-flex flex-column align-items-center justify-content-center" routerLink="/login">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
           xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512"
-          style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+          style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
           <g>
             <g xmlns="http://www.w3.org/2000/svg">
               <g>
@@ -62,14 +57,27 @@
             </g>
           </g>
         </svg>
-
-        <p>Login</p>
       </a>
 
+    
+      <div class="dropdown" >
+        <a class="drop-btn nav-link text-light"  href="#" data-toggle="dropdown">Conta</a>
+        <div class="dropdown-content" >
+         
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/login">Entrar</a>
+            <a class="dropdown-item" href="#">Perfil</a>
+            <a class="dropdown-item" href="#">Sair</a>
+          </div>
+
+        </div>
+      </div>
     </div>
 
+    
+
     <div class="d-flex flex-column align-items-center justify-content-center login-cesta mr-3">
-      <a class=' text-light d-flex flex-column align-items-center justify-content-center' href="">
+      <a class="text-light d-flex flex-column align-items-center justify-content-center" href="">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
           <g id="outline">
             <path d="M56,424H72a8,8,0,0,0,0-16H56a8,8,0,0,0,0,16Z" />
@@ -95,13 +103,6 @@
 
         <p>Cesta</p>
       </a>
-
     </div>
-
   </div>
-
-
-
-
-
 </nav>
