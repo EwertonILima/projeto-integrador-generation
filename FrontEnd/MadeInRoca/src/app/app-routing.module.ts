@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
 import { PostProdutoComponent } from './produtor/post-produto/post-produto.component';
+import { ProdutorPerfilComponent } from './produtor/produtor-perfil/produtor-perfil.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreComponent } from './sobre/sobre.component';
 
@@ -31,6 +32,7 @@ const routes: Routes = [
 
   {path: 'produtos/:id', component: ProdutoShopComponent},
   {path: 'post-produto', component: PostProdutoComponent},
+  {path: 'produtor-perfil', component: ProdutorPerfilComponent}
   
 ];
 
