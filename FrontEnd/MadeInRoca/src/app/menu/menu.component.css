@@ -26,11 +26,15 @@
     box-shadow: 0px 5px 10px 0px rgba(100, 99, 99, 0.247);
 }
 
-.dropdown-content:hover
-{
-
-    
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
+
+a:link 
+{ 
+ text-decoration:none; 
+} 
+
 .login-cesta {
   color: white;
 }
