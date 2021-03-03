@@ -22,8 +22,6 @@ export class PostProdutoComponent implements OnInit {
   
   categoria: Categoria = new Categoria()
 
-  idUsuario = environment.id
-
   constructor(
     private produtoService: ProdutoService,
     private auth: AuthService,
@@ -34,44 +32,41 @@ export class PostProdutoComponent implements OnInit {
     window.scroll(0,0)
 
     this.getAllCategoria()
-    this.findByIdUsuario()
   }
 
   getAllCategoria() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategoria = resp
-      alert('getallCategoriaOK')
     })
   }
 
   findByIdCategoria() {
       this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) =>{
         this.categoria = resp
-        alert('ByidCategoriaOk')
       })
   }
 
-  findByIdUsuario() {
-    this.auth.getbyIdUser(this.idUsuario).subscribe((resp: Usuario) => {
-      this.usuario = resp
-      alert('findByIdUsuarioOk')
-    })
-  }
+  // findByIdUsuario() {
+  //   this.auth.getbyIdUser(this.idUsuario).subscribe((resp: Usuario) => {
+  //     this.usuario = resp
+  //     alert('findByIdUsuarioOk')
+  //   })
+  // }
 
   cadastrarProduto() {
     this.categoria.id = this.idCategoria
-
     this.produto.categoria = this.categoria
 
-    this.usuario.id = this.idUsuario
-
+    this.usuario.id = environment.id
     this.produto.usuario = this.usuario
+
+    console.log(this.produto)
 
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
       alert('Seu produto foi cadastrado com sucesso!')
-      this.produto = new Produto
-      alert('cadastrarOK')
+      
+      this.produto = new Produto()
     })
   }
 }

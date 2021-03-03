@@ -25,14 +25,10 @@ public class Produto {
 	@NotNull
 	@Size(min = 4, max = 20)
 	private String nome;
-	
+
 	@NotNull
 	@Digits(integer = 5, fraction = 2)
 	private BigDecimal preco;
-
-	@NotNull
-	@Size(max = 100)
-	private String fornecedor;
 	
 	@NotNull
 	private int qtdeEstoque;
@@ -40,6 +36,11 @@ public class Produto {
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
 	private Categoria categoria;
+	
+	
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
+	private Usuario usuario; 
 
 	public long getId() {
 		return id;
@@ -65,14 +66,6 @@ public class Produto {
 		this.preco = preco;
 	}
 
-	public String getFornecedor() {
-		return fornecedor;
-	}
-
-	public void setFornecedor(String fornecedor) {
-		this.fornecedor = fornecedor;
-	}
-
 	public int getQtdeEstoque() {
 		return qtdeEstoque;
 	}
@@ -87,6 +80,14 @@ public class Produto {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
 	
