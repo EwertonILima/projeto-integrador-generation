@@ -1,0 +1,59 @@
+<div class="container">
+    <div>
+
+
+        <div class="card-columns">
+          <div class="card text-center" *ngFor='let item of usuario.produto'>
+            <div class="card-body">
+              <h5 class="card-title m-0">{{item.nome}}</h5>
+              <small class="text-muted"> preco {{item.preco}}</small>
+              <p class="card-text mt-3">estoque {{item.qtdeEstoque}}</p>
+              <p class="card-text"><small class="text-muted">
+                  {{item.categoria.nome}}
+                </small></p>
+  
+              <a [routerLink]="['/produto-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+              <a [routerLink]="['/produto-delete', item.id]" class="text-danger" href="">Apagar</a>
+  
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  
+</div>
+
+<!-- Botão para acionar modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+    Abrir modal de demonstração
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" class="form-control" [(ngModel)] = 'produto.nome'>
+
+              <label for="preco">Preço</label>
+              <input type="number" id="preco" class="form-control" [(ngModel)] = 'produto.preco'>
+
+              <label for="qtdeEstoque">Quantidade Em Estoque</label>
+              <input type="text" id="qtdeEstoque" class="form-control" [(ngModel)] = 'produto.qtdeEstoque'>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Salvar mudanças</button>
+        </div>
+      </div>
+    </div>
+  </div>
