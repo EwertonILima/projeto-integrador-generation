@@ -11,9 +11,9 @@
               <p class="card-text"><small class="text-muted">
                   {{item.categoria.nome}}
                 </small></p>
-  
-              <a [routerLink]="['/produto-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-              <a [routerLink]="['/produto-delete', item.id]" class="text-danger" href="">Apagar</a>
+                
+              <button data-toggle="modal" data-target="#modalEditar" class="btn btn-primary text-info mr-3" (click)="findProdutoById(item.id)" href="">Editar</button>
+              <button data-toggle="modal"  data-target="#modalExcluir" (click)=" getIdProduto(item.id)" class="text-danger" href="" >Apagar</button>
   
             </div>
           </div>
@@ -24,16 +24,16 @@
 </div>
 
 <!-- Botão para acionar modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditar">
     Abrir modal de demonstração
   </button>
   
-  <!-- Modal -->
-  <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Modal Editar -->
+  <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="modalEditarLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+          <h5 class="modal-title" id="modalEditarLabel">Título do modal</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -41,18 +41,45 @@
         <div class="modal-body">
           <div class="form-group">
               <label for="nome">Nome</label>
-              <input type="text" id="nome" class="form-control" [(ngModel)] = 'produto.nome'>
+              <input type="text" id="nome" class="form-control" [(ngModel)]= 'produto.nome'>
 
               <label for="preco">Preço</label>
-              <input type="number" id="preco" class="form-control" [(ngModel)] = 'produto.preco'>
+              <input type="number" id="preco" class="form-control" [(ngModel)]= 'produto.preco'>
 
               <label for="qtdeEstoque">Quantidade Em Estoque</label>
-              <input type="text" id="qtdeEstoque" class="form-control" [(ngModel)] = 'produto.qtdeEstoque'>
+              <input type="number" id="qtdeEstoque" class="form-control" [(ngModel)]= "produto.qtdeEstoque">
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-primary">Salvar mudanças</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary"  data-dismiss="modal" (click)= "putProduto()" >Salvar mudanças</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Excluir -->
+  <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="modalExcluirLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalExcluirLabel">Título do modal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+          <div>
+            Hmmm você tem certeza que quer excluir o produto? 
+          
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger"  data-dismiss="modal" (click)= "delProduto()" >Excluir </button>
         </div>
       </div>
     </div>
