@@ -8,6 +8,7 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MenuComponent } from './menu/menu.component';
 import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
 import { PostProdutoComponent } from './produtor/post-produto/post-produto.component';
 import { ProdutorPerfilComponent } from './produtor/produtor-perfil/produtor-perfil.component';
@@ -32,7 +33,8 @@ const routes: Routes = [
 
   {path: 'produtos/:id', component: ProdutoShopComponent},
   {path: 'post-produto', component: PostProdutoComponent},
-  {path: 'produtor-perfil', component: ProdutorPerfilComponent}
+  {path: 'produtor-perfil', component: ProdutorPerfilComponent},
+  
   
 ];
 

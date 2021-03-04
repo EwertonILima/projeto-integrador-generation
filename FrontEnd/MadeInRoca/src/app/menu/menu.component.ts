@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+import { Usuario } from '../model/Usuario';
+
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  
+ 
+  
+   id = environment.id
+   
+  
+  
+  constructor(
+    private route: ActivatedRoute
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+   console.log(this.id)
+   
   }
 
+
+  
 }
+
+
