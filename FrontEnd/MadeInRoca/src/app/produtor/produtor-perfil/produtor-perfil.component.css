@@ -57,3 +57,11 @@
     opacity: 1;
     right: 0;
 }
+
+
+.perfil {
+    border-radius: 15px;
+    background-color: #fff0cf;
+    border: solid 1px #fff0cf;
+    padding: 15px;
+}
