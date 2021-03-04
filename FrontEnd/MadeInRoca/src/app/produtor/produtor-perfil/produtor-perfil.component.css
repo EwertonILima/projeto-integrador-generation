@@ -65,3 +65,13 @@
     border: solid 1px #fff0cf;
     padding: 15px;
 }
+
+.btn-comprar-carousel{
+    background-color: #57732D;
+    border: solid 2px #57732D;
+    color: white;
+}
+
+.card-title {
+    color: #402222;
+}

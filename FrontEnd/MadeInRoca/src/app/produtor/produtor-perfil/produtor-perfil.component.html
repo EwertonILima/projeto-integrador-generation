@@ -82,7 +82,30 @@
 
 
     </div>
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        
+            <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex my-4">
+                <div class="card efeitoFruta" style="width: 18rem;">
+                  <img class="card-img-top w-100" src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Uva Itália">
+                  <div class="card-body">
+                    <h5 class="card-title">Uva Itália</h5>
+                    
+                    <div class="mb-2">
+                      <p class="card-text negrito">Preço: R$2.50</p>
+                    </div>
+            
+                    <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+                    <div class="form-group my-auto w-50 mr-2">
+                        <button type="button" class="btn btn-comprar-carousel mr-3" style="height: 42px;" [routerLink]="['/produtos', 1]" >Editar</button>
+                  </div>
+                    
+                       <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" [routerLink]="['/produtos', 1]" >Apagar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+    </div>
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
   </div>
   
