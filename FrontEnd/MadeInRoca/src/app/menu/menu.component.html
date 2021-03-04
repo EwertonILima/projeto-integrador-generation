@@ -18,7 +18,7 @@
         <a class="nav-link text-light" routerLink="/sobre-nos">Sobre nós</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-light" routerLink="/fale-conosco">Fale Conosco</a>
+        <a  class="nav-link text-light" routerLink="/fale-conosco">Fale Conosco</a>
       </li>
 
       <!-- BARRA SEARCH -->
@@ -61,13 +61,19 @@
 
     
       <div class="dropdown" >
-        <a class="drop-btn nav-link text-light"  href="#" data-toggle="dropdown">Conta</a>
+        <a *ngIf="auth.deslogado()" class="drop-btn nav-link text-light"  href="#" data-toggle="dropdown">Login</a>
+        <a *ngIf="auth.logado()" class="drop-btn nav-link text-light"  href="#" data-toggle="dropdown">Conta</a>
         <div class="dropdown-content" >
          
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/login">Entrar</a>
-            <a class="dropdown-item" href="#">Perfil</a>
-            <a class="dropdown-item" href="#">Sair</a>
+            <a *ngIf="auth.deslogado()" class="dropdown-item" href="/login">Entrar</a>
+
+            <a *ngIf="auth.deslogado()" class="dropdown-item" href="/login">Perfil</a>
+            <a *ngIf="auth.logado()" class="dropdown-item" href="">Perfil</a>
+            <a class="dropdown-item" href="#">Compras</a>
+            <a class="dropdown-item" href="#">Assinatura</a>
+            <a class="dropdown-item" href="#">Produtor</a>
+            <a *ngIf="auth.logado()" (click)="sair()" class="dropdown-item" href="/home">Sair</a>
           </div>
 
         </div>

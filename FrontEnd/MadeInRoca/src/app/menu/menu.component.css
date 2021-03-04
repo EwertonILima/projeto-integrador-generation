@@ -33,6 +33,7 @@
 a:link 
 { 
  text-decoration:none; 
+ border-radius: 5px ;
 } 
 
 .login-cesta {
