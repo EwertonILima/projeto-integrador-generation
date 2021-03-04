@@ -45,7 +45,7 @@ export class ProdutorPerfilComponent implements OnInit {
 
     
 
-   // this.idUsuario = this.route.snapshot.params['id']
+    this.idUsuario = this.route.snapshot.params['id']
     console.log(this.idUsuario)
     this.findUsuarioById()
   }
@@ -75,7 +75,7 @@ export class ProdutorPerfilComponent implements OnInit {
           environment.nome = ''
           environment.foto = ''
           environment.id = 0
-          
+          environment.usuario = ''
 
           this.router.navigate(['/login'])
         })
