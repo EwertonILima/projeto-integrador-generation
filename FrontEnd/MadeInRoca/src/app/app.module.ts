@@ -17,7 +17,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
-import { ProdutorComponent } from './produtor/produtor.component';
+
 
 
 
@@ -38,7 +38,6 @@ import { ProdutorComponent } from './produtor/produtor.component';
     ProdutoShopComponent,
     CategoriaDeleteComponent,
     CategoriaEditComponent,
-    ProdutorComponent,
   ],
   imports: [
     BrowserModule,
