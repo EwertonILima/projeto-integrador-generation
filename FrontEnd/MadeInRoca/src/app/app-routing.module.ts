@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'cesta', component: CestaComponent },
   { path: 'sobre-nos', component: SobreComponent },
   { path: 'fale-conosco', component: FaleConoscoComponent },
-  { path: 'produto-shop', component: ProdutoShopComponent },
+  { path: 'produto-shop/:id', component: ProdutoShopComponent },
   { path: 'categoria', component: CategoriaComponent },
 
   { path: 'categoria-edit/:id', component: CategoriaEditComponent },
