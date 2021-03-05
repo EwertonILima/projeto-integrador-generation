@@ -8,11 +8,31 @@
   max-height: 30px;
   fill:white;
 }
+
+
 .dropdown-item {
   
     color: #57732d;
     padding-left: 2px;
     
+}
+.dropdown-menu-search {
+  position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: center;
+    min-width: 54rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
 }
 
 .dropdown-menu {
