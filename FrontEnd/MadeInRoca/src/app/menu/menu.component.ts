@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { AuthService } from '../service/auth.service';
 
+
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -10,14 +12,14 @@ import { AuthService } from '../service/auth.service';
 })
 export class MenuComponent implements OnInit {
 
+
   constructor(
     public auth: AuthService,
     private router: Router,
-    
     )
    { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   sair(){
@@ -29,3 +31,5 @@ export class MenuComponent implements OnInit {
   }
 
 }
+
+

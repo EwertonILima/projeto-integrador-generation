@@ -73,5 +73,19 @@ a:link
 
 
 
+@media(max-width: 700px){
+    .login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+
+    ul{
+        margin-right: 48px;
+    }
+}
+
+
 
   

@@ -22,6 +22,8 @@ import { EditProdutoComponent } from './produtor/edit-produto/edit-produto.compo
 import { PostProdutoComponent } from './produtor/post-produto/post-produto.component';
 import { MeusProdutosComponent } from './produtor/meus-produtos/meus-produtos.component';
 
+import { ProdutorPerfilComponent } from './produtor/produtor-perfil/produtor-perfil.component';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 
 
@@ -46,6 +48,7 @@ import { MeusProdutosComponent } from './produtor/meus-produtos/meus-produtos.co
     EditProdutoComponent,
     PostProdutoComponent,
     MeusProdutosComponent,
+    ProdutorPerfilComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,11 @@ import { MeusProdutosComponent } from './produtor/meus-produtos/meus-produtos.co
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

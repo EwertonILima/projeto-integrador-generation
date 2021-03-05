@@ -11,10 +11,10 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./meus-produtos.component.css'],
 })
 export class MeusProdutosComponent implements OnInit {
+  
   produto: Produto = new Produto();
   usuario: Usuario = new Usuario();
   idProduto: number; // criado para deletar o produto com referencia de id na modal excluir
-
 
   constructor(
     private authService: AuthService,
@@ -50,8 +50,6 @@ export class MeusProdutosComponent implements OnInit {
 
   getIdProduto(id: number){
     this.idProduto = id;
-
-
   }
 
   delProduto(){  
