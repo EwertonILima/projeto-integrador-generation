@@ -47,6 +47,7 @@ export class ProdutorPerfilComponent implements OnInit {
     console.log(this.id + "Esse cara aqui é um ID!!!")
 
     this.getAllCategoria()
+    this.findUsuarioById()
   }
 
   confirmSenha(event: any) {
