@@ -128,14 +128,13 @@
 }
 
 .img-como-funciona{
-    height: 180px;
-    width: 150px;
+    
     align-self: center;
 }
 
 .card-sobre{
-    background-color: #f2ecdf;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    background-color: white;
+   border: none;
     margin-bottom: 15px;
     margin-top: 15px;
 }
