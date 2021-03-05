@@ -41,5 +41,10 @@ export class AuthService {
   
       return ok
     }
+    
+    getbyIdUser(id: number): Observable<Usuario> {
+      return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`)
+
+    }
 
 }

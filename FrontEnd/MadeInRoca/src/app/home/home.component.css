@@ -168,3 +168,70 @@
         margin: 0;
     }
 }
+
+
+
+
+
+
+
+.img-product-single{
+    border:#C4C4C4 solid 1px;
+    border-radius: 5px;
+}
+
+.title-prod-rel{
+
+    color: #402222;
+    margin-left: 30px;
+}
+
+.descricao-produto{
+    font-family: 'Public Sans', sans-serif;
+    font-style: italic;
+    max-width: 600px;
+}
+
+.btn-comprar{
+    background-color: #57732D;
+    border: solid 2px #57732D;
+    color: white;
+
+}
+
+
+
+.efeitoFruta {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.efeitoFruta:hover {
+    filter: drop-shadow(10px 10px 5px rgba(0,0,0,.5));
+}
+
+.btn-comprar-carousel{
+    background-color: #57732D;
+    border: solid 2px #57732D;
+    color: white;
+}
+
+
+ .carousel-control-next, .carousel-control-prev{
+
+    height: 80px;
+    width: auto;
+    
+    top:50%;
+}
+
+.btn-next, .btn-prev{
+     border-radius: 100px;
+     background-color: rgba(97, 95, 95, 0.384);
+     height: 25px;  
+ 
+} 
+
+.form-group{
+    border-radius: 5px;
+}

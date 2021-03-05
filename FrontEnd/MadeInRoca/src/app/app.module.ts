@@ -17,6 +17,9 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
+import { DeleteProdutoComponent } from './produtor/delete-produto/delete-produto.component';
+import { EditProdutoComponent } from './produtor/edit-produto/edit-produto.component';
+import { PostProdutoComponent } from './produtor/post-produto/post-produto.component';
 
 
 
@@ -38,6 +41,9 @@ import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.com
     ProdutoShopComponent,
     CategoriaDeleteComponent,
     CategoriaEditComponent,
+    DeleteProdutoComponent,
+    EditProdutoComponent,
+    PostProdutoComponent,
   ],
   imports: [
     BrowserModule,
