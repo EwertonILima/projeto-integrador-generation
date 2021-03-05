@@ -1,6 +1,7 @@
-*{
+.container-fluid{
     
     font-family: 'Roboto Condensed', sans-serif;
+    background-color: #e9ecef;
 }
 
 .card-forms{
@@ -74,4 +75,25 @@
 
 .card-title {
     color: #402222;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+*{
+    color: #402222;
+}
+
+.btn{
+    color: #fff;
+}
+
+.nav-link{
+    color: #89A61F;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #89A61F;
 }

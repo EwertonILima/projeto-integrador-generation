@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Categoria } from 'src/app/model/Categoria';
 import { Produto } from 'src/app/model/Produto';
 import { Usuario } from 'src/app/model/Usuario';
 import { AuthService } from 'src/app/service/auth.service';
+import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutoService } from 'src/app/service/produto.service';
 
 import { environment } from 'src/environments/environment.prod';
@@ -15,6 +17,7 @@ import { environment } from 'src/environments/environment.prod';
 export class ProdutorPerfilComponent implements OnInit {
 
   produto: Produto = new Produto();
+  listaProdutos: Produto[];
 
   usuario: Usuario = new Usuario()
   idUsuario: number
@@ -23,11 +26,15 @@ export class ProdutorPerfilComponent implements OnInit {
 
   idProduto: number; // criado para deletar o produto com referencia de id na modal excluir
 
+  categoria: Categoria = new Categoria()
+  idCategoria: number
+  listaCategoria: Categoria[]
+
   constructor(
     private authService: AuthService,
-    private route: ActivatedRoute,
     private router: Router,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private categoriaService: CategoriaService
   ) { }
 
   id = environment.id
@@ -39,15 +46,7 @@ export class ProdutorPerfilComponent implements OnInit {
     window.scroll(0,0)
     console.log(this.id + "Esse cara aqui é um ID!!!")
 
-   // if(environment.token == '') {
-   //   this.router.navigate(['/home'])
- //   }
-
-    
-
-    this.idUsuario = this.route.snapshot.params['id']
-    console.log(this.idUsuario)
-    this.findUsuarioById()
+    this.getAllCategoria()
   }
 
   confirmSenha(event: any) {
@@ -58,7 +57,7 @@ export class ProdutorPerfilComponent implements OnInit {
     this.tipoUsuario = event.target.value
   }
 
-
+// ATUALIZAR DADOS PESSOAIS
   atualizar() { // PUT de perfil de usuário 
     this.usuario.tipoUsuario = this.tipoUsuario
 
@@ -91,6 +90,11 @@ export class ProdutorPerfilComponent implements OnInit {
     });
   }
 
+  // ATUALIZAR PRODUTOS 
+  getIdProduto(id: number){
+    this.idProduto = id
+  }
+
 
   findProdutoById(id: number) { // Produto por ID
     this.produtoService.getByIdProduto(id).subscribe((resp: Produto) => {
@@ -103,7 +107,6 @@ export class ProdutorPerfilComponent implements OnInit {
       this.produto = resp;
       
       this.findUsuarioById();
-
       alert('Produto atualizado com sucesso!');
     });
   }
@@ -114,6 +117,37 @@ export class ProdutorPerfilComponent implements OnInit {
       this.findUsuarioById();
       alert ('Produto excluído com sucesso!');
 
+    })
+  }
+
+
+// POST NOVO PRODUTO
+  getAllCategoria() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp
+    })
+  }
+
+  findByIdCategoria() {
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) =>{
+      this.categoria = resp
+    })
+  }
+
+  cadastrarProduto() {
+    this.categoria.id = this.idCategoria
+    this.produto.categoria = this.categoria
+
+    this.usuario.id = environment.id
+    this.produto.usuario = this.usuario
+
+    console.log(this.produto)
+
+    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+      this.produto = resp
+      alert('Seu produto foi cadastrado com sucesso!')
+      this.findUsuarioById()
+      this.produto = new Produto()
     })
   }
 }
