@@ -1,13 +1,15 @@
 
 .social-network svg {
     width: 40px;
-    height: 45px;
-    margin-right: 50px;
+    height: 35px;
+    margin-right: 10px;
+    margin-left: 10px;
  
 }
 
 .pagamento{
     width: 55px;
     height: 60px;
-    padding: 2px;
+    padding: 7px;
 }
+
