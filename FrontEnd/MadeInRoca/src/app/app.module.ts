@@ -17,7 +17,13 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
-import { ProdutorComponent } from './produtor/produtor.component';
+import { DeleteProdutoComponent } from './produtor/delete-produto/delete-produto.component';
+import { EditProdutoComponent } from './produtor/edit-produto/edit-produto.component';
+import { PostProdutoComponent } from './produtor/post-produto/post-produto.component';
+import { MeusProdutosComponent } from './produtor/meus-produtos/meus-produtos.component';
+
+import { ProdutorPerfilComponent } from './produtor/produtor-perfil/produtor-perfil.component';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 
 
 
@@ -38,7 +44,11 @@ import { ProdutorComponent } from './produtor/produtor.component';
     ProdutoShopComponent,
     CategoriaDeleteComponent,
     CategoriaEditComponent,
-    ProdutorComponent,
+    DeleteProdutoComponent,
+    EditProdutoComponent,
+    PostProdutoComponent,
+    MeusProdutosComponent,
+    ProdutorPerfilComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +56,11 @@ import { ProdutorComponent } from './produtor/produtor.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: LocationStrategy,
+    useClass: HashLocationStrategy
+  }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

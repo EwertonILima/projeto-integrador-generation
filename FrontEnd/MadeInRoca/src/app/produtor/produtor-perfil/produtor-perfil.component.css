@@ -1,8 +1,8 @@
-*{
+.container-fluid{
     
-    font-family:'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #e9ecef;
 }
-
 
 .card-forms{
     border-radius: 10px;
@@ -10,16 +10,6 @@
     filter: drop-shadow(10px 10px 5px rgba(0,0,0,.5));
     background-color: #e9ecef;
 
-}
-
-.card-forms h1{
-    color: #57732D;
-}
-
-@media (max-width: 360px){
-    .row-externa{
-        height: 100%;
-    }
 }
 
 .text-start{
@@ -51,7 +41,7 @@
     transition: 0.5s;
   }
   
-  .btn-entrar span:after {
+.btn-entrar span:after {
     content: '\00BB';
     position: absolute;
     opacity: 0;
@@ -60,11 +50,50 @@
     transition: 0.5s;
   }
   
-  .btn-entrar:hover span {
+.btn-entrar:hover span {
     padding-right: 20px;
   }
   
-  .btn-entrar:hover span:after {
+.btn-entrar:hover span:after {
     opacity: 1;
     right: 0;
-  }
+}
+
+
+.perfil {
+    border-radius: 15px;
+    background-color: #fff0cf;
+    border: solid 1px #fff0cf;
+    padding: 15px;
+}
+
+.btn-comprar-carousel{
+    background-color: #57732D;
+    border: solid 2px #57732D;
+    color: white;
+}
+
+.card-title {
+    color: #402222;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+*{
+    color: #402222;
+}
+
+.btn{
+    color: #fff;
+}
+
+.nav-link{
+    color: #89A61F;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #89A61F;
+}

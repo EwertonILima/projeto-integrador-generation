@@ -12,7 +12,8 @@ import { AuthService } from '../service/auth.service';
 export class LoginComponent implements OnInit {
 
 
-  userLogin: UserLogin = new UserLogin
+  userLogin: UserLogin = new UserLogin()
+  
 
   constructor(
     private auth: AuthService,
@@ -26,10 +27,17 @@ export class LoginComponent implements OnInit {
   entrar() {
     this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) =>{
       this.userLogin = resp
+
       environment.token = this.userLogin.token
+      environment.nome = this.userLogin.nome
       environment.foto = this.userLogin.foto
-      environment.nome =this.userLogin.nome
-      environment.tipoUsuario = this.userLogin.tipoUsuario
+      environment.id = this.userLogin.id
+      environment.usuario = this.userLogin.usuario
+
+      console.log(environment.token)
+      console.log(environment.nome)
+      console.log(environment.foto)
+      console.log(environment.id)
 
       this.router.navigate(['/home'])
 

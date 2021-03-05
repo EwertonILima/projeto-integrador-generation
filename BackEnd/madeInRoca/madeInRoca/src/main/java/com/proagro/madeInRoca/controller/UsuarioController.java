@@ -57,7 +57,17 @@ public class UsuarioController {
 		return usuarioService.Logar(user).map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
 	}
-
+	
+	@PutMapping("/atualizar")
+	public ResponseEntity<Usuario> Put(@RequestBody Usuario usuario) {
+		Optional<Usuario> user = usuarioService.CadastrarUsuario(usuario);
+		try {
+			return ResponseEntity.status(HttpStatus.CREATED).body(user.get());
+		} catch (Exception e) {
+			return ResponseEntity.badRequest().build();
+		}
+		
+	}	
 	@PostMapping("/cadastrar")
 	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario) {
 		Optional<Usuario> user = usuarioService.CadastrarUsuario(usuario);

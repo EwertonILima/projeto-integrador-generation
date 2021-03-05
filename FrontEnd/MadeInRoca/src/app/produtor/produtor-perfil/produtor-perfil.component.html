@@ -1,0 +1,446 @@
+<!-- 
+<nav>
+    
+    <div class="nav nav-tabs justify-content-center mt-4" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Dados Pessoais</a>
+
+      <a class="nav-item nav-link justify-content-center" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Meus Produtos</a>
+
+      <a class="nav-item nav-link justify-content-center" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Compras vendas</a>
+
+      
+    </div>
+
+  </nav>
+  
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="row mb-2 my-5 m-5">
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+
+                    <div class="d-flex justify-content-center align-items-center">
+
+                        <div class="justify-content-center align-items-center flex-column d-flex perfil">
+
+                            <div class="row d-flex justify-content-center align-items-center m-3">
+                                <img class="img-fluid rounded-circle" src="{{foto}}" alt="">
+                            </div>
+
+                            <h4 style="width: fit-content;">
+                                Nome completo: {{nome}}
+                            </h4>
+                            <h4 style="width: fit-content;">
+                                E-mail: {{email}}
+                            </h4>
+                        </div>
+
+                    </div>
+
+                </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                  <label for="nome">Nome Completo</label>
+                  <input [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" id="nome"
+                  placeholder="Insira seu nome completo">
+              </div>
+            
+              <div class="form-group">
+                  <label for="Email">E-mail</label>
+                  <input [(ngModel)]='usuario.usuario' class="form-control" type="text" name="email" id="email"
+                  placeholder="Insira seu e-mail">
+              </div>
+            
+              <div class="form-group">
+                  <label for="Senha">Senha</label>
+                  <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
+                  placeholder="Digite sua senha">
+              </div>
+            
+              <div class="form-group">
+                  <label for="confirmSenha">Confirmar Senha</label>
+                  <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+                  placeholder="Confirme sua senha">
+              </div>
+            
+                  <div class="form-group">
+              <label for="foto">Foto</label>
+            
+                  <input [(ngModel)]= 'usuario.foto' name="foto" class="form-control" id="foto" 
+                  placeholder="Insira o link da sua foto">
+              </div>
+              <div class="form-group">
+                  <label for="tipo">Tipo de Usuário</label>
+            
+                  <select name="tipo" class="form-control" id="tipo">
+                      <option>Selecione um tipo de usuário</option>
+                      <option value="cliente">Cliente</option>
+                      <option value="produtor">Produtor</option>
+                  </select>
+            </div>
+            <div>
+                <button class="btn btn-success mr-3" (click)='atualizar()'>Atualizar</button>
+                <button class="btn btn-danger">Cancelar</button>
+            </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        
+            <div class="d-flex flex-wrap bd-highlight align-items-center justify-content-center">
+
+    <div *ngFor='let item of usuario.produto' class=" d-flex align-items-center justify-content-center m-3">
+      <div class="card efeitoFruta" style="width: 14rem;">
+        <img class="card-img-top w-100" src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Uva Itália">
+        <div class="card-body">
+          <h5 class="card-title">{{item.nome}}</h5>
+          
+          <div class="mb-2">
+            <p class="card-text negrito">Preço: R${{item.preco}}</p>
+          </div>
+  
+          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
+          
+            <button type="button " class="btn btn-info mr-3" data-target="#modalEditar" data-toggle="modal" (click)="findProdutoById(item.id)" >Atualizar</button>
+             <button type="button" class="btn btn-danger" data-target="#modalExcluir" data-toggle="modal" (click)="getIdProduto(item.id)" >Deletar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+      compras works
+    </div>
+  </div> -->
+  
+
+<!-- Modal Editar -->
+<div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="modalEditarLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEditarLabel">Título do modal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" class="form-control" [(ngModel)]= 'produto.nome'>
+
+              <label for="preco">Preço</label>
+              <input type="number" id="preco" class="form-control" [(ngModel)]= 'produto.preco'>
+
+              <label for="qtdeEstoque">Quantidade Em Estoque</label>
+              <input type="number" id="qtdeEstoque" class="form-control" [(ngModel)]= "produto.qtdeEstoque">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary"  data-dismiss="modal" (click)= "putProduto()" >Salvar mudanças</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Modal Excluir -->
+<div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="modalExcluirLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalExcluirLabel">Título do modal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+          <div>
+            Hmmm você tem certeza que quer excluir o produto? 
+          
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger"  data-dismiss="modal" (click)= "delProduto()" >Excluir </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- <div class="container">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<div class="profile-userpic">
+					<img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+				</div>
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						Marcus Doe
+					</div>
+					<div class="profile-usertitle-job">
+						Developer
+					</div>
+				</div>
+				<div class="profile-usermenu">
+					<ul class="nav d-flex flex-column justify-content-center align-items-center">
+						<li class="active">
+							<a href="#">
+							<i class="glyphicon glyphicon-home"></i>
+							Overview </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							Account Settings </a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+							<i class="glyphicon glyphicon-ok"></i>
+							Tasks </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-flag"></i>
+							Help </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-9">
+            <div class="profile-content">
+			   Some user related content goes here...
+            </div>
+		</div>
+	</div>
+</div>
+
+<br>
+<br> -->
+
+<div class="container-fluid">
+
+
+
+
+  <div class="container p-3">
+    <div class="row " >
+      <div class="col-3  m-0 p-0  d-flex  flex-column">
+        <div class="px-4" style="background-color: white;" >
+          <div class="d-flex justify-content-center align-items-center mt-4 mb-3">
+            <img class="img-fluid"  src="../../../assets/img/alface.jpg" alt="" >
+          </div>
+          <div class="d-flex flex-column align-items-center">
+            <p class="uppercase mb-1">
+              {{nome}}
+            </p>
+            <p>
+              {{email}}
+            </p>
+          </div>
+          
+      
+          
+            <div class="nav d-block  flex-column text-truncate nav-pills mb-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Atualizar cadastro</a>
+              <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Meus produtos</a>
+              <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mensagens</a>
+              <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Configurações</a>
+            </div>
+          
+  
+  
+  
+        </div>
+        
+      </div>
+      <div class="col-9">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+  
+  
+            <div class="row mb-2 ml-4">
+              
+              
+              <div class="col-md-12 d-flex justify-content-center flex-column px-5 " style="background-color: white;">
+                <h4 class="mt-4">Atualizar cadastro</h4>
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" id="nome"
+                    placeholder="Insira seu nome completo">
+                </div>
+              
+                <div class="form-group">
+                    <label for="Email">E-mail</label>
+                    <input [(ngModel)]='usuario.usuario' class="form-control" type="text" name="email" id="email"
+                    placeholder="Insira seu e-mail">
+                </div>
+              
+                <div class="form-group">
+                    <label for="Senha">Senha</label>
+                    <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
+                    placeholder="Digite sua senha">
+                </div>
+              
+                <div class="form-group">
+                    <label for="confirmSenha">Confirmar Senha</label>
+                    <input [(ngModel)]='usuario.senha' class="form-control" type="password" name="confirmSenha" id="confirmSenha"
+                    placeholder="Confirme sua senha">
+                </div>
+              
+                    <div class="form-group">
+                <label for="foto">Foto</label>
+              
+                    <input [(ngModel)]= 'usuario.foto' name="foto" class="form-control" id="foto" 
+                    placeholder="Insira o link da sua foto">
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo de Usuário</label>
+              
+                    <select name="tipo" class="form-control" id="tipo">
+                        <option>Selecione um tipo de usuário</option>
+                        <option value="cliente">Cliente</option>
+                        <option value="produtor">Produtor</option>
+                    </select>
+              </div>
+              <div class="d-flex justify-content-center mb-3">
+                  <button class="btn btn-danger mr-3 text-light">Cancelar</button>
+                  <button class="btn btn-success text-light " (click)='atualizar()'>Atualizar</button>
+                  
+              </div>
+              </div>
+          </div>
+  
+  
+  
+          </div>
+          <div class="tab-pane fade pl-4" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+
+
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Ver produtos</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false" (click)="findUsuarioById()">Cadastrar</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Editar</a>
+              </div>
+            </nav>
+
+            <div class="tab-content " id="nav-tabContent">
+              <div class="tab-pane fade show active " id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="col-md-12 d-flex flex-wrap   justify-content-center" style="background-color: white;">
+                  primeira tap
+                
+
+
+
+                  
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="col-md-12 pt-3 px-5 m d-flex flex-wrap flex-column  justify-content-center" style="background-color: white;">
+                  
+
+                        <div class="form-group">
+                            <label for="titulo">Produto</label>
+                            <input [(ngModel)]='produto.nome' type="text" class="form-control" id="titulo" placeholder="Digite o título">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="texto">Preço</label>
+                            <input [(ngModel)]='produto.preco' type="number" class="form-control" id="preco" placeholder="Digite o título">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="texto">Quantidade Estoque</label>
+                            <input [(ngModel)]='produto.qtdeEstoque' type="number" class="form-control" id="qtde" placeholder="Digite o título">
+                        </div>
+            
+            
+            
+                        <div class="form-group">
+                            <label for="tema">Escolha uma categoria <a data-dismiss="modal" routerLink='/categoria'>cadastre um novo</a>: </label>
+                            <select name="tema" id="tema" class="form-control" [(ngModel)]='idCategoria' (change) ='findByIdCategoria()'>
+                                <option *ngFor='let item of listaCategoria' value="{{item.id}}">
+                                  {{item.nome}}</option>
+                            </select>
+            
+                        </div>
+            
+                        <div class="d-flex justify-content-center mb-3">
+                            <button class="btn btn-danger mr-4" routerLink='/inicio'>Cancelar</button>
+                            <button class="btn btn-success" (click)='cadastrarProduto()'>Cadastrar</button>
+                        </div>
+                
+                
+                
+                </div>
+ 
+              </div>
+              <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="d-flex bd-highlight ">
+            
+                  <div class="col-md-12 d-flex flex-wrap justify-content-center" style="background-color: white;">
+                
+                    <div *ngFor='let item of usuario.produto' class=" d-flex align-items-center justify-content-center m-3">
+                      <div class="card efeitoFruta" style="width: 14rem;">
+                        <img class="card-img-top w-100" src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg"
+                          alt="Uva Itália">
+                        <div class="card-body">
+                          <h5 class="card-title">{{item.nome}}</h5>
+                
+                          <div class="mb-2">
+                            <p class="card-text negrito">Preço: R${{item.preco}}</p>
+                          </div>
+                
+                          <div class="qtd-buy d-flex align-items-center justify-content-center">
+                
+                            <button type="button " class="btn btn-info mr-3" data-target="#modalEditar" data-toggle="modal"
+                              (click)="findProdutoById(item.id)">Atualizar</button>
+                            <button type="button" class="btn btn-danger" data-target="#modalExcluir" data-toggle="modal"
+                              (click)="getIdProduto(item.id)">Deletar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+

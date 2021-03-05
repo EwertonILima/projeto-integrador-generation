@@ -3,10 +3,6 @@
     <div class="row bg-secondary">
         <div class="col-md-12 text-white">
 
-            <a routerLink='/inicio' class="text-white text-left">
-                <i class="fa fa-angle-double-left" aria-hidden="true"></i> Início
-            </a>
-
             <h1 class="fs-54 text-center">Categorias</h1>
             <h5 class="fs-18 text-center">Confira as categorias ou inclua uma nova:</h5>
 
@@ -54,7 +50,7 @@
                     <td>{{ categoria.nome }}</td>
                     <td> {{categoria.descricao}}</td>
                     <td class="d-flex justify-content-end">
-                      <button class="btn btn-info mr-3" [routerLink]="['/categoria-edit', categoria.id]" >Editar</button>
+                      <button class="btn btn-info mr-3" [routerLink]="['/categoria-edit', categoria.id]">Editar</button>
                       <button class="btn btn-danger" [routerLink]="['/categoria-delete', categoria.id]" routerLinkActive="router-link-active" >Apagar</button>
                     </td>
                   </tr>
