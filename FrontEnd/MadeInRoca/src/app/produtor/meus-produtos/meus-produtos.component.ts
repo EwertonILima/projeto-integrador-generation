@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from 'src/app/model/Produto';
 import { Usuario } from 'src/app/model/Usuario';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { ProdutoService } from 'src/app/service/produto.service';
 import { environment } from 'src/environments/environment.prod';
@@ -18,7 +19,8 @@ export class MeusProdutosComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private alertas: AlertasService
   ) {}
 
   ngOnInit(): void {
@@ -44,7 +46,7 @@ export class MeusProdutosComponent implements OnInit {
       this.produto = resp;
       
       this.findUsuarioById();
-      alert('Produto atualizado com sucesso!');
+      this.alertas.showAlertSuccess('Produto atualizado com sucesso!');
     });
   }
 
@@ -56,7 +58,7 @@ export class MeusProdutosComponent implements OnInit {
     this.produtoService.deleteProduto(this.idProduto).subscribe(() => {
       
       this.findUsuarioById();
-      alert ('Produto excluído com sucesso!');
+      this.alertas.showAlertSuccess('Produto excluído com sucesso!');
 
     })
   }

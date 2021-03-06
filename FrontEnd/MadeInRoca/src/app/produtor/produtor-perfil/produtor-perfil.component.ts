@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
 import { Produto } from 'src/app/model/Produto';
 import { Usuario } from 'src/app/model/Usuario';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutoService } from 'src/app/service/produto.service';
@@ -34,7 +35,8 @@ export class ProdutorPerfilComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alertas: AlertasService
   ) { }
 
   id = environment.id
@@ -44,7 +46,6 @@ export class ProdutorPerfilComponent implements OnInit {
   
   ngOnInit() {
     window.scroll(0,0)
-    console.log(this.id + "Esse cara aqui é um ID!!!")
 
     this.getAllCategoria()
     this.findUsuarioById()
@@ -62,15 +63,14 @@ export class ProdutorPerfilComponent implements OnInit {
   atualizar() { // PUT de perfil de usuário 
     this.usuario.tipoUsuario = this.tipoUsuario
 
-    console.log(this.usuario)
 
     if(this.usuario.senha != this.confirmarSenha) {
-        alert('As senhas estão incorretas.')
+        this.alertas.showAlertDanger('As senhas estão incorretas.')
     } else {
         this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
           this.usuario = resp
 
-          alert('Usuario atualizado com sucesso, faça o login novamente.')
+          this.alertas.showAlertSuccess('Usuario atualizado com sucesso, faça o login novamente.')
           environment.token = ''
           environment.nome = ''
           environment.foto = ''
@@ -87,7 +87,6 @@ export class ProdutorPerfilComponent implements OnInit {
     console.log(environment.id);
     this.authService.getbyIdUser(environment.id).subscribe((resp: Usuario) => {
       this.usuario = resp;
-      console.log(this.usuario);
     });
   }
 
@@ -108,7 +107,7 @@ export class ProdutorPerfilComponent implements OnInit {
       this.produto = resp;
       
       this.findUsuarioById();
-      alert('Produto atualizado com sucesso!');
+      this.alertas.showAlertSuccess('Produto atualizado com sucesso!');
     });
   }
 
@@ -116,7 +115,7 @@ export class ProdutorPerfilComponent implements OnInit {
     this.produtoService.deleteProduto(this.idProduto).subscribe(() => {
       
       this.findUsuarioById();
-      alert ('Produto excluído com sucesso!');
+      this.alertas.showAlertSuccess('Produto excluído com sucesso!');
 
     })
   }
@@ -142,11 +141,9 @@ export class ProdutorPerfilComponent implements OnInit {
     this.usuario.id = environment.id
     this.produto.usuario = this.usuario
 
-    console.log(this.produto)
-
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
-      alert('Seu produto foi cadastrado com sucesso!')
+      this.alertas.showAlertSuccess('Seu produto foi cadastrado com sucesso!')
       this.findUsuarioById()
       this.produto = new Produto()
     })
