@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscriber } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Categoria } from '../model/Categoria';
+import { AlertasService } from '../service/alertas.service';
 import { CategoriaService } from '../service/categoria.service';
 
 @Component({
@@ -16,17 +16,18 @@ export class CategoriaComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private categoriaService: CategoriaService
-  ) {}
+    private categoriaService: CategoriaService,
+    private alertas: AlertasService
+  ) { }
 
   ngOnInit(): void {
-    window.scroll(0,0)
-    
-    //if (environment.token == '') {
-      //alert('Sua sessão expirou, você que lute');
-      //this.router.navigate(['/home']);
+    window.scroll(0, 0)
 
-    //}
+    // if (environment.token == '') {
+    //   this.alertas.showAlertDanger('Sua sessão expirou, faça login novamente');
+    //   this.router.navigate(['/home']);
+
+    // }
     this.findAllCategoria();
   }
 
@@ -36,10 +37,10 @@ export class CategoriaComponent implements OnInit {
     });
   }
 
-  cadastrarCategoria(){
-    this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria)=> {
+  cadastrarCategoria() {
+    this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
       this.categoria = resp;
-      alert('Categoria cadastrada com sucesso!') 
+      this.alertas.showAlertSuccess('Categoria cadastrada com sucesso!')
       this.findAllCategoria();
       this.categoria = new Categoria();
     })

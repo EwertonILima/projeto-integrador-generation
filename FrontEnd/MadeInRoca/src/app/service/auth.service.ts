@@ -47,4 +47,16 @@ export class AuthService {
 
     }
 
+    validaAdm(){
+
+      let ok: boolean = false
+
+      if(environment.tipoUsuario == 'admin'){
+        ok= true
+
+      }
+      console.log (ok)
+        return ok
+    }
+
 }

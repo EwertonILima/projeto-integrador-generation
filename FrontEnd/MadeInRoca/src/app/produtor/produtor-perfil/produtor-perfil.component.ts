@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
 import { Produto } from 'src/app/model/Produto';
 import { Usuario } from 'src/app/model/Usuario';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutoService } from 'src/app/service/produto.service';
@@ -21,7 +22,7 @@ export class ProdutorPerfilComponent implements OnInit {
 
   usuario: Usuario = new Usuario()
   idUsuario: number
-  confirmarSenha:  string
+  confirmarSenha: string
   tipoUsuario: string
 
   idProduto: number; // criado para deletar o produto com referencia de id na modal excluir
@@ -34,19 +35,20 @@ export class ProdutorPerfilComponent implements OnInit {
     private authService: AuthService,
     private router: Router,
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alertas: AlertasService
   ) { }
 
   id = environment.id
   nome = environment.nome
   email = environment.usuario
   foto = environment.foto
-  
+
   ngOnInit() {
-    window.scroll(0,0)
-    console.log(this.id + "Esse cara aqui é um ID!!!")
+    window.scroll(0, 0)
 
     this.getAllCategoria()
+    this.findUsuarioById()
   }
 
   confirmSenha(event: any) {
@@ -57,41 +59,40 @@ export class ProdutorPerfilComponent implements OnInit {
     this.tipoUsuario = event.target.value
   }
 
-// ATUALIZAR DADOS PESSOAIS
+  // ATUALIZAR DADOS PESSOAIS
   atualizar() { // PUT de perfil de usuário 
     this.usuario.tipoUsuario = this.tipoUsuario
 
-    console.log(this.usuario)
 
-    if(this.usuario.senha != this.confirmarSenha) {
-        alert('As senhas estão incorretas.')
+    if (this.usuario.senha != this.confirmarSenha) {
+      this.alertas.showAlertDanger('As senhas estão incorretas.')
     } else {
-        this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
-          this.usuario = resp
+      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+        this.usuario = resp
 
-          alert('Usuario atualizado com sucesso, faça o login novamente.')
-          environment.token = ''
-          environment.nome = ''
-          environment.foto = ''
-          environment.id = 0
-          environment.usuario = ''
+        this.alertas.showAlertSuccess('Usuario atualizado com sucesso, faça o login novamente.')
+        environment.token = ''
+        environment.nome = ''
+        environment.foto = ''
+        environment.id = 0
+        environment.usuario = ''
 
-          this.router.navigate(['/login'])
-        })
+        this.router.navigate(['/login'])
+      })
     }
   }
 
-  
+
   findUsuarioById() {
     console.log(environment.id);
     this.authService.getbyIdUser(environment.id).subscribe((resp: Usuario) => {
       this.usuario = resp;
-      console.log(this.usuario);
+
     });
   }
 
   // ATUALIZAR PRODUTOS 
-  getIdProduto(id: number){
+  getIdProduto(id: number) {
     this.idProduto = id
   }
 
@@ -105,23 +106,23 @@ export class ProdutorPerfilComponent implements OnInit {
   putProduto() {
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp;
-      
+
       this.findUsuarioById();
-      alert('Produto atualizado com sucesso!');
+      this.alertas.showAlertSuccess('Produto atualizado com sucesso!');
     });
   }
 
-  delProduto(){  
+  delProduto() {
     this.produtoService.deleteProduto(this.idProduto).subscribe(() => {
-      
+
       this.findUsuarioById();
-      alert ('Produto excluído com sucesso!');
+      this.alertas.showAlertSuccess('Produto excluído com sucesso!');
 
     })
   }
 
 
-// POST NOVO PRODUTO
+  // POST NOVO PRODUTO
   getAllCategoria() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategoria = resp
@@ -129,7 +130,7 @@ export class ProdutorPerfilComponent implements OnInit {
   }
 
   findByIdCategoria() {
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) =>{
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria = resp
     })
   }
@@ -141,11 +142,9 @@ export class ProdutorPerfilComponent implements OnInit {
     this.usuario.id = environment.id
     this.produto.usuario = this.usuario
 
-    console.log(this.produto)
-
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
-      alert('Seu produto foi cadastrado com sucesso!')
+      this.alertas.showAlertSuccess('Seu produto foi cadastrado com sucesso!')
       this.findUsuarioById()
       this.produto = new Produto()
     })

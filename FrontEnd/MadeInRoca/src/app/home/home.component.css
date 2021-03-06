@@ -87,8 +87,7 @@
 }
 
 .efeitoFruta:hover {
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
-     filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(10px 10px 5px rgba(0,0,0,.5));
 }
 
 .promo-icon{
@@ -134,11 +133,54 @@
 
 .card-sobre{
     background-color: white;
-   border: none;
-    margin-bottom: 15px;
-    margin-top: 15px;
+    border: solid 1px;
+    margin: 15px 5px 5px 5px;
+    width: 13rem; 
 }
 
+.cesta-card-img{
+    display: flex;
+}
+
+.img-product-single{
+    border:#C4C4C4 solid 1px;
+    border-radius: 5px;
+}
+
+.title-prod-rel{
+
+    color: #402222;
+    margin-left: 30px;
+}
+
+.descricao-produto{
+    font-family: 'Public Sans', sans-serif;
+    font-style: italic;
+    max-width: 600px;
+}
+
+.btn-comprar{
+    background-color: #57732D;
+    border: solid 2px #57732D;
+    color: white;
+
+}
+
+.form-group{
+    border-radius: 5px;
+}
+
+
+
+@media (max-width: 768px){
+    .cesta-card-img{
+        display: none;
+    }
+}
+
+h3{
+    font-size: 45px;
+}
 
 
 @media (max-width: 768px){
@@ -169,53 +211,6 @@
 }
 
 
-
-
-
-
-
-.img-product-single{
-    border:#C4C4C4 solid 1px;
-    border-radius: 5px;
-}
-
-.title-prod-rel{
-
-    color: #402222;
-    margin-left: 30px;
-}
-
-.descricao-produto{
-    font-family: 'Public Sans', sans-serif;
-    font-style: italic;
-    max-width: 600px;
-}
-
-.btn-comprar{
-    background-color: #57732D;
-    border: solid 2px #57732D;
-    color: white;
-
-}
-
-
-
-.efeitoFruta {
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-.efeitoFruta:hover {
-    filter: drop-shadow(10px 10px 5px rgba(0,0,0,.5));
-}
-
-.btn-comprar-carousel{
-    background-color: #57732D;
-    border: solid 2px #57732D;
-    color: white;
-}
-
-
  .carousel-control-next, .carousel-control-prev{
 
     height: 80px;
@@ -234,3 +229,12 @@
 .form-group{
     border-radius: 5px;
 }
+
+
+
+/* 
+div{
+    border: 1px red solid;
+} */
+
+

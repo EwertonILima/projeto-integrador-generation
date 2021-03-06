@@ -1,99 +1,175 @@
-.container-fluid{
-    
-    font-family: 'Roboto Condensed', sans-serif;
-    background-color: #e9ecef;
+* {
+  color: #402222;
 }
 
-.card-forms{
-    border-radius: 10px;
-    padding: 20px;
-    filter: drop-shadow(10px 10px 5px rgba(0,0,0,.5));
-    background-color: #e9ecef;
-
+.container-fluid {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #e9ecef;
 }
 
-.text-start{
-
-    font-family: 'Playfair Display', serif;
-    color: #57732D;
-    
+.card-forms {
+  border-radius: 10px;
+  padding: 20px;
+  filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+  background-color: #e9ecef;
 }
 
-.btn-entrar{
+.text-start {
+  font-family: "Playfair Display", serif;
+  color: #57732d;
+}
 
-    background-color: #57732D;
-    border: solid 2px #57732D;
-    color: white;
-    border-radius: 100px;
-    padding: 0 30px;
-
+.btn-entrar {
+  background-color: #57732d;
+  border: solid 2px #57732d;
+  color: white;
+  border-radius: 100px;
+  padding: 0 30px;
 }
 
 .form-control {
-
-    background-color: white;
-
+  background-color: white;
 }
 .btn-entrar span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-.btn-entrar span:after {
-    content: '\00BB';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -10px;
-    transition: 0.5s;
-  }
-  
-.btn-entrar:hover span {
-    padding-right: 20px;
-  }
-  
-.btn-entrar:hover span:after {
-    opacity: 1;
-    right: 0;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
+.btn-entrar span:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.btn-entrar:hover span {
+  padding-right: 20px;
+}
+
+.btn-entrar:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 .perfil {
-    border-radius: 15px;
-    background-color: #fff0cf;
-    border: solid 1px #fff0cf;
-    padding: 15px;
+  border-radius: 15px;
+  background-color: #fff0cf;
+  border: solid 1px #fff0cf;
+  padding: 15px;
 }
 
-.btn-comprar-carousel{
-    background-color: #57732D;
-    border: solid 2px #57732D;
-    color: white;
+.btn-comprar-carousel {
+  background-color: #57732d;
+  border: solid 2px #57732d;
+  color: white;
 }
 
 .card-title {
-    color: #402222;
+  color: #402222;
 }
 
-.uppercase{
-    text-transform: uppercase;
+.uppercase {
+  text-transform: uppercase;
 }
 
-*{
-    color: #402222;
+.btn {
+  color: #fff;
 }
 
-.btn{
-    color: #fff;
+.nav-link {
+  color: #89a61f;
 }
 
-.nav-link{
-    color: #89A61F;
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #89a61f;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #89A61F;
+.tab-margin {
+  margin-left: 25px;
+}
+
+.imagem-perfil {
+  display: block;
+}
+
+.nav-pills {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link svg {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.icon-container {
+  max-width: 600px;
+}
+
+.margin-left {
+  margin-left: 15px;
+}
+
+h5 {
+  font-size: 35px;
+}
+
+.tab-content svg {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+h5 a:hover {
+  color: #774040;
+  text-decoration: none;
+}
+
+@media (max-width: 780px) {
+  .container-page {
+    margin-top: 25px;
+  }
+
+  h5 {
+    font-size: 25px;
+  }
+
+  .tab-content svg {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu-perfil {
+    width: 300px;
+  }
+
+  .nav-pills {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .drop-text {
+    display: none;
+  }
+
+  .imagem-perfil {
+    display: none;
+  }
+
+  .margin-left {
+    margin-left: 0px;
+  }
+
+  .container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

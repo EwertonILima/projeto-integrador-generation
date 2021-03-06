@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/model/Categoria';
 import { Produto } from 'src/app/model/Produto';
 import { Usuario } from 'src/app/model/Usuario';
+import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { ProdutoService } from 'src/app/service/produto.service';
@@ -25,7 +26,8 @@ export class PostProdutoComponent implements OnInit {
   constructor(
     private produtoService: ProdutoService,
     private auth: AuthService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -64,7 +66,7 @@ export class PostProdutoComponent implements OnInit {
 
     this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
-      alert('Seu produto foi cadastrado com sucesso!')
+      this.alertas.showAlertSuccess('Seu produto foi cadastrado com sucesso!')
       
       this.produto = new Produto()
     })

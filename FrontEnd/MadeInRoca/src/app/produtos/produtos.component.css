@@ -2,9 +2,8 @@
     font-family: "public sans", sans-serif;
 }
 
-
 .efeitoFruta:hover {
-    filter: drop-shadow(10px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, .5));
 }
 
 .efeitoFruta {
@@ -21,14 +20,11 @@
     margin-left: 37px;
 }
 
-
 .link {
     color: #000;
-    
 }
 
-
-.btn-comprar-carousel{
+.btn-comprar-carousel {
     background-color: #57732D;
     border: solid 2px #57732D;
     color: white;
@@ -36,4 +32,31 @@
 
 .card-title {
     color: #402222;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50%;
+    min-width: 10rem;
+    text-align: left;
+    background-clip: padding-box;
+    border: 1px solid #57732d;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 0px rgba(100, 99, 99, 0.247);
+    padding: 0;
+    margin: .125rem 0 0;
+}
+
+.dropdown-item {
+    color: #57732d;
+    padding-left: 2px;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
 }

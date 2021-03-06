@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { Produto } from '../model/Produto';
 import { AuthService } from '../service/auth.service';
+import { ProdutoService } from '../service/produto.service';
 
 
 
@@ -12,22 +14,45 @@ import { AuthService } from '../service/auth.service';
 })
 export class MenuComponent implements OnInit {
 
+  nomeProd: string
+  listaProdutos: Produto[]
+  place: string
 
   constructor(
     public auth: AuthService,
     private router: Router,
-    )
-   { }
+    private produtoService: ProdutoService
+  ) { }
 
   ngOnInit() {
+    this.findByNomeProduto()
+    this.limparPesquisar()
   }
 
-  sair(){
+  sair() {
     this.router.navigate(["/home"])
     environment.token = ''
     environment.nome = ''
     environment.foto = ''
     environment.id = 0
+  }
+
+  findByNomeProduto() {
+
+    if(this.nomeProd == ''){
+      this.place = "Pesquisar produtos"
+      this.nomeProd = ''
+    }
+    else{
+      this.produtoService.getByNomeProduto(this.nomeProd).subscribe((resp: Produto[]) => {
+        this.listaProdutos = resp
+      })
+    }
+  }
+
+  limparPesquisar() {
+    this.nomeProd = ''
+    this.place = "Pesquisar produtos"
   }
 
 }

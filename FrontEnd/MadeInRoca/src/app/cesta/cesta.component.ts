@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-cesta',
@@ -11,7 +12,9 @@ export class CestaComponent implements OnInit {
   nFrutas = 0
   nVerduras = 0
   
-  constructor() { }
+  constructor(
+    private alertas: AlertasService
+  ) { }
 
   ngOnInit(): void {
     window.scroll(0,0)
@@ -19,7 +22,7 @@ export class CestaComponent implements OnInit {
 
   maxItens(){
     if((this.nLegumes + this.nFrutas + this.nVerduras) > 12){
-      alert('Escolha no maximo 12 itens para compor sua cesta'),
+      this.alertas.showAlertInfo('Escolha no maximo 12 itens para compor sua cesta'),
       this.nLegumes = 0 
       this.nFrutas = 0 
       this.nVerduras = 0
