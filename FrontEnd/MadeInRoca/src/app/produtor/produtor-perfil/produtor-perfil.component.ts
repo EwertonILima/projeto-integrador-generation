@@ -22,7 +22,7 @@ export class ProdutorPerfilComponent implements OnInit {
 
   usuario: Usuario = new Usuario()
   idUsuario: number
-  confirmarSenha:  string
+  confirmarSenha: string
   tipoUsuario: string
 
   idProduto: number; // criado para deletar o produto com referencia de id na modal excluir
@@ -43,9 +43,9 @@ export class ProdutorPerfilComponent implements OnInit {
   nome = environment.nome
   email = environment.usuario
   foto = environment.foto
-  
+
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
 
     this.getAllCategoria()
     this.findUsuarioById()
@@ -59,39 +59,40 @@ export class ProdutorPerfilComponent implements OnInit {
     this.tipoUsuario = event.target.value
   }
 
-// ATUALIZAR DADOS PESSOAIS
+  // ATUALIZAR DADOS PESSOAIS
   atualizar() { // PUT de perfil de usuário 
     this.usuario.tipoUsuario = this.tipoUsuario
 
 
-    if(this.usuario.senha != this.confirmarSenha) {
-        this.alertas.showAlertDanger('As senhas estão incorretas.')
+    if (this.usuario.senha != this.confirmarSenha) {
+      this.alertas.showAlertDanger('As senhas estão incorretas.')
     } else {
-        this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
-          this.usuario = resp
+      this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
+        this.usuario = resp
 
-          this.alertas.showAlertSuccess('Usuario atualizado com sucesso, faça o login novamente.')
-          environment.token = ''
-          environment.nome = ''
-          environment.foto = ''
-          environment.id = 0
-          environment.usuario = ''
+        this.alertas.showAlertSuccess('Usuario atualizado com sucesso, faça o login novamente.')
+        environment.token = ''
+        environment.nome = ''
+        environment.foto = ''
+        environment.id = 0
+        environment.usuario = ''
 
-          this.router.navigate(['/login'])
-        })
+        this.router.navigate(['/login'])
+      })
     }
   }
 
-  
+
   findUsuarioById() {
     console.log(environment.id);
     this.authService.getbyIdUser(environment.id).subscribe((resp: Usuario) => {
       this.usuario = resp;
+
     });
   }
 
   // ATUALIZAR PRODUTOS 
-  getIdProduto(id: number){
+  getIdProduto(id: number) {
     this.idProduto = id
   }
 
@@ -105,15 +106,15 @@ export class ProdutorPerfilComponent implements OnInit {
   putProduto() {
     this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp;
-      
+
       this.findUsuarioById();
       this.alertas.showAlertSuccess('Produto atualizado com sucesso!');
     });
   }
 
-  delProduto(){  
+  delProduto() {
     this.produtoService.deleteProduto(this.idProduto).subscribe(() => {
-      
+
       this.findUsuarioById();
       this.alertas.showAlertSuccess('Produto excluído com sucesso!');
 
@@ -121,7 +122,7 @@ export class ProdutorPerfilComponent implements OnInit {
   }
 
 
-// POST NOVO PRODUTO
+  // POST NOVO PRODUTO
   getAllCategoria() {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategoria = resp
@@ -129,7 +130,7 @@ export class ProdutorPerfilComponent implements OnInit {
   }
 
   findByIdCategoria() {
-    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) =>{
+    this.categoriaService.getByIdCategoria(this.idCategoria).subscribe((resp: Categoria) => {
       this.categoria = resp
     })
   }
