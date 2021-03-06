@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from '../model/Produto';
 
 @Component({
   selector: 'app-rodape',
@@ -20,6 +21,7 @@ export class RodapeComponent implements OnInit {
         }else{
           alert("Por favor, preencha os campos nome e email")
         } 
+       
   }
 
 }
