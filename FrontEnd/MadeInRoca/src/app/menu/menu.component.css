@@ -14,23 +14,19 @@
     padding-left: 2px;
 }
 
-.dropdown-menu-search {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    float: center;
+.dropdown-item-search {
+    display: block;
     min-width: 54rem;
-    padding: .5rem 0;
-    margin: .125rem 0 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .15);
+    padding-left: 3px;
     border-radius: .25rem;
+}
+
+.dropdown-item-search:hover {
+    color: #57732d;
+    min-width: 54rem;
+    padding-left: 2px;
+    border-radius: .25rem;
+    background-color: rgba(100, 99, 99, 0.171);
 }
 
 .dropdown-menu {

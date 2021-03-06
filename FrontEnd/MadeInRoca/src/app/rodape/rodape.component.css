@@ -13,3 +13,31 @@
     padding: 7px;
 }
 
+.rodape-text {
+    padding: 10px;
+}
+
+.rodape {
+    
+    justify-content: center;
+    
+}
+
+
+@media(max-width: 360px) {
+    .tamanho-nome {
+        width: 190px;
+        margin-bottom: 20px;
+        
+    }
+    .botao {
+        margin-left: 50px;
+    }
+    
+    .ajuste-row{
+       
+        margin-right: 30px;
+    }
+}
+
+
