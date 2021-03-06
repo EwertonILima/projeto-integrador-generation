@@ -20,7 +20,7 @@
       <li class="nav-item">
         <a class="nav-link text-light" routerLink="/fale-conosco">Fale Conosco</a>
       </li>
-
+      
       <li  *ngIf="auth.validaAdm()" class="nav-item">
         <a  class="nav-link text-light" routerLink='/administrador'>Adm</a>
       </li>
@@ -83,9 +83,8 @@
 
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a *ngIf="auth.deslogado()" class="dropdown-item" routerLink='/login'>Entrar</a>
-
             <a *ngIf="auth.deslogado()" class="dropdown-item" routerLink='/login'>Perfil</a>
-            <a *ngIf="auth.logado()" class="dropdown-item" href="">Perfil</a>
+            <a *ngIf="auth.logado()" class="dropdown-item" routerLink='/produtor-perfil'>Perfil</a>
             <a class="dropdown-item" href="#">Compras</a>
             <a class="dropdown-item" href="#">Assinatura</a>
             <a class="dropdown-item" href="#">Produtor</a>
@@ -95,7 +94,6 @@
         </div>
       </div>
     </div>
-
 
     <div class="d-flex flex-column align-items-center justify-content-center login-cesta mr-3">
       <a class="text-light d-flex flex-column align-items-center justify-content-center" href="">
