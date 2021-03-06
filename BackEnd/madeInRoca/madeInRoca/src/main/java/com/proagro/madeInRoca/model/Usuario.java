@@ -26,9 +26,8 @@ public class Usuario {
 	@Size(min = 3, max = 100)
 	private String nome;
 
-
 //  @NotNull
-	@Size (min= 2, max=10)
+	@Size(min = 2, max = 10)
 	private String tipoUsuario;
 
 	@NotNull
@@ -36,11 +35,11 @@ public class Usuario {
 	private String usuario;
 
 	@NotNull
-	@Size(min = 8, max = 60)
+	@Size(min = 8, max = 100)
 	private String senha;
-	
+
 	private String foto;
-	
+
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Produto> produto;
@@ -69,7 +68,6 @@ public class Usuario {
 		this.tipoUsuario = tipoUsuario;
 	}
 
-
 	public String getUsuario() {
 		return usuario;
 	}
@@ -85,7 +83,7 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
+
 	public String getFoto() {
 		return foto;
 	}
