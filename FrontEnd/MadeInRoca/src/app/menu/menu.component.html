@@ -21,20 +21,20 @@
         <a class="nav-link text-light" routerLink="/fale-conosco">Fale Conosco</a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link text-light" routerLink='/post-produto'>Produtos</a>
+      <li  *ngIf="auth.validaAdm()" class="nav-item">
+        <a  class="nav-link text-light" routerLink='/administrador'>Adm</a>
       </li>
 
 
 
       <!-- BARRA SEARCH -->
 
-      <div class="search dropdown">
+      <!-- <div class="search dropdown">
         <input class="form-control " type="search" placeholder="{{place}}" [(ngModel)]='nomeProd'
           (keyup)='findByNomeProduto()' />
         <a href=" #">
           <img class="img-search " src="https://i.imgur.com/MCYlHQs.png" id="btn-search" alt="Buscar" href="#" /></a>
-        <div  class="dropdown-menu-search" aria-labelledby="dropdownMenu2">
+        <div  class="dropdown-menu-search" aria-labelledby="dropdownMenu2" aria-hidden="true">
           <div *ngFor='let item of listaProdutos' class="col-md-3 align-items-center my-1 dropdown-item">
             <div class="" style="width: 18rem;">
         
@@ -45,7 +45,7 @@
 
         </div>
 
-      </div>
+      </div> -->
 
 
 
@@ -95,7 +95,6 @@
         </div>
       </div>
     </div>
-
 
 
     <div class="d-flex flex-column align-items-center justify-content-center login-cesta mr-3">

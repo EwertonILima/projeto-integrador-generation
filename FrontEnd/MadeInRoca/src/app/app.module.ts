@@ -24,6 +24,7 @@ import { MeusProdutosComponent } from './produtor/meus-produtos/meus-produtos.co
 
 import { ProdutorPerfilComponent } from './produtor/produtor-perfil/produtor-perfil.component';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { AdministradorComponent } from './administrador/administrador.component';
 
 
 
@@ -49,6 +50,7 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
     PostProdutoComponent,
     MeusProdutosComponent,
     ProdutorPerfilComponent,
+    AdministradorComponent,
   ],
   imports: [
     BrowserModule,
