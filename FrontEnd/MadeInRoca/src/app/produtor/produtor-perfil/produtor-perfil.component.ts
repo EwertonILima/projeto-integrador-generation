@@ -36,7 +36,7 @@ export class ProdutorPerfilComponent implements OnInit {
     private router: Router,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private alertas: AlertasService
+    private alertas: AlertasService,
   ) { }
 
   id = environment.id
@@ -46,6 +46,11 @@ export class ProdutorPerfilComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0)
+
+    if(environment.token == ''){
+      this.alertas.showAlertDanger('Faça login para acessar esta pagina.')
+      this.router.navigate(['/home'])
+    }
 
     this.getAllCategoria()
     this.findUsuarioById()
