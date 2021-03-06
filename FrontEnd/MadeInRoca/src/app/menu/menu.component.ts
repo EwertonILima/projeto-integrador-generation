@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     this.findByNomeProduto()
-    
+  
   }
 
   sair() {
@@ -48,10 +48,8 @@ export class MenuComponent implements OnInit {
         this.listaProdutos = resp
       })
     }
-
   }
 
- 
 
 }
 
