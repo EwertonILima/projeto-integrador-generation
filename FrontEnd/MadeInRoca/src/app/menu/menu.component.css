@@ -1,23 +1,21 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .login-cesta svg {
-  max-width: 30px;
-  max-height: 30px;
-  fill:white;
+    max-width: 30px;
+    max-height: 30px;
+    fill: white;
 }
-
 
 .dropdown-item {
-  
     color: #57732d;
     padding-left: 2px;
-    
 }
+
 .dropdown-menu-search {
-  position: absolute;
+    position: absolute;
     top: 100%;
     left: 0;
     z-index: 1000;
@@ -31,7 +29,7 @@
     list-style: none;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
+    border: 1px solid rgba(0, 0, 0, .15);
     border-radius: .25rem;
 }
 
@@ -42,70 +40,62 @@
     text-align: left;
     background-clip: padding-box;
     border: 1px solid #57732d;
-    border-radius: 5px ;
+    border-radius: 5px;
     box-shadow: 0px 5px 10px 0px rgba(100, 99, 99, 0.247);
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+    display: block;
 }
 
-a:link 
-{ 
- text-decoration:none; 
- border-radius: 5px ;
-} 
+a:link {
+    text-decoration: none;
+    border-radius: 5px;
+}
 
 .login-cesta {
-  color: white;
+    color: white;
 }
 
 .login-cesta:hover {
-  cursor: pointer;
-  color: #ffffff;
+    cursor: pointer;
+    color: #ffffff;
 }
 
 .img-search {
-  width: 1.5vw;
-  margin-left: -2vw;
-  opacity: 0.5;
+    width: 1.5vw;
+    margin-left: -2vw;
+    opacity: 0.5;
 }
 
 .search {
-  background-color: #e9ecef;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  border-color: transparent;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    border-color: transparent;
 }
 
 .form-control {
-  width: 45vw;
-  height: 30px;
-  background-color: #e9ecef;
-  font-style: italic;
-  border: none;
+    width: 45vw;
+    height: 30px;
+    background-color: #e9ecef;
+    font-style: italic;
+    border: none;
 }
 
 .nav-item {
-  font-size: 16px;
+    font-size: 16px;
 }
 
-
-
-@media(max-width: 700px){
-    .login{
+@media(max-width: 700px) {
+    .login {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100vw;
     }
-
-    ul{
+    ul {
         margin-right: 48px;
     }
 }
-
-
-
-  

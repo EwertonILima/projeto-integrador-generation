@@ -1,62 +1,88 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-12 justify-content-center d-flex">
+    <div class="row">
+        <div class="col-md-12 justify-content-center d-flex">
 
-      <ul class="nav justify-content-center mt-5">
-        <li class="nav-item">
-            
-          <a class="nav-link active" href="#"><img class="tamanhoCategoria categoriaPosicao" src="../../assets/svg/cesta.svg" alt="cesta">
-            <p class="text-center d-flex link">Todos os produtos</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mr-3" href="#"><img class="tamanhoCategoria" src="../../assets/svg/fruits.svg" alt="frutas">
-            <p class="text-center align-items-center ml-1 link">Frutas</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mr-3" href="#"><img class="tamanhoCategoria" src="../../assets/svg/vegetable.svg" alt="vegetais">
-            <p class="text-center link">Vegetais</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mr-3" href="#"><img class="tamanhoCategoria" src="../../assets/svg/cabbage.svg" alt="hortaliças">
-            <p class="text-center link">Hortaliças</p>
-          </a>
-        </li>
-      </ul>
+            <ul class="nav justify-content-center mt-5">
+                <li class="nav-item">
+
+                    <a class="nav-link active" href="#"><img class="tamanhoCategoria categoriaPosicao" src="../../assets/svg/cesta.svg" alt="cesta">
+                        <p class="text-center d-flex link">Todos os produtos</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="#"><img class="tamanhoCategoria" src="../../assets/svg/fruits.svg" alt="frutas">
+                        <p class="text-center align-items-center ml-1 link">Frutas</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="#"><img class="tamanhoCategoria" src="../../assets/svg/vegetable.svg" alt="vegetais">
+                        <p class="text-center link">Vegetais</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-3" href="#"><img class="tamanhoCategoria" src="../../assets/svg/cabbage.svg" alt="hortaliças">
+                        <p class="text-center link">Hortaliças</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
-  </div>
-  <div class="row">
-
-    <div *ngFor='let item of listaProdutos' class="col-md-3 align-items-center justify-content-center my-3 d-flex">
-      <div class="card efeitoFruta" style="width: 18rem;">
-        <img class="card-img-top w-100" src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Uva Itália">
-        <div class="card-body">
-          <h5 class="card-title">{{item.nome}}</h5>
-          
-          <div class="mb-2">
-            <p class="card-text negrito">Preço: R${{item.preco}}</p>
-          </div>
-  
-          <div class="qtd-buy d-flex align-items-center justify-content-center" > 
-          <div class="form-group my-auto w-50 mr-2">
-            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
-                placeholder="Qtd">
+    <!--Filtro de Produtos-->
+    <div class="row d-flex justify-content-center mt-5 mb-5">
+        <div class="col-md-4">
+            <div class="form-group d-flex">
+                <h4 class="card-text mr-1">Filtro: </h4><input type="text" class="form-control" id="nome" placeholder="Filtre pelo produto desejado" [(ngModel)]='nomeProd' (keyup)='findByNomeProduto()'>
+            </div>
         </div>
-          
-             <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" [routerLink]="['/produtos', item.id]" >Comprar</button>
-          </div>
+        <!-- Ordem de item -->
+        <div class="dropdown d-flex align-items-center">
+            <p>Ordem de visualização</p>
+            <div class="dropdown-content">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" (click)='orderByMenorPreco()'>Menor Preço</a>
+                    <a class="dropdown-item" (click)='orderByMaiorPreco()'>Maior Preço</a>
+                    <a class="dropdown-item" (click)='orderByAz()'>A - Z</a>
+                    <a class="dropdown-item" (click)='orderByZa()'>Z - A</a>
+                </div>
+            </div>
         </div>
-      </div>
+        <!-- /Ordem de item -->
     </div>
-   
-  
-   
-  </div>
+    <!--/Filtro de Produtos-->
 
-  </div>
- 
+
+
+
+
+    <div class="row">
+
+        <div *ngFor='let item of listaProdutos | orderBy : key : reverse' class="col-md-3 align-items-center justify-content-center my-3 d-flex">
+            <div class="card efeitoFruta" style="width: 18rem;">
+                <img class="card-img-top w-100" src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Uva Itália">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.nome}}</h5>
+
+                    <div class="mb-2">
+                        <p class="card-text negrito">Preço: R${{item.preco}}</p>
+                    </div>
+
+                    <div class="qtd-buy d-flex align-items-center justify-content-center">
+                        <div class="form-group my-auto w-50 mr-2">
+                            <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto" placeholder="Qtd">
+                        </div>
+
+                        <button type="button" class="btn btn-comprar-carousel" style="height: 42px;" [routerLink]="['/produtos', item.id]">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+
 
 <hr style="background-color: #89A61F;">

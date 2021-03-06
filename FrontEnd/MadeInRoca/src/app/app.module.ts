@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { OrderModule } from 'ngx-order-pipe';
 
 import { AppComponent } from './app.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
@@ -24,9 +25,11 @@ import { EditProdutoComponent } from './produtor/edit-produto/edit-produto.compo
 import { PostProdutoComponent } from './produtor/post-produto/post-produto.component';
 import { MeusProdutosComponent } from './produtor/meus-produtos/meus-produtos.component';
 import { ProdutorPerfilComponent } from './produtor/produtor-perfil/produtor-perfil.component';
-import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import { AdministradorComponent } from './administrador/administrador.component';
 import { AlertasComponent } from './alertas/alertas.component';
+
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+
 
 
 
@@ -61,7 +64,8 @@ import { AlertasComponent } from './alertas/alertas.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    OrderModule
   ],
   providers: [{
     provide: LocationStrategy,
