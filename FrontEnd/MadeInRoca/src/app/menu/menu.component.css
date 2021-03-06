@@ -14,17 +14,6 @@
     padding-left: 2px;
 }
 
-.dropdown-menu-search {
-    position: absolute;
-    top: 100%;
-    min-width: 54rem;
-    text-align: left;
-    background-color: #fff;
-    border-radius: .25rem;
-    border: 1px solid #57732d;
-    z-index: 1000;
-}
-
 .dropdown-item-search {
     display: block;
     min-width: 54rem;

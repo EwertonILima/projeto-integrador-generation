@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
     this.findByNomeProduto()
-  
+    this.limparPesquisar()
   }
 
   sair() {
@@ -50,6 +50,10 @@ export class MenuComponent implements OnInit {
     }
   }
 
+  limparPesquisar() {
+    this.nomeProd = ''
+    this.place = "Pesquisar produtos"
+  }
 
 }
 

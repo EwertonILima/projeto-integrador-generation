@@ -27,16 +27,19 @@
 
             <!-- BARRA SEARCH -->
 
-            <div class="search dropdown ">
-                <input class="form-control p-2" type="search" placeholder="{{place}}" [(ngModel)]='nomeProd' (keyup)='findByNomeProduto()' />
+            <div class="search dropdown">
+                <input data-toggle="dropdown" class="form-control p-2" type="search" placeholder="Pesquisar produtos" [(ngModel)]='nomeProd' (keyup)='findByNomeProduto()' (mouseover)='limparPesquisar()' />
                 <a href=" # ">
                     <img class="img-search " src="https://i.imgur.com/MCYlHQs.png " id="btn-search " alt="Buscar " href="# " /></a>
-                <div class="dropdown-menu-search " aria-labelledby="navbarDropdown">
-                    <div *ngFor='let item of listaProdutos'>
-                        <a class="dropdown-item-search" [routerLink]="[ '/produtos', item.id] ">{{item.nome}}</a>
+                <div class="dropdown-content ">
+                    <div class="dropdown-menu mt-1" aria-labelledby="navbarDropdown ">
+                        <div *ngFor='let item of listaProdutos'>
+                            <a class="dropdown-item-search" [routerLink]="[ '/produtos', item.id] ">{{item.nome}}</a>
+                        </div>
                     </div>
                 </div>
             </div>
+
 
             <!-- / BARRA SEARCH -->
         </ul>
