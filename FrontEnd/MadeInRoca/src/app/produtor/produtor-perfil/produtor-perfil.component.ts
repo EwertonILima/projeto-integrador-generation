@@ -19,13 +19,14 @@ export class ProdutorPerfilComponent implements OnInit {
 
   produto: Produto = new Produto();
   listaProdutos: Produto[];
+  idProduto: number; // criado para deletar o produto com referencia de id na modal excluir
 
   usuario: Usuario = new Usuario()
   idUsuario: number
   confirmarSenha: string
   tipoUsuario: string
 
-  idProduto: number; // criado para deletar o produto com referencia de id na modal excluir
+  
 
   categoria: Categoria = new Categoria()
   idCategoria: number
@@ -57,6 +58,7 @@ export class ProdutorPerfilComponent implements OnInit {
     this.getAllCategoria()
     this.findUsuarioById()
     this.findAllCategoria()
+    
   }
 
   confirmSenha(event: any) {
@@ -174,11 +176,15 @@ export class ProdutorPerfilComponent implements OnInit {
 
 
   cadastrarCategoria() {
-    this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
+      console.log(this.categoria)
+
+      this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
       this.categoria = resp;
       this.alertas.showAlertSuccess('Categoria cadastrada com sucesso!')
       this.findAllCategoria();
       this.categoria = new Categoria();
+
+      
     })
   }
 
@@ -186,6 +192,33 @@ export class ProdutorPerfilComponent implements OnInit {
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategoria = resp;
     });
+  }
+
+  getIdCategoria(id: number) {
+    this.idCategoria = id
+  }
+
+  delCategoria() {
+    this.categoriaService.deleteCategoria(this.idCategoria).subscribe(() => {
+      this.findAllCategoria();
+      this.alertas.showAlertSuccess('Categoria excluído com sucesso!');
+
+    })
+  }
+
+  putCategoria(){
+
+      this.categoriaService.putCategoria(this.categoria).subscribe((resp: Categoria) => {
+      this.categoria = resp;
+      this.findAllCategoria();
+      this.alertas.showAlertSuccess('Categoria atualizada com sucesso!');
+    });
+
+  }
+  findCategoriaById(id:number) {
+    this.categoriaService.getByIdCategoria(id).subscribe((resp: Categoria) => {
+      this.categoria = resp
+    })
   }
 
 
