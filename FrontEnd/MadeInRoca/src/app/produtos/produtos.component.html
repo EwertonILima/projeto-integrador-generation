@@ -184,6 +184,8 @@
             <ng-container *ngIf="all; else elseTemplate">
                 <div *ngFor='let item of listaProdutos | orderBy : key : reverse'
                     class="d-flex align-items-center justify-content-center m-3">
+
+                    
                     <div class="card efeitoFruta" style="width: 14rem;">
                         <img class="card-img-top w-100"
                             src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg"
@@ -210,7 +212,7 @@
             </ng-container>
 
             <ng-template #elseTemplate>
-                <div class="d-flex align-items-center justify-content-center m-3" *ngFor='let categoria of listaCategoria'>
+                <div class="d-flex flex-wrap align-items-center justify-content-center" *ngFor='let categoria of listaCategoria'>
                     <div *ngFor='let item of categoria.produto | orderBy : key : reverse'
                         class="d-flex align-items-center justify-content-center m-3">
                         <div class="card efeitoFruta" style="width: 14rem;">
