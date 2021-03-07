@@ -37,17 +37,11 @@ export class LoginComponent implements OnInit {
       environment.usuario = this.userLogin.usuario
       environment.tipoUsuario = this.userLogin.tipoUsuario
 
-      console.log(environment.token)
-      console.log(environment.nome)
-      console.log(environment.foto)
-      console.log(environment.id)
-      console.log(environment.tipoUsuario)
-
-      this.router.navigate(['/home'])
+      this.router.navigate(['/produtor-perfil'])
 
     }, erro => {
       if(erro.status == 500){
-        this.alertas.showAlertDanger('Usuário ou senha estão incorretos.')
+        this.alertas.showAlertDanger('Usuário e/ou senha não encontrados.')
       }
     })
   }

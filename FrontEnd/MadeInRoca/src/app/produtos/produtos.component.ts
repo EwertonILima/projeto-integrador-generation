@@ -61,6 +61,8 @@ export class ProdutosComponent implements OnInit {
     this.key = 'preco'
     this.reverse = false
   }
+
 }
+
 
 
