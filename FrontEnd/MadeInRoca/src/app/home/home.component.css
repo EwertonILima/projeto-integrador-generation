@@ -159,7 +159,7 @@
     max-width: 600px;
 }
 
-.btn-comprar{
+.btn-comprar-carousel{
     background-color: #57732D;
     border: solid 2px #57732D;
     color: white;
@@ -211,12 +211,13 @@ h3{
 }
 
 
- .carousel-control-next, .carousel-control-prev{
+ .carousel-promo{
 
     height: 80px;
     width: auto;
-    
-    top:50%;
+    position:absolute;
+    top: 30%;
+
 }
 
 .btn-next, .btn-prev{
@@ -230,11 +231,5 @@ h3{
     border-radius: 5px;
 }
 
-
-
-/* 
-div{
-    border: 1px red solid;
-} */
 
 
