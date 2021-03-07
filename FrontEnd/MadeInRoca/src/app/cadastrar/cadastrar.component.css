@@ -28,8 +28,14 @@
 
 }
 
-.form-control {
+.btn-danger{
+  border: solid 2p #dc3545;
+  color: white;
+  border-radius: 100px;
+  padding: 0px 33px;
+}
 
+.form-control {
     background-color: white;
 
 }
@@ -56,4 +62,10 @@
   .btn-entrar:hover span:after {
     opacity: 1;
     right: 0;
+  }
+
+  #termo{
+    
+      color: #402222;
+  
   }
