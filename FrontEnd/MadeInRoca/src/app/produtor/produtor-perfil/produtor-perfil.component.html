@@ -59,35 +59,187 @@
   </div>
 </div>
 
+<!-- Modal Categoria -->
+
+<div class="modal fade" id="modalEditarCategoria" tabindex="-1" role="dialog"
+  aria-labelledby="modalEditarCategoriaLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditarCategoriaLabel">Título do modal</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" class="form-control" [(ngModel)]='produto.nome'>
+
+          <label for="preco">Preço</label>
+          <input type="number" id="preco" class="form-control" [(ngModel)]='produto.preco'>
+
+          <label for="qtdeEstoque">Quantidade Em Estoque</label>
+          <input type="number" id="qtdeEstoque" class="form-control" [(ngModel)]="produto.qtdeEstoque">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="putProduto()">Salvar
+          mudanças</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="container-fluid">
   <div class="container py-3">
     <div class="row flex-wrap d-flex justify-content-center">
-      <div class="col-md-3 m-0 p-0 d-flex flex-column menu-perfil">
-        <div class="px-4 container-page" style="background-color: white">
-          <div class="justify-content-center align-items-center mt-4 mb-3 imagem-perfil">
-            <img class="img-fluid" src="../../../assets/img/alface.jpg" alt="" />
+      <div class="col-md-3 m-0 p-0  d-flex  flex-column menu-perfil">
+        <div class="px-4 container-page" style="background-color: white;">
+          <div class="justify-content-center align-items-center mt-4  imagem-perfil">
+            <img class="img-fluid w-100" src="https://i.imgur.com/7pQm0qj.png"
+              style="border:rgba(128, 128, 128, 0.219) solid 1px;" alt="">
           </div>
+
           <div class="d-flex flex-column align-items-center">
             <p class="uppercase mt-3 mb-0">
               {{ nome }}
             </p>
-            <p class="mb-2 mt-0">
-              {{ email }}
+
+            <p class="mb-3 mt-0">
+              {{email}}
             </p>
           </div>
 
-          <div class="nav d-flex text-truncate nav-pills mb-3 justify-content-center" id="v-pills-tab" role="tablist"
+
+          <div class="nav d-flex text-truncate nav-pills mb-3 justify-content-center " id="v-pills-tab" role="tab"
             aria-orientation="vertical">
-            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+
+            <a class="nav-link active" id="v-pills-adm-tab" data-toggle="pill" href="#v-pills-adm" role="tab"
               aria-controls="v-pills-home" aria-selected="true">
-              <div class="d-flex align-items-center">
+
+              <div class="d-flex  align-items-center">
+
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480 480"
+                  style="enable-background:new 0 0 480 480;" xml:space="preserve">
+                  <g>
+                    <g>
+                      <path d="M296,280h-8.8c-3.31,0.006-6.271-2.059-7.408-5.168c-0.976-2.56-2.024-5.064-3.152-7.544
+        c-1.402-3.016-0.762-6.587,1.6-8.928l6.272-6.28c9.311-9.393,9.294-24.541-0.04-33.912l-22.608-22.608
+        c-9.383-9.328-24.537-9.328-33.92,0l-6.272,6.264c-2.346,2.353-5.911,2.992-8.928,1.6c-2.48-1.128-4.984-2.176-7.552-3.2
+        c-3.125-1.129-5.204-4.101-5.192-7.424V184c0-13.255-10.745-24-24-24h-32c-13.255,0-24,10.745-24,24v8.8
+        c0.006,3.31-2.059,6.271-5.168,7.408c-2.56,0.976-5.064,2.024-7.544,3.152c-3.017,1.395-6.583,0.756-8.928-1.6l-6.28-6.272
+        c-9.382-9.322-24.53-9.322-33.912,0l-22.608,22.68c-9.328,9.383-9.328,24.537,0,33.92l6.264,6.272
+        c2.362,2.341,3.002,5.912,1.6,8.928c-1.128,2.48-2.176,4.984-3.16,7.552c-1.145,3.127-4.134,5.194-7.464,5.16H24
+        c-13.255,0-24,10.745-24,24v32c0,13.255,10.745,24,24,24h8.8c3.31-0.006,6.271,2.059,7.408,5.168
+        c0.976,2.56,2.024,5.064,3.152,7.544c1.402,3.016,0.762,6.587-1.6,8.928l-6.272,6.28c-9.322,9.382-9.322,24.53,0,33.912
+        l22.608,22.608c9.383,9.328,24.537,9.328,33.92,0l6.272-6.264c2.346-2.353,5.911-2.992,8.928-1.6
+        c2.48,1.128,4.984,2.176,7.552,3.2c3.141,1.116,5.238,4.091,5.232,7.424v8.8c0,13.255,10.745,24,24,24h32
+        c13.255,0,24-10.745,24-24v-8.8c-0.006-3.31,2.059-6.271,5.168-7.408c2.56-0.976,5.064-2.024,7.544-3.152
+        c3.017-1.395,6.583-0.756,8.928,1.6l6.28,6.272c9.395,9.307,24.539,9.289,33.912-0.04l22.608-22.608
+        c9.328-9.383,9.328-24.537,0-33.92l-6.264-6.272c-2.362-2.341-3.002-5.912-1.6-8.928c1.128-2.48,2.176-4.984,3.2-7.552
+        c1.129-3.125,4.101-5.204,7.424-5.192h8.8c13.255,0,24-10.745,24-24v-32C320,290.745,309.255,280,296,280z M304,336
+        c0,4.418-3.582,8-8,8h-8.8c-9.945,0.037-18.845,6.184-22.4,15.472c-0.848,2.24-1.765,4.445-2.752,6.616
+        c-4.113,9.08-2.205,19.756,4.8,26.848l6.256,6.264c3.126,3.122,3.129,8.188,0.006,11.314c-0.002,0.002-0.004,0.004-0.006,0.006
+        l-22.608,22.608c-3.124,3.123-8.188,3.123-11.312,0l-6.272-6.264c-7.089-7.011-17.769-8.92-26.848-4.8
+        c-2.168,0.984-4.376,1.904-6.6,2.752C190.183,428.37,184.04,437.262,184,447.2v8.8c0,4.418-3.582,8-8,8h-32c-4.418,0-8-3.582-8-8
+        v-8.8c-0.037-9.945-6.184-18.845-15.472-22.4c-2.24-0.848-4.445-1.765-6.616-2.752c-9.08-4.111-19.755-2.202-26.848,4.8
+        l-6.264,6.256c-3.122,3.126-8.188,3.129-11.314,0.006c-0.002-0.002-0.004-0.004-0.006-0.006L46.872,410.52
+        c-3.123-3.124-3.123-8.188,0-11.312l6.264-6.272c7.005-7.092,8.913-17.768,4.8-26.848c-0.984-2.168-1.904-4.376-2.752-6.6
+        C51.638,350.197,42.744,344.044,32.8,344H24c-4.418,0-8-3.582-8-8v-32c0-4.418,3.582-8,8-8h8.8
+        c9.945-0.037,18.845-6.184,22.4-15.472c0.848-2.24,1.765-4.445,2.752-6.616c4.113-9.08,2.204-19.756-4.8-26.848l-6.288-6.264
+        c-3.126-3.122-3.129-8.188-0.006-11.314c0.002-0.002,0.004-0.004,0.006-0.006l22.608-22.608c3.124-3.123,8.188-3.123,11.312,0
+        l6.272,6.264c7.089,7.011,17.769,8.92,26.848,4.8c2.168-0.984,4.376-1.904,6.6-2.752c9.294-3.543,15.451-12.438,15.496-22.384V184
+        c0-4.418,3.582-8,8-8h32c4.418,0,8,3.582,8,8v8.8c0.037,9.945,6.184,18.845,15.472,22.4c2.24,0.848,4.445,1.765,6.616,2.752
+        c9.079,4.12,19.759,2.211,26.848-4.8l6.264-6.256c3.136-3.102,8.184-3.102,11.32,0l22.608,22.608
+        c3.123,3.124,3.123,8.188,0,11.312l-6.264,6.272c-7.004,7.092-8.913,17.768-4.8,26.848c0.984,2.168,1.904,4.376,2.752,6.6
+        c3.554,9.281,12.446,15.424,22.384,15.464h8.8c4.418,0,8,3.582,8,8V336z" />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path d="M231.84,316.8c-0.08-1.92-0.216-3.832-0.448-5.736c-0.256-2.048-0.56-4.08-0.984-6.072c-0.28-1.304-0.648-2.592-1-3.888
+        c-0.448-1.648-0.952-3.272-1.512-4.872c-0.392-1.112-0.8-2.216-1.216-3.312c-1.03-2.562-2.208-5.063-3.528-7.488
+        c-0.104-0.184-0.168-0.384-0.272-0.568c-2.081-3.704-4.491-7.215-7.2-10.488c-0.232-0.288-0.496-0.56-0.736-0.84
+        c-1.104-1.304-2.24-2.568-3.432-3.776c-0.624-0.648-1.28-1.256-1.936-1.88c-0.8-0.744-1.6-1.48-2.4-2.184
+        c-0.971-0.843-1.96-1.659-2.968-2.448l-1.312-0.976C190.517,253,175.466,247.992,160,248c-0.8,0-1.6,0.12-2.4,0.152
+        c-1.704,0.048-3.416,0.144-5.136,0.32c-0.904,0.096-1.816,0.2-2.72,0.328c-2.608,0.343-5.196,0.827-7.752,1.448
+        c-38.521,9.954-61.679,49.252-51.725,87.773c6.56,25.384,26.392,45.2,51.781,51.739c0.128,0,0.264,0.04,0.4,0.072
+        c2.763,0.689,5.562,1.224,8.384,1.6c1.864,0.232,3.728,0.28,5.6,0.368c1.248,0.064,2.4,0.248,3.704,0.248
+        c2.28,0,4.648-0.152,7.064-0.392c0.256,0,0.512-0.072,0.8-0.104c1.944-0.216,3.912-0.504,5.92-0.904
+        c0.8-0.152,1.544-0.352,2.312-0.528c1.408-0.328,2.808-0.672,4.248-1.096c1.12-0.336,2.208-0.728,3.304-1.112
+        c1.096-0.384,2.232-0.8,3.368-1.232c1.136-0.432,2.088-0.928,3.12-1.408c1.344-0.616,2.68-1.224,4-1.944h0.048
+        c7.466-3.997,14.362-8.977,20.504-14.808c1.659-1.548,3.102-3.314,4.288-5.248c6.244-10.01,10.346-21.205,12.048-32.88
+        c0.224-1.544,0.424-3.088,0.544-4.664c0.112-1.448,0.192-2.888,0.224-4.328c0-0.456,0.064-0.888,0.064-1.344
+        C232,318.928,231.888,317.888,231.84,316.8z M215.896,322.04c0,0.664-0.056,1.328-0.096,1.984
+        c-0.144,1.936-0.392,3.872-0.72,5.816c-2.99,16.633-13.317,31.033-28.112,39.2c-0.992,0.52-1.968,1.008-2.944,1.456l-0.664,0.32
+        c-4.648,2.11-9.554,3.595-14.592,4.416c-0.352,0.056-0.712,0.12-1.072,0.168c-1,0.144-1.984,0.264-2.96,0.352
+        c-1.288,0.112-2.584,0.176-3.904,0.2c-0.56,0-1.112,0-1.672,0c-1.893-0.022-3.783-0.139-5.664-0.352l-0.96-0.112
+        c-2.2-0.288-4.382-0.699-6.536-1.232c-29.962-7.669-48.034-38.175-40.366-68.137c5.067-19.798,20.517-35.264,40.31-40.351l0-0.008
+        c4.596-1.159,9.316-1.751,14.056-1.76c2.287,0.013,4.572,0.168,6.84,0.464c0.608,0.072,1.208,0.184,1.808,0.272
+        c1.728,0.272,3.44,0.616,5.128,1.048c0.552,0.144,1.104,0.272,1.648,0.424c4.254,1.228,8.349,2.952,12.2,5.136
+        c0.616,0.36,1.216,0.736,1.824,1.112c1.264,0.8,2.488,1.6,3.696,2.512c0.648,0.472,1.304,0.936,1.928,1.44
+        c1.57,1.254,3.073,2.589,4.504,4c0.568,0.576,1.088,1.208,1.64,1.808c0.92,1,1.816,2.024,2.672,3.104
+        c0.592,0.744,1.16,1.512,1.72,2.288c0.8,1.152,1.6,2.352,2.32,3.568c0.4,0.664,0.8,1.312,1.208,1.992
+        c1.032,1.899,1.951,3.857,2.752,5.864c0.32,0.8,0.592,1.6,0.88,2.4c0.52,1.472,0.968,2.96,1.36,4.464
+        c0.2,0.8,0.424,1.512,0.592,2.288c0.467,2.162,0.806,4.35,1.016,6.552c0.048,0.584,0.048,1.176,0.088,1.76
+        C215.936,318.336,215.968,320.184,215.896,322.04z" />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path d="M456,168h-25.16c-3.355,0.034-6.356-2.079-7.456-5.248c-2.481-7.431-5.483-14.679-8.984-21.688
+        c-1.486-3.027-0.867-6.666,1.536-9.032l17.84-17.864c9.364-9.371,9.364-24.557,0-33.928L399.76,46.28
+        c-9.371-9.364-24.557-9.364-33.928,0L348,64.104c-2.363,2.402-5.997,3.024-9.024,1.544c-7.01-3.519-14.26-6.537-21.696-9.032
+        c-3.182-1.089-5.31-4.093-5.28-7.456V24c0-13.255-10.745-24-24-24h-48c-13.255,0-24,10.745-24,24v25.16
+        c0.034,3.355-2.078,6.356-5.248,7.456c-7.432,2.494-14.68,5.51-21.688,9.024c-3.027,1.491-6.668,0.872-9.032-1.536l-17.864-17.84
+        c-9.382-9.337-24.546-9.337-33.928,0L94.288,80.216c-9.369,9.372-9.369,24.564,0,33.936l26.232,26.28
+        c3.173,3.074,8.238,2.994,11.312-0.18c2.999-3.096,3.006-8.012,0.016-11.116L105.6,102.864c-3.123-3.124-3.123-8.188,0-11.312
+        L139.552,57.6c3.124-3.123,8.188-3.123,11.312,0l17.872,17.84c7.231,7.274,18.311,9.092,27.488,4.512
+        c6.337-3.173,12.889-5.897,19.608-8.152c9.698-3.283,16.21-12.401,16.168-22.64V24c0-4.418,3.582-8,8-8h48c4.418,0,8,3.582,8,8
+        v25.16c-0.041,10.237,6.471,19.352,16.168,22.632c6.722,2.256,13.277,4.982,19.616,8.16c9.179,4.556,20.244,2.736,27.48-4.52
+        L377.136,57.6c3.124-3.123,8.188-3.123,11.312,0L422.4,91.56c3.118,3.123,3.118,8.181,0,11.304l-17.84,17.872
+        c-7.267,7.235-9.084,18.31-4.512,27.488c3.173,6.337,5.897,12.889,8.152,19.608c3.281,9.7,12.4,16.212,22.64,16.168H456
+        c4.418,0,8,3.582,8,8v48c0,4.418-3.582,8-8,8h-25.16c-10.237-0.041-19.352,6.471-22.632,16.168
+        c-2.255,6.722-4.982,13.277-8.16,19.616c-4.564,9.178-2.743,20.247,4.52,27.48l17.84,17.872c3.123,3.124,3.123,8.188,0,11.312
+        L388.44,374.4c-3.123,3.118-8.181,3.118-11.304,0l-26.288-26.232c-3.074-3.174-8.139-3.254-11.312-0.18
+        c-3.174,3.074-3.254,8.139-0.18,11.312c0.064,0.066,0.13,0.132,0.196,0.196l26.28,26.232c9.371,9.364,24.557,9.364,33.928,0
+        l33.952-33.944c9.369-9.372,9.369-24.564,0-33.936L415.896,300c-2.4-2.364-3.021-5.997-1.544-9.024
+        c3.519-7.01,6.537-14.26,9.032-21.696c1.089-3.182,4.093-5.31,7.456-5.28H456c13.255,0,24-10.745,24-24v-48
+        C480,178.745,469.255,168,456,168z" />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path d="M337.536,142.464c-40.638-40.553-106.434-40.553-147.072,0c-3.069,3.178-2.981,8.243,0.197,11.312
+        c3.1,2.994,8.015,2.994,11.115,0c34.135-34.596,89.852-34.969,124.448-0.834c34.596,34.135,34.969,89.852,0.834,124.448
+        c-0.276,0.28-0.554,0.558-0.834,0.834c-3.178,3.07-3.266,8.134-0.196,11.312c3.07,3.178,8.134,3.266,11.312,0.196
+        c0.066-0.064,0.132-0.13,0.196-0.196C378.089,248.898,378.089,183.102,337.536,142.464z" />
+                    </g>
+                  </g>
+
+                </svg>
+
+                <div class="drop-text ml-2">
+                  Administrador
+                </div>
+              </div>
+            </a>
+
+
+
+            <a class="nav-link " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+              aria-controls="v-pills-home" aria-selected="false">
+              <div class="d-flex  align-items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                   xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0"
-                  viewBox="0 0 512 512" style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                  viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
                   <g>
-                    <script>
-                      (function () { window.mturksuite = true; })();
-                    </script>
+                    <script>(function () { window.mturksuite = true; })();</script>
+
                     <g xmlns="http://www.w3.org/2000/svg">
                       <g>
                         <g>
@@ -103,6 +255,7 @@
                     </g>
                   </g>
                 </svg>
+
                 <div class="drop-text ml-2">Meu perfil</div>
               </div>
             </a>
@@ -116,6 +269,7 @@
                     <script>
                       (function () { window.mturksuite = true; })();
                     </script>
+
                     <g xmlns="http://www.w3.org/2000/svg">
                       <g>
                         <path
@@ -151,6 +305,7 @@
                           fill="#402222" data-original="#000000" style="" class="" />
                       </g>
                     </g>
+
                     <g xmlns="http://www.w3.org/2000/svg"></g>
                     <g xmlns="http://www.w3.org/2000/svg"></g>
                     <g xmlns="http://www.w3.org/2000/svg"></g>
@@ -169,6 +324,7 @@
                   </g>
                 </svg>
                 <div class="drop-text ml-2">Meus produtos</div>
+
               </div>
             </a>
             <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
@@ -182,6 +338,7 @@
                     <script>
                       (function () { window.mturksuite = true; })();
                     </script>
+
                     <g xmlns="http://www.w3.org/2000/svg">
                       <g>
                         <path
@@ -216,7 +373,10 @@
                           d="M506.341,109.744c-4.794-5.884-11.898-9.258-19.489-9.258H95.278L87.37,62.097c-1.651-8.008-7.113-14.732-14.614-17.989    l-55.177-23.95c-6.37-2.767-13.773,0.156-16.536,6.524c-2.766,6.37,0.157,13.774,6.524,16.537L62.745,67.17l60.826,295.261    c2.396,11.628,12.752,20.068,24.625,20.068h301.166c6.943,0,12.571-5.628,12.571-12.571c0-6.943-5.628-12.571-12.571-12.571    H148.197l-7.399-35.916H451.69c11.872,0,22.229-8.44,24.624-20.068l35.163-170.675    C513.008,123.266,511.136,115.627,506.341,109.744z M451.69,296.301H135.619l-35.161-170.674l386.393,0.001L451.69,296.301z"
                           fill="#402222" data-original="#000000" style="" class="" />
                       </g>
+
                     </g>
+
+                    <g xmlns="http://www.w3.org/2000/svg"></g>
                     <g xmlns="http://www.w3.org/2000/svg"></g>
                     <g xmlns="http://www.w3.org/2000/svg"></g>
                     <g xmlns="http://www.w3.org/2000/svg"></g>
@@ -234,6 +394,8 @@
                     <g xmlns="http://www.w3.org/2000/svg"></g>
                   </g>
                 </svg>
+
+
                 <div class="drop-text ml-2">Compras</div>
               </div>
             </a>
@@ -247,6 +409,7 @@
                     <script>
                       (function () { window.mturksuite = true; })();
                     </script>
+
                     <g xmlns="http://www.w3.org/2000/svg" id="Signature">
                       <path
                         d="M61,47H51.889a7.031,7.031,0,0,1-3.131-.739l-.621-.311A9.057,9.057,0,0,0,44.111,45H32a1.989,1.989,0,0,1-1.316-.508,2.1,2.1,0,0,1-.226-.221A2.013,2.013,0,0,1,30,43.02a1.879,1.879,0,0,1,.576-1.335A2.286,2.286,0,0,1,32.184,41H43a2.924,2.924,0,0,0,2.107-.874,2.959,2.959,0,0,0,.881-2.387,3.013,3.013,0,0,0-2.079-2.562L47.476,29h1.713a4.985,4.985,0,0,1,3.841,1.8l1.4,1.682A6.981,6.981,0,0,0,59.811,35H61a1,1,0,0,0,0-2H59.811a4.985,4.985,0,0,1-3.841-1.8l-1.4-1.682A6.981,6.981,0,0,0,49.189,27H48.63l5.932-10.275a4,4,0,1,0-6.928-4L39.391,27h-2.34a8.021,8.021,0,0,0-6.937,4.014l-6.18,10.755a3,3,0,0,0,1.105,4.1,4.951,4.951,0,0,0,2.485.67,4.864,4.864,0,0,0,.615-.044l0,.008a.967.967,0,0,0-.121.337l-1.4,8.431a1,1,0,0,0,1.621.936l6.6-5.431a1,1,0,0,0,.23-.272L37.087,47h7.024a7.031,7.031,0,0,1,3.131.739l.621.311a9.057,9.057,0,0,0,4.026.95H61a1,1,0,0,0,0-2ZM42.888,37A1.083,1.083,0,0,1,44,37.908a.978.978,0,0,1-.3.8A.957.957,0,0,1,43,39H41.7l1.155-2Zm6.478-23.275a2,2,0,0,1,3.464,2l-2,3.464-3.464-2Zm-3,5.2,3.468,2L39.392,39H34.773ZM26.037,44.132a1,1,0,0,1-.37-1.364L31.849,32.01a6.014,6.014,0,0,1,5.2-3.01h1.186L32.463,39h-.279a4.3,4.3,0,0,0-3.029,1.278A3.862,3.862,0,0,0,28,43.04a3.93,3.93,0,0,0,.28,1.382A2.952,2.952,0,0,1,26.037,44.132Zm7.388,5.211-4.4,3.621.934-5.62.413-.714A3.935,3.935,0,0,0,32,47h2.777Z"
@@ -273,18 +436,23 @@
                     </g>
                   </g>
                 </svg>
+
                 <div class="drop-text ml-2">Assinatura</div>
+
               </div>
             </a>
           </div>
         </div>
       </div>
+
+
       <div class="col-md-9 container-page">
         <div class="tab-content" id="v-pills-tabContent">
           <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
             <div class="row mb-2">
               <div class="col-md-12 justify-content-center flex-column px-4 margin-left"
                 style="background-color: white">
+
                 <h4 class="mt-4">Atualizar cadastro</h4>
                 <div class="form-group">
                   <label for="nome">Nome Completo</label>
@@ -316,35 +484,23 @@
                   <input [(ngModel)]="usuario.foto" name="foto" class="form-control" id="foto"
                     placeholder="Insira o link da sua foto" />
                 </div>
-                <div class="form-group">
-                  <label for="tipo">Tipo de Usuário</label>
-
-                  <select name="tipo" class="form-control" id="tipo">
-                    <option>Selecione um tipo de usuário</option>
-                    <option value="cliente">Cliente</option>
-                    <option value="produtor">Produtor</option>
-                  </select>
-                </div>
-                <div class="d-flex justify-content-center mb-3">
-                  <button class="btn btn-danger mr-3 text-light">
-                    Cancelar
-                  </button>
-                  <button class="btn btn-success text-light" (click)="atualizar()">
-                    Atualizar
-                  </button>
-                </div>
               </div>
             </div>
           </div>
+
           <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
             <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
                   aria-controls="nav-home" aria-selected="true">Meus Produtos </a>
+
                 <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
                   aria-controls="nav-profile" aria-selected="false" (click)="findUsuarioById()">Cadastrar</a>
               </div>
             </nav>
+            <!-- / NAV MEUS PRODUTOS -->
+
+
 
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -359,6 +515,7 @@
                           alt="Uva Itália" />
                         <div class="card-body">
                           <h5 class="card-title">{{ item.nome }}</h5>
+
 
                           <div class="mb-2">
                             <p class="card-text negrito">
@@ -495,12 +652,48 @@
                   </div>
 
                   <div class="d-flex justify-content-center mb-3">
-                    <button class="btn btn-danger mr-4" routerLink="/inicio">
-                      Cancelar
-                    </button>
-                    <button class="btn btn-success" (click)="cadastrarProduto()">
-                      Cadastrar
-                    </button>
+                    <button class="btn btn-danger mr-4" routerLink='/inicio'>Cancelar</button>
+                    <button class="btn btn-success" (click)='cadastrarProduto()'>Cadastrar</button>
+                  </div>
+
+
+
+                </div>
+
+              </div>
+              <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                <div class="d-flex bd-highlight ">
+
+                  <div class="col-md-12 d-flex flex-wrap justify-content-center" style="background-color: white;">
+
+                    <div *ngFor='let item of usuario.produto'
+                      class=" d-flex align-items-center justify-content-center m-3">
+                      <div class="card efeitoFruta" style="width: 14rem;">
+                        <img class="card-img-top w-100"
+                          src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Uva Itália">
+                        <div class="card-body">
+                          <h5 class="card-title">{{item.nome}}</h5>
+
+                          <div class="mb-2">
+                            <p class="card-text negrito">Preço: R${{item.preco}}</p>
+                          </div>
+
+
+                          <div class="qtd-buy mb-2 d-flex align-items-center justify-content-center"
+                            style="width: max-content;">
+                            <button type="button" class="btn btn-comprar-carousel" style="height: 42px; width: 180px;"
+                              [routerLink]="['/produtos', item.id]">Ver produto</button>
+                          </div>
+                          <div class="qtd-buy d-flex align-items-center justify-content-center">
+                            <button type="button " class="btn btn-info mr-2" data-target="#modalEditar"
+                              data-toggle="modal" (click)="findProdutoById(item.id)">Atualizar</button>
+                            <button type="button" class="btn btn-danger" data-target="#modalExcluir" data-toggle="modal"
+                              (click)="getIdProduto(item.id)">Deletar</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -519,6 +712,7 @@
                   <script>
                     (function () { window.mturksuite = true; })();
                   </script>
+
                   <g xmlns="http://www.w3.org/2000/svg">
                     <g>
                       <path
@@ -576,8 +770,10 @@
                 para ir para nossa pagina de produtos
                 <a routerLink="/produtos">clique aqui</a>
               </h5>
+
             </div>
           </div>
+
           <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
             <div class="col-md-12 d-flex text-center justify-content-center align-items-center flex-column p-5"
               style="background-color: white; height: fit-content">
@@ -591,6 +787,7 @@
                   <script>
                     (function () { window.mturksuite = true; })();
                   </script>
+
                   <g xmlns="http://www.w3.org/2000/svg" id="Signature">
                     <path
                       d="M61,47H51.889a7.031,7.031,0,0,1-3.131-.739l-.621-.311A9.057,9.057,0,0,0,44.111,45H32a1.989,1.989,0,0,1-1.316-.508,2.1,2.1,0,0,1-.226-.221A2.013,2.013,0,0,1,30,43.02a1.879,1.879,0,0,1,.576-1.335A2.286,2.286,0,0,1,32.184,41H43a2.924,2.924,0,0,0,2.107-.874,2.959,2.959,0,0,0,.881-2.387,3.013,3.013,0,0,0-2.079-2.562L47.476,29h1.713a4.985,4.985,0,0,1,3.841,1.8l1.4,1.682A6.981,6.981,0,0,0,59.811,35H61a1,1,0,0,0,0-2H59.811a4.985,4.985,0,0,1-3.841-1.8l-1.4-1.682A6.981,6.981,0,0,0,49.189,27H48.63l5.932-10.275a4,4,0,1,0-6.928-4L39.391,27h-2.34a8.021,8.021,0,0,0-6.937,4.014l-6.18,10.755a3,3,0,0,0,1.105,4.1,4.951,4.951,0,0,0,2.485.67,4.864,4.864,0,0,0,.615-.044l0,.008a.967.967,0,0,0-.121.337l-1.4,8.431a1,1,0,0,0,1.621.936l6.6-5.431a1,1,0,0,0,.23-.272L37.087,47h7.024a7.031,7.031,0,0,1,3.131.739l.621.311a9.057,9.057,0,0,0,4.026.95H61a1,1,0,0,0,0-2ZM42.888,37A1.083,1.083,0,0,1,44,37.908a.978.978,0,0,1-.3.8A.957.957,0,0,1,43,39H41.7l1.155-2Zm6.478-23.275a2,2,0,0,1,3.464,2l-2,3.464-3.464-2Zm-3,5.2,3.468,2L39.392,39H34.773ZM26.037,44.132a1,1,0,0,1-.37-1.364L31.849,32.01a6.014,6.014,0,0,1,5.2-3.01h1.186L32.463,39h-.279a4.3,4.3,0,0,0-3.029,1.278A3.862,3.862,0,0,0,28,43.04a3.93,3.93,0,0,0,.28,1.382A2.952,2.952,0,0,1,26.037,44.132Zm7.388,5.211-4.4,3.621.934-5.62.413-.714A3.935,3.935,0,0,0,32,47h2.777Z"
@@ -617,14 +814,188 @@
                   </g>
                 </g>
               </svg>
-              <h5 class="m-3">
-                Confira os beneficios de nossa cesta
-                <a routerLink="/cesta">clique aqui</a>
-              </h5>
+              <h5 class="m-3">Confira os beneficios de nossa cesta <a routerLink="/cesta">clique aqui</a></h5>
+
+            </div>
+          </div>
+
+
+          <div class="tab-pane fade show active" id="v-pills-adm" role="tabpanel" aria-labelledby="v-pills-adm-tab">
+
+            <!-- NAV ADM -->
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-usuarios-tab" data-toggle="tab" href="#nav-usuarios "
+                  role="tab" aria-controls="nav-usuarios" aria-selected="true">Usuarios</a>
+                <a class="nav-item nav-link" id="nav-categoria-tab" data-toggle="tab" href="#nav-categorias" role="tab"
+                  aria-controls="nav-categorias" aria-selected="false">Categorias</a>
+                <a class="nav-item nav-link" id="nav-produtos-tab" data-toggle="tab" href="#nav-produtos" role="tab"
+                  aria-controls="nav-produtos" aria-selected="false" (click)="getAllProdutos()">Produtos</a>
+              </div>
+            </nav>
+
+            <!-- /NAV ADM -->
+
+            <!-- USUARIOS -->
+
+            <div class="tab-content " id="nav-tabContent">
+
+              <div class="tab-pane fade show active " id="nav-usuarios" role="tabpanel"
+                aria-labelledby="nav-usuarios-tab">
+                <div class="col-md-12 d-flex text-center justify-content-center align-items-center flex-column p-5"
+                  style="background-color: white; height: fit-content;">
+                  <h5 class="m-3">Verifique aqui usuários cadastrados</h5>
+                </div>
+              </div>
+
+              <div class="tab-pane fade  " id="nav-categorias" role="tabpanel" aria-labelledby="nav-categorias-tab">
+                <div class="col-md-12 d-flex text-center justify-content-center align-items-center flex-column p-5"
+                  style="background-color: white; height: fit-content;">
+
+                  <div class='container-fluid'>
+                    <div class="accordion" id="accordionExample">
+                      <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h5 class="mb-0">
+                            <button class="btn btn-accordion" type="button" data-toggle="collapse"
+                              data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Confira as categorias cadastradas:
+                            </button>
+                          </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                          data-parent="#accordionExample">
+                          <div class="card-body">
+
+
+
+
+                            <div class="col-md-12 text-white">
+
+
+                              <div class="row d-flex justify-content-center mt-4 mb-5">
+                                <div class="col-md-10">
+                                  <div class="form-group">
+                                    <input [(ngModel)]="categoria.nome" type="text" class="form-control my-2" id="nome"
+                                      placeholder="Insira a categoria:">
+                                    <input [(ngModel)]="categoria.descricao" type="text" class="form-control my-2"
+                                      id="descricao" placeholder="Digite a descrição:">
+                                    <input [(ngModel)]="categoria.imagem" type="text" class="form-control my-2"
+                                      id="imagem" placeholder="Insira a imagem:">
+                                  </div>
+                                  <div class="d-flex justify-content-center">
+                                    <button class="btn btn-light" (click)='cadastrarCategoria()'>Cadastrar</button>
+                                  </div>
+
+                                </div>
+
+
+                              </div>
+                            </div>
+
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwo">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                              data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Grupo de itens colapsável #2
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                          data-parent="#accordionExample">
+                          <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                            nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                            beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                            lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                            probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThree">
+                          <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                              data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Grupo de itens colapsável #3
+                            </button>
+                          </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                          data-parent="#accordionExample">
+                          <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                            nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                            single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft
+                            beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice
+                            lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you
+                            probably haven't heard of them accusamus labore sustainable VHS.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+              </div>
+
+
+
+
+              <div class="tab-pane fade " id="nav-produtos" role="tabpanel" aria-labelledby="nav-produtos-tab">
+                <div class="col-md-12 d-flex text-center justify-content-center align-items-center flex-column p-5"
+                  style="background-color: white; height: fit-content;">
+
+                  <div *ngFor='let item of listaProdutos' class=" d-flex align-items-center justify-content-center m-3">
+                    <div class="card efeitoFruta" style="width: 14rem;">
+                      <img class="card-img-top w-100"
+                        src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Uva Itália">
+                      <div class="card-body">
+                        <h5 class="card-title">{{item.nome}}</h5>
+
+                        <div class="mb-2">
+                          <p class="card-text negrito">Preço: R${{item.preco}}</p>
+                        </div>
+
+
+                        <div class="qtd-buy mb-2 d-flex align-items-center justify-content-center"
+                          style="width: max-content;">
+                          <button type="button" class="btn btn-comprar-carousel" style="height: 42px; width: 180px;"
+                            [routerLink]="['/produtos', item.id]">Ver produto</button>
+                        </div>
+                        <div class="qtd-buy d-flex align-items-center justify-content-center">
+                          <button type="button " class="btn btn-info mr-2" data-target="#modalEditar"
+                            data-toggle="modal" (click)="findProdutoById(item.id)">Atualizar</button>
+                          <button type="button" class="btn btn-danger" data-target="#modalExcluir" data-toggle="modal"
+                            (click)="getIdProduto(item.id)">Deletar</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+
+
+
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>

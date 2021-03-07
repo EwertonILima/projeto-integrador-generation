@@ -31,6 +31,7 @@ export class ProdutorPerfilComponent implements OnInit {
   idCategoria: number
   listaCategoria: Categoria[]
 
+
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -52,8 +53,10 @@ export class ProdutorPerfilComponent implements OnInit {
       this.router.navigate(['/home'])
     }
 
+
     this.getAllCategoria()
     this.findUsuarioById()
+    this.findAllCategoria()
   }
 
   confirmSenha(event: any) {
@@ -100,6 +103,8 @@ export class ProdutorPerfilComponent implements OnInit {
   getIdProduto(id: number) {
     this.idProduto = id
   }
+
+
 
 
   findProdutoById(id: number) { // Produto por ID
@@ -154,4 +159,34 @@ export class ProdutorPerfilComponent implements OnInit {
       this.produto = new Produto()
     })
   }
+
+  // GET DE ADM
+
+  getAllProdutos() {
+    console.log(this.listaProdutos)
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      
+      this.listaProdutos = resp
+
+      
+    })
+  }
+
+
+  cadastrarCategoria() {
+    this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
+      this.categoria = resp;
+      this.alertas.showAlertSuccess('Categoria cadastrada com sucesso!')
+      this.findAllCategoria();
+      this.categoria = new Categoria();
+    })
+  }
+
+  findAllCategoria() {
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp;
+    });
+  }
+
+
 }

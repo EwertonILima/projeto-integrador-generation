@@ -1,16 +1,77 @@
+*{
+    color: #402222;
+}
 
 .social-network svg {
     width: 40px;
     height: 35px;
-    margin-right: 10px;
-    margin-left: 10px;
- 
+    margin: 5px;
+}
+
+.social-network{
+    height: 57px;
+}
+
+.pagamento-container{
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.social-network-container {
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .pagamento{
-    width: 55px;
-    height: 60px;
+    width: 50px;
+    height: 55px;
     padding: 7px;
+
+}
+
+.social-icon{
+    height: 50;
+    width: 55;
+}
+
+.form-email{
+    max-width: 330px; 
+    height: 45px;
+}
+
+.form-button{
+    height: 45px;
+    background-color: #89A61F;
+}
+
+svg{
+    transition: .7s ease;
+}
+
+svg:hover{
+    transition: .7s ease;
+    transform: translate3d(0,-4px,0);
+}
+
+svg:hover path, svg:hover circle {
+    transition: .7s ease;
+    fill: #fff;
+}
+
+@media(max-width: 906px){
+    .form-button{
+        width: 330px; 
+    } 
+
+    .pagamento-container{
+        margin-bottom: 10px;
+        margin-top: 0px;
+    }
+
+    .social-network-container {
+        margin-bottom: 10px;
+        margin-top: 0px;
+    }
 }
 
 .rodape-text {

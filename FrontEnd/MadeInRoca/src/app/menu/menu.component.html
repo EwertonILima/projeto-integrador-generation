@@ -83,14 +83,14 @@
 
 
             <div class="dropdown ">
-                <a *ngIf="auth.deslogado() " class="drop-btn nav-link text-light " data-toggle="dropdown ">Login</a>
-                <a *ngIf="auth.logado() " class="drop-btn nav-link text-light ">Conta</a>
+                <a *ngIf="auth.deslogado()" class="drop-btn nav-link text-light " data-toggle="dropdown ">Login</a>
+                <a *ngIf="auth.logado()" class="drop-btn nav-link text-light ">Conta</a>
                 <div class="dropdown-content ">
 
                     <div class="dropdown-menu " aria-labelledby="navbarDropdown ">
-                        <a *ngIf="auth.deslogado() " class="dropdown-item " routerLink='/login '>Entrar</a>
-                        <a *ngIf="auth.deslogado() " class="dropdown-item " routerLink='/login '>Perfil</a>
-                        <a *ngIf="auth.logado() " class="dropdown-item " routerLink='/produtor-perfil '>Perfil</a>
+                        <a *ngIf="auth.deslogado() " class="dropdown-item " routerLink='/login'>Entrar</a>
+                        <a *ngIf="auth.deslogado() " class="dropdown-item " routerLink='/login'>Perfil</a>
+                        <a *ngIf="auth.logado() " class="dropdown-item " routerLink='/produtor-perfil'>Perfil</a>
                         <a class="dropdown-item " href="# ">Compras</a>
                         <a class="dropdown-item " href="# ">Assinatura</a>
                         <a class="dropdown-item " href="# ">Produtor</a>
