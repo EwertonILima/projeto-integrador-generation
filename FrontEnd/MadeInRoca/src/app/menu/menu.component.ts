@@ -39,20 +39,15 @@ export class MenuComponent implements OnInit {
 
   findByNomeProduto() {
 
-    if(this.nomeProd == ''){
-      this.place = "Pesquisar produtos"
-      this.nomeProd = ''
-    }
-    else{
       this.produtoService.getByNomeProduto(this.nomeProd).subscribe((resp: Produto[]) => {
         this.listaProdutos = resp
       })
-    }
+    
   }
 
   limparPesquisar() {
     this.nomeProd = ''
-    this.place = "Pesquisar produtos"
+    this.listaProdutos = []
   }
 
 }
