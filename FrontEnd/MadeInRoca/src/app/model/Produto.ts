@@ -8,4 +8,5 @@ export class Produto {
     public qtdeEstoque: number
     public usuario: Usuario
     public categoria: Categoria
+    public foto: string
 }

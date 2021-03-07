@@ -45,7 +45,7 @@ export class ProdutorPerfilComponent implements OnInit {
   id = environment.id
   nome = environment.nome
   email = environment.usuario
-  produtoFoto = environment.foto
+  foto = environment.foto
 
   ngOnInit() {
     window.scroll(0, 0)
@@ -164,6 +164,7 @@ export class ProdutorPerfilComponent implements OnInit {
     this.produto.categoria = this.categoria
     this.usuario.id = environment.id
     this.produto.usuario = this.usuario
+   
     
       this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
