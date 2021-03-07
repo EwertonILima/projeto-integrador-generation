@@ -21,7 +21,7 @@ public class Produto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	@NotNull
 	@Size(min = 4, max = 20)
 	private String nome;
@@ -29,18 +29,28 @@ public class Produto {
 	@NotNull
 	@Digits(integer = 5, fraction = 2)
 	private BigDecimal preco;
-	
+
 	@NotNull
 	private int qtdeEstoque;
-	
+
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
 	private Categoria categoria;
-	
-	
+
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
-	private Usuario usuario; 
+	private Usuario usuario;
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	@NotNull
+	private String foto;
 
 	public long getId() {
 		return id;
@@ -81,7 +91,7 @@ public class Produto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
-	
+
 	public Usuario getUsuario() {
 		return usuario;
 	}
@@ -89,8 +99,5 @@ public class Produto {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-	
-	
-	
-	
+
 }

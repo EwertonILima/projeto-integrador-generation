@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
       environment.usuario = this.userLogin.usuario
       environment.tipoUsuario = this.userLogin.tipoUsuario
 
-      this.router.navigate(['/produtor-perfil'])
+      this.router.navigate(['/home'])
 
     }, erro => {
       if(erro.status == 500){
