@@ -27,14 +27,13 @@
 
             <!-- BARRA SEARCH -->
 
-            <div class="search dropdown">
+            <div class="search dropdown ml-5">
                 <input data-toggle="dropdown" class="form-control p-2" type="search" placeholder="Pesquisar produtos" [(ngModel)]='nomeProd' (keyup)='findByNomeProduto()' (mouseover)='limparPesquisar()' />
-                <a href=" # ">
-                    <img class="img-search " src="https://i.imgur.com/MCYlHQs.png " id="btn-search " alt="Buscar " href="# " /></a>
+                
                 <div class="dropdown-content ">
                     <div class="dropdown-menu mt-1" aria-labelledby="navbarDropdown ">
                         <div *ngFor='let item of listaProdutos'>
-                            <a class="dropdown-item-search" [routerLink]="[ '/produtos', item.id] ">{{item.nome}}</a>
+                            <a class="dropdown-item-search" [routerLink]="[ '/produtos', item.id]">{{item.nome}}</a>
                         </div>
                     </div>
                 </div>
@@ -81,19 +80,16 @@
         </svg>
             </a>
 
-
+            <a *ngIf="auth.deslogado()" class="drop-btn nav-link text-light" routerLink='/login'>Login</a>
             <div class="dropdown ">
-                <a *ngIf="auth.deslogado()" class="drop-btn nav-link text-light " data-toggle="dropdown ">Login</a>
-                <a *ngIf="auth.logado()" class="drop-btn nav-link text-light ">Conta</a>
+                
+                <a *ngIf="auth.logado()" class="drop-btn nav-link text-light" data-toggle="dropdown">Conta</a>
                 <div class="dropdown-content ">
 
                     <div class="dropdown-menu " aria-labelledby="navbarDropdown ">
-                        <a *ngIf="auth.deslogado() " class="dropdown-item " routerLink='/login'>Entrar</a>
-                        <a *ngIf="auth.deslogado() " class="dropdown-item " routerLink='/login'>Perfil</a>
-                        <a *ngIf="auth.logado() " class="dropdown-item " routerLink='/produtor-perfil'>Perfil</a>
-                        <a class="dropdown-item " href="# ">Compras</a>
-                        <a class="dropdown-item " href="# ">Assinatura</a>
-                        <a class="dropdown-item " href="# ">Produtor</a>
+                        <a *ngIf="auth.deslogado()" class="dropdown-item " routerLink='/login'>Entrar</a>
+                        <a  class="dropdown-item" routerLink='/produtor-perfil'>Perfil</a>
+                        <a class="dropdown-item " routerLink='/cesta'>Assinatura</a>
                         <a *ngIf="auth.logado() " (click)="sair() " class="dropdown-item " routerLink='/home '>Sair</a>
                     </div>
 
