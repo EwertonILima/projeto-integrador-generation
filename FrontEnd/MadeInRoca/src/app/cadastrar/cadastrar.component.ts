@@ -34,6 +34,8 @@ export class CadastrarComponent implements OnInit {
     this.tipoUsuario = event.target.value
   }
 
+
+
   cadastrar() {
     this.usuario.tipoUsuario = this.tipoUsuario
 
@@ -48,5 +50,12 @@ export class CadastrarComponent implements OnInit {
         this.alertas.showAlertSuccess('Usuário cadastrado com sucesso!') 
       })
     }
+  }
+
+  cadastrarCheck(){
+    if((<HTMLSelectElement>document.getElementById('nome')).value == '' ||
+        (<HTMLSelectElement>document.getElementById('email')).value == '' || (<HTMLSelectElement>document.getElementById('senha')).value == '' || (<HTMLSelectElement>document.getElementById('confirmSenha')).value == ''){
+          this.alertas.showAlertDanger("Por favor, preencha os campos")
+        } 
   }
 }
