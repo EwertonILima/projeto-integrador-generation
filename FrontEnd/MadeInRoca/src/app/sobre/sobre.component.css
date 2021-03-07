@@ -37,13 +37,11 @@
 .icon-redes{
     height: 30px;
     width: 30px;
-    margin: 15px 10px;
+    margin: 0 0 30px 10px;
 }
 
 .icon-redes-insta{
-    height: 35px;
-    width: 35px;
-    margin: 15px 10px;
+    margin: 0 0 30px 10px;
 }
 
 .margin-l{
@@ -54,68 +52,32 @@
     font-size: 20px;
 }
 
-
-.single-content .text-content,
-.single-content::after {
-    position: absolute;
-    left: 20px;
-    right: 20px;
-}
-
-.single-content::after{
-    content: '';
-    display: block;
-    background: #363636;
-    top: -5px;
-    bottom: -5px;
-    left: 15px;
-    right: 20px;
-    margin-right: 45px;
-    opacity: 0;
-    transform: rotate3d(-1,1,0,100deg);
-    transition: .4s;
-    border-radius: 50%;
-}
-
-.single-content:hover::after{
-    opacity: .9;
-    transform: rotate3d(0,0,0,0deg);
-}
-
-.single-content .w-ajuste{
-    width: 70%;
-    height: auto;
-    margin-left: 30%;
-}
-
-.text-content{
-    top: 55%;
-    opacity: 0;
-    z-index: 1;
-    transform: translate(10%,-30%);
-    transition: .3s;
-    text-align: center;
-    color: #fff;
-}
-
-.text-content h4{
-    font-family: big john;
-}
-
-.single-content:hover .text-content{ /*Posição no centro do quadro vermelho*/
-    opacity: 1;
-    transform: translate(0,-50%);
-    transition-delay: .3s;
-    margin-right: 45px;
-}
-
-.fa-fab{
-    filter: invert(100%);
-}
-
 .img-sobre{
     width: 450px;
     min-height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+/* div{
+    border: solid 1px red;
+} */
+
+
+@media(max-width: 1233px){
+    .distancia{
+        padding-right: 30px;
+    }
+}
+
+@media(max-width: 360px){
+    .teste{
+        margin-left: 50px;
+    }
+
+    .wh-video{
+        width: 400px;
+        right: 150px;
+    }
 }
