@@ -160,14 +160,14 @@ export class ProdutorPerfilComponent implements OnInit {
   }
 
   cadastrarProduto() {
+    console.log (this.produto)
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
     this.usuario.id = environment.id
     this.produto.usuario = this.usuario
-   
     
-      this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
-      this.produto = resp
+    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+     this.produto = resp
       this.alertas.showAlertSuccess('Seu produto foi cadastrado com sucesso!')
       this.findUsuarioById()
       this.produto = new Produto()
