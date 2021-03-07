@@ -1,14 +1,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 justify-content-center d-flex">
-
             <div class="nav justify-content-center mt-5">
                 <div class="nav-item justify-content-center align-items-center d-flex">
-                    <div class="nav-link active justify-content-center align-items-center d-flex flex-column" 
-                    (click)="findByNomeCategoria('')">
+                    <div class="nav-link active justify-content-center align-items-center d-flex flex-column"
+                        (click)="findByNomeCategoria('')">
                         <svg class="tamanhoCategoria" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1_1_" x="0px" y="0px"
-                            viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve"
+                            viewBox="0 0 64 64" style="enable-background: new 0 0 64 64" xml:space="preserve"
                             width="512" height="512">
                             <g>
                                 <rect x="53" y="37" width="2" height="2" />
@@ -43,8 +42,8 @@
                     </div>
                 </div>
                 <div class="nav-item justify-content-center align-items-center d-flex">
-                    <div class="nav-link active justify-content-center align-items-center d-flex flex-column" 
-                    (click)="findByNomeCategoria('legume')">
+                    <div class="nav-link active justify-content-center align-items-center d-flex flex-column"
+                        (click)="findByNomeCategoria('legume')">
                         <svg class="tamanhoCategoria" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                             width="512" height="512">
                             <g id="outline">
@@ -61,10 +60,10 @@
                 </div>
                 <div class="nav-item justify-content-center align-items-center d-flex">
                     <div class="nav-link active justify-content-center align-items-center d-flex flex-column"
-                    (click)="findByNomeCategoria('vegetal')">
+                        (click)="findByNomeCategoria('vegetal')">
                         <svg class="tamanhoCategoria" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.997 511.997"
-                            style="enable-background:new 0 0 511.997 511.997;" xml:space="preserve">
+                            style="enable-background: new 0 0 511.997 511.997" xml:space="preserve">
                             <g>
                                 <g>
                                     <path d="M511.868,153.314c-2.093-23.649-27.799-33.904-51.032-32.559c-2.055-0.985-4.153-1.492-4.379-4.145
@@ -114,8 +113,7 @@
 			C513.104,141.305,497.609,178.43,469.935,187.152z" />
                                 </g>
                             </g>
-                            <g>
-                            </g>
+                            <g></g>
                         </svg>
 
                         <p class="text-center link">Vegetais</p>
@@ -126,27 +124,31 @@
     </div>
 
     <!--Filtro de Produtos-->
-    <div style="background-color: #89A61f;" class="row d-flex my-4 pt-3 justify-content-center">
+    <div style="background-color: #89a61f" class="row d-flex my-4 pt-3 justify-content-center">
         <div class="col-md-3 justify-content-center d-flex align-items-center"
-            style="padding-right: 0px; padding-left: 0px;">
+            style="padding-right: 0px; padding-left: 0px">
             <div class="form-group d-flex justify-content-center d-flex align-items-center">
-                <h4 class="card-text  d-flex align-items-center p-2 m-0">Buscar </h4><input type="text"
-                    class="form-control" id="nome" placeholder="Ex: banana ou maça" [(ngModel)]='nomeProd'
-                    (keyup)='findByNomeProduto()'>
+                <h4 class="card-text d-flex align-items-center p-2 m-0">Buscar</h4>
+                <input type="text" class="form-control" id="nome" placeholder="Ex: banana ou maça"
+                    [(ngModel)]="nomeProd" (keyup)="findByNomeProduto()" />
             </div>
         </div>
 
         <!-- Ordem de item -->
         <div class="dropdown d-flex align-items-center">
             <div class="ordem-visualizacao d-flex">
-                <p class="pl-1 p-0 justify-content-center d-flex align-items-center">Ordem de visualização</p>
+                <p class="pl-1 p-0 justify-content-center d-flex align-items-center">
+                    Ordem de visualização
+                </p>
                 <div class="ml-2">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0"
-                        viewBox="0 0 300.003 300.003" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                        viewBox="0 0 300.003 300.003" style="enable-background: new 0 0 512 512" xml:space="preserve"
                         class="">
                         <g>
-                            <script>(function () { window.mturksuite = true; })();</script>
+                            <script>
+                                (function () { window.mturksuite = true; })();
+                            </script>
                             <g xmlns="http://www.w3.org/2000/svg">
                                 <g>
                                     <path
@@ -154,8 +156,7 @@
                                         fill="#402222" data-original="#000000" class="" />
                                 </g>
                             </g>
-                            <g xmlns="http://www.w3.org/2000/svg">
-                            </g>
+                            <g xmlns="http://www.w3.org/2000/svg"></g>
                         </g>
                     </svg>
                 </div>
@@ -163,10 +164,10 @@
 
             <div class="dropdown-content">
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" (click)='orderByMenorPreco()'>Menor Preço</a>
-                    <a class="dropdown-item" (click)='orderByMaiorPreco()'>Maior Preço</a>
-                    <a class="dropdown-item" (click)='orderByAz()'>A - Z</a>
-                    <a class="dropdown-item" (click)='orderByZa()'>Z - A</a>
+                    <a class="dropdown-item" (click)="orderByMenorPreco()">Menor Preço</a>
+                    <a class="dropdown-item" (click)="orderByMaiorPreco()">Maior Preço</a>
+                    <a class="dropdown-item" (click)="orderByAz()">A - Z</a>
+                    <a class="dropdown-item" (click)="orderByZa()">Z - A</a>
                 </div>
             </div>
         </div>
@@ -174,37 +175,32 @@
     </div>
     <!--/Filtro de Produtos-->
 
-
-
-
-
     <div class="row">
         <div class="col-md-12 d-flex flex-wrap justify-content-center">
-
             <ng-container *ngIf="all; else elseTemplate">
-                <div *ngFor='let item of listaProdutos | orderBy : key : reverse'
+                <div *ngFor="let item of listaProdutos | orderBy: key:reverse"
                     class="d-flex align-items-center justify-content-center m-3">
-
-                    
-                    <div class="card efeitoFruta" style="width: 14rem;">
+                    <div class="card efeitoFruta" style="width: 14rem">
                         <img class="card-img-top w-100"
                             src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg"
-                            alt="Uva Itália">
+                            alt="Uva Itália" />
                         <div class="card-body">
-                            <h5 class="card-title">{{item.nome}}</h5>
+                            <h5 class="card-title">{{ item.nome }}</h5>
 
                             <div class="mb-2">
-                                <p class="card-text negrito">Preço: R${{item.preco}}</p>
+                                <p class="card-text negrito">Preço: R${{ item.preco }}</p>
                             </div>
 
                             <div class="qtd-buy d-flex align-items-center justify-content-center">
                                 <div class="form-group my-auto w-50 mr-2">
-                                    <input class="form-control" min=0 type="number" name="qtdProduto" id="qtdProduto"
-                                        placeholder="Qtd">
+                                    <input class="form-control" min="0" type="number" name="qtdProduto" id="qtdProduto"
+                                        placeholder="Qtd" />
                                 </div>
 
-                                <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                                    [routerLink]="['/produtos', item.id]">Comprar</button>
+                                <button type="button" class="btn btn-comprar-carousel" style="height: 42px"
+                                    [routerLink]="['/produtos', item.id]">
+                                    Comprar
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -212,43 +208,39 @@
             </ng-container>
 
             <ng-template #elseTemplate>
-                <div class="d-flex flex-wrap align-items-center justify-content-center" *ngFor='let categoria of listaCategoria'>
-                    <div *ngFor='let item of categoria.produto | orderBy : key : reverse'
+                <div class="d-flex flex-wrap align-items-center justify-content-center"
+                    *ngFor="let categoria of listaCategoria">
+                    <div *ngFor="let item of categoria.produto | orderBy: key:reverse"
                         class="d-flex align-items-center justify-content-center m-3">
-                        <div class="card efeitoFruta" style="width: 14rem;">
+                        <div class="card efeitoFruta" style="width: 14rem">
                             <img class="card-img-top w-100"
                                 src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg"
-                                alt="Uva Itália">
+                                alt="Uva Itália" />
                             <div class="card-body">
-                                <h5 class="card-title">{{item.nome}}</h5>
+                                <h5 class="card-title">{{ item.nome }}</h5>
 
                                 <div class="mb-2">
-                                    <p class="card-text negrito">Preço: R${{item.preco}}</p>
+                                    <p class="card-text negrito">Preço: R${{ item.preco }}</p>
                                 </div>
 
                                 <div class="qtd-buy d-flex align-items-center justify-content-center">
                                     <div class="form-group my-auto w-50 mr-2">
-                                        <input class="form-control" min=0 type="number" name="qtdProduto"
-                                            id="qtdProduto" placeholder="Qtd">
+                                        <input class="form-control" min="0" type="number" name="qtdProduto"
+                                            id="qtdProduto" placeholder="Qtd" />
                                     </div>
 
-                                    <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                                        [routerLink]="['/produtos', item.id]">Comprar</button>
+                                    <button type="button" class="btn btn-comprar-carousel" style="height: 42px"
+                                        [routerLink]="['/produtos', item.id]">
+                                        Comprar
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </ng-template>
-
-
-
-
         </div>
-
     </div>
-
 </div>
 
-
-<hr style="background-color: #89A61F;">
+<hr style="background-color: #89a61f" />
