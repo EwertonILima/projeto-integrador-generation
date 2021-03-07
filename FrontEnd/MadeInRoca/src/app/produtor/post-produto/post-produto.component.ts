@@ -58,6 +58,7 @@ export class PostProdutoComponent implements OnInit {
   cadastrarProduto() {
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
+    
 
     this.usuario.id = environment.id
     this.produto.usuario = this.usuario

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Categoria } from 'src/app/model/Categoria';
 import { Produto } from 'src/app/model/Produto';
 import { Usuario } from 'src/app/model/Usuario';
@@ -19,13 +20,13 @@ export class ProdutorPerfilComponent implements OnInit {
 
   produto: Produto = new Produto();
   listaProdutos: Produto[];
-  idProduto: number; // criado para deletar o produto com referencia de id na modal excluir
+  idProduto: number;// criado para deletar o produto com referencia de id na modal excluir
 
   usuario: Usuario = new Usuario()
   idUsuario: number
   confirmarSenha: string
   tipoUsuario: string
-
+  listaUsuarios: Usuario[]
   
 
   categoria: Categoria = new Categoria()
@@ -44,7 +45,7 @@ export class ProdutorPerfilComponent implements OnInit {
   id = environment.id
   nome = environment.nome
   email = environment.usuario
-  foto = environment.foto
+  produtoFoto = environment.foto
 
   ngOnInit() {
     window.scroll(0, 0)
@@ -99,15 +100,26 @@ export class ProdutorPerfilComponent implements OnInit {
       this.usuario = resp;
 
     });
+
+    
   }
+
+
+  getAllUsuarios(){
+
+    
+    this.authService.getAllUsuarios().subscribe((resp: Usuario[]) => {
+      
+    this.listaUsuarios= resp; 
+
+    }
+    )
+}
 
   // ATUALIZAR PRODUTOS 
   getIdProduto(id: number) {
     this.idProduto = id
   }
-
-
-
 
   findProdutoById(id: number) { // Produto por ID
     this.produtoService.getByIdProduto(id).subscribe((resp: Produto) => {
@@ -150,11 +162,10 @@ export class ProdutorPerfilComponent implements OnInit {
   cadastrarProduto() {
     this.categoria.id = this.idCategoria
     this.produto.categoria = this.categoria
-
     this.usuario.id = environment.id
     this.produto.usuario = this.usuario
-
-    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+    
+      this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
       this.produto = resp
       this.alertas.showAlertSuccess('Seu produto foi cadastrado com sucesso!')
       this.findUsuarioById()
@@ -220,6 +231,8 @@ export class ProdutorPerfilComponent implements OnInit {
       this.categoria = resp
     })
   }
+
+  
 
 
 }

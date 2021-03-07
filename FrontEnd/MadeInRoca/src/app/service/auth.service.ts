@@ -10,6 +10,8 @@ import { Usuario } from '../model/Usuario';
 })
 export class AuthService {
 
+  listaUsuarios: Usuario[]
+
   constructor(
     private http: HttpClient
   ) { }
@@ -59,4 +61,13 @@ export class AuthService {
         return ok
     }
 
+    getAllUsuarios():Observable<Usuario[]>{
+
+      return this.http.get<Usuario[]> ("http://localhost:8080/usuarios")
+  
+      }
+  
 }
+  
+
+
