@@ -8,10 +8,10 @@
       <h5 class="visually-hidden">R$ {{produto.preco}}</h5>
       <div class="comprar-qnt my-3 d-flex justify-content-start align-items-center">
         <div class="form-group my-auto mr-2">
-          <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
+          <input [(ngModel)]="qtdProduto" class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
             placeholder="Quantidade">
         </div>
-        <button type="button" class="btn btn-comprar" style="height: 42px;">Comprar</button>
+        <button type="button" class="btn btn-comprar" style="height: 42px;" data-toggle="modal" data-target="#modalComprar" (click)='somaTotal(produto.preco)'>Comprar</button>
       </div>
       <p class='descricao-produto text-justify text'>Um dos frutos mais utilizados na culinária internacional.
         Fortemente associado à
@@ -230,4 +230,28 @@
         <span class="sr-only">Próximo</span>
       </a>
     </div>
+</div>
+
+<div class="modal fade" id="modalComprar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+          <img style="max-width: 160px;" src="https://divinoamigoreflexoes.files.wordpress.com/2010/01/certo.png" alt="">
+          <h5 class="mb-3" style="font-size: 35px;">{{produto.nome}} x {{qtdProduto}}</h5>
+          <h5> Valor Total: R$ {{totalProduto}}</h5>
+          <p> Adicionado com sucesso a sua cesta</p>
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" style="color: white;">Continuar comprando</button>
+        <button type="button" class="btn btn-success" style="color: white;">Ir para cesta</button>
+      </div>
+    </div>
   </div>
+</div>
