@@ -68,26 +68,16 @@
     width: 80px;
     font-size: 15px;
     transition: .7s ease;
-}
-
-.nav-item:hover{
-    width: 100px;
-    font-size: 20px;
-    background-color: #402222;
-    color: white;
-    fill: white;
-    border-radius: 100px;
-}
-
-.nav-item:hover p{
-    transition: .7s ease;
-    font-size: 15px;
-    color: white;
+    cursor: pointer;
 }
 
 .nav-item:hover svg{
     transition: .7s ease;
-    fill: white;
+    transform: translate3d(0,-5px,0);
 }
+
+/* div{
+    border: solid red 1px;
+} */
 
 
