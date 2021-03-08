@@ -41,6 +41,9 @@ public class Produto {
 	@JsonIgnoreProperties("produto")
 	private Usuario usuario;
 
+	@NotNull
+	private String foto;
+
 	public String getFoto() {
 		return foto;
 	}
@@ -48,9 +51,6 @@ public class Produto {
 	public void setFoto(String foto) {
 		this.foto = foto;
 	}
-
-	@NotNull
-	private String foto;
 
 	public long getId() {
 		return id;
