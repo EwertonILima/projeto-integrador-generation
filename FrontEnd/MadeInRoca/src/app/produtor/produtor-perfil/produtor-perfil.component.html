@@ -679,7 +679,7 @@
 
                   <div class="form-group">
                     <label for="texto">Foto</label>
-                    <input   [(ngModel)]="produto.foto" type="text" class="form-control" id="foto"  placeholder="Insira o link da foto" />
+                    <input [(ngModel)]="produto.foto" type="text" class="form-control" id="foto"  placeholder="Insira o link da foto"/>
 
                     <!-- INSERIR REFERENCIA FOTO -->
                      
@@ -1053,38 +1053,46 @@
                 </div>
               </div>
               <div class="tab-pane fade " id="nav-produtos" role="tabpanel" aria-labelledby="nav-produtos-tab">
+                
                 <div class="col-md-12 d-flex text-center justify-content-center align-items-center flex-column p-5"
                   style="background-color: white; height: fit-content;">
 
-                  <div *ngFor='let item of listaProdutos' class=" d-flex align-items-center justify-content-center m-3">
-                    <div class="card efeitoFruta" style="width: 14rem;">
-                      <img class="card-img-top w-100"
-                        src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Uva Itália">
-                      <div class="card-body">
-                        <h5 class="card-title">{{item.nome}}</h5>
-
-                        <div class="mb-2">
-                          <p class="card-text negrito">Preço: R${{item.preco}}</p>
-                        </div>
-                        <div class="qtd-buy mb-2 d-flex align-items-center justify-content-center"
-                          style="width: max-content;">
-                          <button type="button" class="btn btn-comprar-carousel" style="height: 42px; width: 180px;"
-                            [routerLink]="['/produtos', item.id]">Ver produto</button>
-                        </div>
-                        <div class="qtd-buy d-flex align-items-center justify-content-center">
-                          <button type="button " class="btn btn-info mr-2" data-target="#modalEditar"
-                            data-toggle="modal" (click)="findProdutoById(item.id)">Atualizar</button>
-                          <button type="button" class="btn btn-danger" data-target="#modalExcluir" data-toggle="modal"
-                            (click)="getIdProduto(item.id)">Deletar</button>
+                        <div *ngFor='let item of listaProdutos'
+                          class=" d-flex align-items-center justify-content-center m-3">
+                          <div class="card efeitoFruta" style="width: 14rem;">
+                            <img class="card-img-top w-100"
+                              src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Uva Itália">
+                            <div class="card-body">
+                              <h5 class="card-title">{{item.nome}}</h5>
+    
+                              <div class="mb-2">
+                                <p class="card-text negrito">Preço: R${{item.preco}}</p>
+                              </div>
+    
+    
+                              <div class="qtd-buy mb-2 d-flex align-items-center justify-content-center"
+                                style="width: max-content;">
+                                <button type="button" class="btn btn-comprar-carousel" style="height: 42px; width: 180px;"
+                                  [routerLink]="['/produtos', item.id]">Ver produto</button>
+                              </div>
+                              <div class="qtd-buy d-flex align-items-center justify-content-center">
+                                <button type="button " class="btn btn-info mr-2" data-target="#modalEditar"
+                                  data-toggle="modal" (click)="findProdutoById(item.id)">Atualizar</button>
+                                <button type="button" class="btn btn-danger" data-target="#modalExcluir" data-toggle="modal"
+                                  (click)="getIdProduto(item.id)">Deletar</button>
+                              </div>
+    
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    
