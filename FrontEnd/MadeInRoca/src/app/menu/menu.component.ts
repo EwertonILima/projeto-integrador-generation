@@ -18,15 +18,20 @@ export class MenuComponent implements OnInit {
   listaProdutos: Produto[]
   place: string
 
+  nome = environment.nome
+  
   constructor(
     public auth: AuthService,
     private router: Router,
     private produtoService: ProdutoService
   ) { }
 
+  
+
   ngOnInit() {
     this.findByNomeProduto()
     this.limparPesquisar()
+    
   }
 
   sair() {
@@ -38,10 +43,9 @@ export class MenuComponent implements OnInit {
   }
 
   findByNomeProduto() {
-
-      this.produtoService.getByNomeProduto(this.nomeProd).subscribe((resp: Produto[]) => {
-        this.listaProdutos = resp
-      })
+    this.produtoService.getByNomeProduto(this.nomeProd).subscribe((resp: Produto[]) => {
+     this.listaProdutos = resp
+     })
     
   }
 

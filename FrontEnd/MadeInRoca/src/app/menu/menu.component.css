@@ -16,14 +16,14 @@
 
 .dropdown-item-search {
     display: block;
-    min-width: 40rem;
+    min-width: 36rem;
     padding-left: 3px;
     border-radius: .25rem;
 }
 
 .dropdown-item-search:hover {
     color: #57732d;
-    min-width: 40rem;
+    min-width: 36rem;
     padding-left: 2px;
     border-radius: .25rem;
     background-color: rgba(100, 99, 99, 0.171);
@@ -94,4 +94,105 @@ a:link {
     ul {
         margin-right: 48px;
     }
+}
+
+
+/* Modal Cesta */
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @-webkit-keyframes fadeInRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .modal-dialog {
+    margin: 0;
+    height: 100%;
+  }
+  
+  .animated {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-weight: bolder;
+}
+  
+  .modal-header {
+    border-color: black;
+    align-items: center;
+    padding: 1rem;
+    
+  }
+  
+  .modal-content {
+    border-radius: 0;
+    border: 0;
+    -webkit-box-shadow: -12px 0 38px -14px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: -12px 0 38px -14px rgba(0, 0, 0, 0.25);
+    box-shadow: -12px 0 38px -14px rgba(0, 0, 0, 0.25);
+    background-clip: padding-box;
+    min-height: 100%;
+    
+  }
+  
+  .modal-backdrop {
+    background-color: transparent;
+  }
+  
+  .modal-button-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .modal-body{
+    overflow: auto; 
+    min-height: 100%;
+ }
+
+ .btn-comprar{
+    background-color: #57732d;
+    border: solid 7px #57732d;
+    color: black;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.btn-comprar:hover{
+    background-color: #0f2b11;
+    border: solid 7px #0f2b11;
+    color: white;
 }
