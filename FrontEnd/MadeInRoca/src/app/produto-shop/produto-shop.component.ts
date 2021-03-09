@@ -19,19 +19,19 @@ export class ProdutoShopComponent implements OnInit {
     private produtoService: ProdutoService
   ) { }
 
-  ngOnInit(){
-    window.scroll(0,0)
+  ngOnInit() {
+    window.scroll(0, 0)
     let id = this.route.snapshot.params['id']
     this.findByIdProduto(id)
   }
 
-  findByIdProduto(id: number){
-    this.produtoService.getByIdProduto(id).subscribe((resp: Produto) =>{
+  findByIdProduto(id: number) {
+    this.produtoService.getByIdProduto(id).subscribe((resp: Produto) => {
       this.produto = resp
     })
   }
 
-  somaTotal(valor: number){
+  somaTotal(valor: number) {
     this.totalProduto = valor * this.qtdProduto
   }
 }

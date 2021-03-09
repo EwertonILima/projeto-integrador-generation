@@ -1,7 +1,6 @@
 *{
-    color: #402222;
+  color: #402222;
 }
-
 
 .img-product-single {
   border: #c4c4c4 solid 1px;
@@ -44,8 +43,8 @@ h5 {
 
 .product-single {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  min-width: 350px;
+  max-width: 350px;
 }
 .carousel-control-next,
 .carousel-control-prev {
@@ -70,4 +69,27 @@ h5 {
   width: auto;
   position: absolute;
   top: 30%;
+}
+
+.color-green {
+  color: #0e5411;
+}
+
+.btn {
+  color: #fff;
+}
+
+@media (max-width: 350px) {
+  .product-single {
+    min-width: 320px;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 280px) {
+  .product-single {
+    display: flex;
+    min-width: 275px;
+    max-width: 275px;
+  }
 }
