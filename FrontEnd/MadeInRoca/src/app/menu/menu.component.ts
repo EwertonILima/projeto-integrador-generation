@@ -14,19 +14,17 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class MenuComponent implements OnInit {
 
+ 
   nomeProd: string
   listaProdutos: Produto[]
   place: string
 
-  nome = environment.nome
-  
   constructor(
     public auth: AuthService,
     private router: Router,
     private produtoService: ProdutoService
   ) { }
 
-  
 
   ngOnInit() {
     this.findByNomeProduto()
