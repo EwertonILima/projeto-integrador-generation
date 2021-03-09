@@ -1,5 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light my-0 py-1" style="background-color: #57732d">
-
+<nav class="navbar navbar-expand-lg navbar-light my-0 py-0" style="background-color: #57732d">
 
 
     <ul class="navbar-nav d-flex align-items-center ml-1">
@@ -7,7 +6,7 @@
             <a routerLink="/home">
                 <img src="https://i.imgur.com/XnkpS3j.png" alt="Logo Made In Roça" width="90px" class="img-fluid p-1" />
             </a>
-            <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
+            <button class="navbar-toggler ml-2 align-top" type="button" data-toggle="collapse"
                 data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false"
                 aria-label="Alterna navegação">
                 <span class="navbar-toggler-icon-branca d-flex flex-column align-items-center "><i class="fa fa-bars"
@@ -15,26 +14,6 @@
                     <p class="nav-item mt-2">Menu</p>
                 </span>
             </button>
-            <!-- Menu dentro botão -->
-            <div class="collapse" id="conteudoNavbarSuportado">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-2">
-
-                    <li class="nav-item">
-                        <a class="nav-link text-light" routerLink="/produtos">Produtos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" routerLink="/cesta">Assine</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" routerLink="/sobre-nos">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" routerLink="/fale-conosco">Contato</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- /Menu dentro botão -->
             
         </li>
         <!-- Saudação -->
@@ -49,8 +28,8 @@
     </ul>
 
 
-    <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-2 align-items-center">
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-2">
 
             <li class="nav-item">
                 <a class="nav-link text-light" routerLink="/produtos">Produtos</a>
@@ -71,9 +50,9 @@
             <div class="search dropdown ml-5">
                 <input data-toggle="dropdown" class="form-control p-2" type="text" placeholder="Pesquisar produtos"
                     [(ngModel)]='nomeProd' (keyup)='findByNomeProduto()' (mouseover)='limparPesquisar()' />
-                <i class="fa fa-search mr-2" aria-hidden="true"></i>
+                <i class="fa fa-search text-light ml-3" aria-hidden="true"></i>
                 <div class="dropdown-content ">
-                    <div class="dropdown-menu mt-1" aria-labelledby="navbarDropdown ">
+                    <div class="dropdown-menu  mt-1" aria-labelledby="navbarDropdown ">
                         <div *ngFor='let item of listaProdutos'>
                             <a class="dropdown-item-search" [routerLink]="[ '/produtos', item.id]">{{item.nome}}</a>
                         </div>
@@ -86,8 +65,9 @@
         </ul>
     </div>
 
-    <div class="d-flex mt-3 ">
-        <div class="d-flex flex-column align-items-center justify-content-center login-cesta mr-4 fixed">
+
+    <div class="d-flex responsividade">
+        <div class="login-cesta mr-4">
             <a class="text-light d-flex flex-column align-items-center justify-content-center " routerLink="/login ">
                 <svg xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink "
                     xmlns:svgjs="http://svgjs.com/svgjs " version="1.1 " width="512 " height="512 " x="0 " y="0 "
@@ -143,7 +123,7 @@
             </div>
         </div>
 
-        <div class="d-flex flex-column align-items-center justify-content-center login-cesta mr-3 ">
+        <div class="d-flex flex-column justify-content-center login-cesta mr-3 ">
             <a class="text-light d-flex flex-column align-items-center justify-content-center " data-toggle="modal"
                 data-target="#flyoutmodal">
                 <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 512 512 " width="512 " height="512 ">
@@ -181,11 +161,6 @@
 
 <!-- Modal cesta -->
 
-<!-- Modal -->
-<!-- Button to open the Modal -->
-
-
-<!-- Modal -->
 <div class="modal" id="flyoutmodal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog fadeInRight animated ml-auto" role="document">
         <div class="modal-content">
@@ -203,8 +178,12 @@
             </div>
             <div class="modal-footer">
 
-                <div class="col-md-12  ml-5">
+                <div class="col-md-12 pt-3 pl-4">
                     0 Itens
+                </div>
+
+                <div class="col-md-12 pt-4 pl-4">
+                    R$ 0,00
                 </div>
 
                 <button type="button" class="d-flex m-3 abtn btn-comprar">Finalizar Compra</button>
