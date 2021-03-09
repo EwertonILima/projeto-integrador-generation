@@ -14,12 +14,11 @@ import { ProdutoService } from '../service/produto.service';
 })
 export class MenuComponent implements OnInit {
 
+ 
   nomeProd: string
   listaProdutos: Produto[]
   place: string
 
-  nome = environment.nome
-  
   constructor(
     public auth: AuthService,
     private router: Router,
@@ -48,6 +47,8 @@ export class MenuComponent implements OnInit {
      })
     
   }
+
+  
 
   limparPesquisar() {
     this.nomeProd = ''

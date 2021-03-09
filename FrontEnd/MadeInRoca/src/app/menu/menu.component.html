@@ -1,20 +1,56 @@
-<nav class="navbar navbar-expand-lg navbar-light my-0 py-0" style="background-color: #57732d">
+<nav class="navbar navbar-expand-lg navbar-light my-0 py-1" style="background-color: #57732d">
 
-    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-        <ul class="navbar-nav mr-auto d-flex align-items-center ml-1">
-            <li class="nav-item active">
-                <a routerLink="/home">
-                    <img src="https://i.imgur.com/XnkpS3j.png" alt="Logo Made In Roça" width="90px"
-                        class="img-fluid p-1" />
-                </a>
-            </li>
-            <li class="nav-item">
-                <h4 *ngIf="auth.validaAdm()" class="nav-link text-light" >Olá, Administrador!</h4>
-            </li>
 
-            <li class="nav-item">
-                <p *ngIf="auth.logado()" class="nav-link text-light">Olá, {{ nome }}</p>
-            </li>
+
+    <ul class="navbar-nav d-flex align-items-center ml-1">
+        <li class="nav-item active">
+            <a routerLink="/home">
+                <img src="https://i.imgur.com/XnkpS3j.png" alt="Logo Made In Roça" width="90px" class="img-fluid p-1" />
+            </a>
+            <button class="navbar-toggler ml-2" type="button" data-toggle="collapse"
+                data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false"
+                aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon-branca d-flex flex-column align-items-center "><i class="fa fa-bars"
+                        aria-hidden="true"></i>
+                    <p class="nav-item mt-2">Menu</p>
+                </span>
+            </button>
+            <!-- Menu dentro botão -->
+            <div class="collapse" id="conteudoNavbarSuportado">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-2">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" routerLink="/produtos">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" routerLink="/cesta">Assine</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" routerLink="/sobre-nos">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" routerLink="/fale-conosco">Contato</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- /Menu dentro botão -->
+            
+        </li>
+        <!-- Saudação -->
+        <li class="nav-item">
+            <h4 *ngIf="auth.validaAdm()" class="nav-link text-light">Olá, Administrador!</h4>
+        </li>
+
+        <li class="nav-item">
+            <p *ngIf="auth.logado()" class="nav-link text-light"></p>
+        </li>
+        <!-- /Saudação -->
+    </ul>
+
+
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-2 align-items-center">
 
             <li class="nav-item">
                 <a class="nav-link text-light" routerLink="/produtos">Produtos</a>
@@ -33,9 +69,9 @@
             <!-- BARRA SEARCH -->
 
             <div class="search dropdown ml-5">
-                <input data-toggle="dropdown" class="form-control p-2" type="search" placeholder="Pesquisar produtos"
+                <input data-toggle="dropdown" class="form-control p-2" type="text" placeholder="Pesquisar produtos"
                     [(ngModel)]='nomeProd' (keyup)='findByNomeProduto()' (mouseover)='limparPesquisar()' />
-
+                <i class="fa fa-search mr-2" aria-hidden="true"></i>
                 <div class="dropdown-content ">
                     <div class="dropdown-menu mt-1" aria-labelledby="navbarDropdown ">
                         <div *ngFor='let item of listaProdutos'>
@@ -51,7 +87,7 @@
     </div>
 
     <div class="d-flex mt-3 ">
-        <div class="d-flex flex-column align-items-center justify-content-center login-cesta mr-4 ">
+        <div class="d-flex flex-column align-items-center justify-content-center login-cesta mr-4 fixed">
             <a class="text-light d-flex flex-column align-items-center justify-content-center " routerLink="/login ">
                 <svg xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink "
                     xmlns:svgjs="http://svgjs.com/svgjs " version="1.1 " width="512 " height="512 " x="0 " y="0 "
@@ -132,7 +168,7 @@
                             d="M204.6,320a8,8,0,0,0,5.657-13.657,7.686,7.686,0,0,1-1.442-8.884l2.94-5.881a8,8,0,0,0-14.31-7.156L194.5,290.3a23.667,23.667,0,0,0,4.439,27.354A7.978,7.978,0,0,0,204.6,320Z " />
                     </g>
                 </svg>
-                
+
 
 
             </a>
@@ -166,11 +202,11 @@
 
             </div>
             <div class="modal-footer">
-            
+
                 <div class="col-md-12  ml-5">
-                   0 Itens
+                    0 Itens
                 </div>
-         
+
                 <button type="button" class="d-flex m-3 abtn btn-comprar">Finalizar Compra</button>
             </div>
         </div>
