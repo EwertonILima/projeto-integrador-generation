@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Produto } from 'src/app/model/Produto';
+import { AuthService } from 'src/app/service/auth.service';
+import { ProdutoService } from 'src/app/service/produto.service';
 import { environment } from 'src/environments/environment.prod';
-import { Produto } from '../model/Produto';
-import { AuthService } from '../service/auth.service';
-import { ProdutoService } from '../service/produto.service';
-
-
 
 @Component({
   selector: 'app-menu',
@@ -13,14 +11,15 @@ import { ProdutoService } from '../service/produto.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-
- 
+  
   nomeProd: string
   listaProdutos: Produto[]
-  place: string
+
+  nome = environment.nome
+  foto = environment.foto
 
   constructor(
-    public auth: AuthService,
+    public authService: AuthService,
     private router: Router,
     private produtoService: ProdutoService
   ) { }
@@ -53,5 +52,3 @@ export class MenuComponent implements OnInit {
   }
 
 }
-
-
