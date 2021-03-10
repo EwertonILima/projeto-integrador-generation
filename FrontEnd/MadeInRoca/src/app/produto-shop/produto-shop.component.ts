@@ -11,6 +11,9 @@ import { ProdutoService } from '../service/produto.service';
 export class ProdutoShopComponent implements OnInit {
   produto: Produto = new Produto()
 
+  qtdProduto: number = 1
+  totalProduto: number
+
   constructor(
     private route: ActivatedRoute,
     private produtoService: ProdutoService
@@ -26,5 +29,9 @@ export class ProdutoShopComponent implements OnInit {
     this.produtoService.getByIdProduto(id).subscribe((resp: Produto) =>{
       this.produto = resp
     })
+  }
+
+  somaTotal(valor: number){
+    this.totalProduto = valor * this.qtdProduto
   }
 }

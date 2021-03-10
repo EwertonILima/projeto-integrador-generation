@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Categoria } from '../model/Categoria';
 import { Produto } from '../model/Produto';
+import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -14,12 +16,18 @@ export class ProdutosComponent implements OnInit {
   listaProdutos: Produto[]
   nomeProd: string
 
+  categoria: Categoria = new Categoria
+  listaCategoria: Categoria[]
+
   key: string
   reverse: boolean
 
+  all: boolean = true
+
   constructor(
     private route: ActivatedRoute,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private categoriaService: CategoriaService
   ) { }
 
   ngOnInit() {
@@ -32,7 +40,8 @@ export class ProdutosComponent implements OnInit {
   }
 
   findByNomeProduto() {
-
+    this.all = true
+    
     if (this.nomeProd == '') {
       this.getAllProdutos()
     }
@@ -62,6 +71,23 @@ export class ProdutosComponent implements OnInit {
     this.reverse = false
   }
 
+  getAllCategorias(){
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp
+    })
+  }
+
+  findByNomeCategoria(nome: string) {
+    this.all = false
+    if(nome == ''){
+      this.getAllProdutos()
+      this.all = true
+    }
+    this.categoriaService.getByNomeCategoria(nome).subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp
+    })
+    this.listaCategoria = []
+  }
 }
 
 
