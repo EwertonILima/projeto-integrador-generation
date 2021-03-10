@@ -1,0 +1,418 @@
+/* TELA NOTEBOOK*/
+
+/* Barra de pesquisar */
+
+.dropdown-menu-search {
+    position: absolute;
+    top: 100%;
+    text-align: left;
+    background-clip: padding-box;
+    border: 1px solid #57732d;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 0px rgba(100, 99, 99, 0.247);
+    min-width: 0rem;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1000;
+    background-color: white;
+}
+
+.form-control {
+    min-width: 30.5rem;
+    height: 30px;
+    background-color: #e9ecef;
+    font-style: italic;
+    border: none;
+    box-shadow: none;
+}
+
+.dropdown-item-search {
+    display: block;
+    min-width: 30.5rem;
+    padding-left: 2px;
+    border-radius: .25rem;
+}
+
+.dropdown-item-search:hover {
+    color: #57732d;
+    min-width: 30rem;
+    padding-left: 2px;
+    border-radius: .25rem;
+    background-color: rgba(100, 99, 99, 0.171);
+}
+
+.barrapesquisar {
+    /* Posição barra de pesquisar */
+    flex-grow: 3;
+    display: grid;
+    justify-content: center!important;
+}
+
+a:link {
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* /Barra de pesquisar */
+
+
+/* Menu */
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    flex-direction: row-reverse;
+}
+
+/* /Menu */
+
+.logo {
+    /* Logo Made in Roça */
+    width: 90px;
+    margin-right: 0px;
+}
+
+/*login e cesta */
+
+.login-cesta {
+    padding: 0.3rem;
+}
+
+.login-cesta svg {
+    max-width: 30px;
+    max-height: 30px;
+    fill: white;
+}
+
+.login-cesta:hover {
+    cursor: pointer;
+    
+}
+
+.dropdown-item {
+    color: #57732d;
+    padding-left: 2px;
+    padding: 0px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 70%;
+    min-width: 6rem;
+    background-clip: padding-box;
+    border: 1px solid #57732d;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 0px rgba(100, 99, 99, 0.247);
+    color: #57732d;
+    padding: 0rem;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    font-weight: 600;
+}
+
+/* /login e cesta */
+
+
+/* Saudacao */
+.flex-column-saudacao {
+    flex-direction: column;
+}
+
+
+
+
+
+
+/* icone do menu responsivo */
+
+.navbar-toggler-icon-roca {
+    /* Barras internas */
+    display: inline-block;
+    padding: 2px;
+    width: 1.2em;
+    vertical-align: middle;
+    content: "";
+    background: 50%/100% 100% no-repeat;
+    font-size: 30px;
+    color: #f8f9fa;
+}
+
+.bordabotaodropdown {
+    /* Borda */
+    padding: .25rem .50rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.navbar-light .bordabotaodropdown {
+    /* Cor da borda */
+    border-color: rgba(241, 237, 237, 0.596);
+}
+
+/* /icone do menu responsivo */
+
+/* FUNÇÔES RESPONSIVAS */
+
+@media(max-width: 1000px) {
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: .5rem 1rem;
+    }
+    .nav-link {
+        display: block;
+        padding: .2rem .2rem;
+    }
+    p {
+        margin-top: -30px;
+    }
+    .dropdown-menu-search {
+        top: 135%!important;
+    }
+    .barrapesquisar {
+        /* Posição barra de pesquisar */
+        flex-grow: 3;
+        display: unset!important;
+    }
+    .flex-column-saudacao {
+        flex-direction: row-reverse;
+    }
+    .nav-link {
+        display: block;
+        padding-left: 5px;
+    }
+
+    .saudacao{
+        padding-right: 10px!important;
+    }
+}
+
+@media(max-width: 950x) {
+    .dropdown-menu-search {
+        top: 120%!important;
+    }
+}
+
+@media(max-width: 700px) {
+    .form-inline {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+    .nav-link {
+        display: block;
+        padding: .1rem .1rem;
+    }
+    .form-control {
+        min-width: 25rem!important;
+        height: 30px;
+        background-color: #e9ecef;
+        font-style: italic;
+        border: none;
+        box-shadow: none;
+        width: auto;
+        display: inline-block!important;
+    }
+    .dropdown-item-search {
+        display: block;
+        min-width: 25rem!important;
+        padding-left: 2px;
+        border-radius: .25rem;
+    }
+    .dropdown-menu-search {
+        top: 140%!important;
+    }
+}
+
+@media(max-width: 575px) {
+    .dropdown-menu-search {
+        top: 133%!important;
+    }
+}
+
+@media(max-width: 510px) {
+    .fa-search:before {
+        content: "";
+    }
+    .fa {
+        display: unset;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .form-control {
+        min-width: 20rem!important;
+        height: 30px;
+        background-color: #e9ecef;
+        font-style: italic;
+        border: none;
+        box-shadow: none;
+        width: auto;
+        display: inline-block!important;
+    }
+    .dropdown-item-search {
+        display: block;
+        min-width: 20rem!important;
+        padding-left: 2px;
+        border-radius: .25rem;
+    }
+    .dropdown-menu-search {
+        top: 130%!important;
+    }
+}
+
+@media(max-width: 400px) {
+    .nav-link {
+        display: block;
+        padding: .09rem .1rem;
+    }
+    .mr-5, .mx-5 {
+        margin-right: 0rem!important;
+    }
+    .fa-search:before {
+        content: "";
+    }
+    .fa {
+        display: unset;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .form-control {
+        min-width: 15rem!important;
+        height: 30px;
+        background-color: #e9ecef;
+        font-style: italic;
+        border: none;
+        box-shadow: none;
+        width: auto;
+        display: inline-block!important;
+    }
+    .dropdown-item-search {
+        display: block;
+        min-width: 15rem!important;
+        padding-left: 2px;
+        border-radius: .25rem;
+    }
+    .dropdown-menu-search {
+        top: 126%!important;
+    }
+}
+
+@media(max-width: 270px) {}
+
+/* /FUNÇÔES RESPONSIVAS */
+
+/* Modal Cesta */
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.modal-dialog {
+    margin: 0;
+    height: 100%;
+}
+
+.animated {
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-weight: bolder;
+}
+
+.modal-header {
+    border-color: black;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal-content {
+    border-radius: 0;
+    border: 0;
+    -webkit-box-shadow: -12px 0 38px -14px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: -12px 0 38px -14px rgba(0, 0, 0, 0.25);
+    box-shadow: -12px 0 38px -14px rgba(0, 0, 0, 0.25);
+    background-clip: padding-box;
+    min-height: 100%;
+}
+
+.modal-backdrop {
+    background-color: transparent;
+}
+
+.modal-button-container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-body {
+    overflow: auto;
+    min-height: 100%;
+}
+
+.btn-comprar {
+    background-color: #57732d;
+    border: solid 7px #57732d;
+    color: black;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.btn-comprar:hover {
+    background-color: #0f2b11;
+    border: solid 7px #0f2b11;
+    color: white;
+}
+
+/* /Modal Cesta */
