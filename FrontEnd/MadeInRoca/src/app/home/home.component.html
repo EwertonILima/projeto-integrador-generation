@@ -26,88 +26,63 @@
   </a>
 </div>
 
-<!-- BOX BANNER -->
+<!-- SOBRE NOSSA CAUSA -->
+<div class="jumbotron jumbotron-fluid" style="background-color: #f5f8f0;">
+  <div class="container">
+    
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-4">
 
-<div class="container-fluid my-4">
-  <div class="row flex-wrap m-3 p-3 justify-content-center" style="background-color: #8EA676; border-radius: 15px;">
-    <div class="col-md-6 m-0 d-flex justify-content-center flex-column">
-      <div class="ml-2 my-3 mr-0">
-        <h3 class="mb-0"><strong>Cesta</strong></h3>
-        <h3><strong>Made In Roça!</strong></h3>
-        <p class="text-justify m-0">Nós trabalhamos para conectar pequenos produtores com a mesa da sua casa, entregando
-          frutas, legumes e verduras, com qualidade. Ao optar pelas nossas Cestas você não vai mais precisar gastar
-          tempo, combustível e bom-humor procurando alimentos
-          de qualidade. Nós levamos para você alimentos de ótima qualidade, por um preço que cabe no seu bolso. Venha
-          você também pode fazer parte dessa iniciativa. Suas escolhas podem mudar o mundo!</p>
-        <div class="d-flex justify-content-end mt-3">
-          <button *ngIf="auth.deslogado()" type="submit" class="btn btn-success" routerLink="/cadastrar">Cadastrar nova
-            conta</button>
-          <button *ngIf="auth.logado()" type=" submit " class="btn btn-success " routerLink="/cesta">Cadastrar nova
-            conta</button>
+        <img src="https://i.imgur.com/IGv2c0n.gif"
+          alt="Foto de um celular com a foto de uma mulher do lado esquerdo do celular tem três icones com as redes socias"
+          width="300px" height="300px">
 
-        </div>
       </div>
-
-    </div>
-
-    <div class="col-md-6 cesta-card-img justify-content-center align-items-center ">
-      <img class="rounded img-fluid " style="max-height: 300px; " src="https://i.imgur.com/NOutWyC.jpg " alt=" ">
+      <div class="col-md-6 d-flex justify-content-center flex-column">
+        <h1 class="display-4">Apoie nossa causa</h1>
+        
+        <p class="lead text-justify">Baseado em um dos objetivos sustentáveis da ONU, Made In Roça é um e-commerce criado no intuito de ajudar o pequeno produtor, dando um espaço de destaque para os mesmos.</p>
+      </div>
+      
     </div>
   </div>
-
 </div>
-<!-- /BOX BANNER -->
+<!-- /SOBRE NOSSA CAUSA -->
 
 <!-- COMO FUNCIONA -->
 <div class="container-fluid my-5 ">
   <div class="row d-flex justify-content-center text-center my-5 ">
     <h1 class="color-green mb-3 ">Como funciona?</h1>
     <div class="col-md-12 d-flex flex-wrap justify-content-center align-items-center como-funciona ">
-
-
-
       <div class="card card-sobre ">
         <img class="card-img-top p-3 " height="180px " src="https://i.imgur.com/x9a0pOS.png " alt="Card image cap ">
         <div class="card-body pt-2 d-flex align-items-center flex-column ">
-
           <p class="card-text ">Suas verduras são colhidas prontamente, para chegar fresquinho até você o quanto antes.
             &nbsp; &nbsp; &nbsp;</p>
         </div>
       </div>
-
       <div class="d-flex align-items-center sobre-cards ">
-
-
         <div class="card card-sobre ">
           <img class="card-img-top p-3 img-como-funciona " height="180px " src="https://i.imgur.com/jiYwssw.png "
             alt="Card image cap ">
-
           <div class="card-body pt-2 d-flex align-items-center flex-column ">
-
             <p class="card-text ">Escolha suas frutas, legumes, verduras e outros produtos online.&nbsp;&nbsp;
               <br><br>
             </p>
           </div>
         </div>
       </div>
-
       <div class="d-flex align-items-center sobre-cards ">
-
-
         <div class="card card-sobre ">
           <img class="card-img-top p-3 " height="180px " src="https://i.imgur.com/mTL46MV.png " alt="Card image cap ">
           <div class="card-body pt-2 d-flex align-items-center flex-column ">
-
             <p class="card-text ">Toda semana a lista de produtos é atualizada com os produtos da época que temos
               disponíveis.
               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
           </div>
         </div>
       </div>
-
       <div class="d-flex align-items-center sobre-cards ">
-
-
         <div class="card card-sobre ">
           <img class="card-img-top p-3 img-fluid img-como-funciona " style="width: auto; max-height: 180px; "
             src="https://i.imgur.com/NRWY4tm.png " alt="Card image cap ">
@@ -118,15 +93,11 @@
           </div>
         </div>
       </div>
-
       <div class="d-flex align-items-center sobre-cards ">
-
-
         <div class="card card-sobre ">
           <img class="card-img-top p-3 img-fluid img-como-funciona " style="width: auto; max-height: 180px; "
             src="https://i.imgur.com/THkjq0O.png " alt="Card image cap ">
           <div class="card-body pt-2 d-flex align-items-center flex-column ">
-
             <p class="card-text ">Você incentiva o pequeno produtor, respeita a natureza e não prejudica sua saúde.</p>
           </div>
         </div>
@@ -136,7 +107,6 @@
   </div>
 </div>
 <!-- /COMO FUNCIONA -->
-
 <!-- PROMOCAO -->
 <div class="container mt-5">
   <div class="row mt-0 d-flex justify-content-center" style="border: #e9ecef solid 3px;">
@@ -163,11 +133,8 @@
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
                           placeholder="Qtd">
                       </div>
-
                       <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
                         href="#">Comprar</button>
-
-
                     </div>
                   </div>
                 </div>
@@ -181,8 +148,6 @@
                     alt="Pimentões vermelhos">
                   <div class="card-body">
                     <h5 class="card-title">Pimentão Vermelho</h5>
-
-
                     <div class="mb-2">
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
@@ -191,10 +156,8 @@
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
                           placeholder="Qtd">
                       </div>
-
                       <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
                         href="#">Comprar</button>
-
                     </div>
                   </div>
                 </div>
@@ -208,8 +171,6 @@
                     alt="Dois limões cortados ao meio">
                   <div class="card-body">
                     <h5 class="card-title">Limão Tahiti</h5>
-
-
                     <div class="mb-2">
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
@@ -218,10 +179,8 @@
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
                           placeholder="Qtd">
                       </div>
-
                       <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
                         href="#">Comprar</button>
-
                     </div>
                   </div>
                 </div>
@@ -249,9 +208,7 @@
                 </div>
               </div>
               <!--/Cards-->
-
               <!--COMECA AQUI-->
-
             </div>
           </div>
           <div class="carousel-item">
@@ -264,7 +221,6 @@
                     alt="Foto de cenouras">
                   <div class="card-body">
                     <h5 class="card-title">Cenoura</h5>
-
                     <div class="mb-2">
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
@@ -273,10 +229,8 @@
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
                           placeholder="Qtd">
                       </div>
-
                       <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
                         href="#">Comprar</button>
-
                     </div>
                   </div>
                 </div>
@@ -289,10 +243,7 @@
                     src="https://siriusorganicos.com.br/wp-content/uploads/2020/11/maca-gala-importada-organica-produtos-organicos-sirius-delivery-entrega-cesta-curitiba.jpg"
                     alt="Foto de três maçãs gala">
                   <div class="card-body">
-
                     <h5 class="card-title">Maçã Gala</h5>
-
-
                     <div class="mb-2">
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
@@ -301,10 +252,8 @@
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
                           placeholder="Qtd">
                       </div>
-
                       <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
                         href="#">Comprar</button>
-
                     </div>
                   </div>
                 </div>
@@ -318,8 +267,6 @@
                     alt="Um alho inteiro e outros alhos descacados">
                   <div class="card-body">
                     <h5 class="card-title">Alho</h5>
-
-
                     <div class="mb-2">
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
@@ -328,18 +275,13 @@
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
                           placeholder="Qtd">
                       </div>
-
-
                       <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
                         href="#">Comprar</button>
-
-
                     </div>
                   </div>
                 </div>
               </div>
               <!--/Cards-->
-
               <!--Cards-->
               <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
                 <div class="card efeitoFruta" style="width: 18rem;">
@@ -347,11 +289,7 @@
                     src="https://superplanalto.com/image/cache/catalog/produtos/produtos/banana-nanica-550x550w.jpg"
                     alt="Meia Duzia de Bananas">
                   <div class="card-body">
-
                     <h5 class="card-title">Banana Nanica</h5>
-
-
-
                     <div class="mb-2">
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
@@ -360,18 +298,13 @@
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
                           placeholder="Qtd">
                       </div>
-
-
                       <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
                         href="#">Comprar</button>
-
                     </div>
                   </div>
                 </div>
               </div>
               <!--/Cards-->
-
-
             </div>
           </div>
         </div>

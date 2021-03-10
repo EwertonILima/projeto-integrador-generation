@@ -20,7 +20,6 @@ import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { ProdutorPerfilComponent } from './produtor/produtor-perfil/produtor-perfil.component';
-import { AdministradorComponent } from './administrador/administrador.component';
 import { AlertasComponent } from './alertas/alertas.component';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
@@ -46,7 +45,6 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     CategoriaDeleteComponent,
     CategoriaEditComponent,
     ProdutorPerfilComponent,
-    AdministradorComponent,
     AlertasComponent
   ],
   imports: [
