@@ -1,4 +1,5 @@
-<app-menu></app-menu>
+<app-menu *ngIf="authService.deslogado()"></app-menu>
+<app-menu-logado *ngIf="authService.logado()"></app-menu-logado>
 
 <router-outlet></router-outlet>
 

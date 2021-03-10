@@ -29,6 +29,7 @@ import { AdministradorComponent } from './administrador/administrador.component'
 import { AlertasComponent } from './alertas/alertas.component';
 
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { MenuLogadoComponent } from './menu/menu-logado/menu-logado.component';
 
 
 
@@ -57,7 +58,8 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
     MeusProdutosComponent,
     ProdutorPerfilComponent,
     AdministradorComponent,
-    AlertasComponent
+    AlertasComponent,
+    MenuLogadoComponent
   ],
   imports: [
     BrowserModule,

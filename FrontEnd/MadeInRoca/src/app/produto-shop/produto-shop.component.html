@@ -1,42 +1,19 @@
-<div class="container">
 
-  <div class='row produto-unico justify-content-center'>
-    <div class=" col-md-12  mt-5 d-flex ">
-
-      <div class="row">
-        <div class="container product-single col-md-4 col-sm-12">
-
-          <img class="img-fluid img-product-single" src="https://i.imgur.com/G6t3XF4.jpg" alt="Produto">
-
-
+<div class="container my-5">
+  <div class="row produto-unico justify-content-center" style="background-color: #e9ecef">
+    <div class="col-md-4 d-flex align-items-center my-4">
+      <img class="img-fluid img-product-single" src="https://i.imgur.com/G6t3XF4.jpg" alt="Produto">
+    </div>
+    <div class="col-md-6 product-single-info my-4">
+      <h5 class="mb-3" style="font-size: 35px;">{{produto.nome}}</h5>
+      <h5 class="visually-hidden">R$ {{produto.preco}}</h5>
+      <div class="comprar-qnt my-3 d-flex justify-content-start align-items-center">
+        <div class="form-group my-auto mr-2">
+          <input [(ngModel)]="qtdProduto" class="form-control" min="0" value="1" type="number" name="qtdProduto"
+            id="qtdProduto" placeholder="Quantidade">
         </div>
-
-        <div class="product-single-info col-md-8 col-sm-12">
-          <h5 class="mb-3">{{produto.nome}}</h5>
-          <h5 class="visually-hidden">R$ {{produto.preco}}</h5>
-
-          <div class="comprar-qnt my-3 d-flex justify-content-start align-items-center">
-            <div class="form-group my-auto mr-2">
-              <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                placeholder="Quantidade">
-            </div>
-
-            <button type="button" class="btn btn-comprar" style="height: 42px;">Comprar</button>
-
-
-          </div>
-
-          <div class='descricao-produto text-justify text '>
-            <p>Descrição: A berinjela é um dos frutos mais utilizados na culinária internacional. Fortemente associado à
-              cozinha Italiana, no Brasil também nao fica atrás, e integra pratos importantes como o famoso Vinagrete! É
-              rico em vitaminas A e C, além de antioxidantes. O Tomate Italiano em especial é super indicado para o
-              preparo de molhos e pode ser consumido cru ou cozido.
-            </p>
-          </div>
-
-        </div>
-
-
+        <button type="button" class="btn btn-comprar" style="height: 42px;" data-toggle="modal"
+          data-target="#modalComprar" (click)='somaTotal(produto.preco)'>Comprar</button>
       </div>
     </div>
   </div>
@@ -291,20 +268,42 @@
             </div>
           </div>
         </div>
+      </div>
+      <a class="carousel-control-prev carousel-promo" href="#carouselExampleIndicators2" role="button"
+        data-slide="prev">
+        <span class="carousel-control-prev-icon btn btn-prev" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next carousel-promo" href="#carouselExampleIndicators2" role="button"
+        data-slide="next">
+        <span class="carousel-control-next-icon btn btn-next" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+  </div>
 
-        <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon btn btn-prev" aria-hidden="true"></span>
-          <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
-          <span class="carousel-control-next-icon btn btn-next" aria-hidden="true"></span>
-          <span class="sr-only">Próximo</span>
-        </a>
+  <div class="modal fade" id="modalComprar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+            <img style="max-width: 160px;" src="https://divinoamigoreflexoes.files.wordpress.com/2010/01/certo.png"
+              alt="">
+            <h5 class="mb-3" style="font-size: 35px;">{{produto.nome}} x {{qtdProduto}}</h5>
+            <h5> Valor Total: R$ {{totalProduto}}</h5>
+            <p> Adicionado com sucesso a sua cesta</p>
+          </div>
 
-
-
-
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" style="color: white;">Continuar
+            comprando</button>
+          <button type="button" class="btn btn-success" style="color: white;">Ir para cesta</button>
+        </div>
       </div>
     </div>
   </div>
-</div>

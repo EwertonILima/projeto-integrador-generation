@@ -6,11 +6,11 @@ import { ProdutoService } from 'src/app/service/produto.service';
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  selector: 'app-menu-logado',
+  templateUrl: './menu-logado.component.html',
+  styleUrls: ['./menu-logado.component.css']
 })
-export class MenuComponent implements OnInit {
+export class MenuLogadoComponent implements OnInit {
   
   nomeProd: string
   listaProdutos: Produto[]
