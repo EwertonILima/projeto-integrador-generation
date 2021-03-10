@@ -30,27 +30,20 @@
 
 <div class="container-fluid my-4">
   <div class="row flex-wrap m-3 p-3 justify-content-center" style="background-color: #8EA676; border-radius: 15px;">
-    <div class="col-md-6 m-0 d-flex justify-content-center flex-column">
-      <div class="ml-2 my-3 mr-0">
-        <h3 class="mb-0"><strong>Cesta</strong></h3>
-        <h3><strong>Made In Roça!</strong></h3>
-        <p class="text-justify m-0">Nós trabalhamos para conectar pequenos produtores com a mesa da sua casa, entregando
-          frutas, legumes e verduras, com qualidade. Ao optar pelas nossas Cestas você não vai mais precisar gastar
-          tempo, combustível e bom-humor procurando alimentos
-          de qualidade. Nós levamos para você alimentos de ótima qualidade, por um preço que cabe no seu bolso. Venha
-          você também pode fazer parte dessa iniciativa. Suas escolhas podem mudar o mundo!</p>
+    <div class="col-md-6 d-flex justify-content-center flex-column">
+      <div class="ml-2 my-3 mr-5">
+        <h3 class="mb-0 text-cesta"><strong>Cesta</strong></h3>
+        <h3 class="text-cesta"><strong>Made In Roça!</strong></h3>
+        <p class="text-justify">Escolha a quantidade de hortifrutis orgânicos que quer receber toda semana ou quinzena e nós selecionamos os melhores da estação para você. Além disso, você poderá restringir outros produtos que não quer receber...</p>
         <div class="d-flex justify-content-end mt-3">
-          <button *ngIf="auth.deslogado()" type="submit" class="btn btn-success" routerLink="/cadastrar">Cadastrar nova
-            conta</button>
-          <button *ngIf="auth.logado()" type=" submit " class="btn btn-success " routerLink="/cesta">Cadastrar nova
-            conta</button>
-
+          <button *ngIf="auth.deslogado()" type="submit" class="btn btn-cesta px-4" routerLink="/cadastrar">Cadastrar </button>
+            <button *ngIf="auth.logado()" type=" submit " class="btn btn-cesta px-4" routerLink="/cesta">Confira e assine</button>
         </div>
       </div>
 
     </div>
 
-    <div class="col-md-6 cesta-card-img justify-content-center align-items-center ">
+    <div class="col-md-4 cesta-card-img justify-content-center align-items-center ">
       <img class="rounded img-fluid " style="max-height: 300px; " src="https://i.imgur.com/NOutWyC.jpg " alt=" ">
     </div>
   </div>
@@ -61,13 +54,13 @@
 <!-- COMO FUNCIONA -->
 <div class="container-fluid my-5 ">
   <div class="row d-flex justify-content-center text-center my-5 ">
-    <h1 class="color-green mb-3 ">Como funciona?</h1>
+    <h1 class="text-comofunciona mb-3">Como funciona?</h1>
     <div class="col-md-12 d-flex flex-wrap justify-content-center align-items-center como-funciona ">
 
 
 
       <div class="card card-sobre ">
-        <img class="card-img-top p-3 " height="180px " src="https://i.imgur.com/x9a0pOS.png " alt="Card image cap ">
+        <img class="card-img-top p-3 " height="180px " src="https://i.imgur.com/aZ3jiHG.png" alt="Card image cap ">
         <div class="card-body pt-2 d-flex align-items-center flex-column ">
 
           <p class="card-text ">Suas verduras são colhidas prontamente, para chegar fresquinho até você o quanto antes.
@@ -79,7 +72,7 @@
 
 
         <div class="card card-sobre ">
-          <img class="card-img-top p-3 img-como-funciona " height="180px " src="https://i.imgur.com/jiYwssw.png "
+          <img class="card-img-top p-3 img-como-funciona " height="180px " src="https://i.imgur.com/bi6p9JW.png"
             alt="Card image cap ">
 
           <div class="card-body pt-2 d-flex align-items-center flex-column ">
@@ -95,7 +88,7 @@
 
 
         <div class="card card-sobre ">
-          <img class="card-img-top p-3 " height="180px " src="https://i.imgur.com/mTL46MV.png " alt="Card image cap ">
+          <img class="card-img-top p-3 " height="180px " src="https://i.imgur.com/vfIvB28.png" alt="Card image cap ">
           <div class="card-body pt-2 d-flex align-items-center flex-column ">
 
             <p class="card-text ">Toda semana a lista de produtos é atualizada com os produtos da época que temos
@@ -110,7 +103,7 @@
 
         <div class="card card-sobre ">
           <img class="card-img-top p-3 img-fluid img-como-funciona " style="width: auto; max-height: 180px; "
-            src="https://i.imgur.com/NRWY4tm.png " alt="Card image cap ">
+            src="https://i.imgur.com/Pn07CGO.png" alt="Card image cap ">
           <div class="card-body pt-2 d-flex align-items-center flex-column ">
 
             <p class="card-text ">Pediu antes das 11h? A gente leva na sua casa no dia seguinte, de segunda a sábado.
@@ -124,7 +117,7 @@
 
         <div class="card card-sobre ">
           <img class="card-img-top p-3 img-fluid img-como-funciona " style="width: auto; max-height: 180px; "
-            src="https://i.imgur.com/THkjq0O.png " alt="Card image cap ">
+            src="https://i.imgur.com/izQig2x.png" alt="Card image cap ">
           <div class="card-body pt-2 d-flex align-items-center flex-column ">
 
             <p class="card-text ">Você incentiva o pequeno produtor, respeita a natureza e não prejudica sua saúde.</p>
@@ -141,7 +134,7 @@
 <div class="container mt-5">
   <div class="row mt-0 d-flex justify-content-center" style="border: #e9ecef solid 3px;">
     <div class="col-12 mb-1 ">
-      <h3 class="mb-0 px-4 py-2 pro text-center color-green">Promoções do dia </h3>
+      <h3 class="mb-0 px-4 py-2 pro text-center text-comofunciona">Promoções do dia </h3>
     </div>
     <div class="col-12 ">
       <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
@@ -156,7 +149,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Uva Itália</h5>
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$2.50</p>
+                      <p class="card-text negrito"> R$9.50</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
@@ -184,7 +177,7 @@
 
 
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$2.50</p>
+                      <p class="card-text negrito"> R$10,99</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
@@ -211,7 +204,7 @@
 
 
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$2.50</p>
+                      <p class="card-text negrito"> R$7,99</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
@@ -234,7 +227,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Berinjela</h5>
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$2.50</p>
+                      <p class="card-text negrito"> R$6,00</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
@@ -266,7 +259,7 @@
                     <h5 class="card-title">Cenoura</h5>
 
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$2.50</p>
+                      <p class="card-text negrito"> R$4.00</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
@@ -294,7 +287,7 @@
 
 
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$2.50</p>
+                      <p class="card-text negrito"> R$5,99</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
@@ -321,7 +314,7 @@
 
 
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$2.50</p>
+                      <p class="card-text negrito"> R$5,50</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
@@ -353,7 +346,7 @@
 
 
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$2.50</p>
+                      <p class="card-text negrito"> R$4.00</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
@@ -453,7 +446,7 @@
               fill="#ffffff " data-original="#000000 " />
             <path xmlns="http://www.w3.org/2000/svg " d="m246.734375 14.351562c1.59375 3.863282 5.566406
                         6.398438 9.757813 6.179688 4.140624-.214844 7.777343-3.011719 9.058593-6.953125 1.285157-3.972656-.113281-8.5-3.441406-11.03125-3.394531-2.5859375-8.128906-2.730469-11.679687-.382813-3.960938 2.617188-5.496094 7.828126-3.695313 12.1875zm0
-                        0 " fill="#ffffff " data-original="#000000 " />
+                        0 "fill="#ffffff " data-original="#000000" />
           </g>
         </svg>
 
@@ -471,7 +464,7 @@
       <div class="col-md-5 mx-3 p-0 ">
         <h1 class="m-1 ">Obrigado </h1>
         <h2>por ser nosso parceiro</h2>
-        <p class="text-justify ">Ficamos feliz em tê-lo como cliente ou fornecedor em nossa plataforma.</p>
+        <p class="text-justify">Ficamos feliz em tê-lo como cliente ou fornecedor em nossa plataforma.</p>
         <div class="d-flex justify-content-end mr-5 mb-3">
           <button *ngIf="auth.deslogado()" type="submit " class="btn btn-parceria"
             routerLink="/cadastrar">CADASTRE-SE</button>
@@ -543,13 +536,12 @@
         <img class="rounded img-fluid" src="https://i.imgur.com/E67bOMl.jpg"
           alt="Mão de um homem segura uma cesta com legumes">
       </div>
-      <div class="col-md-5 mx-4 mt-2 p-0 d-flex flex-column ">
-        <h1 class="m-0 color-green ">Quem</h1>
-        <h2 class="color-green ">Somos?</h2>
-        <p class="text-justify ">Clique no botão abaixo e se informe sobre o time por trás dessa maravilhosa plataforma.
-        </p>
-        <div class="d-flex justify-content-end mr-5 mb-3 ">
-          <button type="submit " class="btn btn-success" routerLink="/sobre-nos">saiba mais sobre a equipe</button>
+      <div class="col-md-5 mx-4 mt-2 p-0 d-flex flex-column">
+        <h1 class="m-0 text-quemsomos">Quem</h1>
+        <h2 class="text-quemsomos">Somos?</h2>
+        <p class="text-justify text-quemsomos2"> Clique no botão abaixo e se informe sobre o time por trás dessa maravilhosa plataforma. </p>
+        <div class="d-flex justify-content-end mr-5 mb-3">
+          <button type="submit" class="btn btn-sobre px-5"  routerLink="/sobre-nos">Saiba mais</button>
 
         </div>
       </div>

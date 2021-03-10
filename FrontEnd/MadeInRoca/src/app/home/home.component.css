@@ -15,13 +15,52 @@
   border: #000 solid 1px;
 }
 
+.text-quemsomos{
+  color: hsl(124, 66%, 16%);
+  font-size: 38px;
+}
+
+.text-comofunciona{
+  color:#573c23
+
+}
+
+.text-quemsomos2{
+  color: #412c14ef;
+  font-size: 18px;
+}
+
+.text-cesta{
+  color:  #57732d;
+}
+
+.btn-cesta{
+  background-color: #57732d;
+  color: white;
+}
+
+.btn-cesta:hover{
+  background: rgba(75, 121, 54, 0.795);
+}
+
+.btn-sobre{
+  background-color: #aac560;
+  font-weight: 700;
+  color:#1f4e21;
+  opacity: 1;
+  transition: 0.3s;
+}
+.btn-sobre:hover {
+  background: rgba(75, 121, 54, 0.795);
+}
+
 .card-svg {
   height: 75px;
   padding: 0;
 }
 
 .equipe-e-parceria {
-  background-color: #0e5411;
+  background-color: #57732d;
   color: white;
 }
 
@@ -93,7 +132,10 @@
 
 .btn-parceria {
   background: white;
-  color: #0e5411;
+  color: #4b7936cb;
+  font-weight: bold;
+  
+
 }
 
 .btn-parceria:hover {
@@ -131,6 +173,7 @@
 .card-sobre {
   background-color: white;
   border: solid 1px;
+  border-color:#c4c4c4a1 ;
   margin: 15px 5px 5px 5px;
   width: 13rem;
 }
@@ -201,6 +244,7 @@ h3 {
     margin: 0;
   }
 }
+
 
 .carousel-promo {
   height: 80px;
