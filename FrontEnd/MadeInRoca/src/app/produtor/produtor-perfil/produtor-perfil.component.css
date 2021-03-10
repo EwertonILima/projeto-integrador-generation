@@ -103,7 +103,7 @@
   flex-direction: column;
 }
 
-.nav-link svg {
+.icon {
   max-width: 20px;
   max-height: 20px;
 }
@@ -120,7 +120,7 @@ h5 {
   font-size: 35px;
 }
 
-.tab-content svg {
+.tab-content img {
   max-width: 150px;
   max-height: 150px;
 }
@@ -174,10 +174,6 @@ h5 a:hover {
   }
 }
 
-/* div{
-    border: 1px solid red;
-} */
-
 .btn-accordion{
     color: #57732D;
     font-weight: bolt;
@@ -193,7 +189,5 @@ h5 a:hover {
 }
 
 .title-accordion{
-
   color: #57732d;
 }
-

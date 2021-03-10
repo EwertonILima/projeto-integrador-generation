@@ -3,15 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdministradorComponent } from './administrador/administrador.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { CategoriaComponent } from './categoria/categoria.component';
-import { CestaComponent } from './cesta/cesta.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
-import { MeusProdutosComponent } from './produtor/meus-produtos/meus-produtos.component';
-import { PostProdutoComponent } from './produtor/post-produto/post-produto.component';
 import { ProdutorPerfilComponent } from './produtor/produtor-perfil/produtor-perfil.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { SobreComponent } from './sobre/sobre.component';
@@ -23,7 +20,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'produtos', component: ProdutosComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'cesta', component: CestaComponent },
   { path: 'sobre-nos', component: SobreComponent },
   { path: 'fale-conosco', component: FaleConoscoComponent },
   { path: 'produto-shop/:id', component: ProdutoShopComponent },
@@ -32,12 +28,10 @@ const routes: Routes = [
   { path: 'categoria-edit/:id', component: CategoriaEditComponent },
   { path: 'categoria-delete/:id', component: CategoriaDeleteComponent },
 
-  {path: 'produtos/:id', component: ProdutoShopComponent},
-  {path: 'post-produto', component: PostProdutoComponent},
-  {path: 'meus-produtos', component: MeusProdutosComponent},
-  {path: 'produtor-perfil', component: ProdutorPerfilComponent},
-  {path: 'administrador', component: AdministradorComponent},
-  
+  { path: 'produtos/:id', component: ProdutoShopComponent },
+  { path: 'produtor-perfil', component: ProdutorPerfilComponent },
+  { path: 'administrador', component: AdministradorComponent },
+
 ];
 
 @NgModule({

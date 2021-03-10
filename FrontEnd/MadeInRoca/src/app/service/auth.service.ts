@@ -57,7 +57,7 @@ export class AuthService {
         ok= true
 
       }
-      console.log (ok)
+      // console.log (ok)
         return ok
     }
 
