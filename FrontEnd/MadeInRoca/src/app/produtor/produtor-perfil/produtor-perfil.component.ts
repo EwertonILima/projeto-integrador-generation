@@ -28,6 +28,7 @@ export class ProdutorPerfilComponent implements OnInit {
   tipoUsuario: string
   listaUsuarios: Usuario[]
   
+  
 
   categoria: Categoria = new Categoria()
   idCategoria: number
@@ -40,6 +41,7 @@ export class ProdutorPerfilComponent implements OnInit {
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     private alertas: AlertasService,
+    private route: ActivatedRoute
   ) { }
 
   id = environment.id
@@ -54,11 +56,10 @@ export class ProdutorPerfilComponent implements OnInit {
       this.alertas.showAlertDanger('Faça login para acessar esta pagina.')
       this.router.navigate(['/home'])
     }
-
-
     this.getAllCategoria()
     this.findUsuarioById()
     this.findAllCategoria()
+    this.getAllUsuarios()
     
   }
 
@@ -100,20 +101,13 @@ export class ProdutorPerfilComponent implements OnInit {
       this.usuario = resp;
 
     });
-
-    
   }
-
 
   getAllUsuarios(){
 
-    
     this.authService.getAllUsuarios().subscribe((resp: Usuario[]) => {
-      
     this.listaUsuarios= resp; 
-
-    }
-    )
+  })
 }
 
   // ATUALIZAR PRODUTOS 
@@ -181,9 +175,11 @@ export class ProdutorPerfilComponent implements OnInit {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
       
       this.listaProdutos = resp
-
-      
     })
+  }
+
+  getIdUsuario(id: number) {
+    this.idUsuario = id
   }
 
 
@@ -234,6 +230,13 @@ export class ProdutorPerfilComponent implements OnInit {
   }
 
   
-
+  deleteUsuario() {
+    return this.authService.deleteUsuario(this.idUsuario).subscribe(() => {
+      
+      this.findUsuarioById()
+      this.alertas.showAlertSuccess('Usuário deletado com sucesso!');
+      this.getAllUsuarios()
+    })
+  }
 
 }

@@ -679,15 +679,16 @@
 
                   <div class="form-group">
                     <label for="texto">Foto</label>
-                    <input   [(ngModel)]="produto.foto" type="text" class="form-control" id="foto"  placeholder="Insira o link da foto" />
+                    <input [(ngModel)]="produto.foto" type="text" class="form-control" id="foto"
+                      placeholder="Insira o link da foto" />
 
                     <!-- INSERIR REFERENCIA FOTO -->
-                     
+
                   </div>
 
                   <div class="form-group">
                     <label for="tema">Escolha uma categoria:
-                   
+
                     </label>
                     <select name="tema" id="tema" class="form-control" [(ngModel)]="idCategoria"
                       (change)="findByIdCategoria()">
@@ -871,10 +872,13 @@
             <!-- NAV ADM -->
             <nav>
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
                 <a class="nav-item nav-link active" id="nav-usuarios-tab" data-toggle="tab" href="#nav-usuarios "
-                  role="tab" aria-controls="nav-usuarios" aria-selected="true">Usuarios</a>
+                  role="tab" aria-controls="nav-usuarios" aria-selected="true" (click)='getAllUsuarios()' >Usuarios
+                </a>
                 <a class="nav-item nav-link" id="nav-categoria-tab" data-toggle="tab" href="#nav-categorias" role="tab"
                   aria-controls="nav-categorias" aria-selected="false">Categorias</a>
+
                 <a class="nav-item nav-link" id="nav-produtos-tab" data-toggle="tab" href="#nav-produtos" role="tab"
                   aria-controls="nav-produtos" aria-selected="false" (click)="getAllProdutos()">Produtos</a>
               </div>
@@ -887,48 +891,47 @@
             <div class="tab-content " id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-usuarios" role="tabpanel"
                 aria-labelledby="nav-usuarios-tab">
-                
-              <div class="col-md-12 d-flex text-center justify-content-center align-items-center flex-column p-5"
-              style="background-color: white; height: fit-content">
-              <ng-container *ngIf="usuario.usuario.length != 0; else elseTemplate">
 
-                <div class="col-md-12 d-flex flex-wrap justify-content-center" style="background-color: white">
-                  <div *ngFor="let item of usuario.usuario"
-                    class="d-flex align-items-center justify-content-center m-3">
-
-                    <table class="table table-striped  table-hover">
-                      <thead>
-                        <tr>
-                          <th class="text-table" scope="col">#</th>
-                          <th class="text-table" scope="col">Nome</th>
-                          <th class="text-table" scope="col">Usuário </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr *ngFor='let categoria of listaUsuarios'>
-                          <th class="text2-table" scope="row">{{ usuario.id }}</th>
-                          <td class="text2-table">{{ usuario.nome }}</td>
-                          <td class="text2-table"> {{usuario.usuario}}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                   
-                  </div>
-                </div>
-              </ng-container>
-              <ng-template #elseTemplate>
                 <div class="col-md-12 d-flex text-center justify-content-center align-items-center flex-column p-5"
                   style="background-color: white; height: fit-content">
-                  <h5 class="m-3">
-                    Você ainda não possui usuários cadastrados
-                  </h5>
-                  </div>
-              </ng-template>
-              
-            </div>
+                  <ng-container *ngIf="usuario.usuario.length != 0; else elseTemplate">
 
-            
+                    <div class="col-md-12 d-flex flex-wrap justify-content-center" style="background-color: white">
+                      <div class="d-flex align-items-center justify-content-center m-3">
 
+                        <table class="table table-striped  table-hover">
+                          <thead>
+                            <tr>
+                          <tbody>
+                            <th class="text-table" scope="col">ID</th>
+                            <th class="text-table" scope="col">Nome</th>
+                            <th class="text-table" scope="col">Usuário</th>
+                            <th class="text-table" scope="col">Deletar</th>
+                            <tr *ngFor='let item of listaUsuarios'>
+                              <th class="text2-table" scope="row">{{ item.id }}</th>
+                              <td class="text2-table">{{ item.nome }}</td>
+                              <td class="text2-table"> {{ item.usuario }}</td>
+                              <button type="button" class="btn btn-danger" data-toggle="modal"
+                                data-target="#modalUsuario" (click)='getIdUsuario(item.id)'>
+                                Deletar
+                              </button>
+                            </tr>
+                          </tbody>
+                          </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                    <ng-template #elseTemplate>
+                      <div class="col-md-12 d-flex text-center justify-content-center align-items-center flex-column p-5"
+                        style="background-color: white; height: fit-content">
+                        <h5 class="m-3">
+                          Você ainda não possui usuários cadastrados
+                        </h5>
+                      </div>
+                    </ng-template>
+                  </ng-container>
+                </div>
               </div>
               <div class="tab-pane fade  " id="nav-categorias" role="tabpanel" aria-labelledby="nav-categorias-tab">
                 <div class="col-md-12 d-flex text-center justify-content-center align-items-center flex-column p-5"
@@ -1088,3 +1091,25 @@
       </div>
     </div>
   </div>
+
+   <!-- Modal Excluir Usuário -->
+   <div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog"
+   aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">Mensagem!</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         Você tem certeza que deseja excluir este usuário?
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+         <button type="button" class="btn btn-danger" data-dismiss="modal"(click)='deleteUsuario()'>Excluir</button>
+       </div>
+     </div>
+   </div>
+ </div>

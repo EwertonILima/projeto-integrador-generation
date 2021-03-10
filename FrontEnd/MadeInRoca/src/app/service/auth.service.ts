@@ -66,6 +66,10 @@ export class AuthService {
       return this.http.get<Usuario[]> ("http://localhost:8080/usuarios")
   
       }
+
+      deleteUsuario(id: number)  {
+        return this.http.delete(`http://localhost:8080/usuarios/${id}`)
+      }
   
 }
   
