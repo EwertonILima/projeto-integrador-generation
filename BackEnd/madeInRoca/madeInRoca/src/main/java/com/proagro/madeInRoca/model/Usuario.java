@@ -45,6 +45,11 @@ public class Usuario {
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Produto> produto;
+	
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties("usuario")
+	private List<CestaCompras> cestaCompras;
+
 
 	public long getId() {
 		return id;
@@ -100,6 +105,14 @@ public class Usuario {
 
 	public void setProduto(List<Produto> produto) {
 		this.produto = produto;
+	}
+
+	public List<CestaCompras> getCestaCompras() {
+		return cestaCompras;
+	}
+
+	public void setCestaCompras(List<CestaCompras> cestaCompras) {
+		this.cestaCompras = cestaCompras;
 	}
 
 }

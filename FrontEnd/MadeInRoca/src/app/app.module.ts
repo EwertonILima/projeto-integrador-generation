@@ -10,26 +10,23 @@ import { AppComponent } from './app.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
+import { MenuLogadoComponent } from './menu/menu-logado/menu-logado.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { HomeComponent } from './home/home.component';
-import { CestaComponent } from './cesta/cesta.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
 import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
 import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
-import { DeleteProdutoComponent } from './produtor/delete-produto/delete-produto.component';
-import { EditProdutoComponent } from './produtor/edit-produto/edit-produto.component';
-import { PostProdutoComponent } from './produtor/post-produto/post-produto.component';
-import { MeusProdutosComponent } from './produtor/meus-produtos/meus-produtos.component';
 import { ProdutorPerfilComponent } from './produtor/produtor-perfil/produtor-perfil.component';
-import { AdministradorComponent } from './administrador/administrador.component';
 import { AlertasComponent } from './alertas/alertas.component';
 
+
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
-import { MenuLogadoComponent } from './menu/menu-logado/menu-logado.component';
+
+
 
 
 
@@ -47,17 +44,11 @@ import { MenuLogadoComponent } from './menu/menu-logado/menu-logado.component';
     SobreComponent,
     RodapeComponent,
     HomeComponent,
-    CestaComponent,
     CategoriaComponent,
     ProdutoShopComponent,
     CategoriaDeleteComponent,
     CategoriaEditComponent,
-    DeleteProdutoComponent,
-    EditProdutoComponent,
-    PostProdutoComponent,
-    MeusProdutosComponent,
     ProdutorPerfilComponent,
-    AdministradorComponent,
     AlertasComponent,
     MenuLogadoComponent
   ],

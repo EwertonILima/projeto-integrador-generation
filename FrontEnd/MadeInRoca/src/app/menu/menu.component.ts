@@ -28,7 +28,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.findByNomeProduto()
     this.limparPesquisar()
-    
+
   }
 
   sair() {
@@ -41,9 +41,9 @@ export class MenuComponent implements OnInit {
 
   findByNomeProduto() {
     this.produtoService.getByNomeProduto(this.nomeProd).subscribe((resp: Produto[]) => {
-     this.listaProdutos = resp
-     })
-    
+      this.listaProdutos = resp
+    })
+
   }
 
   limparPesquisar() {

@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
+import { CestaCompras } from 'src/app/model/CestaCompras';
 import { Produto } from 'src/app/model/Produto';
 import { Usuario } from 'src/app/model/Usuario';
 import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
+import { CestaComprasService } from 'src/app/service/cesta-compras.service';
 import { ProdutoService } from 'src/app/service/produto.service';
-
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
@@ -24,20 +24,24 @@ export class ProdutorPerfilComponent implements OnInit {
   usuario: Usuario = new Usuario();
   idUsuario: number;
   confirmarSenha: string;
-  tipoUsuario: string;
+  tipoUsuario = environment.tipoUsuario
   listaUsuarios: Usuario[];
 
   categoria: Categoria = new Categoria();
   idCategoria: number;
   listaCategoria: Categoria[];
 
+  listaCestaCompras: CestaCompras[];
+  totalCestaProdutos: number = 0;
+
   constructor(
     private authService: AuthService,
     private router: Router,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private alertas: AlertasService
-  ) {}
+    private alertas: AlertasService,
+    private CestaComprasService: CestaComprasService
+  ) { }
 
   id = environment.id;
   nome = environment.nome;
@@ -47,29 +51,27 @@ export class ProdutorPerfilComponent implements OnInit {
   ngOnInit() {
     window.scroll(0, 0);
 
-    if (environment.token == '') {
-      this.alertas.showAlertDanger('Faça login para acessar esta pagina.');
-      this.router.navigate(['/home']);
-    }
+    // if (environment.token == '') {
+    //   this.alertas.showAlertDanger('Faça login para acessar esta pagina.');
+    //   this.router.navigate(['/home']);
+    // }
 
     this.getAllCategoria();
     this.findUsuarioById();
     this.findAllCategoria();
+    this.findAllProdutosComprados()
   }
 
   confirmSenha(event: any) {
     this.confirmarSenha = event.target.value;
   }
 
-  tipoUser(event: any) {
-    this.tipoUsuario = event.target.value;
-  }
 
   // ATUALIZAR DADOS PESSOAIS
   atualizar() {
-    // PUT de perfil de usuário
-    this.usuario.tipoUsuario = this.tipoUsuario;
 
+    this.usuario.tipoUsuario = environment.tipoUsuario
+    console.log(this.usuario)
     if (this.usuario.senha != this.confirmarSenha) {
       this.alertas.showAlertDanger('As senhas estão incorretas.');
     } else {
@@ -109,7 +111,6 @@ export class ProdutorPerfilComponent implements OnInit {
   }
 
   findProdutoById(id: number) {
-    // Produto por ID
     this.produtoService.getByIdProduto(id).subscribe((resp: Produto) => {
       this.produto = resp;
     });
@@ -162,7 +163,6 @@ export class ProdutorPerfilComponent implements OnInit {
   }
 
   // GET DE ADM
-
   getAllProdutos() {
     console.log(this.listaProdutos);
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
@@ -171,16 +171,12 @@ export class ProdutorPerfilComponent implements OnInit {
   }
 
   cadastrarCategoria() {
-    console.log(this.categoria);
-
-    this.categoriaService
-      .postCategoria(this.categoria)
-      .subscribe((resp: Categoria) => {
-        this.categoria = resp;
-        this.alertas.showAlertSuccess('Categoria cadastrada com sucesso!');
-        this.findAllCategoria();
-        this.categoria = new Categoria();
-      });
+    this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
+      this.categoria = resp;
+      this.alertas.showAlertSuccess('Categoria cadastrada com sucesso!');
+      this.findAllCategoria();
+      this.categoria = new Categoria();
+    });
   }
 
   findAllCategoria() {
@@ -213,5 +209,39 @@ export class ProdutorPerfilComponent implements OnInit {
     this.categoriaService.getByIdCategoria(id).subscribe((resp: Categoria) => {
       this.categoria = resp;
     });
+  }
+
+
+  // CESTA DE COMPRAS
+  findAllProdutosComprados(){
+    this.CestaComprasService.getAllProdutosComprados().subscribe((resp: CestaCompras[]) => {
+      this.listaCestaCompras = resp
+      console.log(this.listaCestaCompras)
+      console.log("tamanho array" + this.listaCestaCompras.length)
+      this.totalProdutos()
+    })
+  }
+
+  deleteProdutoComprado(idProduto: number){
+    this.CestaComprasService.deleteProdutoComprado(idProduto).subscribe(() =>{
+    this.totalCestaProdutos = 0
+    this.findAllProdutosComprados();
+    this.alertas.showAlertSuccess('Produto retirado com sucesso da sua cesta!');
+    });
+  }
+
+  totalProdutos(){
+    for(let item of this.listaCestaCompras){
+      this.totalCestaProdutos = this.totalCestaProdutos + item.preco
+    }
+  }
+
+  finalizarCompra(){
+    for(let item of this.listaCestaCompras){
+      this.CestaComprasService.deleteProdutoComprado(item.id).subscribe(() =>{
+        this.totalCestaProdutos = 0
+      this.findAllProdutosComprados()
+      });
+    }
   }
 }
