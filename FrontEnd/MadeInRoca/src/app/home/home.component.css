@@ -184,7 +184,7 @@ h3 {
 }
 
 @media (max-width: 768px) {
-  .equipe-e-parceria svg {
+  .equipe-e-parceria{
     display: none;
   }
 
@@ -210,6 +210,13 @@ h3 {
   }
 }
 
+@media(max-width: 270){
+  .div-img img{
+    width: 250px;
+    height: 250px;
+  }
+}
+
 .carousel-promo {
   height: 80px;
   width: auto;
@@ -229,9 +236,16 @@ h3 {
   border-radius: 5px;
 }
 
+
 .btn-comprar-carousel {
   background-color: #57732d;
   border: solid 2px #57732d;
   color: white;
+
+}
+.div-img img{
+  width: 250px; 
+  height: 250px;
+
 }
 
