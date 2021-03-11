@@ -197,3 +197,10 @@ h5 a:hover {
   color: #57732d;
 }
 
+@media(max-width:280px) {
+  .alinhamento {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
