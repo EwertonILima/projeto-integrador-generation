@@ -8,15 +8,24 @@
 
 .btn {
     color: azure;
-    box-shadow: none; 
+    box-shadow: none;
 }
 
-.card-header:hover{
+.card-header:hover {
     background-color: #89A61F;
 }
 
-.border{
+.border {
     background-color: #347322;
 }
 
-
+@media(max-width: 400px) {
+    .imagem-responsiva {
+        max-width: 400px;
+    }
+    @media(max-width: 300px) {
+        .imagem-responsiva {
+            max-width: 350px;
+        }
+    }
+}
