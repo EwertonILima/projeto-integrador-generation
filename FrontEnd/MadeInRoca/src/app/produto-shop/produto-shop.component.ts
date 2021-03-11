@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CestaCompras } from '../model/CestaCompras';
 import { Produto } from '../model/Produto';
+import { CestaComprasService } from '../service/cesta-compras.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
@@ -14,9 +16,12 @@ export class ProdutoShopComponent implements OnInit {
   qtdProduto: number = 1
   totalProduto: number
 
+  produtoComprado: CestaCompras = new CestaCompras()
+
   constructor(
     private route: ActivatedRoute,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private cestaComprasService: CestaComprasService
   ) { }
 
   ngOnInit() {
@@ -31,7 +36,23 @@ export class ProdutoShopComponent implements OnInit {
     })
   }
 
-  somaTotal(valor: number) {
-    this.totalProduto = valor * this.qtdProduto
+  somaTotal() {
+    this.totalProduto = this.produto.preco * this.qtdProduto
+  }
+
+  postCestaProdutos(){
+    this.somaTotal()
+    console.log(this.produto.nome)
+    this.produtoComprado.nome = this.produto.nome
+    this.produtoComprado.foto = this.produto.foto
+    this.produtoComprado.usuario = this.produto.usuario
+    this.produtoComprado.preco = this.totalProduto
+    this.produtoComprado.quantidade = this.qtdProduto
+    this.produtoComprado.categoria = this.produto.categoria.nome
+
+    console.log(this.produtoComprado)
+    this.cestaComprasService.postProdutoComprado(this.produtoComprado).subscribe((resp: CestaCompras) => {
+      this.produtoComprado =  resp
+    })
   }
 }

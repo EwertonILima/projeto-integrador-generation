@@ -191,3 +191,8 @@ h5 a:hover {
 .title-accordion{
   color: #57732d;
 }
+
+.produtosCesta{
+  display: flex;
+  flex-direction: block;
+}

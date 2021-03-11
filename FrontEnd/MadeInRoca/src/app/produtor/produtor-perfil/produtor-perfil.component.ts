@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
+import { CestaCompras } from 'src/app/model/CestaCompras';
 import { Produto } from 'src/app/model/Produto';
 import { Usuario } from 'src/app/model/Usuario';
 import { AlertasService } from 'src/app/service/alertas.service';
 import { AuthService } from 'src/app/service/auth.service';
 import { CategoriaService } from 'src/app/service/categoria.service';
+import { CestaComprasService } from 'src/app/service/cesta-compras.service';
 import { ProdutoService } from 'src/app/service/produto.service';
-
 import { environment } from 'src/environments/environment.prod';
 
 @Component({
@@ -31,12 +31,16 @@ export class ProdutorPerfilComponent implements OnInit {
   idCategoria: number;
   listaCategoria: Categoria[];
 
+  listaCestaCompras: CestaCompras[];
+  totalCestaProdutos: number = 0;
+
   constructor(
     private authService: AuthService,
     private router: Router,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    private CestaComprasService: CestaComprasService
   ) { }
 
   id = environment.id;
@@ -55,6 +59,7 @@ export class ProdutorPerfilComponent implements OnInit {
     this.getAllCategoria();
     this.findUsuarioById();
     this.findAllCategoria();
+    this.findAllProdutosComprados()
   }
 
   confirmSenha(event: any) {
@@ -204,5 +209,39 @@ export class ProdutorPerfilComponent implements OnInit {
     this.categoriaService.getByIdCategoria(id).subscribe((resp: Categoria) => {
       this.categoria = resp;
     });
+  }
+
+
+  // CESTA DE COMPRAS
+  findAllProdutosComprados(){
+    this.CestaComprasService.getAllProdutosComprados().subscribe((resp: CestaCompras[]) => {
+      this.listaCestaCompras = resp
+      console.log(this.listaCestaCompras)
+      console.log("tamanho array" + this.listaCestaCompras.length)
+      this.totalProdutos()
+    })
+  }
+
+  deleteProdutoComprado(idProduto: number){
+    this.CestaComprasService.deleteProdutoComprado(idProduto).subscribe(() =>{
+    this.totalCestaProdutos = 0
+    this.findAllProdutosComprados();
+    this.alertas.showAlertSuccess('Produto retirado com sucesso da sua cesta!');
+    });
+  }
+
+  totalProdutos(){
+    for(let item of this.listaCestaCompras){
+      this.totalCestaProdutos = this.totalCestaProdutos + item.preco
+    }
+  }
+
+  finalizarCompra(){
+    for(let item of this.listaCestaCompras){
+      this.CestaComprasService.deleteProdutoComprado(item.id).subscribe(() =>{
+        this.totalCestaProdutos = 0
+      this.findAllProdutosComprados()
+      });
+    }
   }
 }
