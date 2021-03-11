@@ -176,7 +176,7 @@ h3 {
 }
 
 @media (max-width: 768px) {
-  .equipe-e-parceria svg {
+  .equipe-e-parceria{
     display: none;
   }
 
@@ -202,6 +202,13 @@ h3 {
   }
 }
 
+@media(max-width: 270){
+  .div-img img{
+    width: 250px;
+    height: 250px;
+  }
+}
+
 .carousel-promo {
   height: 80px;
   width: auto;
@@ -219,3 +226,9 @@ h3 {
 .form-group {
   border-radius: 5px;
 }
+
+.div-img img{
+  width: 250px; 
+  height: 250px;
+}
+
