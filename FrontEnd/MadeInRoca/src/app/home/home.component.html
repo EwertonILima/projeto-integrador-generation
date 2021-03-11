@@ -7,13 +7,15 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="https://i.imgur.com/vWMVMjB.jpg" alt="Maõs segurando uma abobora">
+      <img class="d-block w-100" src="https://i.imgur.com/bnAHZ0p.png" alt="Logo Made In Roça" />
+
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://i.imgur.com/B2bti2U.jpg" alt="Mãos segurando três batatas">
+      <img class="d-block w-100" src="https://i.imgur.com/DYORxh6.png" alt="Seja um produtos parceiro, ao lado de um agricultor." />
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="https://i.imgur.com/zDFk8Nh.jpg" alt="Mãos seguando Cenoura">
+      <img class="d-block w-100" src="https://i.imgur.com/Gip41Tc.png" alt="Mãos segurando abóbora escrito: Preços caindo de maduro. Promoções confira aqui."/> 
+
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -26,105 +28,76 @@
   </a>
 </div>
 
-<!-- BOX BANNER -->
-
-<div class="container-fluid my-4">
-  <div class="row flex-wrap m-3 p-3 justify-content-center" style="background-color: #8EA676; border-radius: 15px;">
-    <div class="col-md-6 d-flex justify-content-center flex-column">
-      <div class="ml-2 my-3 mr-5">
-        <h3 class="mb-0 text-cesta"><strong>Cesta</strong></h3>
-        <h3 class="text-cesta"><strong>Made In Roça!</strong></h3>
-        <p class="text-justify">Escolha a quantidade de hortifrutis orgânicos que quer receber toda semana ou quinzena e nós selecionamos os melhores da estação para você. Além disso, você poderá restringir outros produtos que não quer receber...</p>
-        <div class="d-flex justify-content-end mt-3">
-          <button *ngIf="auth.deslogado()" type="submit" class="btn btn-cesta px-4" routerLink="/cadastrar">Cadastrar </button>
-            <button *ngIf="auth.logado()" type=" submit " class="btn btn-cesta px-4" routerLink="/cesta">Confira e assine</button>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="col-md-4 cesta-card-img justify-content-center align-items-center ">
-      <img class="rounded img-fluid " style="max-height: 300px; " src="https://i.imgur.com/NOutWyC.jpg " alt=" ">
-    </div>
-  </div>
-
-</div>
-<!-- /BOX BANNER -->
-
 <!-- COMO FUNCIONA -->
-<div class="container-fluid my-5 ">
-  <div class="row d-flex justify-content-center text-center my-5 ">
-    <h1 class="text-comofunciona mb-3">Como funciona?</h1>
-    <div class="col-md-12 d-flex flex-wrap justify-content-center align-items-center como-funciona ">
-
-
-
-      <div class="card card-sobre ">
-        <img class="card-img-top p-3 " height="180px " src="https://i.imgur.com/aZ3jiHG.png" alt="Card image cap ">
-        <div class="card-body pt-2 d-flex align-items-center flex-column ">
-
-          <p class="card-text ">Suas verduras são colhidas prontamente, para chegar fresquinho até você o quanto antes.
-            &nbsp; &nbsp; &nbsp;</p>
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center text-center my-5">
+    <h1 class="text-comofunciona font-weight-bold mb-3" style="color: #743e29">
+      Como funciona?
+    </h1>
+    <div class="col-md-12 d-flex flex-wrap justify-content-center align-items-center como-funciona">
+      <div class="card card-sobre">
+        <img class="card-img-top img-fluid p-3 img-como-funciona" src="https://i.imgur.com/TjXws9I.png"
+          alt="Card image cap " />
+        <div class="card-body pt-2 d-flex align-items-center flex-column">
+          <p class="card-text text-center">
+            Cultivados com muito carinho e dedicação por nossos produtores
+            parceiros.
+          </p>
         </div>
       </div>
 
-      <div class="d-flex align-items-center sobre-cards ">
+      <div class="d-flex align-items-center sobre-cards">
+        <div class="card card-sobre">
+          <img class="card-img-top img-fluid p-3 img-como-funciona" src="https://i.imgur.com/bi6p9JW.png"
+            alt="Card image cap " />
 
-
-        <div class="card card-sobre ">
-          <img class="card-img-top p-3 img-como-funciona " height="180px " src="https://i.imgur.com/bi6p9JW.png"
-            alt="Card image cap ">
-
-          <div class="card-body pt-2 d-flex align-items-center flex-column ">
-
-            <p class="card-text ">Escolha suas frutas, legumes, verduras e outros produtos online.&nbsp;&nbsp;
-              <br><br>
+          <div class="card-body pt-2 d-flex align-items-center flex-column">
+            <p class="card-text text-center">
+              Colhidos com carinho e cuidado para manter a melhor qualidade do
+              produto.
             </p>
           </div>
         </div>
       </div>
 
-      <div class="d-flex align-items-center sobre-cards ">
-
-
-        <div class="card card-sobre ">
-          <img class="card-img-top p-3 " height="180px " src="https://i.imgur.com/vfIvB28.png" alt="Card image cap ">
-          <div class="card-body pt-2 d-flex align-items-center flex-column ">
-
-            <p class="card-text ">Toda semana a lista de produtos é atualizada com os produtos da época que temos
-              disponíveis.
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+      <div class="d-flex align-items-center sobre-cards">
+        <div class="card card-sobre">
+          <img class="card-img-top img-fluid p-3 img-como-funciona" src="https://i.imgur.com/vfIvB28.png"
+            alt="Card image cap " />
+          <div class="card-body pt-2 d-flex align-items-center flex-column">
+            <p class="card-text text-center">
+              Retirado por nossos entregadores parceiros e transportado com
+              cuidado.
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="d-flex align-items-center sobre-cards ">
-
-
-        <div class="card card-sobre ">
-          <img class="card-img-top p-3 img-fluid img-como-funciona " style="width: auto; max-height: 180px; "
-            src="https://i.imgur.com/Pn07CGO.png" alt="Card image cap ">
-          <div class="card-body pt-2 d-flex align-items-center flex-column ">
-
-            <p class="card-text ">Pediu antes das 11h? A gente leva na sua casa no dia seguinte, de segunda a sábado.
-              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+      <div class="d-flex align-items-center sobre-cards">
+        <div class="card card-sobre">
+          <img class="card-img-top img-fluid p-3 img-como-funciona" src="https://i.imgur.com/Pn07CGO.png"
+            alt="Card image cap " />
+          <div class="card-body pt-2 d-flex align-items-center flex-column">
+            <p class="card-text text-center">
+              Você acessa e escolhe seu hortifrut e compra no conforto da sua
+              casa com facilidade.
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="d-flex align-items-center sobre-cards ">
-
-
-        <div class="card card-sobre ">
-          <img class="card-img-top p-3 img-fluid img-como-funciona " style="width: auto; max-height: 180px; "
-            src="https://i.imgur.com/izQig2x.png" alt="Card image cap ">
-          <div class="card-body pt-2 d-flex align-items-center flex-column ">
-
-            <p class="card-text ">Você incentiva o pequeno produtor, respeita a natureza e não prejudica sua saúde.</p>
+      <div class="d-flex align-items-center sobre-cards">
+        <div class="card card-sobre">
+          <img class="card-img-top img-fluid p-3 img-como-funciona" style="width: auto; max-height: 190px"
+            src="https://i.imgur.com/izQig2x.png" alt="Card image cap" />
+          <div class="card-body pt-2 d-flex align-items-center flex-column">
+            <p class="card-text text-center">
+              Prontinho! Seus produtos selecionados frescos e entregues no
+              conforto da sua casa.
+            </p>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -132,35 +105,36 @@
 
 <!-- PROMOCAO -->
 <div class="container mt-5">
-  <div class="row mt-0 d-flex justify-content-center" style="border: #e9ecef solid 3px;">
-    <div class="col-12 mb-1 ">
-      <h3 class="mb-0 px-4 py-2 pro text-center text-comofunciona">Promoções do dia </h3>
+  <div class="row mt-0 d-flex justify-content-center">
+    <div class="col-12 mb-1">
+      <h3 class="mb-0 px-4 py-2 text-left text-comofunciona">
+        Promoções do dia
+      </h3>
     </div>
     <div class="col-12 ">
-      <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+      <div id="carouselExampleIndicators2" class="carousel slide " data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="row mb-3 mx-3">
               <!--Cards-->
               <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                <div class="card efeitoFruta" style="width: 18rem;">
-                  <img class="card-img-top w-100"
-                    src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Uva Itália">
+                <div class="card efeitoFruta" style="width: 18rem">
+                  <img class="card-img-top img-fluid w-100"
+                    src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Uva Itália" />
                   <div class="card-body">
                     <h5 class="card-title">Uva Itália</h5>
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$9.50</p>
+                      <p class="card-text text-left negrito">R$9.50</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
+                          placeholder="Qtd" />
                       </div>
 
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
-
-
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px" href="#">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -168,26 +142,25 @@
               <!--/Cards-->
               <!--Cards-->
               <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                <div class="card efeitoFruta" style="width: 18rem;">
-                  <img class="card-img-top w-100"
+                <div class="card efeitoFruta" style="width: 18rem">
+                  <img class="card-img-top img-fluid w-100"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU"
-                    alt="Pimentões vermelhos">
+                    alt="Pimentões vermelhos" />
                   <div class="card-body">
                     <h5 class="card-title">Pimentão Vermelho</h5>
 
-
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$10,99</p>
+                      <p class="card-text text-left negrito">R$10,99</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
+                          placeholder="Qtd" />
                       </div>
 
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
-
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px" href="#">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -195,26 +168,25 @@
               <!--/Cards-->
               <!--Cards-->
               <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                <div class="card efeitoFruta" style="width: 18rem;">
-                  <img class="card-img-top w-100"
+                <div class="card efeitoFruta" style="width: 18rem">
+                  <img class="card-img-top img-fluid w-100"
                     src="https://static3.tcdn.com.br/img/img_prod/450860/muda_de_limao_taiti_enxertada_546_1_20190611093557.jpg"
-                    alt="Dois limões cortados ao meio">
+                    alt="Dois limões cortados ao meio" />
                   <div class="card-body">
                     <h5 class="card-title">Limão Tahiti</h5>
 
-
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$7,99</p>
+                      <p class="card-text text-left negrito">R$7,99</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
+                          placeholder="Qtd" />
                       </div>
 
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
-
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px" href="#">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -222,21 +194,23 @@
               <!--/Cards-->
               <!--Cards-->
               <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                <div class="card efeitoFruta" style="width: 18rem;">
-                  <img class="card-img-top w-100" src="https://i.imgur.com/G6t3XF4.jpg" alt="Foto de Duas Beringelas">
+                <div class="card efeitoFruta" style="width: 18rem">
+                  <img class="card-img-top img-fluid w-100" src="https://i.imgur.com/G6t3XF4.jpg"
+                    alt="Foto de Duas Beringelas" />
                   <div class="card-body">
                     <h5 class="card-title">Berinjela</h5>
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$6,00</p>
+                      <p class="card-text text-left negrito">R$6,00</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
+                          placeholder="Qtd" />
                       </div>
 
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px" href="#">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -244,32 +218,31 @@
               <!--/Cards-->
 
               <!--COMECA AQUI-->
-
             </div>
           </div>
           <div class="carousel-item">
             <div class="row mb-3 mx-3">
               <!--Cards-->
               <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                <div class="card efeitoFruta" style="width: 18rem;">
-                  <img class="card-img-top w-100"
+                <div class="card efeitoFruta" style="width: 18rem">
+                  <img class="card-img-top img-fluid w-100"
                     src="https://www.proativaalimentos.com.br/image/cache/catalog/img_prod/cenoura2-1000x1000.jpg"
-                    alt="Foto de cenouras">
+                    alt="Foto de cenouras"/>
                   <div class="card-body">
                     <h5 class="card-title">Cenoura</h5>
 
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$4.00</p>
+                      <p class="card-text text-left negrito">R$4.00</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
+                          placeholder="Qtd"/>
                       </div>
 
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
-
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px" href="#">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -277,27 +250,25 @@
               <!--/Cards-->
               <!--Cards-->
               <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                <div class="card efeitoFruta" style="width: 18rem;">
-                  <img class="card-img-top w-100"
+                <div class="card efeitoFruta" style="width: 18rem">
+                  <img class="card-img-top img-fluid w-100"
                     src="https://siriusorganicos.com.br/wp-content/uploads/2020/11/maca-gala-importada-organica-produtos-organicos-sirius-delivery-entrega-cesta-curitiba.jpg"
-                    alt="Foto de três maçãs gala">
+                    alt="Foto de três maçãs gala" />
                   <div class="card-body">
-
                     <h5 class="card-title">Maçã Gala</h5>
 
-
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$5,99</p>
+                      <p class="card-text text-left negrito">R$5,99</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
+                          placeholder="Qtd" />
                       </div>
 
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
-
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px" href="#">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -305,28 +276,25 @@
               <!--/Cards-->
               <!--Cards-->
               <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                <div class="card efeitoFruta" style="width: 18rem;">
-                  <img class="card-img-top w-100"
+                <div class="card efeitoFruta" style="width: 18rem">
+                  <img class="card-img-top img-fluid w-100"
                     src="https://emporioquatroestrelas.vteximg.com.br/arquivos/ids/160134-1000-1000/alho-roxo.png?v=637285138034270000"
-                    alt="Um alho inteiro e outros alhos descacados">
+                    alt="Um alho inteiro e outros alhos descacados" />
                   <div class="card-body">
                     <h5 class="card-title">Alho</h5>
 
-
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$5,50</p>
+                      <p class="card-text text-left negrito">R$5,50</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
+                          placeholder="Qtd" />
                       </div>
 
-
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
-
-
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px" href="#">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -335,78 +303,77 @@
 
               <!--Cards-->
               <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                <div class="card efeitoFruta" style="width: 18rem;">
-                  <img class="card-img-top w-100"
+                <div class="card efeitoFruta" style="width: 18rem">
+                  <img class="card-img-top img-fluid w-100"
                     src="https://superplanalto.com/image/cache/catalog/produtos/produtos/banana-nanica-550x550w.jpg"
-                    alt="Meia Duzia de Bananas">
+                    alt="Meia Duzia de Bananas" />
                   <div class="card-body">
-
                     <h5 class="card-title">Banana Nanica</h5>
 
-
-
                     <div class="mb-2">
-                      <p class="card-text negrito"> R$4.00</p>
+                      <p class="card-text text-left negrito">R$4.00</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
                       <div class="form-group my-auto w-50 mr-2">
                         <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
+                          placeholder="Qtd" />
                       </div>
 
-
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
-
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px" href="#">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
               <!--/Cards-->
-
-
             </div>
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev carousel-promo" href="#carouselExampleIndicators2" role="button"
+     <a class="carousel-control-prev carousel-promo" href="#carouselExampleIndicators2" role="button"
         data-slide="prev">
-        <span class="carousel-control-prev-icon btn btn-prev" aria-hidden="true"></span>
+        <span class="carousel-control-prev-icon btn btn-prev p-3 " aria-hidden="true"></span>
         <span class="sr-only">Anterior</span>
       </a>
       <a class="carousel-control-next carousel-promo" href="#carouselExampleIndicators2" role="button"
         data-slide="next">
-        <span class="carousel-control-next-icon btn btn-next" aria-hidden="true"></span>
+        <span class="carousel-control-next-icon btn btn-next p-3" aria-hidden="true"></span>
         <span class="sr-only">Próximo</span>
       </a>
+      
     </div>
   </div>
 </div>
 <!-- /PROMOCAO -->
 
-
 <!-- PARCERIA -->
 
-<div *ngIf="auth.deslogado()" class="container-fluid equipe-e-parceria my-5 ">
-  <div class="container ">
-    <div class="row d-flex justify-content-center ">
-      <div class="col-md-5 mx-3 p-0 ">
-        <h1 class="m-1 ">Seja um </h1>
+<div *ngIf="auth.deslogado()" class="container-fluid equipe-e-parceria my-5">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-5 mx-3 p-0">
+        <h1 class="m-1">Seja um</h1>
         <h2>produtor parceiro</h2>
-        <p class="text-justify ">Se cadastre em nossa plataforma e seja um produtor parceiro, e venda nos produtos
-          através desse portal especializado em conectar o pequeno produtor com o cliente final.</p>
+        <p class="text-justify">
+          Se cadastre em nossa plataforma e seja um produtor parceiro. Venda
+          produtos em nosso portal com segurança. Aqui você consegue dar
+          visibilidade aos seus produtos.
+        </p>
         <div class="d-flex justify-content-end mr-5 mb-3">
-          <button *ngIf="auth.deslogado()" type="submit " class="btn btn-parceria"
-            routerLink="/cadastrar">CADASTRE-SE</button>
+          <button *ngIf="auth.deslogado()" type="submit " class="btn btn-parceria px-5" routerLink="/cadastrar">
+            CADASTRE-SE
+          </button>
         </div>
       </div>
-      <div class="col-md-3 svg-equipe-parceria justify-content-center align-items-center d-flex ">
+      <div class="col-md-3 svg-equipe-parceria justify-content-center align-items-center d-flex">
         <svg xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink "
           xmlns:svgjs="http://svgjs.com/svgjs " version="1.1 " width="512 " height="512 " x="0 " y="0 "
-          viewBox="0 0 511.99992 511 " style="enable-background:new
-                        0 0 512 512 " xml:space="preserve ">
+          viewBox="0 0 511.99992 511 " style="enable-background: new 0 0 512 512" xml:space="preserve ">
           <g>
-            <script>(function () { window.mturksuite = true; })();</script>
+            <script>
+              (function () { window.mturksuite = true; })();
+            </script>
             <path xmlns="http://www.w3.org/2000/svg " d="m509.914062 214.859375-85.695312-111.320313c-3.171875-4.117187-8.957031-5.132812-13.34375-2.34375l-55.328125
                         35.1875h-72.160156c-.933594 0-1.863281.199219-2.761719.460938l-55.949219 16.105469-58.054687-15.878907-56.410156-35.875c-4.3125-2.742187-9.992188-1.8125-13.199219 2.164063l-94.785157 117.40625c-3.40625 4.21875-2.84375 10.378906 1.265626
                         13.914063l49.679687 42.753906 44.570313 60.0625c-13.035157 13.886718-12.78125 35.789062.78125 49.355468 6.011718 6.007813 13.65625 9.402344 21.519531 10.191407-.273438 1.78125-.414063 3.589843-.414063 5.425781 0 9.476562 3.691406 18.386719
@@ -446,37 +413,37 @@
               fill="#ffffff " data-original="#000000 " />
             <path xmlns="http://www.w3.org/2000/svg " d="m246.734375 14.351562c1.59375 3.863282 5.566406
                         6.398438 9.757813 6.179688 4.140624-.214844 7.777343-3.011719 9.058593-6.953125 1.285157-3.972656-.113281-8.5-3.441406-11.03125-3.394531-2.5859375-8.128906-2.730469-11.679687-.382813-3.960938 2.617188-5.496094 7.828126-3.695313 12.1875zm0
-                        0 "fill="#ffffff " data-original="#000000" />
+                        0 " fill="#ffffff " data-original="#000000" />
           </g>
         </svg>
-
       </div>
-
     </div>
-
   </div>
-
 </div>
 
-<div *ngIf="auth.logado()" class="container-fluid equipe-e-parceria my-5 ">
-  <div class="container ">
-    <div class="row d-flex justify-content-center ">
-      <div class="col-md-5 mx-3 p-0 ">
-        <h1 class="m-1 ">Obrigado </h1>
+<div *ngIf="auth.logado()" class="container-fluid equipe-e-parceria my-5">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-5 mx-3 p-0">
+        <h1 class="m-1">Obrigado</h1>
         <h2>por ser nosso parceiro</h2>
-        <p class="text-justify">Ficamos feliz em tê-lo como cliente ou fornecedor em nossa plataforma.</p>
+        <p class="text-justify">
+          Ficamos felizes em tê-lo como cliente ou fornecedor em nossa plataforma.
+        </p>
         <div class="d-flex justify-content-end mr-5 mb-3">
-          <button *ngIf="auth.deslogado()" type="submit " class="btn btn-parceria"
-            routerLink="/cadastrar">CADASTRE-SE</button>
+          <button *ngIf="auth.deslogado()" type="submit " class="btn btn-parceria px-5" routerLink="/cadastrar">
+            CADASTRE-SE
+          </button>
         </div>
       </div>
-      <div class="col-md-3 svg-equipe-parceria justify-content-center align-items-center d-flex ">
+      <div class="col-md-3 svg-equipe-parceria justify-content-center align-items-center d-flex">
         <svg xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink "
           xmlns:svgjs="http://svgjs.com/svgjs " version="1.1 " width="512 " height="512 " x="0 " y="0 "
-          viewBox="0 0 511.99992 511 " style="enable-background:new
-                      0 0 512 512 " xml:space="preserve ">
+          viewBox="0 0 511.99992 511 " style="enable-background: new 0 0 512 512" xml:space="preserve ">
           <g>
-            <script>(function () { window.mturksuite = true; })();</script>
+            <script>
+              (function () { window.mturksuite = true; })();
+            </script>
             <path xmlns="http://www.w3.org/2000/svg " d="m509.914062 214.859375-85.695312-111.320313c-3.171875-4.117187-8.957031-5.132812-13.34375-2.34375l-55.328125
                       35.1875h-72.160156c-.933594 0-1.863281.199219-2.761719.460938l-55.949219 16.105469-58.054687-15.878907-56.410156-35.875c-4.3125-2.742187-9.992188-1.8125-13.199219 2.164063l-94.785157 117.40625c-3.40625 4.21875-2.84375 10.378906 1.265626
                       13.914063l49.679687 42.753906 44.570313 60.0625c-13.035157 13.886718-12.78125 35.789062.78125 49.355468 6.011718 6.007813 13.65625 9.402344 21.519531 10.191407-.273438 1.78125-.414063 3.589843-.414063 5.425781 0 9.476562 3.691406 18.386719
@@ -525,24 +492,30 @@
 </div>
 <!-- /PARCERIA -->
 
-
 <!-- QUEM SOMOS -->
-
 
 <div class="container-fluid my-5">
   <div class="container">
     <div class="row d-flex justify-content-center">
-      <div class="col-md-5  align-items-center d-flex">
+      <div class="col-md-5 align-items-center d-flex">
         <img class="rounded img-fluid" src="https://i.imgur.com/E67bOMl.jpg"
-          alt="Mão de um homem segura uma cesta com legumes">
+          alt="Mão de um homem segura uma cesta com legumes" />
       </div>
       <div class="col-md-5 mx-4 mt-2 p-0 d-flex flex-column">
         <h1 class="m-0 text-quemsomos">Quem</h1>
         <h2 class="text-quemsomos">Somos?</h2>
-        <p class="text-justify text-quemsomos2"> Clique no botão abaixo e se informe sobre o time por trás dessa maravilhosa plataforma. </p>
+        <p class="text-justify text-quemsomos2">
+          Clique no botão abaixo e se informe sobre o time por trás dessa
+          maravilhosa plataforma.
+        </p>
         <div class="d-flex justify-content-end mr-5 mb-3">
-          <button type="submit" class="btn btn-sobre px-5"  routerLink="/sobre-nos">Saiba mais</button>
 
+          <button  type="submit " class="btn btn-quemsomos px-5" routerLink="/sobre-">
+            CONFIRA AQUI
+          </button> 
+          <!-- <button type="submit" class="btn btn-sobre px-5" routerLink="/sobre-nos">
+            Saiba mais
+          </button> -->
         </div>
       </div>
     </div>
