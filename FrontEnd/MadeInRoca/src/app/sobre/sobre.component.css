@@ -7,7 +7,7 @@
 }
 
 #img-bg1{
-    background-image: url('../../assets/img/misao.jpg');
+    background-image: url('https://i.imgur.com/32wL316.gif');
     min-height: 337px;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@
 }
 
 #img-bg2{
-    background-image: url('../../assets/img/binóculos-desenho-do-vetor-52556383.jpg');
+    background-image: url('https://i.imgur.com/KbaCK21.gif');
     min-height: 337px;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@
 }
 
 #img-bg3{
-    background-image: url('../../assets/img/Planta2.jpg');
+    background-image: url('https://i.imgur.com/g2U7Gnh.gif');
     min-height: 337px;
     background-position: center;
     background-repeat: no-repeat;
@@ -72,12 +72,16 @@
 }
 
 @media(max-width: 360px){
-    .teste{
-        margin-left: 50px;
+    .centralizado{
+        margin-left: 150px;
     }
 
     .wh-video{
-        width: 400px;
+        width: 200px;
         right: 150px;
+    }
+
+    .distancia{
+        margin-bottom: 50px;
     }
 }
