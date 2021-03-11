@@ -3,16 +3,30 @@
   background-color: #fff;
 }
 
-.card-saiba-mais-barra {
-  height: 25px;
-  margin: 0;
-  background-color: #0e5411;
-  border-radius: 10px 10px 0 0;
+.text-quemsomos{
+  color: hsl(124, 66%, 16%);
+  font-size: 38px;
 }
 
-.card-saiba-mais-corpo {
-  border-radius: 10px;
-  border: #000 solid 1px;
+.text-comofunciona{
+  color:#573c23
+
+}
+
+.text-quemsomos2{
+  color: #412c14ef;
+  font-size: 18px;
+}
+
+.btn-sobre{
+  background-color: #aac560;
+  font-weight: 700;
+  color:#1f4e21;
+  opacity: 1;
+  transition: 0.3s;
+}
+.btn-sobre:hover {
+  background: rgba(75, 121, 54, 0.795);
 }
 
 .card-svg {
@@ -21,7 +35,7 @@
 }
 
 .equipe-e-parceria {
-  background-color: #0e5411;
+  background-color: #57732d;
   color: white;
 }
 
@@ -66,9 +80,7 @@
   transform: scale(1.2);
 }
 
-.card-header {
-  border: #0e5411 solid 1px;
-}
+
 
 .btn-link {
   color: #fff;
@@ -93,11 +105,25 @@
 
 .btn-parceria {
   background: white;
-  color: #0e5411;
+  color: #4b7936cb;
+  font-weight: bold;
+
+}
+
+.btn-quemsomos {
+  background: white;
+  color: #4b7936cb;
+  font-weight: bold;
+  border: 1px solid;
 }
 
 .btn-parceria:hover {
   background: rgb(218, 218, 218);
+}
+
+.btn-quemsomos:hover {
+  background: rgb(218, 218, 218);
+
 }
 
 .color-green {
@@ -126,28 +152,25 @@
 
 .img-como-funciona {
   align-self: center;
+  height: 12rem;
 }
 
 .card-sobre {
   background-color: white;
   border: solid 1px;
+  border-color:#c4c4c4a1 ;
   margin: 15px 5px 5px 5px;
   width: 13rem;
-}
+  height: 20rem;
+} 
 
-.cesta-card-img {
-  display: flex;
-}
 
 .img-product-single {
   border: #c4c4c4 solid 1px;
   border-radius: 5px;
 }
 
-.title-prod-rel {
-  color: #402222;
-  margin-left: 30px;
-}
+
 
 .descricao-produto {
   font-family: "Public Sans", sans-serif;
@@ -155,21 +178,6 @@
   max-width: 600px;
 }
 
-.btn-comprar-carousel {
-  background-color: #57732d;
-  border: solid 2px #57732d;
-  color: white;
-}
-
-.form-group {
-  border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-  .cesta-card-img {
-    display: none;
-  }
-}
 
 h3 {
   font-size: 45px;
@@ -211,11 +219,19 @@ h3 {
 
 .btn-next,
 .btn-prev {
-  border-radius: 100px;
-  background-color: rgba(97, 95, 95, 0.384);
-  height: 25px;
+  
+  border-radius: 50px;
+  background-color: rgba(202, 195, 195, 0.726);
+ 
 }
 
 .form-group {
   border-radius: 5px;
 }
+
+.btn-comprar-carousel {
+  background-color: #57732d;
+  border: solid 2px #57732d;
+  color: white;
+}
+
