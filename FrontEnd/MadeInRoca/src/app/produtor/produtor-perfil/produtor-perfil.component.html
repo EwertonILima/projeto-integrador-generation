@@ -236,7 +236,8 @@
                   <div class="col-md-12 d-flex flex-wrap justify-content-center" style="background-color: white">
                     <div *ngFor="let item of usuario.produto"
                       class="d-flex align-items-center justify-content-center m-3">
-                      <div class="card efeitoFruta d-flex align-items-center justify-content-center" style="width: 14rem">
+                      <div class="card efeitoFruta d-flex align-items-center justify-content-center"
+                        style="width: 14rem">
                         <img class="card-img-top w-100" src="{{item.foto}}" alt="{{item.nome}}" />
                         <div class="card-body">
                           <h5 class="card-title">{{ item.nome }}</h5>
@@ -331,8 +332,8 @@
           </div>
           <!-- COMPRAS REALIZADAS -->
           <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-            <div class="container-fluid justify-content-center d-flex flex-column align-items-center" style="background-color: white; height: fit-content">
-              
+            <div class="container-fluid justify-content-center d-flex flex-column align-items-center"
+              style="background-color: white; height: fit-content">
               <div class=" m-5 justify-content-center d-flex flex-column align-items-center">
                 <h5 class="mt-3 text-center">
                   Você ainda não possui nenhum produto em sua cesta
@@ -343,7 +344,6 @@
                   <a routerLink="/produtos">clique aqui</a>
                 </h5>
               </div>
-              
             </div>
           </div>
           <div class="tab-pane fade show" id="v-pills-adm" role="tabpanel" aria-labelledby="v-pills-adm-tab">

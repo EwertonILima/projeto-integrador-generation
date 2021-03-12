@@ -18,7 +18,7 @@ declare var paypal: { Buttons: (arg0: { createOrder: (data: any, actions: any) =
   styleUrls: ['./menu-logado.component.css']
 })
 export class MenuLogadoComponent implements OnInit {
-  
+
   nomeProd: string
   listaProdutos: Produto[]
 
@@ -63,14 +63,14 @@ export class MenuLogadoComponent implements OnInit {
       onApprove: async (data: any, actions: any) => {
         const order = await actions.order.capture()
         this.paidFor = true
-          console.log(order)
+        console.log(order)
       },
       onError: (err: any) => {
         console.log(err)
       }
     })
       .render(this.paypalElement.nativeElement)
-    
+
   }
 
   sair() {
@@ -83,9 +83,9 @@ export class MenuLogadoComponent implements OnInit {
 
   findByNomeProduto() {
     this.produtoService.getByNomeProduto(this.nomeProd).subscribe((resp: Produto[]) => {
-     this.listaProdutos = resp
-     })
-    
+      this.listaProdutos = resp
+    })
+
   }
 
   limparPesquisar() {
@@ -101,29 +101,20 @@ export class MenuLogadoComponent implements OnInit {
     });
   }
 
-  deleteProdutoComprado(idProduto: number){
-    this.cestaComprasService.deleteProdutoComprado(idProduto).subscribe(() =>{
-    this.findAllProdutosComprados();
-    this.alertas.showAlertSuccess('Produto retirado com sucesso da sua cesta!');
+  deleteProdutoComprado(idProduto: number) {
+    this.cestaComprasService.deleteProdutoComprado(idProduto).subscribe(() => {
+      this.findAllProdutosComprados();
+      this.alertas.showAlertSuccess('Produto retirado com sucesso da sua cesta!');
     });
   }
 
-  totalProdutos(){
+  totalProdutos() {
     this.valorCestaProdutos = 0
     this.itemsCestaProdutos = 0
-    for(let item of this.listaCestaCompras){
+    for (let item of this.listaCestaCompras) {
       this.valorCestaProdutos = this.valorCestaProdutos + item.preco
       this.itemsCestaProdutos = this.itemsCestaProdutos + item.quantidade
     }
   }
-
-  // finalizarCompra(){
-  //   for(let item of this.listaCestaCompras){
-  //     this.cestaComprasService.deleteProdutoComprado(item.id).subscribe(() =>{
-  //       this.totalCestaProdutos = 0
-  //     this.findAllProdutosComprados()
-  //     });
-  //   }
-  // }
 
 }
