@@ -57,8 +57,6 @@
                 </svg>
             </a>
 
-
-
             <a *ngIf="authService.deslogado()" class="drop-btn nav-link text-light py-0 px-0"
                 routerLink='/login'>Login</a>
             <div class="dropdown ">
@@ -78,7 +76,7 @@
             </div>
         </div>
 
-        <div class="flex-column login-cesta">
+        <div class="flex-column login-cesta" >
             <a class="text-light d-flex flex-column align-items-center justify-content-center " data-toggle="modal"
                 data-target="#flyoutmodal">
                 <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 512 512 " width="512 " height="512 ">
@@ -177,36 +175,44 @@
 <!-- /Menu -->
 
 <!-- Modal cesta -->
-
 <div class="modal" id="flyoutmodal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog fadeInRight animated ml-auto" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Sua Cesta</h5>
+    <div class="modal-dialog modal-dialog-div fadeInRight animated ml-auto" role="document">
+        <div class="modal-content modal-content-div">
+            <div class="modal-header modal-header-div">
+                <h5 class="modal-title modal-title-div" id="exampleModalLongTitle">Sua Cesta</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 </button>
             </div>
-            <div class="modal-body">
-
-
-
+            <div class="modal-body modal-body-div">
+                
+                <div class=" m-5 justify-content-center d-flex flex-column align-items-center">
+                    <h5 class="mt-3 text-center">
+                      Faça login para acessar sua cesta de compras
+                    </h5>
+                    <h5 class="mb-5 text-center">
+                      <a routerLink="/login" data-dismiss="modal">clique aqui</a>
+                    </h5>
+                  </div>
 
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer mb-4">
 
-                <div class="col-md-12 pt-3 pl-4">
-                    0 Itens
+                <div class="row" style="width: 100%;">
+                    <div class=" pt-3 pl-4 d-flex">
+                        <p style="font-size: 24px;" class="mb-0">0</p><p class="mb-0 mt-2"> item(s)</p>
+                    </div>
+    
+                    <div class=" pt-3 pl-4 d-flex">
+                        <p style="font-size: 24px;" class="mb-0">Total </p><p> R$</p><p style="font-size: 24px;" class="mb-0">0</p> 
+                    </div>
                 </div>
-
-                <div class="col-md-12 pt-4 pl-4">
-                    R$ 0,00
-                </div>
-
-                <button type="button" class="d-flex m-3 abtn btn-comprar">Finalizar Compra</button>
+                <button type="button" data-dismiss="modal" class="d-flex m-3 abtn btn-comprar" data-toggle="modal" data-target=".bd-example-modal-lg">Finalizar Compra</button>
             </div>
         </div>
     </div>
 </div>
-
 <!-- /Modal cesta -->
+
+
+
