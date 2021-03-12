@@ -3,9 +3,9 @@
 }
 
 .card-header {
-    background-color: #347322;
+    background-color: #57732d;
+    
 }
-
 .btn {
     color: azure;
     box-shadow: none;
@@ -18,14 +18,46 @@
 .border {
     background-color: #347322;
 }
+.text-faleConosco, .text-contato{
+    color: #347322;
+    font-weight: 300;
+    
+}
+
+.btn-form{
+    background-color: #57732d;
+}
+
+
+
+/* Responsividade de imagem */
+@media(max-width: 500px) {
+    .imagem-responsiva {
+        max-width: 400px!important;
+        margin-right: 0px;
+    }
+
+}
 
 @media(max-width: 400px) {
     .imagem-responsiva {
-        max-width: 400px;
+        max-width: 350px!important;
+        margin-right: 0px;
     }
-    @media(max-width: 300px) {
-        .imagem-responsiva {
-            max-width: 350px;
-        }
+
+}
+
+@media(max-width: 300px) {
+    .imagem-responsiva {
+        display: none;
     }
 }
+.btn-form:hover{
+    background: #465e20;
+}
+
+.card-body{
+
+    color: #402222;
+}
+
