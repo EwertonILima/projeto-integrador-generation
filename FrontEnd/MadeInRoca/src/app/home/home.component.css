@@ -4,7 +4,7 @@
 }
 
 .text-quemsomos{
-  color: hsl(124, 66%, 16%);
+  color: #41581f;
   font-size: 38px;
 }
 
@@ -159,9 +159,9 @@
   background-color: white;
   border: solid 1px;
   border-color:#c4c4c4a1 ;
-  margin: 15px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
   width: 13rem;
-  height: 20rem;
+  height: 21.5rem;
 } 
 
 
@@ -227,4 +227,12 @@ h3 {
 
 .form-group {
   border-radius: 5px;
+}
+.card-title-comofunciona{
+  background-color:#e48023f3;
+  border: none;
+  color:#1f4e21 ;
+}
+.card-text-comofunciona {
+  color:#573c23;
 }
