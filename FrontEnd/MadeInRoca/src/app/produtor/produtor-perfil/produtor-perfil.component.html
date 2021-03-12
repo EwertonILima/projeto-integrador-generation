@@ -236,7 +236,7 @@
                   <div class="col-md-12 d-flex flex-wrap justify-content-center" style="background-color: white">
                     <div *ngFor="let item of usuario.produto"
                       class="d-flex align-items-center justify-content-center m-3">
-                      <div class="card efeitoFruta" style="width: 14rem">
+                      <div class="card efeitoFruta d-flex align-items-center justify-content-center" style="width: 14rem">
                         <img class="card-img-top w-100" src="{{item.foto}}" alt="{{item.nome}}" />
                         <div class="card-body">
                           <h5 class="card-title">{{ item.nome }}</h5>
@@ -248,7 +248,7 @@
                           </div>
                           <div class="qtd-buy mb-2 d-flex align-items-center justify-content-center"
                             style="width: max-content">
-                            <button type="button" class="btn btn-comprar-carousel" style="height: 42px; width: 180px"
+                            <button type="button" class="btn btn-comprar-carousel" style="height: 42px; width: 170px"
                               [routerLink]="['/produtos', item.id]">
                               Ver produto
                             </button>
@@ -333,69 +333,16 @@
           <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
             <div class="container-fluid justify-content-center d-flex flex-column align-items-center" style="background-color: white; height: fit-content">
               
-                <ng-container *ngIf="listaCestaCompras.length != 0; else elseCesta">
-                  <h3 class=" mt-4 ml-2 mb-2 text-start">Cesta de compras</h3>
-  
-  
-                  <div class="card w-75 my-3" style="background-color: #F5F8F0;" *ngFor="let item of listaCestaCompras">
-                    <div class="card-body">
-                      <div class="row">
-                        <div style="background-color: #ffffff; border-radius: 5px;" class="col-md-6 d-flex align-items-center justify-content-center">
-                          <img class="img-fluid" src="{{item.foto}}" alt="{{item.nome}} adicionado a cesta de compras">
-                        </div>
-                        <div class="col-md-6 d-flex align-items-center justify-content-center">
-                          <h5 class="card-title">{{item.nome}}</h5>
-                        </div>
-                      </div>
-                      <div class="row mt-3">
-                        <div class="col-md-5 d-flex p-2">
-                          <h5 class="card-text pb-0 text-success">{{item.quantidade}}</h5><p>unidades</p> 
-                        </div>
-                        <div class="col-md-5 d-flex p-2" >
-                          <p>$</p><h5 class="text-success">{{item.preco}}</h5>
-                        </div>
-                        <div class="col-md-2 d-flex justify-content-end p-2">
-                          <button class="btn btn-danger"
-                        (click)="deleteProdutoComprado(item.id)">Excluir</button>
-                        </div>
-                        
-                      </div>
-                      
-                      
-                      
-                      
-                    </div>
-                  </div>
-                  <div class="row d-flex justify-content-center align-items-center" style="width: 90%;">
-                    <div class="col-md-5 justify-content-center align-items-center">
-                      <h3 class="my-3">TOTAL: ${{totalCestaProdutos}}</h3>
-                    </div>
-                    <div class="col-md-5 d-flex justify-content-end align-items-center">
-                      <button class="btn btn-success" style="max-height: fit-content" (click)="finalizarCompra()">Finalizar Compra</button>
-  
-                    </div>
-  
-                  
-                    
-                    
-                  </div>
-                  
-                </ng-container>
-                <ng-template #elseCesta>
-                  <div class=" m-5 justify-content-center d-flex flex-column align-items-center">
-                    <h5 class="mt-3 text-center">
-                      Você ainda não possui nenhum produto em sua cesta
-                    </h5>
-                    <img src="../../../assets/svg/shopping-cart.svg" alt="imagem de um carrinho de compras" />
-                    <h5 class="mb-5 text-center">
-                      para ir para nossa pagina de produtos
-                      <a routerLink="/produtos">clique aqui</a>
-                    </h5>
-                  </div>
-                  
-  
-                </ng-template>
-              
+              <div class=" m-5 justify-content-center d-flex flex-column align-items-center">
+                <h5 class="mt-3 text-center">
+                  Você ainda não possui nenhum produto em sua cesta
+                </h5>
+                <img src="../../../assets/svg/shopping-cart.svg" alt="imagem de um carrinho de compras" />
+                <h5 class="mb-5 text-center">
+                  para ir para nossa pagina de produtos
+                  <a routerLink="/produtos">clique aqui</a>
+                </h5>
+              </div>
               
             </div>
           </div>
@@ -505,7 +452,7 @@
                 <div class="col-md-12 d-flex text-center justify-content-center align-items-center flex-column p-5"
                   style="background-color: white; height: fit-content">
                   <div *ngFor="let item of listaProdutos" class="d-flex align-items-center justify-content-center m-3">
-                    <div class="card efeitoFruta" style="width: 14rem">
+                    <div class="card efeitoFruta d-flex align-items-center justify-content-center" style="width: 14rem">
                       <img class="card-img-top w-100" src="{{item.foto}}" alt="{{item.nome}}" />
                       <div class="card-body">
                         <h5 class="card-title">{{ item.nome }}</h5>
@@ -516,7 +463,7 @@
                         </div>
                         <div class="qtd-buy mb-2 d-flex align-items-center justify-content-center"
                           style="width: max-content">
-                          <button type="button" class="btn btn-comprar-carousel" style="height: 42px; width: 180px"
+                          <button type="button" class="btn btn-comprar-carousel" style="height: 42px; width: 170px"
                             [routerLink]="['/produtos', item.id]">
                             Ver produto
                           </button>
