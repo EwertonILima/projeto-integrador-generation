@@ -3,20 +3,38 @@
 }
 
 .card-header {
-    background-color: #347322;
+    background-color: #57732d;
+    
 }
-
 .btn {
     color: azure;
     box-shadow: none; 
 }
 
 .card-header:hover{
-    background-color: #89A61F;
+    background-color:#A6995B;
+    color:white;
 }
 
 .border{
     background-color: #347322;
 }
+.text-faleConosco, .text-contato{
+    color: #347322;
+    font-weight: 300;
+    
+}
 
+.btn-form{
+    background-color: #57732d;
+}
+
+.btn-form:hover{
+    background: #465e20;
+}
+
+.card-body{
+
+    color: #402222;
+}
 
