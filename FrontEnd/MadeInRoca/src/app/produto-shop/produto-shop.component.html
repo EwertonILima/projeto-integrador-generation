@@ -2,7 +2,7 @@
 <div class="container py-5 mt-5" style="background-color: #e9ecef;">
   <div class="row produto-unico d-flex justify-content-center align-items-center">
     <div class="col-md-4 product-single">
-      <img class="img-fluid img-product-single" src="https://i.imgur.com/G6t3XF4.jpg" alt="Produto">
+      <img class="img-fluid img-product-single" src="{{produto.foto}}" alt="{{produto.nome}} sendo vendido em nosso e-commerce">
     </div>
     <div class="col-md-6  d-flex flex-column">
       <h5 class="my-3" style="font-size: 30px;">{{produto.nome}}</h5>
@@ -28,254 +28,203 @@
 <!-- /PRODUTO INDIVIDUAL -->
 
 <!-- CAROUSEL DE PRODUTOS -->
-<div class="container mb-5">
-  <div class="container mt-5">
-    <div class="row mt-0 d-flex justify-content-center" style="border: #e9ecef solid 3px;">
-      <div class="col-12 mb-1 ">
-        <h3 class="mb-0 px-4 py-2 pro text-center color-green">Produtos Relacionados</h3>
-      </div>
-      <div class="col-12 ">
-        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row mb-3 mx-3">
-                <!--Cards-->
-                <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                  <div class="card efeitoFruta" style="width: 14rem;">
-                    <img class="card-img-top w-100"
-                      src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Uva Itália">
-                    <div class="card-body">
-                      <h5 class="card-title">Uva Itália</h5>
-                      <div class="mb-2">
-                        <p class="card-text negrito"> R$2.50</p>
+<div class="container mt-5">
+  <div class="row mt-0 d-flex justify-content-center align-items-center" style="border: #e9ecef solid 3px;">
+    <div class="col-12 mb-1 ">
+      <h3 class="mb-0 px-4 py-2 pro text-center color-green">Promoções do dia </h3>
+    </div>
+    <div class="col-12 d-flex justify-content-center align-items-center">
+      <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row mb-3 mx-3 d-flex justify-content-center align-items-center">
+              <!--Cards-->
+              <div class="m-3 align-items-center justify-content-center mt-1 d-flex">
+                <div class="card efeitoFruta" style="width: 14rem;">
+                  <img class="card-img-top w-100"
+                    src="https://saborvivo.com.br/wp-content/uploads/2019/05/uva-thompson-2.jpg" alt="Produto em Promoção">
+                  <div class="card-body">
+                    <h5 class="card-title">Uva Itália</h5>
+                    <div class="mb-2">
+                      <p class="card-text negrito"> R$2.50</p>
+                    </div>
+                    <div class="qtd-buy d-flex align-items-center justify-content-center">
+                      <div class="form-group my-auto w-50 mr-2">
+                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
+                          placeholder="Qtd">
                       </div>
-                      <div class="qtd-buy d-flex align-items-center justify-content-center">
-                        <div class="form-group my-auto w-50 mr-2">
-                          <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                            placeholder="Qtd">
-                        </div>
-                        <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                          href="#">Comprar</button>
-                      </div>
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
+                        href="#">Comprar</button>
                     </div>
                   </div>
                 </div>
-                <!--/Cards-->
-                <!--Cards-->
-                <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                  <div class="card efeitoFruta" style="width: 14rem;">
-                    <img class="card-img-top w-100"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU"
-                      alt="Pimentão Vermelho">
-                    <div class="card-body">
-                      <h5 class="card-title">Pimentão</h5>
-                      <div class="mb-2">
-                        <p class="card-text negrito"> R$2.50</p>
-                      </div>
-                      <div class="qtd-buy d-flex align-items-center justify-content-center">
-                        <div class="form-group my-auto w-50 mr-2">
-                          <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                            placeholder="Qtd">
-                        </div>
-                        <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                          href="#">Comprar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--/Cards-->
-                <!--Cards-->
-                <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                  <div class="card efeitoFruta" style="width: 14rem;">
-                    <img class="card-img-top w-100"
-                      src="https://static3.tcdn.com.br/img/img_prod/450860/muda_de_limao_taiti_enxertada_546_1_20190611093557.jpg"
-                      alt="Limão Tahiti">
-                    <div class="card-body">
-                      <h5 class="card-title">Limão Tahiti</h5>
-                      <div class="mb-2">
-                        <p class="card-text negrito"> R$2.50</p>
-                      </div>
-                      <div class="qtd-buy d-flex align-items-center justify-content-center">
-                        <div class="form-group my-auto w-50 mr-2">
-                          <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                            placeholder="Qtd">
-                        </div>
-                        <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                          href="#">Comprar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--/Cards-->
-                <!--Cards-->
-                <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                  <div class="card efeitoFruta" style="width: 14rem;">
-                    <img class="card-img-top w-100" src="https://i.imgur.com/G6t3XF4.jpg" alt="Berinjela">
-                    <div class="card-body">
-                      <h5 class="card-title">Berinjela</h5>
-                      <div class="mb-2">
-                        <p class="card-text negrito"> R$2.50</p>
-                      </div>
-                      <div class="qtd-buy d-flex align-items-center justify-content-center">
-                        <div class="form-group my-auto w-50 mr-2">
-                          <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                            placeholder="Qtd">
-                        </div>
-                        <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                          href="#">Comprar</button>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-                <!--/Cards-->
-
-
-
-                <!--COMECA AQUI-->
               </div>
+              <!--/Cards-->
+              <!--Cards-->
+              <div class="m-3 align-items-center justify-content-center mt-1 d-flex">
+                <div class="card efeitoFruta" style="width: 14rem;">
+                  <img class="card-img-top w-100"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJlvDLUBJYfOLyg5zZVgbhvir3mGR6PTzIYQ&usqp=CAU"
+                    alt="Produto em Promoção">
+                  <div class="card-body">
+                    <h5 class="card-title">Pimentão</h5>
+                    <div class="mb-2">
+                      <p class="card-text negrito"> R$2.50</p>
+                    </div>
+                    <div class="qtd-buy d-flex align-items-center justify-content-center">
+                      <div class="form-group my-auto w-50 mr-2">
+                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
+                          placeholder="Qtd">
+                      </div>
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
+                        href="#">Comprar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/Cards-->
+              <!--Cards-->
+              <div class="m-3 align-items-center justify-content-center mt-1 d-flex">
+                <div class="card efeitoFruta" style="width: 14rem;">
+                  <img class="card-img-top w-100"
+                    src="https://static3.tcdn.com.br/img/img_prod/450860/muda_de_limao_taiti_enxertada_546_1_20190611093557.jpg"
+                    alt="Produto em Promoção">
+                  <div class="card-body">
+                    <h5 class="card-title">Limão Tahiti</h5>
+                    <div class="mb-2">
+                      <p class="card-text negrito"> R$2.50</p>
+                    </div>
+                    <div class="qtd-buy d-flex align-items-center justify-content-center">
+                      <div class="form-group my-auto w-50 mr-2">
+                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
+                          placeholder="Qtd">
+                      </div>
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
+                        href="#">Comprar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/Cards-->
+              <!--Cards-->
+              <div class="m-3 align-items-center justify-content-center mt-1 d-flex">
+                <div class="card efeitoFruta" style="width: 14rem;">
+                  <img class="card-img-top w-100" src="https://i.imgur.com/G6t3XF4.jpg" alt="Produto em Promoção">
+                  <div class="card-body">
+                    <h5 class="card-title">Berinjela</h5>
+                    <div class="mb-2">
+                      <p class="card-text negrito"> R$2.50</p>
+                    </div>
+                    <div class="qtd-buy d-flex align-items-center justify-content-center">
+                      <div class="form-group my-auto w-50 mr-2">
+                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
+                          placeholder="Qtd">
+                      </div>
+
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
+                        href="#">Comprar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/Cards-->
+              <!--COMECA AQUI-->
             </div>
-            <div class="carousel-item">
-              <div class="row mb-3 mx-3">
-                <!--Cards-->
-                <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                  <div class="card efeitoFruta" style="width: 14rem;">
-                    <img class="card-img-top w-100"
-                      src="https://hiperideal.vteximg.com.br/arquivos/ids/167758-1000-1000/85880.jpg?v=636615816451230000"
-                      alt="Batata doce">
-                    <div class="card-body">
-                      <h5 class="card-title">Batata doce</h5>
-                      <div class="mb-2">
-                        <p class="card-text negrito"> R$2.50</p>
+          </div>
+          <div class="carousel-item">
+            <div class="row mb-3 mx-3 d-flex justify-content-center align-items-center">
+              <!--Cards-->
+              <div class="m-3 align-items-center justify-content-center mt-1 d-flex">
+                <div class="card efeitoFruta" style="width: 14rem;">
+                  <img class="card-img-top w-100"
+                    src="https://www.proativaalimentos.com.br/image/cache/catalog/img_prod/cenoura2-1000x1000.jpg"
+                    alt="Produto em Promoção">
+                  <div class="card-body">
+                    <h5 class="card-title">Cenoura</h5>
+                    <div class="mb-2">
+                      <p class="card-text negrito"> R$2.50</p>
+                    </div>
+                    <div class="qtd-buy d-flex align-items-center justify-content-center">
+                      <div class="form-group my-auto w-50 mr-2">
+                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
+                          placeholder="Qtd">
                       </div>
-                      <div class="qtd-buy d-flex align-items-center justify-content-center">
-                        <div class="form-group my-auto w-50 mr-2">
-                          <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                            placeholder="Qtd">
-                        </div>
-                        <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                          href="#">Comprar</button>
-                      </div>
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
+                        href="#">Comprar</button>
                     </div>
                   </div>
                 </div>
-                <!--/Cards-->
-
-
-                <!--Cards-->
-                <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                  <div class="card efeitoFruta" style="width: 18rem;">
-                    <img class="card-img-top w-100"
-                      src="https://hiperideal.vteximg.com.br/arquivos/ids/167758-1000-1000/85880.jpg?v=636615816451230000"
-                      alt="Batata doce">
-                    <div class="card-body">
-                      <h5 class="card-title">Batata doce</h5>
-
-                      <div class="mb-2">
-                        <p class="card-text negrito"> R$2.50</p>
-                      </div>
-
-
-                      <div class="qtd-buy d-flex align-items-center justify-content-center">
-                        <div class="form-group my-auto w-50 mr-2">
-                          <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                            placeholder="Qtd">
-                        </div>
-                        <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                          href="#">Comprar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--/Cards-->
-
-
-
-
-
-                <!--Cards-->
-                <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                  <div class="card efeitoFruta" style="width: 18rem;">
-                    <img class="card-img-top w-100"
-                      src="https://octoshop.sfo2.digitaloceanspaces.com/lojas/padellasaobenedito/uploads_produto/alface-americana-5e9747403104f.png"
-                      alt="Alface Americana">
-                    <div class="card-body">
-                      <h5 class="card-title">Alface Americana</h5>
-
-                      <div class="mb-2">
-                        <p class="card-text negrito"> R$2.50</p>
-                      </div>
-
-                      <div class="qtd-buy d-flex align-items-center justify-content-center">
-                        <div class="form-group my-auto w-50 mr-2">
-                          <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                            placeholder="Qtd">
-                        </div>
-
-                        <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                          href="#">Comprar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--/Cards-->
-
-
-                <!--Cards-->
-                <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                  <div class="card efeitoFruta" style="width: 18rem;">
-                    <img class="card-img-top w-100"
-                      src="https://feiradoceasa.com.br/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/p/e/pera_portuguesa.jpg"
-                      alt="Limão Tahiti">
-                    <div class="card-body">
-                      <h5 class="card-title">Pera Portuguese</h5>
-
-                      <div class="mb-2">
-                        <p class="card-text negrito"> R$2.50</p>
-                      </div>
-                      <div class="qtd-buy d-flex align-items-center justify-content-center">
-                        <div class="form-group my-auto w-50 mr-2">
-                          <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                            placeholder="Qtd">
-                        </div>
-                        <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                          href="#">Comprar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!--/Cards-->
-
-
-                <!--Cards-->
-                  <div class="col-md-3 align-items-center justify-content-center mt-1 d-flex">
-                    <div class="card efeitoFruta" style="width: 18rem;">
-                      <img class="card-img-top w-100"
-                        src="https://s.cornershopapp.com/product-images/2877810.png?versionId=hVL2._j1Ab.EHa4VSaIIDcU66GNG6fMU"
-                        alt="Beterraba">
-                      <div class="card-body">
-                        <h5 class="card-title">Beterraba</h5>
-
-                        <div class="mb-2">
-                          <p class="card-text negrito"> R$2.50</p>
-                        </div>
-
-                        <div class="qtd-buy d-flex align-items-center justify-content-center">
-                          <div class="form-group my-auto w-50 mr-2">
-                            <input class="form-control" min="0" value="1" type="number" name="qtdProduto"
-                              id="qtdProduto" placeholder="Qtd">
-                          </div>
-
-                          <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                            href="#">Comprar</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--/Cards-->
-
               </div>
+              <!--/Cards-->
+              <!--Cards-->
+              <div class="m-3 align-items-center justify-content-center mt-1 d-flex">
+                <div class="card efeitoFruta" style="width: 14rem;">
+                  <img class="card-img-top w-100"
+                    src="https://siriusorganicos.com.br/wp-content/uploads/2020/11/maca-gala-importada-organica-produtos-organicos-sirius-delivery-entrega-cesta-curitiba.jpg"
+                    alt="Produto em Promoção">
+                  <div class="card-body">
+                    <h5 class="card-title">Maçã Gala</h5>
+                    <div class="mb-2">
+                      <p class="card-text negrito"> R$2.50</p>
+                    </div>
+                    <div class="qtd-buy d-flex align-items-center justify-content-center">
+                      <div class="form-group my-auto w-50 mr-2">
+                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
+                          placeholder="Qtd">
+                      </div>
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
+                        href="#">Comprar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/Cards-->
+              <!--Cards-->
+              <div class="m-3 align-items-center justify-content-center mt-1 d-flex">
+                <div class="card efeitoFruta" style="width: 14rem;">
+                  <img class="card-img-top w-100"
+                    src="https://emporioquatroestrelas.vteximg.com.br/arquivos/ids/160134-1000-1000/alho-roxo.png?v=637285138034270000"
+                    alt="Produto em Promoção">
+                  <div class="card-body">
+                    <h5 class="card-title">Alho</h5>
+                    <div class="mb-2">
+                      <p class="card-text negrito"> R$2.50</p>
+                    </div>
+                    <div class="qtd-buy d-flex align-items-center justify-content-center">
+                      <div class="form-group my-auto w-50 mr-2">
+                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
+                          placeholder="Qtd">
+                      </div>
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
+                        href="#">Comprar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/Cards-->
+              <!--Cards-->
+              <div class="m-3 align-items-center justify-content-center mt-1 d-flex">
+                <div class="card efeitoFruta" style="width: 14rem;">
+                  <img class="card-img-top w-100"
+                    src="https://superplanalto.com/image/cache/catalog/produtos/produtos/banana-nanica-550x550w.jpg"
+                    alt="Produto em Promoção">
+                  <div class="card-body">
+                    <h5 class="card-title">Banana Nanica</h5>
+                    <div class="mb-2">
+                      <p class="card-text negrito"> R$2.50</p>
+                    </div>
+                    <div class="qtd-buy d-flex align-items-center justify-content-center">
+                      <div class="form-group my-auto w-50 mr-2">
+                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
+                          placeholder="Qtd">
+                      </div>
+                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
+                        href="#">Comprar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/Cards-->
             </div>
           </div>
         </div>
@@ -293,8 +242,7 @@
     </div>
   </div>
 </div>
-
-<!-- CAROUSEL DE PRODUTOS -->
+<!-- /CAROUSEL DE PRODUTOR -->
 
 
 
