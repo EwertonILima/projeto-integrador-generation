@@ -59,29 +59,39 @@
     background-size: cover;
 }
 
+.team{
+    width: 450px;
+    height: 450px;
+}
 
-/* div{
+
+/* *{
     border: solid 1px red;
 } */
 
-
-@media(max-width: 1233px){
-    .distancia{
-        padding-right: 30px;
-    }
-}
-
 @media(max-width: 360px){
-    .centralizado{
-        margin-left: 150px;
-    }
-
     .wh-video{
-        width: 200px;
+        width: 320px;
         right: 150px;
     }
 
     .distancia{
         margin-bottom: 50px;
+        
+    }
+
+    .cetral{
+        margin: 0;
+        padding: 0;
+    }
+
+    .team{
+        width: 300px;
+        height: 300px;
+        margin-left: 150px;
+    }
+
+    .direita{
+        margin-left: 20px;
     }
 }
