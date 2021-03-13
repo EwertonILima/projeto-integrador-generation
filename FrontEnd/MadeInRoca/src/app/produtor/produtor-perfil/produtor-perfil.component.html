@@ -214,7 +214,7 @@
                 </div>
                 <div class="form-group">
                   <label for="Email">E-mail</label>
-                  <input [(ngModel)]="usuario.usuario" class="form-control" type="text" name="email" id="email"
+                  <input [(ngModel)]="usuario.usuario" [(ngModel)]="usuario.email" class="form-control" type="text" name="email" id="email"
                     placeholder="Insira seu e-mail" />
                 </div>
                 <div class="form-group">
@@ -500,6 +500,7 @@
               <!-- TODOS OS PRODUTOS -->
               <div class="tab-pane fade" id="nav-produtos" role="tabpanel" aria-labelledby="nav-produtos-tab">
                 <div class="col-md-12 d-flex flex-wrap justify-content-center" style="background-color: white">
+                  <ng-container *ngIf="usuario.produto.length != 0; else elseTemplateAdministrador">
                   <div *ngFor="let item of listaProdutos" class="d-flex align-items-center justify-content-center m-3">
                     <div class="card efeitoFruta d-flex align-items-center justify-content-center" style="width: 14rem">
                       <img class="card-img-top w-100" src="{{item.foto}}" alt="{{item.nome}}" />
@@ -531,11 +532,26 @@
                       </div>
                     </div>
                   </div>
+                </ng-container>
+                <ng-template #elseTemplateAdministrador>
+                  <div class="col-md-12 d-flex text-center justify-content-center align-items-center flex-column p-5"
+                    style="background-color: white; height: fit-content">
+                    <h5 class="m-3">
+                      Não há produtos cadastrados na plataforma!
+                    </h5>
+                    <img src="../../../assets/svg/harvest.svg" alt="imagem de tres frutas juntas em fundo branco" />
+                    <h5 class="m-3">
+                      
+                    </h5>
+                  </div>
+                </ng-template>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+  
         <!-- /TODOS OS PRODUTOS -->
       </div>
     </div>
