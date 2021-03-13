@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
 import { CestaCompras } from 'src/app/model/CestaCompras';
 import { Produto } from 'src/app/model/Produto';
@@ -24,7 +24,6 @@ export class ProdutorPerfilComponent implements OnInit {
   usuario: Usuario = new Usuario();
   idUsuario: number;
   confirmarSenha: string;
-  tipoUsuario = environment.tipoUsuario
   listaUsuarios: Usuario[];
 
   categoria: Categoria = new Categoria();
@@ -37,12 +36,14 @@ export class ProdutorPerfilComponent implements OnInit {
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     private alertas: AlertasService,
+    private route: ActivatedRoute
   ) { }
 
   id = environment.id;
   nome = environment.nome;
   email = environment.usuario;
   foto = environment.foto;
+  tipoUsuario = environment.tipoUsuario
 
   ngOnInit() {
     window.scroll(0, 0);
@@ -51,10 +52,10 @@ export class ProdutorPerfilComponent implements OnInit {
       this.alertas.showAlertDanger('Faça login para acessar esta pagina.');
       this.router.navigate(['/home']);
     }
-
-    this.getAllCategoria();
-    this.findUsuarioById();
-    this.findAllCategoria();
+    this.getAllCategoria()
+    this.findUsuarioById()
+    this.findAllCategoria()
+    this.getAllUsuarios()
   }
 
   confirmSenha(event: any) {
@@ -97,7 +98,7 @@ export class ProdutorPerfilComponent implements OnInit {
   getAllUsuarios() {
     this.authService.getAllUsuarios().subscribe((resp: Usuario[]) => {
       this.listaUsuarios = resp;
-    });
+    })
   }
 
   // ATUALIZAR PRODUTOS
@@ -123,9 +124,13 @@ export class ProdutorPerfilComponent implements OnInit {
   delProduto() {
     this.produtoService.deleteProduto(this.idProduto).subscribe(() => {
       this.findUsuarioById();
+      if (this.tipoUsuario == 'adm') {
+        this.getAllProdutos();
+      }
       this.alertas.showAlertSuccess('Produto excluído com sucesso!');
     });
   }
+
 
   // POST NOVO PRODUTO
   getAllCategoria() {
@@ -161,9 +166,15 @@ export class ProdutorPerfilComponent implements OnInit {
   getAllProdutos() {
     console.log(this.listaProdutos);
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
-      this.listaProdutos = resp;
-    });
+
+      this.listaProdutos = resp
+    })
   }
+
+  getIdUsuario(id: number) {
+    this.idUsuario = id
+  }
+
 
   cadastrarCategoria() {
     this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
@@ -205,4 +216,15 @@ export class ProdutorPerfilComponent implements OnInit {
       this.categoria = resp;
     });
   }
+
+
+  deleteUsuario() {
+    return this.authService.deleteUsuario(this.idUsuario).subscribe(() => {
+
+      this.findUsuarioById()
+      this.alertas.showAlertSuccess('Usuário deletado com sucesso!');
+      this.getAllUsuarios()
+    })
+  }
+
 }

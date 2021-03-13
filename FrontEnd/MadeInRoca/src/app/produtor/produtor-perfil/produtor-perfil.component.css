@@ -195,3 +195,30 @@ h5 a:hover {
     align-items: center;
   }
 }
+
+.btn-accordion{
+    color: #57732D;
+    font-weight: bolt;
+}
+
+.text2-table{
+  color: #57732D
+
+}
+
+.text2-table{
+  color: #774040;
+}
+
+.title-accordion{
+
+  color: #57732d;
+}
+
+@media(max-width:280px) {
+  .alinhamento {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
