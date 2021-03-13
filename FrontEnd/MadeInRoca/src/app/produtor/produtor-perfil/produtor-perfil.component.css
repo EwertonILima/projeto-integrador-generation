@@ -130,6 +130,28 @@ h5 a:hover {
   text-decoration: none;
 }
 
+.btn-accordion {
+  color: #57732d;
+  font-weight: bolt;
+}
+
+.text2-table {
+  color: #57732d;
+}
+
+.text2-table {
+  color: #774040;
+}
+
+.title-accordion {
+  color: #57732d;
+}
+
+.produtosCesta {
+  display: flex;
+  flex-direction: block;
+}
+
 @media (max-width: 780px) {
   .container-page {
     margin-top: 25px;
@@ -172,31 +194,4 @@ h5 a:hover {
     justify-content: center;
     align-items: center;
   }
-}
-
-.btn-accordion{
-    color: #57732D;
-    font-weight: bolt;
-}
-
-.text2-table{
-  color: #57732D
-
-}
-
-.text2-table{
-  color: #774040;
-}
-
-.title-accordion{
-  color: #57732d;
-}
-
-.produtosCesta{
-  display: flex;
-  flex-direction: block;
-}
-
-div{
-  border: solid red 1px;
 }

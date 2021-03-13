@@ -144,7 +144,7 @@
               aria-controls="v-pills-home" aria-selected="false">
               <div class="d-flex align-items-center">
                 <img class="icon" src="../../../assets/svg/farmer.svg"
-                  alt="icone de uma engrenagem utilizada para sinalizar a aba de perfil" />
+                  alt="icone de um produtor rural utilizada para sinalizar a aba de perfil" />
                 <div class="drop-text ml-2">Meu perfil</div>
               </div>
             </a>
@@ -152,7 +152,7 @@
               href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
               <div class="d-flex align-items-center">
                 <img class="icon" src="../../../assets/svg/harvest.svg"
-                  alt="icone de uma engrenagem utilizada para sinalizar a aba de meus produtos" />
+                  alt="icone de um conjunto de frutas utilizada para sinalizar a aba de meus produtos" />
                 <div class="drop-text ml-2">Meus produtos</div>
               </div>
             </a>
@@ -160,14 +160,14 @@
               aria-controls="v-pills-messages" aria-selected="false">
               <div class="d-flex align-items-center">
                 <img class="icon" src="../../../assets/svg/shopping-cart.svg"
-                  alt="icone de uma engrenagem utilizada para sinalizar a aba de compras" />
+                  alt="icone de uma carrinho de compras utilizada para sinalizar a aba de compras" />
                 <div class="drop-text ml-2">Compras</div>
               </div>
             </a>
             <a class="nav-link" id="v-pills-adm-tab" data-toggle="pill" href="#v-pills-adm" role="tab"
               aria-controls="v-pills-home" aria-selected="true">
               <div class="d-flex align-items-center">
-                <img class="icon" src="../../../assets/svg/settings.svg"
+                <img class="icon" style="min-height: 20px; min-width: 20px;" src="../../../assets/svg/settings.svg"
                   alt="icone de uma engrenagem utilizada para sinalizar a aba de administrador" />
                 <div class="drop-text ml-2">Administrador</div>
               </div>
@@ -406,7 +406,7 @@
                 <div class="col-md-12 d-flex flex-column" style="background-color: white; height: fit-content">
                   <!-- INCLUA NOVA CATEGORIA -->
                   <h4 class="text-center my-4">Inclua novas categorias:</h4>
-                  <div class="row d-flex justify-content-center mx-4 flex-column">
+                  <div class="row d-flex justify-content-center mx-3 flex-column">
                     <div class="form-group justify-content-center d-flex align-items-center flex-column">
                       <input [(ngModel)]="categoria.nome" style="max-width: 400px;" type="text"
                         class="form-control mb-2" id="nome" placeholder="Insira a categoria:" />
@@ -426,21 +426,31 @@
                   </h4>
                   <div class="row mt-3 mb-5 d-flex justify-content-center">
                     <div class="col-md-12 flex-wrap align-items-center justify-content-center d-flex">
-                      <div *ngFor="let categoria of listaCategoria" class="card m-2" style="width: 18rem;">
-                        <div class="card-body d-flex justify-content-center align-items-center flex-column">
-                          <h4 class="card-title">{{ categoria.nome }}</h4>
-                          <p class="card-text">{{ categoria.descricao }}</p>
-                          <div class="d-flex justify-content-center align-items-center">
-                            <button class="btn btn-info mr-3" data-target="#modalEditarCategoria" data-toggle="modal"
-                              (click)="findCategoriaById(categoria.id)">
-                              Editar
-                            </button>
-                            <button class="btn btn-danger" data-target="#modalExcluirCategoria" data-toggle="modal"
-                              (click)="getIdCategoria(categoria.id)">
-                              Apagar
-                            </button>
-                          </div>
-                        </div>
+                      <div class="table-responsive-lg">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col">Id</th>
+                              <th scope="col">Categoria</th>
+                              <th scope="col">Editar</th>
+                              <th scope="col">Excluir</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr *ngFor="let categoria of listaCategoria">
+                              <th scope="row" class="pb-0">{{ categoria.id }}</th>
+                              <td class="pb-0">{{ categoria.nome }}</td>
+                              <td class="pt-2"><button class="btn btn-info" data-target="#modalEditarCategoria"
+                                  data-toggle="modal" (click)="findCategoriaById(categoria.id)">
+                                  Editar
+                                </button></td>
+                              <td class="pt-2"><button class="btn btn-danger" data-target="#modalExcluirCategoria"
+                                  data-toggle="modal" (click)="getIdCategoria(categoria.id)">
+                                  Apagar
+                                </button></td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   </div>
