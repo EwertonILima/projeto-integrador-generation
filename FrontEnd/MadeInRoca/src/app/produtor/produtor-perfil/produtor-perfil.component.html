@@ -164,7 +164,7 @@
                 <div class="drop-text ml-2">Compras</div>
               </div>
             </a>
-            <a class="nav-link" id="v-pills-adm-tab" data-toggle="pill" href="#v-pills-adm" role="tab"
+            <a *ngIf="tipoUsuario == 'adm' " class="nav-link" id="v-pills-adm-tab" data-toggle="pill" href="#v-pills-adm" role="tab"
               aria-controls="v-pills-home" aria-selected="true">
               <div class="d-flex align-items-center">
                 <img class="icon" style="min-height: 20px; min-width: 20px;" src="../../../assets/svg/settings.svg"
