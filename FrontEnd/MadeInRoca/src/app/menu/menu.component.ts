@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { Produto } from 'src/app/model/Produto';
 import { AuthService } from 'src/app/service/auth.service';
@@ -21,14 +21,13 @@ export class MenuComponent implements OnInit {
   constructor(
     public authService: AuthService,
     private router: Router,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
   ) { }
 
 
   ngOnInit() {
     this.findByNomeProduto()
     this.limparPesquisar()
-
   }
 
   sair() {

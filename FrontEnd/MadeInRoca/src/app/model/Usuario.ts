@@ -1,3 +1,4 @@
+import { CestaCompras } from "./CestaCompras"
 import { Produto } from "./Produto"
 
 export class Usuario {
@@ -8,4 +9,5 @@ export class Usuario {
     public senha: string
     public foto: string
     public produto: Produto[]
+    public cestaCompras: CestaCompras[]
 }

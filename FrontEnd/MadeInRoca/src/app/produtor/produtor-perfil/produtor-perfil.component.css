@@ -130,6 +130,28 @@ h5 a:hover {
   text-decoration: none;
 }
 
+.btn-accordion {
+  color: #57732d;
+  font-weight: bolt;
+}
+
+.text2-table {
+  color: #57732d;
+}
+
+.text2-table {
+  color: #774040;
+}
+
+.title-accordion {
+  color: #57732d;
+}
+
+.produtosCesta {
+  display: flex;
+  flex-direction: block;
+}
+
 @media (max-width: 780px) {
   .container-page {
     margin-top: 25px;
@@ -189,10 +211,14 @@ h5 a:hover {
 }
 
 .title-accordion{
+
   color: #57732d;
 }
 
-.produtosCesta{
-  display: flex;
-  flex-direction: block;
+@media(max-width:280px) {
+  .alinhamento {
+    justify-content: center;
+    align-items: center;
+  }
 }
+

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from 'src/app/model/Categoria';
 import { CestaCompras } from 'src/app/model/CestaCompras';
 import { Produto } from 'src/app/model/Produto';
@@ -24,15 +24,11 @@ export class ProdutorPerfilComponent implements OnInit {
   usuario: Usuario = new Usuario();
   idUsuario: number;
   confirmarSenha: string;
-  tipoUsuario = environment.tipoUsuario
   listaUsuarios: Usuario[];
 
   categoria: Categoria = new Categoria();
   idCategoria: number;
   listaCategoria: Categoria[];
-
-  listaCestaCompras: CestaCompras[];
-  totalCestaProdutos: number = 0;
 
   constructor(
     private authService: AuthService,
@@ -40,26 +36,26 @@ export class ProdutorPerfilComponent implements OnInit {
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     private alertas: AlertasService,
-    private CestaComprasService: CestaComprasService
+    private route: ActivatedRoute
   ) { }
 
   id = environment.id;
   nome = environment.nome;
   email = environment.usuario;
   foto = environment.foto;
+  tipoUsuario = environment.tipoUsuario
 
   ngOnInit() {
     window.scroll(0, 0);
 
-    // if (environment.token == '') {
-    //   this.alertas.showAlertDanger('Faça login para acessar esta pagina.');
-    //   this.router.navigate(['/home']);
-    // }
-
-    this.getAllCategoria();
-    this.findUsuarioById();
-    this.findAllCategoria();
-    this.findAllProdutosComprados()
+    if (environment.token == '') {
+      this.alertas.showAlertDanger('Faça login para acessar esta pagina.');
+      this.router.navigate(['/home']);
+    }
+    this.getAllCategoria()
+    this.findUsuarioById()
+    this.findAllCategoria()
+    this.getAllUsuarios()
   }
 
   confirmSenha(event: any) {
@@ -102,7 +98,7 @@ export class ProdutorPerfilComponent implements OnInit {
   getAllUsuarios() {
     this.authService.getAllUsuarios().subscribe((resp: Usuario[]) => {
       this.listaUsuarios = resp;
-    });
+    })
   }
 
   // ATUALIZAR PRODUTOS
@@ -128,9 +124,13 @@ export class ProdutorPerfilComponent implements OnInit {
   delProduto() {
     this.produtoService.deleteProduto(this.idProduto).subscribe(() => {
       this.findUsuarioById();
+      if (this.tipoUsuario == 'adm') {
+        this.getAllProdutos();
+      }
       this.alertas.showAlertSuccess('Produto excluído com sucesso!');
     });
   }
+
 
   // POST NOVO PRODUTO
   getAllCategoria() {
@@ -166,9 +166,15 @@ export class ProdutorPerfilComponent implements OnInit {
   getAllProdutos() {
     console.log(this.listaProdutos);
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
-      this.listaProdutos = resp;
-    });
+
+      this.listaProdutos = resp
+    })
   }
+
+  getIdUsuario(id: number) {
+    this.idUsuario = id
+  }
+
 
   cadastrarCategoria() {
     this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
@@ -212,36 +218,13 @@ export class ProdutorPerfilComponent implements OnInit {
   }
 
 
-  // CESTA DE COMPRAS
-  findAllProdutosComprados(){
-    this.CestaComprasService.getAllProdutosComprados().subscribe((resp: CestaCompras[]) => {
-      this.listaCestaCompras = resp
-      console.log(this.listaCestaCompras)
-      console.log("tamanho array" + this.listaCestaCompras.length)
-      this.totalProdutos()
+  deleteUsuario() {
+    return this.authService.deleteUsuario(this.idUsuario).subscribe(() => {
+
+      this.findUsuarioById()
+      this.alertas.showAlertSuccess('Usuário deletado com sucesso!');
+      this.getAllUsuarios()
     })
   }
 
-  deleteProdutoComprado(idProduto: number){
-    this.CestaComprasService.deleteProdutoComprado(idProduto).subscribe(() =>{
-    this.totalCestaProdutos = 0
-    this.findAllProdutosComprados();
-    this.alertas.showAlertSuccess('Produto retirado com sucesso da sua cesta!');
-    });
-  }
-
-  totalProdutos(){
-    for(let item of this.listaCestaCompras){
-      this.totalCestaProdutos = this.totalCestaProdutos + item.preco
-    }
-  }
-
-  finalizarCompra(){
-    for(let item of this.listaCestaCompras){
-      this.CestaComprasService.deleteProdutoComprado(item.id).subscribe(() =>{
-        this.totalCestaProdutos = 0
-      this.findAllProdutosComprados()
-      });
-    }
-  }
 }

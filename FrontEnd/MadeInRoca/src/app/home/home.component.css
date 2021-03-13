@@ -178,13 +178,55 @@
   max-width: 600px;
 }
 
+.btn-comprar-carousel {
+  background-color: #57732d;
+  border: solid 2px #57732d;
+  color: white;
+}
+
+.form-group {
+  border-radius: 5px;
+}
 
 h3 {
   font-size: 45px;
 }
 
+.svg-equipe-parceria {
+  display: flex;
+}
+
+.carousel-promo {
+  height: 80px;
+  width: auto;
+  position: absolute;
+  top: 30%;
+}
+
+.btn-next,
+.btn-prev {
+  border-radius: 100px;
+  background-color: rgba(97, 95, 95, 0.384);
+  height: 25px;
+}
+
+.form-group {
+  border-radius: 5px;
+}
+
+.div-img img {
+  width: 250px;
+  height: 250px;
+}
+
 @media (max-width: 768px) {
-  .equipe-e-parceria{
+  .cesta-card-img {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .svg-equipe-parceria {
     display: none;
   }
 
@@ -210,8 +252,8 @@ h3 {
   }
 }
 
-@media(max-width: 270){
-  .div-img img{
+@media (max-width: 270) {
+  .div-img img {
     width: 250px;
     height: 250px;
   }

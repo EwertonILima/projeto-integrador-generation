@@ -1,3 +1,6 @@
+*{
+  color: #402222;
+}
 /* TELA NOTEBOOK*/
 
 /* Barra de pesquisar */
@@ -175,7 +178,7 @@ a:link {
       display: block;
       padding: .2rem .2rem;
   }
-  p {
+  li p {
       margin-top: -30px;
   }
   .dropdown-menu-search {
@@ -352,7 +355,7 @@ a:link {
   }
 }
 
-.modal-dialog {
+.modal-dialog-div {
   margin: 0;
   height: 100%;
 }
@@ -364,19 +367,19 @@ a:link {
   animation-fill-mode: both;
 }
 
-.modal-title {
+.modal-title-div {
   margin-bottom: 0;
   line-height: 1.5;
   font-weight: bolder;
 }
 
-.modal-header {
+.modal-header-div {
   border-color: black;
   align-items: center;
   padding: 1rem;
 }
 
-.modal-content {
+.modal-content-div {
   border-radius: 0;
   border: 0;
   -webkit-box-shadow: -12px 0 38px -14px rgba(0, 0, 0, 0.25);
@@ -396,7 +399,7 @@ a:link {
   max-width: 500px;
 }
 
-.modal-body {
+.modal-body-div {
   overflow: auto;
   min-height: 100%;
 }
@@ -409,10 +412,24 @@ a:link {
   border-radius: 10px;
 }
 
-.btn-comprar:hover {
+.btn-comprar:hover{
   background-color: #0f2b11;
   border: solid 7px #0f2b11;
   color: white;
 }
 
 /* /Modal Cesta */
+
+@media(max-width: 768px){
+  .row{
+    min-height: fit-content;
+  }
+}
+
+h5 a{
+  color: #774040;
+}
+
+h5 a:hover{
+  text-decoration: underline;
+}
