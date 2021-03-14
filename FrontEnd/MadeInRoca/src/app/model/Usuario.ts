@@ -10,4 +10,5 @@ export class Usuario {
     public foto: string
     public produto: Produto[]
     public cestaCompras: CestaCompras[]
+    public email: string
 }

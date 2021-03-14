@@ -3,6 +3,8 @@ package com.proagro.madeInRoca.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,10 +18,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.proagro.madeInRoca.model.EmailDTO;
 import com.proagro.madeInRoca.model.UserLogin;
 import com.proagro.madeInRoca.model.Usuario;
 import com.proagro.madeInRoca.repository.UsuarioRepository;
+import com.proagro.madeInRoca.service.AuthService;
 import com.proagro.madeInRoca.service.UsuarioService;
+
+import javassist.tools.rmi.ObjectNotFoundException;
 
 @RestController
 @RequestMapping("/usuarios")
@@ -32,6 +38,9 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioService usuarioService;
 
+	@Autowired 
+	AuthService service;
+	
 	@GetMapping
 	public ResponseEntity<List <Usuario>> GetAll()
 	{
@@ -83,5 +92,11 @@ public class UsuarioController {
 	public void delete(@PathVariable long id)
 	{
 		repository.deleteById(id);
+	}
+	
+	@PostMapping("/esqueciasenha")
+	public ResponseEntity<Void> forgot(@Valid @RequestBody EmailDTO objDto) throws ObjectNotFoundException {
+		service.sendNewPassword(objDto.getEmail());
+		return ResponseEntity.noContent().build();
 	}
 }

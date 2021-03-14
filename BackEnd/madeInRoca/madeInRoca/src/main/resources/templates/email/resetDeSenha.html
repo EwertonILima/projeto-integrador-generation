@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:remove="all">Reset de Senha</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+	crossorigin="anonymous">
+
+</head>
+<body>
+
+	<!-- Just an image -->
+	<nav class="navbar navbar-light mb-3" style="background-color: #57732d">
+		<div class="container d-flex justify-content-center">
+			<a class="navbar-brand "
+				href="https://made-in-roca.herokuapp.com/#/home" target="_blank">
+				<img src="https://i.imgur.com/XnkpS3j.png" alt="Logo Made In Roça"
+				width="100px
+        ">
+			</a>
+		</div>
+	</nav>
+	<div>
+
+
+		<h1>Nova Senha de acesso</h1>
+
+		<p>
+			Olá <span th:text="${usuario.nome}"></span>
+		</p>
+		<p>
+			Email: <span th:text="${usuario.email}"></span>
+		</p>
+
+		<p>
+			Nova Senha: <span th:text="${password}"></span>
+		</p>
+
+
+		<b></b><p>Recomendamos que você acesse o seu perfil e cadastre uma nova senha assim que receber
+			esse e-mail.</p></b>
+			
+			
+			<p>Att,</p>
+			<p>Equipe Made in Roça</p>
+
+	</div>
+</body>
+</html>

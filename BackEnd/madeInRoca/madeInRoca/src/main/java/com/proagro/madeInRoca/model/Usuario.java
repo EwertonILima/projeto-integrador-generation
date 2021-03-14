@@ -35,11 +35,15 @@ public class Usuario {
 	@Email
 	@Size(min = 3, max = 50)
 	private String usuario;
+	
+	@Email
+	private String email;
 
 	@NotNull
 	@Size(min = 8, max = 100)
 	private String senha;
 
+	@Size(max = 500)
 	private String foto;
 
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
@@ -113,6 +117,14 @@ public class Usuario {
 
 	public void setCestaCompras(List<CestaCompras> cestaCompras) {
 		this.cestaCompras = cestaCompras;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
