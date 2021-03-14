@@ -64,6 +64,14 @@
     height: 450px;
 }
 
+.text-titulo{
+    color: #A6995B;
+}
+
+.text-conteudo{
+    color:#573c23;
+}
+
 
 /* *{
     border: solid 1px red;
