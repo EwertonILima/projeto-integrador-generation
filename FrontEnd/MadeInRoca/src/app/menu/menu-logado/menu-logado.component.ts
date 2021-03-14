@@ -97,6 +97,7 @@ export class MenuLogadoComponent implements OnInit {
   findAllProdutosComprados() {
     this.authService.getbyIdUser(environment.id).subscribe((resp: Usuario) => {
       this.listaCestaCompras = resp.cestaCompras
+      console.log(this.listaCestaCompras)
       this.totalProdutos()
     });
   }
