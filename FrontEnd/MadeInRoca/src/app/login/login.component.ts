@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
+import { EmailDTO } from '../model/EmailDTO';
 import { UserLogin } from '../model/UserLogin';
+
 import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
@@ -14,7 +16,7 @@ export class LoginComponent implements OnInit {
 
 
   userLogin: UserLogin = new UserLogin()
-  
+  emailDTO: EmailDTO = new EmailDTO()
 
   constructor(
     private auth: AuthService,
@@ -45,4 +47,33 @@ export class LoginComponent implements OnInit {
       }
     })
   }
+
+esqueciSenha(){
+ 
+  this.auth.resetarSenha(this.emailDTO).subscribe((resp: EmailDTO) =>{
+    this.emailDTO = resp
+
+    let atraso=500; //1 segundo
+    setTimeout(function(){
+      window.location.reload()
+    },atraso);
+
+    
+    alert('A nova senha foi enviada para o seu email')
+  
+
+
+    
+  }, erro => {
+    if(erro.status == 500){
+      this.alertas.showAlertDanger('Email não encontrado.')
+    }
+    else if(erro.status == 400){
+      this.alertas.showAlertDanger('Formato de e-mail inválido')
+    }
+  
+  })
+}
+
+
 }
