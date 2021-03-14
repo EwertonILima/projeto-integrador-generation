@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { CestaCompras } from '../model/CestaCompras';
 import { Produto } from '../model/Produto';
 import { CestaComprasService } from '../service/cesta-compras.service';
@@ -17,6 +18,8 @@ export class ProdutoShopComponent implements OnInit {
   totalProduto: number
 
   produtoComprado: CestaCompras = new CestaCompras()
+
+  userTokin = environment.token
 
   constructor(
     private route: ActivatedRoute,
@@ -51,6 +54,7 @@ export class ProdutoShopComponent implements OnInit {
 
     this.cestaComprasService.postProdutoComprado(this.produtoComprado).subscribe((resp: CestaCompras) => {
       this.produtoComprado =  resp
+      this.produtoComprado = new CestaCompras()
     })
   }
 }

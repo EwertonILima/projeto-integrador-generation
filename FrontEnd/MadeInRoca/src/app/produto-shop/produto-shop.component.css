@@ -79,6 +79,14 @@ h5 {
   color: #fff;
 }
 
+h5 a{
+  color: #774040;
+}
+
+h5 a:hover{
+  text-decoration: underline;
+}
+
 @media (max-width: 350px) {
   .product-single {
     min-width: 320px;

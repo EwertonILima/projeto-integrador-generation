@@ -185,14 +185,12 @@
                                 <p class="card-text negrito">Preço: R${{ item.preco }}</p>
                             </div>
                             <div class="qtd-buy d-flex align-items-center justify-content-center">
-                                <div class="form-group my-auto w-50 mr-2">
-                                    <input class="form-control" min="0" type="number" name="qtdProduto" id="qtdProduto"
-                                        placeholder="Qtd" />
+                                <div class="qtd-buy d-flex align-items-center justify-content-center">
+                                    <button type="button" class="btn btn-comprar-carousel" style="height: 42px; width: 182px"
+                                        [routerLink]="['/produtos', item.id]">
+                                        Comprar
+                                    </button>
                                 </div>
-                                <button type="button" class="btn btn-comprar-carousel" style="height: 42px"
-                                    [routerLink]="['/produtos', item.id]">
-                                    Comprar
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -213,11 +211,7 @@
                                     <p class="card-text negrito">Preço: R${{ item.preco }}</p>
                                 </div>
                                 <div class="qtd-buy d-flex align-items-center justify-content-center">
-                                    <div class="form-group my-auto w-50 mr-2">
-                                        <input class="form-control" min="0" type="number" name="qtdProduto"
-                                            id="qtdProduto" placeholder="Qtd" />
-                                    </div>
-                                    <button type="button" class="btn btn-comprar-carousel" style="height: 42px"
+                                    <button type="button" class="btn btn-comprar-carousel" style="height: 42px; width: 182px"
                                         [routerLink]="['/produtos', item.id]">
                                         Comprar
                                     </button>

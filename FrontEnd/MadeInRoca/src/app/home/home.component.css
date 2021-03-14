@@ -219,6 +219,14 @@ h3 {
   height: 250px;
 }
 
+h5 a{
+  color: #774040;
+}
+
+h5 a:hover{
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .cesta-card-img {
     display: none;

@@ -13,8 +13,14 @@
           <input [(ngModel)]="qtdProduto" class="form-control" min="0" value="1" type="number" name="qtdProduto"
             id="qtdProduto" placeholder="Quantidade">
         </div>
-        <button type="button" class="btn btn-comprar" style="height: 42px;" data-toggle="modal"
-          data-target="#modalComprar" (click)="postCestaProdutos()">Comprar</button>
+        <ng-container *ngIf="userTokin != ''; else elseComprar">
+          <button type="button" class="btn btn-comprar" style="height: 42px;" data-toggle="modal"
+            data-target="#modalComprar" (click)="postCestaProdutos()">Comprar</button>
+        </ng-container>
+        <ng-template #elseComprar>
+          <button type="button" class="btn btn-comprar" style="height: 42px;" data-toggle="modal"
+            data-target="#modalComprarNegado">Comprar</button>
+        </ng-template>
       </div>
       <p class="text-justify">Descrição: A berinjela é um dos frutos mais utilizados na culinária internacional.
         Fortemente associado à
@@ -26,6 +32,9 @@
   </div>
 </div>
 <!-- /PRODUTO INDIVIDUAL -->
+
+
+
 
 <!-- CAROUSEL DE PRODUTOS -->
 <div class="container mt-5">
@@ -50,12 +59,10 @@
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
-                      <div class="form-group my-auto w-50 mr-2">
-                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
-                      </div>
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
+                      <button type="button" data-toggle="modal" data-target="#modalDemonstrativo"
+                        class="btn btn-comprar-carousel" style="height: 42px; width: 182px">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -73,12 +80,10 @@
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
-                      <div class="form-group my-auto w-50 mr-2">
-                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
-                      </div>
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
+                      <button type="button" data-toggle="modal" data-target="#modalDemonstrativo"
+                        class="btn btn-comprar-carousel" style="height: 42px; width: 182px">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -96,12 +101,10 @@
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
-                      <div class="form-group my-auto w-50 mr-2">
-                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
-                      </div>
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
+                      <button type="button" data-toggle="modal" data-target="#modalDemonstrativo"
+                        class="btn btn-comprar-carousel" style="height: 42px; width: 182px">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -117,13 +120,10 @@
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
-                      <div class="form-group my-auto w-50 mr-2">
-                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
-                      </div>
-
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
+                      <button type="button" data-toggle="modal" data-target="#modalDemonstrativo"
+                        class="btn btn-comprar-carousel" style="height: 42px; width: 182px">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -146,12 +146,10 @@
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
-                      <div class="form-group my-auto w-50 mr-2">
-                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
-                      </div>
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
+                      <button type="button" data-toggle="modal" data-target="#modalDemonstrativo"
+                        class="btn btn-comprar-carousel" style="height: 42px; width: 182px">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -169,12 +167,10 @@
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
-                      <div class="form-group my-auto w-50 mr-2">
-                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
-                      </div>
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
+                      <button type="button" data-toggle="modal" data-target="#modalDemonstrativo"
+                        class="btn btn-comprar-carousel" style="height: 42px; width: 182px">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -192,12 +188,10 @@
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
-                      <div class="form-group my-auto w-50 mr-2">
-                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
-                      </div>
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
+                      <button type="button" data-toggle="modal" data-target="#modalDemonstrativo"
+                        class="btn btn-comprar-carousel" style="height: 42px; width: 182px">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -215,12 +209,10 @@
                       <p class="card-text negrito"> R$2.50</p>
                     </div>
                     <div class="qtd-buy d-flex align-items-center justify-content-center">
-                      <div class="form-group my-auto w-50 mr-2">
-                        <input class="form-control" min="0" value="1" type="number" name="qtdProduto" id="qtdProduto"
-                          placeholder="Qtd">
-                      </div>
-                      <button type="button" class="btn btn-comprar-carousel" style="height: 42px;"
-                        href="#">Comprar</button>
+                      <button type="button" data-toggle="modal" data-target="#modalDemonstrativo"
+                        class="btn btn-comprar-carousel" style="height: 42px; width: 182px">
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -267,9 +259,66 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-        <!-- <button type="button" class="btn btn-info">Ir para cesta</button> -->
       </div>
     </div>
   </div>
 </div>
 <!-- MODAL DE COMPRA -->
+
+
+<!-- MODAL DE COMPRA NAO LOGADO -->
+<div class="modal fade" id="modalComprarNegado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body mt-0 mr-0">
+        <button type="button" class="close justify-content-end d-flex" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="d-flex justify-content-center align-items-center flex-column mt-3">
+          <img class="img-fluid" style="max-width: 150px;" src="https://images.emojiterra.com/mozilla/512px/274c.png"
+            alt="simbolo de negação, para indicar que o produto não foi adicionado com sucesso ao cesta de compras do site pelo usuarioo não estar logado">
+          <h5 class="modal-title text-center" style="font-size: 25px;" id="exampleModalLabel">
+            Faça login no site para adicionar produtos em sua cesta
+          </h5>
+          <p class="text-center">Compra não efetuada</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL DE COMPRA NAO LOGADO -->
+
+<!-- DEMONSTRATIVO -->
+<div class="modal fade" id="modalDemonstrativo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body mt-0 mr-0">
+        <button type="button" class="close justify-content-end d-flex" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="d-flex justify-content-center align-items-center flex-column mt-3">
+          <img class="img-fluid" style="max-width: 150px;" src="https://images.emojiterra.com/mozilla/512px/274c.png"
+            alt="simbolo de negação, para indicar que o produto não foi adicionado com sucesso ao cesta de compras do site pelo usuarioo não estar logado">
+          <h5 class="modal-title text-center" style="font-size: 25px;" id="exampleModalLabel">
+            Card apenas demonstrativo.
+          </h5>
+          <h5 class="modal-title text-center" id="exampleModalLabel">
+            Acesse a pagina de produtos para vizualizar os produtos disponiveis.
+          </h5>
+          <h5 class="mb-2 text-center">
+            <a routerLink="/login" data-dismiss="modal">clique aqui</a>
+          </h5>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MODAL DE COMPRA NAO LOGADO -->
