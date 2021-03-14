@@ -3,28 +3,24 @@
   background-color: #fff;
 }
 
-.text-quemsomos{
+.text-quemsomos {
   color: #41581f;
   font-size: 38px;
 }
 
-.text-comofunciona{
-  color:#573c23
-
-}
-
-.text-quemsomos2{
+.text-quemsomos2 {
   color: #412c14ef;
   font-size: 18px;
 }
 
-.btn-sobre{
+.btn-sobre {
   background-color: #aac560;
   font-weight: 700;
-  color:#1f4e21;
+  color: #1f4e21;
   opacity: 1;
   transition: 0.3s;
 }
+
 .btn-sobre:hover {
   background: rgba(75, 121, 54, 0.795);
 }
@@ -65,8 +61,7 @@
   max-height: 300px;
 }
 
-.card-produto h5,
-.card-produto p {
+.card-produto h5, .card-produto p {
   color: #0e5411;
   text-decoration: dashed;
 }
@@ -79,8 +74,6 @@
 .card-produto:hover img {
   transform: scale(1.2);
 }
-
-
 
 .btn-link {
   color: #fff;
@@ -107,7 +100,6 @@
   background: white;
   color: #4b7936cb;
   font-weight: bold;
-
 }
 
 .btn-quemsomos {
@@ -123,15 +115,13 @@
 
 .btn-quemsomos:hover {
   background: rgb(218, 218, 218);
-
 }
 
 .color-green {
   color: #0e5411;
 }
 
-.fa-arrow-circle-right,
-.fa-arrow-circle-down {
+.fa-arrow-circle-right, .fa-arrow-circle-down {
   font-size: 2rem;
   color: #0e5411;
   margin-left: 10px;
@@ -142,14 +132,6 @@
   display: none;
 }
 
-.number-como-funciona {
-  border-radius: 10px;
-  background-color: #8ea676;
-  color: #0e5411;
-  width: fit-content;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
-}
-
 .img-como-funciona {
   align-self: center;
   height: 12rem;
@@ -158,34 +140,20 @@
 .card-sobre {
   background-color: white;
   border: solid 1px;
-  border-color:#c4c4c4a1 ;
+  border-color: #c4c4c4a1;
   margin: 5px 5px 5px 5px;
   width: 13rem;
   height: 21.5rem;
-} 
-
+}
 
 .img-product-single {
   border: #c4c4c4 solid 1px;
   border-radius: 5px;
 }
 
-
-
 .descricao-produto {
-  font-family: "Public Sans", sans-serif;
   font-style: italic;
   max-width: 600px;
-}
-
-.btn-comprar-carousel {
-  background-color: #57732d;
-  border: solid 2px #57732d;
-  color: white;
-}
-
-.form-group {
-  border-radius: 5px;
 }
 
 h3 {
@@ -203,20 +171,42 @@ h3 {
   top: 30%;
 }
 
-.btn-next,
-.btn-prev {
-  border-radius: 100px;
-  background-color: rgba(97, 95, 95, 0.384);
-  height: 25px;
+.btn-next, .btn-prev {
+  margin-top: 50px;
+  border-radius: 50px;
+  background-color: rgba(202, 195, 195, 0.726);
 }
 
 .form-group {
   border-radius: 5px;
 }
 
-.div-img img {
-  width: 250px;
-  height: 250px;
+.text-comofunciona {
+  color: #573c23;
+  font-size: 13pt;
+  margin-top: -20px;
+}
+
+.card-title-comofunciona {
+  font-family: "Indie Flower", cursive;
+  font-size: 25pt;
+  
+}
+
+.title-comofunciona {
+  color: #91621def;
+  font-size: 20pt;
+}
+
+.text-promo {
+  color: #91621def;
+  font-size: 20pt;
+}
+
+.btn-comprar {
+  background-color: #57732d;
+  border: solid 2px #57732d;
+  color: white;
 }
 
 h5 a{
@@ -237,25 +227,19 @@ h5 a:hover{
   .svg-equipe-parceria {
     display: none;
   }
-
   .como-funciona {
     flex-direction: column;
   }
-
   .fa-arrow-circle-right {
     display: none;
   }
-
   .fa-arrow-circle-down {
     display: block;
   }
-
   .sobre-cards {
     flex-direction: column;
   }
-
-  .fa-arrow-circle-right,
-  .fa-arrow-circle-down {
+  .fa-arrow-circle-right, .fa-arrow-circle-down {
     margin: 0;
   }
 }
@@ -274,36 +258,32 @@ h5 a:hover{
   top: 30%;
 }
 
-.btn-next,
-.btn-prev {
-  
+.btn-next, .btn-prev {
   border-radius: 50px;
   background-color: rgba(202, 195, 195, 0.726);
- 
 }
 
 .form-group {
   border-radius: 5px;
 }
 
-
 .btn-comprar-carousel {
   background-color: #57732d;
   border: solid 2px #57732d;
   color: white;
-
 }
-.div-img img{
-  width: 250px; 
+
+.div-img img {
+  width: 250px;
   height: 250px;
-
 }
 
-.card-title-comofunciona{
-  background-color:#e48023f3;
+.card-title-comofunciona {
+
   border: none;
-  color:#1f4e21 ;
+  color: #1f4e21;
 }
+
 .card-text-comofunciona {
-  color:#573c23;
+  color: #573c23;
 }
