@@ -42,7 +42,6 @@ export class ProdutoShopComponent implements OnInit {
 
   postCestaProdutos(){
     this.somaTotal()
-    console.log(this.produto.nome)
     this.produtoComprado.nome = this.produto.nome
     this.produtoComprado.foto = this.produto.foto
     this.produtoComprado.usuario = this.produto.usuario
@@ -50,7 +49,6 @@ export class ProdutoShopComponent implements OnInit {
     this.produtoComprado.quantidade = this.qtdProduto
     this.produtoComprado.categoria = this.produto.categoria.nome
 
-    console.log(this.produtoComprado)
     this.cestaComprasService.postProdutoComprado(this.produtoComprado).subscribe((resp: CestaCompras) => {
       this.produtoComprado =  resp
     })
