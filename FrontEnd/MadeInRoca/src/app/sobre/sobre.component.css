@@ -2,6 +2,10 @@
     font-size: 20px;
 }
 
+ul li{
+    list-style:none;
+}
+
 .fs-40{
     font-size: 40px;
 }
@@ -30,18 +34,24 @@
     background-size: cover;
 }
 
+#img-bg4{
+    background-image: url('../../assets/img/Team_Teste.gif');
+    min-height: 337px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img-bg5{
+    background-image: url('https://i.imgur.com/IpJv0ma.jpg');
+    min-height: 337px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .min-h{
     min-height: 240px;
-}
-
-.icon-redes{
-    height: 30px;
-    width: 30px;
-    margin: 0 0 30px 10px;
-}
-
-.icon-redes-insta{
-    margin: 0 0 30px 10px;
 }
 
 .margin-l{
@@ -52,46 +62,163 @@
     font-size: 20px;
 }
 
-.img-sobre{
-    width: 450px;
-    min-height: 300px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.team{
-    width: 450px;
-    height: 450px;
-}
-
 
 /* *{
     border: solid 1px red;
+}
+
+.section{
+    border: solid 2px blue;
 } */
 
-@media(max-width: 360px){
+/* @media(max-width: 1024px){
+    .wh-video{
+        width: 420px;
+        right: 150px;
+    }
+
+    .section{
+        border: solid 1px yellow;
+        margin: 0;
+        
+    }
+
+    .section a{
+        padding: 0;
+    }
+
+    p{
+        padding: 10px !important;
+    }
+
+    ul{
+        padding: 10px;
+    }
+}
+
+@media(max-width: 768px){
+    .wh-video{
+        width: 345px;
+        right: 150px;
+    }
+
+    .section{
+        border: solid 1px yellow;
+        margin: 0;
+        
+    }
+
+    .section a{
+        padding: 0;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 540px){
+    *{
+        margin: 0;
+        
+    }
+
+    .wh-video{
+        width: 330px;
+        right: 150px;
+    }
+
+    .section{
+        border: solid 1px yellow;
+        margin: 0;
+        
+    }
+
+    .section a{
+        padding: 15px 20px 15px 30px;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 414px){
     .wh-video{
         width: 320px;
         right: 150px;
     }
 
-    .distancia{
-        margin-bottom: 50px;
-        
+    *{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media(max-width: 320px){
+    .wh-video{
+        width: 300px;
+        right: 150px;
     }
 
-    .cetral{
+    *{
         margin: 0;
         padding: 0;
     }
 
-    .team{
-        width: 300px;
-        height: 300px;
-        margin-left: 150px;
+
+    .section{
+        border: solid 1px blue;
+        margin: 0;
+        
     }
 
-    .direita{
-        margin-left: 20px;
+    .section a{
+        padding: 15px 20px 15px 30px;
+        justify-content: center;
     }
 }
+
+@media(max-width: 360px){
+    .wh-video{
+        width: 300px;
+        right: 150px;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .section{
+        border: solid 1px yellow;
+        margin: 0;
+        
+    }
+
+    .section a{
+        padding: 15px 20px 15px 30px;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 375px){
+    .wh-video{
+        width: 300px;
+        right: 150px;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+@media(max-width: 280px){
+    .wh-video{
+        width: 220px;
+        right: 150px;
+        
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+} */
