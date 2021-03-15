@@ -1,0 +1,9 @@
+body{
+    padding-right:0 !important; 
+    /* !important= força a fazer a condição */
+}
+
+/* .modal-open{
+    overflow: auto;
+    padding-right: 0 !important;
+} */
