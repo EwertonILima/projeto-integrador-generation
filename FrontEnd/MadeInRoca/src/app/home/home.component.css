@@ -54,18 +54,6 @@
   top: 140px;
 }
 
-.card-produto {
-  overflow: hidden;
-  color: #0e5411;
-  max-width: 250px;
-  max-height: 300px;
-}
-
-.card-produto h5, .card-produto p {
-  color: #0e5411;
-  text-decoration: dashed;
-}
-
 .card-produto img {
   max-width: 100%;
   transition: 0.7s ease;
@@ -103,7 +91,7 @@
 }
 
 .btn-quemsomos {
-  background: white;
+  background: #f5f8f0;
   color: #4b7936cb;
   font-weight: bold;
   border: 1px solid;
@@ -190,6 +178,9 @@ h3 {
 .card-title-comofunciona {
   font-family: "Indie Flower", cursive;
   font-size: 25pt;
+  color: #91621def;
+  
+  
   
 }
 
@@ -201,6 +192,7 @@ h3 {
 .text-promo {
   color: #91621def;
   font-size: 20pt;
+  margin-left: 2rem;
 }
 
 .btn-comprar {
@@ -209,13 +201,7 @@ h3 {
   color: white;
 }
 
-h5 a{
-  color: #774040;
-}
 
-h5 a:hover{
-  text-decoration: underline;
-}
 
 @media (max-width: 768px) {
   .cesta-card-img {
@@ -278,11 +264,7 @@ h5 a:hover{
   height: 250px;
 }
 
-.card-title-comofunciona {
 
-  border: none;
-  color: #1f4e21;
-}
 
 .card-text-comofunciona {
   color: #573c23;
