@@ -404,17 +404,18 @@
                       <div class="col-md-6 flex-wrap align-items-center justify-content-center d-flex">
                         <div class="table-responsive-lg">
                           <table class="table table-hover d-flex justify-content-center align-items-center">
-                            <thead>
-                              <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Usuário</th>
-                                <th scope="col">Deletar</th>
-                              </tr>
-                            </thead>
+                            
                             <tbody>
+                              <thead>
+                                <tr>
+                                  <th scope="col">ID</th>
+                                  <th scope="col">Nome</th>
+                                  <th scope="col">Usuário</th>
+                                  <th scope="col">Deletar</th>
+                                </tr>
+                              </thead>
                               <tr *ngFor="let item of listaUsuarios">
-                               <div *ngIf='item.tipoUsuario != "adm"'>
+                              
                                 <th scope="row" class="pb-0">{{ item.id }}</th>
                                 <td class="pb-2">{{ item.nome }}</td>
                                 <td class="pb-2"> {{ item.usuario }}</td>
@@ -422,7 +423,6 @@
                                   (click)='getIdUsuario(item.id)'>
                                   Deletar
                                 </button>
-                              </div>
                               </tr>
                             </tbody>
                           </table>
