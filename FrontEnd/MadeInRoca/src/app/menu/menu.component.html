@@ -14,7 +14,7 @@
     <!-- Login e Cesta -->
     <div class="d-flex">
         <div class="login-cesta">
-            <a class="text-light d-flex flex-column align-items-center" routerLink="/login ">
+            <a class="text-light d-flex flex-column align-items-center" routerLink="/login">
                 <svg xmlns="http://www.w3.org/2000/svg " xmlns:xlink="http://www.w3.org/1999/xlink "
                     xmlns:svgjs="http://svgjs.com/svgjs " version="1.1 " width="512 " height="512 " x="0 " y="0 "
                     viewBox="0 0 512 512 " style="enable-background: new 0
@@ -58,7 +58,6 @@
                     data-toggle="dropdown">Conta</a>
                 <div class="dropdown-content ">
                     <div *ngIf="authService.logado()" class="dropdown-menu " aria-labelledby="navbarDropdown ">
-                        <a *ngIf="authService.deslogado()" class="dropdown-item " routerLink='/login'>Entrar</a>
                         <a class="dropdown-item" routerLink='/produtor-perfil'>Perfil</a>
                         <a *ngIf="authService.logado() " (click)="sair() " class="dropdown-item "
                             routerLink='/home '>Sair</a>
@@ -99,25 +98,9 @@
     </div>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <hr class="bg-light text-light mt-1 mb-0">
-        <div *ngIf="authService.logado()" class="d-flex align-items-center mr-2">
-            <a class="text-light" routerLink='/produtor-perfil'>
-                <ul class="navbar-nav flex-column-saudacao align-items-center ">
-                    <li class="nav-item-saudacao">
-                        <img src="{{foto}}" alt="Imagem do user" width="50px" height="50px"
-                            class="img-fluid rounded-circle">
-                    </li>
-                    <li class="nav-item-saudacao flex-column align-items-center">
-                        <p class="m-0 font-weight-bold text-light saudacao">Olá, {{nome}}</p>
-                    </li>
-                </ul>
-            </a>
-        </div>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <!-- Saudação -->
-            <li class="nav-item">
-                <p *ngIf="authService.logado()" class="nav-link text-light"></p>
-            </li>
-            <!-- /Saudação -->
+       
+        <ul class="navbar-nav ml-5 mr-auto mt-2 mt-lg-0 ml-5-resp">
+           
             <!-- Menu barra/MenuDropDown -->
             <li class="nav-item active">
                 <a a class="nav-link text-light" routerLink="/home">Home<span class="sr-only">(Página

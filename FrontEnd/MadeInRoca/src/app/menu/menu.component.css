@@ -1,6 +1,4 @@
-*{
-  color: #402222;
-}
+
 /* TELA NOTEBOOK*/
 
 /* Barra de pesquisar */
@@ -18,6 +16,7 @@
   padding: 0px;
   z-index: 1000;
   background-color: white;
+
 }
 
 .form-control {
@@ -48,7 +47,8 @@
   /* Posição barra de pesquisar */
   flex-grow: 3;
   display: grid;
-  justify-content: center!important;
+  justify-content: left!important;
+  margin-left: 5rem;
 }
 
 a:link {
@@ -68,7 +68,6 @@ a:link {
   align-items: center;
   justify-content: space-between;
   padding: .5rem 1rem;
-  flex-direction: row-reverse;
 }
 
 /* /Menu */
@@ -154,6 +153,7 @@ a:link {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: .25rem;
+  margin-left: 5px;
 }
 
 .navbar-light .bordabotaodropdown {
@@ -165,7 +165,19 @@ a:link {
 
 /* FUNÇÔES RESPONSIVAS */
 
+@media(max-width: 1086px) {
+  .barrapesquisar {
+    /* Posição barra de pesquisar */
+    margin-left: 0rem;
+  }
+
+}
+
 @media(max-width: 1000px) {
+
+  .ml-5-resp{
+    margin-left: 0rem!important;
+  }
   .navbar {
       position: relative;
       display: flex;
@@ -178,7 +190,7 @@ a:link {
       display: block;
       padding: .2rem .2rem;
   }
-  li p {
+  p {
       margin-top: -30px;
   }
   .dropdown-menu-search {
@@ -188,6 +200,7 @@ a:link {
       /* Posição barra de pesquisar */
       flex-grow: 3;
       display: unset!important;
+      margin-left: 0rem!important;
   }
   .flex-column-saudacao {
       flex-direction: row-reverse;
@@ -355,7 +368,7 @@ a:link {
   }
 }
 
-.modal-dialog-div {
+.modal-dialog {
   margin: 0;
   height: 100%;
 }
@@ -367,19 +380,19 @@ a:link {
   animation-fill-mode: both;
 }
 
-.modal-title-div {
+.modal-title {
   margin-bottom: 0;
   line-height: 1.5;
   font-weight: bolder;
 }
 
-.modal-header-div {
+.modal-header {
   border-color: black;
   align-items: center;
   padding: 1rem;
 }
 
-.modal-content-div {
+.modal-content {
   border-radius: 0;
   border: 0;
   -webkit-box-shadow: -12px 0 38px -14px rgba(0, 0, 0, 0.25);
@@ -399,7 +412,7 @@ a:link {
   max-width: 500px;
 }
 
-.modal-body-div {
+.modal-body {
   overflow: auto;
   min-height: 100%;
 }
@@ -412,7 +425,7 @@ a:link {
   border-radius: 10px;
 }
 
-.btn-comprar:hover{
+.btn-comprar:hover {
   background-color: #0f2b11;
   border: solid 7px #0f2b11;
   color: white;
@@ -420,16 +433,3 @@ a:link {
 
 /* /Modal Cesta */
 
-@media(max-width: 768px){
-  .row{
-    min-height: fit-content;
-  }
-}
-
-h5 a{
-  color: #774040;
-}
-
-h5 a:hover{
-  text-decoration: underline;
-}
