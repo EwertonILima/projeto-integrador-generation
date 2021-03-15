@@ -172,7 +172,8 @@ export class ProdutorPerfilComponent implements OnInit {
   }
 
   getIdUsuario(id: number) {
-    this.idUsuario = id
+      this.idUsuario = id
+    
   }
 
 
@@ -220,11 +221,14 @@ export class ProdutorPerfilComponent implements OnInit {
 
   deleteUsuario() {
     return this.authService.deleteUsuario(this.idUsuario).subscribe(() => {
-
+      
+      this.getAllUsuarios()
       this.findUsuarioById()
       this.alertas.showAlertSuccess('Usuário deletado com sucesso!');
-      this.getAllUsuarios()
+     
     })
   }
+
+  
 
 }

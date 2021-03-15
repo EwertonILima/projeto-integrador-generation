@@ -370,6 +370,7 @@
             </div>
           </div>
           <div class="tab-pane fade show" id="v-pills-adm" role="tabpanel" aria-labelledby="v-pills-adm-tab">
+
             <!-- NAV ADM -->
             <nav aria-label="nav-adm">
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -397,11 +398,12 @@
                     <h4 class="text-center my-4">
                       Verifique os usuarios cadastrados
                     </h4>
+                
 
                     <div class="row mt-3 mb-5 d-flex justify-content-center">
-                      <div class="col-md-12 flex-wrap align-items-center justify-content-center d-flex">
+                      <div class="col-md-6 flex-wrap align-items-center justify-content-center d-flex">
                         <div class="table-responsive-lg">
-                          <table class="table">
+                          <table class="table table-hover d-flex justify-content-center align-items-center">
                             <thead>
                               <tr>
                                 <th scope="col">ID</th>
@@ -412,13 +414,15 @@
                             </thead>
                             <tbody>
                               <tr *ngFor="let item of listaUsuarios">
+                               <div *ngIf='item.tipoUsuario != "adm"'>
                                 <th scope="row" class="pb-0">{{ item.id }}</th>
                                 <td class="pb-2">{{ item.nome }}</td>
                                 <td class="pb-2"> {{ item.usuario }}</td>
-                                <td class="pt-2"><button type="button" class="btn btn-danger" ata-toggle="modal"
-                                    data-target="#modalUsuario" (click)='getIdUsuario(item.id)'>
-                                    Deletar
-                                  </button></td>
+                                <td class="pt-2 justify-content-end d-flex"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalUsuario" 
+                                  (click)='getIdUsuario(item.id)'>
+                                  Deletar
+                                </button>
+                              </div>
                               </tr>
                             </tbody>
                           </table>
@@ -435,7 +439,7 @@
                       </h5>
                     </div>
                   </ng-template>
-                </div>
+                
               </div>
 
               <!-- /USUARIOS -->
