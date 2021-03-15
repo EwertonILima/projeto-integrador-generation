@@ -372,6 +372,7 @@
             </div>
           </div>
           <div class="tab-pane fade show" id="v-pills-adm" role="tabpanel" aria-labelledby="v-pills-adm-tab">
+
             <!-- NAV ADM -->
             <nav aria-label="nav-adm">
               <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -414,13 +415,15 @@
                             </thead>
                             <tbody>
                               <tr *ngFor="let item of listaUsuarios">
+                               
                                 <th scope="row" class="pb-0">{{ item.id }}</th>
                                 <td class="pb-2">{{ item.nome }}</td>
                                 <td class="pb-2"> {{ item.usuario }}</td>
-                                <td class="pt-2"><button type="button" class="btn btn-danger" ata-toggle="modal"
-                                    data-target="#modalUsuario" (click)='getIdUsuario(item.id)'>
-                                    Deletar
-                                  </button></td>
+                                <td class="pt-2"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalUsuario" 
+                                  (click)='getIdUsuario(item.id)'>
+                                  Deletar
+                                </button>
+                              
                               </tr>
                             </tbody>
                           </table>
