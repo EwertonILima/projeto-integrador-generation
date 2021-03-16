@@ -1,9 +1,20 @@
-/* font-family: 'Public Sans', sans-serif;
-font-family: 'Roboto', sans-serif;*/
-
 
 *{
     font-family: 'Roboto', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+  }
 
+::-webkit-scrollbar-track {
+background: #F5F8F0;
+}
+
+::-webkit-scrollbar-thumb {
+background: #A6995B;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
