@@ -42,7 +42,7 @@
 
           <form class="was-validated">
           <div class="custom-control custom-checkbox ml-1 mb-3 ">
-            <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+            <input (change)='changeEvent($event)' type="checkbox" class="custom-control-input" id="customControlValidation1" required>
             <label class="custom-control-label" style="color:#0a0a0a;" for="customControlValidation1"> Concordo com <a class="termos-link" data-toggle="modal" data-target=".bd-example-modal-lg" >os termos e condições. </a></label>
             <div class="invalid-feedback">Você deve concordar, antes de continuar.</div>
           </div>
@@ -52,7 +52,7 @@
           
 
           <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-entrar mb-2" style="height: 42px;" (click)='cadastrar()'><span>Cadastrar</span></button>
+            <button [disabled]='termos' type="submit" class="btn btn-entrar mb-2" style="height: 42px;" (click)='cadastrar()'><span>Cadastrar</span></button>
           </div><div class="mt-3 mb-">
             
             <p class="text-center" style=" margin-top:-5px; font-size:small">

@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex-column login-cesta">
+        <div class="flex-column login-cesta" (click)="findAllProdutosComprados()">
             <a class="text-light d-flex flex-column align-items-center justify-content-center " data-toggle="modal"
                 data-target="#flyoutmodal">
                 <svg xmlns="http://www.w3.org/2000/svg " viewBox="0 0 512 512 " width="512 " height="512 ">
@@ -145,32 +145,68 @@
                     <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 </button>
             </div>
-            <div class="modal-body modal-body-div">
-                <div class=" m-5 justify-content-center d-flex flex-column align-items-center">
-                    <h5 class="mt-3 text-center">
-                        Faça login para acessar sua cesta de compras
-                    </h5>
-                    <h5 class="mb-5 text-center">
-                        <a routerLink="/login" data-dismiss="modal">clique aqui</a>
-                    </h5>
-                </div>
-            </div>
-            <div class="modal-footer mb-4">
-                <div class="row" style="width: 100%;">
-                    <div class=" pt-3 pl-4 d-flex">
-                        <p style="font-size: 24px;" class="mb-0">0</p>
-                        <p class="mb-0 mt-2"> item(s)</p>
+            <ng-container *ngIf="authService.logado(); else elseDeslogado">
+                <div class="modal-body modal-body-div">
+                    <div class="row my-3 mx-0" style="border: solid 1px #57732d; border-radius: 10px;"
+                        *ngFor="let item of listaCestaCompras">
+                        <div class="col-md-3 d-flex justify-content-center align-items-center">
+                            <img style="height: 80px;" class="img-fluid" src="{{item.foto}}" alt="">
+                        </div>
+                        <div style="font-size: 14px;" class="col-md-3 d-flex justify-content-center align-items-center">
+                            <p class="mb-0" style="font-size: 24px;">{{item.nome}}</p>
+                        </div>
+                        <div class="col-md-6 p-0 d-flex justify-content-center align-items-center">
+                            <div class="row m-0 d-flex justify-content-center align-items-center" style="width: 100%;">
+                                <div class="col-md-4 preco-unid d-flex justify-content-center align-items-center">
+                                    <p style="font-size: 24px;" class="mb-0">{{item.quantidade}}</p>
+                                    <p class="mb-0">item(s)</p>
+                                </div>
+                                <div class="col-md-4 preco-unid d-flex justify-content-center align-items-center">
+                                    <p>R$</p>
+                                    <p style="font-size: 24px;" class="mb-0">{{item.preco}}</p>
+                                </div>
+                                <div class="col-md-4 preco-unid d-flex justify-content-center align-items-center">
+                                    <button class="btn btn-danger" (click)="deleteProdutoComprado(item.id)">Excluir</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class=" pt-3 pl-4 d-flex">
-                        <p style="font-size: 24px;" class="mb-0">Total </p>
-                        <p> R$</p>
-                        <p style="font-size: 24px;" class="mb-0">0</p>
+                </div>
+            </ng-container>
+            <ng-template #elseDeslogado>
+                <div class="modal-body modal-body-div">
+                    <div class=" m-5 justify-content-center d-flex flex-column align-items-center">
+                        <h5 class="mt-3 text-center">
+                            Faça login para acessar sua cesta de compras
+                        </h5>
+                        <h5 class="mb-5 text-center">
+                            <a routerLink="/login" data-dismiss="modal">clique aqui</a>
+                        </h5>
                     </div>
                 </div>
-                <button type="button" data-dismiss="modal" class="d-flex m-3 abtn btn-comprar" data-toggle="modal"
-                    data-target=".bd-example-modal-lg">Finalizar Compra</button>
-            </div>
+            </ng-template>
+            
+            <ng-container *ngIf="authService.logado()">
+                <div class="modal-footer  mb-4">
+                    <div class="row" style="width: 100%;">
+                        <div class=" pt-3 pl-4 d-flex">
+                            <p style="font-size: 24px;" class="mb-0">{{ itemsCestaProdutos }}</p>
+                            <p class="mb-0 mt-2"> item(s)</p>
+                        </div>
+                        <div class=" pt-3 pl-4 d-flex">
+                            <p style="font-size: 24px;" class="mb-0">Total </p>
+                            <p> R$</p>
+                            <p style="font-size: 24px;" class="mb-0">{{ valorCestaProdutos }}</p>
+                        </div>
+                    </div>
+                    <button type="button" data-dismiss="modal" class="d-flex m-3 abtn btn-comprar" data-toggle="modal"
+                        data-target=".bd-example-modal-lg">Finalizar Compra</button>
+                </div>
+            </ng-container>
         </div>
     </div>
 </div>
 <!-- /Modal cesta -->
+
+
+
