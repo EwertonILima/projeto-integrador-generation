@@ -42,6 +42,8 @@
 .form-button{
     height: 45px;
     background-color: #89A61F;
+    border:1px solid rgba(161, 132, 78, 0.671);
+    color: #402222;
 }
 
 svg{
