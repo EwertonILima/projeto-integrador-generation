@@ -60,7 +60,7 @@
                     <div *ngIf="authService.logado()" class="dropdown-menu " aria-labelledby="navbarDropdown ">
                         <a class="dropdown-item" routerLink='/produtor-perfil'>Perfil</a>
                         <a *ngIf="authService.logado() " (click)="sair() " class="dropdown-item "
-                            routerLink='/home '>Sair</a>
+                            routerLink='/home'>Sair</a>
                     </div>
                 </div>
             </div>
