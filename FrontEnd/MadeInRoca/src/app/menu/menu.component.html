@@ -200,13 +200,33 @@
                         </div>
                     </div>
                     <button type="button" data-dismiss="modal" class="d-flex m-3 abtn btn-comprar" data-toggle="modal"
-                        data-target=".bd-example-modal-lg">Finalizar Compra</button>
+                    data-target=".bd-pagamento-lg">Finalizar Compra</button>
                 </div>
             </ng-container>
         </div>
     </div>
 </div>
 <!-- /Modal cesta -->
+
+<!-- MODAL PAYPAL -->
+<div class="modal fade bd-pagamento-lg" tabindex="-1" role="dialog" aria-labelledby="modalPaypal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="d-flex justify-content-center mt-5">
+                    <h2>Escolha a forma de pagamento</h2>
+                </div>
+                <h3 class="my-3">Total a pagar R${{ valorCestaProdutos }}</h3>
+                <div class="container mt-3">
+                    <div class="pay" #paypal></div>
+                </div>
+                <hr class="hr3">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /MODAL PAYPAL -->
 
 
 

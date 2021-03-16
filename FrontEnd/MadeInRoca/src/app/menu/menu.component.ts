@@ -32,6 +32,8 @@ export class MenuComponent implements OnInit {
     // paypal
     @ViewChild('paypal', { static: true }) paypalElement!: ElementRef;
 
+    paidFor = false
+
   constructor(
     public authService: AuthService,
     private router: Router,
@@ -44,6 +46,30 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
     this.findByNomeProduto()
     this.limparPesquisar()
+
+    // paypal
+    paypal.Buttons({
+      createOrder: (data: any, actions: any) => {
+        return actions.order.create({
+          purchase_units: [{
+            description: 'Produtos de Hortifruti Made In Roça',
+            amount: {
+              currency_code: 'BRL',
+              value: this.valorCestaProdutos
+            }
+          }]
+        })
+      },
+      onApprove: async (data: any, actions: any) => {
+        const order = await actions.order.capture()
+        this.paidFor = true
+        console.log(order)
+      },
+      onError: (err: any) => {
+        console.log(err)
+      }
+    })
+      .render(this.paypalElement.nativeElement)
   }
 
   sair() {

@@ -320,7 +320,6 @@ a:link {
 /* /FUNÇÔES RESPONSIVAS */
 
 /* Modal Cesta */
-
 .fadeInRight {
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight;
@@ -416,9 +415,8 @@ a:link {
 }
 
 /* /Modal Cesta */
-
-
 .preco-unid{
+
     display: block;
     justify-content: space-around;
     height: 40px;
