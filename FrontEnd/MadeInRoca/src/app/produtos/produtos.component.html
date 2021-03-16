@@ -182,7 +182,7 @@
                             <h5 class="card-title">{{ item.nome }}</h5>
 
                             <div class="mb-2">
-                                <p class="card-text negrito">Preço: R${{ item.preco }}</p>
+                                <p class="card-text negrito">Preço: R${{ item.preco | number: '2.2-2' }}</p>
                             </div>
                             <div class="qtd-buy d-flex align-items-center justify-content-center">
                                 <div class="qtd-buy d-flex align-items-center justify-content-center">
@@ -208,7 +208,7 @@
                                 <h5 class="card-title">{{ item.nome }}</h5>
 
                                 <div class="mb-2">
-                                    <p class="card-text negrito">Preço: R${{ item.preco }}</p>
+                                    <p class="card-text negrito">Preço: R${{ item.preco | number: '2.2-2' }}</p>
                                 </div>
                                 <div class="qtd-buy d-flex align-items-center justify-content-center">
                                     <button type="button" class="btn btn-comprar-carousel" style="height: 42px; width: 182px"

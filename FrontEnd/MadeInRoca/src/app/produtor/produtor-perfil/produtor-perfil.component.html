@@ -189,7 +189,9 @@
                 <div class="drop-text ml-2">Compras</div>
               </div>
             </a>
-            <a *ngIf="tipoUsuario == 'adm' " (click)="getAllProdutos()" class="nav-link" id="v-pills-adm-tab" data-toggle="pill" href="#v-pills-adm"
+
+            <a *ngIf="tipoUsuario == 'adm'" (click)="getAllProdutos()" class="nav-link" id="v-pills-adm-tab" data-toggle="pill" href="#v-pills-adm"
+
               role="tab" aria-controls="v-pills-home" aria-selected="true">
               <div class="d-flex align-items-center">
                 <img class="icon" style="min-height: 20px; min-width: 20px;" src="../../../assets/svg/settings.svg"
@@ -269,7 +271,7 @@
 
                           <div class="mb-2">
                             <p class="card-text negrito">
-                              Preço: R${{ item.preco }}
+                              Preço: R${{ item.preco | number: '2.2-2' }}
                             </p>
                           </div>
                           <div class="qtd-buy mb-2 d-flex align-items-center justify-content-center"
@@ -294,6 +296,7 @@
                     </div>
                   </div>
                 </ng-container>
+
                 <ng-template #elseTemplate>
                   <div class="col-md-12 d-flex text-center justify-content-center align-items-center flex-column p-5"
                     style="background-color: white; height: fit-content">
@@ -507,6 +510,7 @@
                 <div class="col-md-12 d-flex flex-wrap justify-content-center" style="background-color: white">
                   <ng-container *ngIf="usuario.produto.length != 0; else elseTemplateAdministrador">
                   <div *ngFor="let item of listaProdutos" class="d-flex align-items-center justify-content-center m-3">
+                    
                     <div class="card efeitoFruta d-flex align-items-center justify-content-center" style="width: 14rem">
                       <img class="card-img-top w-100" src="{{item.foto}}" alt="{{item.nome}}" />
                       <div class="card-body">
