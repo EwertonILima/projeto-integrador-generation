@@ -15,11 +15,16 @@ export class CadastrarComponent implements OnInit {
   usuario: Usuario = new Usuario
   confirmarSenha: string
   tipoUsuario: string
+  termos:boolean = true
+ 
 
   constructor(
     private authService: AuthService,
     private router: Router,
-    private alertas: AlertasService
+    private alertas: AlertasService 
+    
+    
+
   ) { }
 
   ngOnInit() {
@@ -58,4 +63,15 @@ export class CadastrarComponent implements OnInit {
           this.alertas.showAlertDanger("Por favor, preencha os campos")
         } 
   }
+
+ changeEvent(event:any){
+   if(event.target.checked){
+
+    this.termos=false
+   } else{this.termos=true }
+
+
+ }
+
 }
+ 
