@@ -149,24 +149,24 @@
                 <div class="modal-body modal-body-div">
                     <div class="row my-3 mx-0" style="border: solid 1px #57732d; border-radius: 10px;"
                         *ngFor="let item of listaCestaCompras">
-                        <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <div class="col-md-2 d-flex justify-content-center align-items-center">
                             <img style="height: 80px;" class="img-fluid" src="{{item.foto}}" alt="">
                         </div>
                         <div style="font-size: 14px;" class="col-md-3 d-flex justify-content-center align-items-center">
-                            <p class="mb-0" style="font-size: 24px;">{{item.nome}}</p>
+                            <p class="mb-0" style="font-size: 18px;">{{item.nome}}</p>
                         </div>
-                        <div class="col-md-6 p-0 d-flex justify-content-center align-items-center">
+                        <div class="col-md-7 ml=2 p-0 d-flex justify-content-center align-items-center">
                             <div class="row m-0 d-flex justify-content-center align-items-center" style="width: 100%;">
-                                <div class="col-md-4 preco-unid d-flex justify-content-center align-items-center">
-                                    <p style="font-size: 24px;" class="mb-0">{{item.quantidade}}</p>
+                                <div class="col-md-4 ml-3 preco-unid d-flex justify-content-center align-items-center">
+                                    <p style="font-size: 18px;" class="mb-0">{{item.quantidade}}</p>
                                     <p class="mb-0">item(s)</p>
                                 </div>
-                                <div class="col-md-4 preco-unid d-flex justify-content-center align-items-center">
+                                <div class="col-md-4 ml-3 preco-unid d-flex justify-content-center align-items-center">
                                     <p>R$</p>
-                                    <p style="font-size: 24px;" class="mb-0">{{item.preco}}</p>
+                                    <p style="font-size: 18px;" class="mb-0">{{item.preco}}</p>
                                 </div>
-                                <div class="col-md-4 preco-unid d-flex justify-content-center align-items-center">
-                                    <button class="btn btn-danger" (click)="deleteProdutoComprado(item.id)">Excluir</button>
+                                <div class="col-md-2 preco-unid d-flex justify-content-center align-items-center">
+                                    <button class="btn btn-danger" (click)="deleteProdutoComprado(item.id)">X</button>
                                 </div>
                             </div>
                         </div>
@@ -189,17 +189,17 @@
             <ng-container *ngIf="authService.logado()">
                 <div class="modal-footer  mb-4">
                     <div class="row" style="width: 100%;">
-                        <div class=" pt-3 pl-4 d-flex">
+                        <div class=" pt-3 px-4 d-flex">
                             <p style="font-size: 24px;" class="mb-0">{{ itemsCestaProdutos }}</p>
                             <p class="mb-0 mt-2"> item(s)</p>
                         </div>
-                        <div class=" pt-3 pl-4 d-flex">
+                        <div class=" pt-3 px-2 d-flex">
                             <p style="font-size: 24px;" class="mb-0">Total </p>
                             <p> R$</p>
                             <p style="font-size: 24px;" class="mb-0">{{ valorCestaProdutos }}</p>
                         </div>
                     </div>
-                    <button type="button" data-dismiss="modal" class="d-flex m-3 abtn btn-comprar" data-toggle="modal"
+                    <button type="button" data-dismiss="modal" class="d-flex m-3 mr-5 abtn btn-comprar" data-toggle="modal"
                     data-target=".bd-pagamento-lg">Finalizar Compra</button>
                 </div>
             </ng-container>
