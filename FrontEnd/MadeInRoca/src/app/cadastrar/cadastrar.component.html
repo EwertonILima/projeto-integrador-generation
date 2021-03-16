@@ -6,7 +6,7 @@
           <h1 class="text-start text-center font-weight-bold">Cadastrar</h1>
 
           <div class="form-group">
-            <label for="nome">Nome Completo</label>
+            <label for="nome ">Nome Completo</label>
             <input [(ngModel)]='usuario.nome' class="form-control" type="text" name="nome" id="nome"
               placeholder="Insira seu nome completo">
           </div>
@@ -21,6 +21,9 @@
             <label for="Senha">Senha</label>
             <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
               placeholder="Digite sua senha">
+              <small id="passwordHelpInline" class="text-muted">
+                Deve ter entre 6 e 20 caracteres.
+              </small>
           </div>
 
           <div class="form-group">
@@ -34,19 +37,27 @@
 
             <input [(ngModel)]='usuario.foto' name="foto" class="form-control" id="foto"
               placeholder="Insira o link da sua foto">
-
-
           </div>
 
 
-          <div class="mt-3 mb-3">
+          <form class="was-validated">
+          <div class="custom-control custom-checkbox ml-1 mb-3 ">
+            <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+            <label class="custom-control-label" style="color:#0a0a0a;" for="customControlValidation1"> Concordo com <a class="termos-link" data-toggle="modal" data-target=".bd-example-modal-lg" >os termos e condições. </a></label>
+            <div class="invalid-feedback">Você deve concordar, antes de continuar.</div>
+          </div>
+          </form>
+
+          
+          
+
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-entrar mb-2" style="height: 42px;"><span>Cadastrar</span></button>
+          </div><div class="mt-3 mb-">
+            
             <p class="text-center" style=" margin-top:-5px; font-size:small">
               Já tem uma conta? <a routerLink="/login">Entre aqui.</a>
             </p>
-          </div>
-
-          <div class="d-flex justify-content-center">
-            <button type="button" class="btn btn-entrar" style="height: 42px;" data-toggle="modal" data-target=".bd-example-modal-xl"><span>Cadastrar</span></button>
           </div>
 
         </div>
@@ -58,19 +69,19 @@
 
 
 
-<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
   aria-hidden="true">
-  <div class="modal-dialog modal-xl">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="container-fluid" >
-        <div id="termo">
-          <div class="text-justify " style=" margin-top:-5px; font-size:small">
-            <h1>Termos e
+        <div id="termos">
+          <div class="text-justify mt-2 " style="font-size:small">
+            <h4>Termos e
               condições
-              gerais de uso dos sites</h1>
+              gerais de uso dos sites</h4>
 
             <p>
-            <h2>1. Acesso e Uso do Site</h2>
+            <h5>1. Acesso e Uso do Site</h5>
             <p>Você, ao acessar quaisquer páginas do Site, ou finalizar seu cadastro para realizar sua primeira compra
               ou
               venda na made-in-roca.herokuapp.com ou cadastrar seu e-mail individual para recebimento de nossas
@@ -82,14 +93,14 @@
               de
               utilizar o Site.
               Em caso de dúvidas envie e-mail para madeinrocagroup@gmail.com</p>
-            <h3>01 - Objeto</h3>
+            <h5>01 - Objeto</h5>
             <p>Os serviços objeto dos presentes Termos e Condições gerais consistem em (i) ofertar produtos à venda e
               (ii)
               viabilizar o contato entre Usuários interessados em adquirir os produtos anunciados, por meio da
               plataforma
               de
               comércio eletrônico da made-in-roca.herokuapp.com. </p>
-            <h3>02 - Capacidade para cadastrar-se</h3>
+            <h5>02 - Capacidade para cadastrar-se</h5>
             <p>Os serviços da made-in-roca.herokuapp.com estão disponíveis apenas para as pessoas físicas ou jurídicas
               que
               tenham capacidade legal para comprar produtos por sites.
@@ -102,7 +113,7 @@
               sem prejuízo da aplicação das sanções legais previstas no Código Civil Brasileiro, notadamente, art. 166,
               I;
               171, I e 180.</p>
-            <h3>03 - Cadastro</h3>
+            <h5>03 - Cadastro</h5>
             <p>Apenas será confirmado o cadastramento dos Usuários que preencherem todos os campos obrigatórios
               solicitados
               na(s) página(s) de cadastro de Usuários dos Sites, com informações exatas, precisas e verdadeiras. Ao
@@ -123,7 +134,7 @@
               não
               autorizado de sua conta. O Usuário será o único responsável pelas operações efetuadas em sua conta direta.
             </p>
-            <h3>04 - Modificações dos Termos e condições gerais</h3>
+            <h5>04 - Modificações dos Termos e condições gerais</h5>
             <p>O conteúdo destes Termos poderão ser modificados a qualquer tempo e a nova versão deste documento entrará
               em
               vigor quando da sua publicação no Site. Você somente será comunicado sobre a alteração dos Termos se
@@ -139,7 +150,7 @@
               Não havendo manifestação no prazo estipulado, entender-se-á que Você aceitou os novos Termos e condições
               gerais de uso e o contrato continuará vinculando as partes, com base nos novos Termos.
             </p>
-            <h3>05 - Produtos anunciados</h3>
+            <h5>05 - Produtos anunciados</h5>
             <p>
               <strong>5.1 Processamento de pagamento</strong>
               O usuário declara e reconhece que o processamento de pagamentos depende do cumprimento de alguns
@@ -164,7 +175,7 @@
               qualquer
               outro meio de comunicação.
             </p>
-            <h3>06 - Privacidade da Informação</h3>
+            <h5>06 - Privacidade da Informação</h5>
             <p>Toda informação ou Dado Individual do Usuário é armazenado em servidores ou meios magnéticos de alta
               segurança. Salvo com relação às informações que são publicadas no Site, a made-in-roca.herokuapp.com
               adotará
@@ -180,7 +191,7 @@
               com as demais empresas parceiras comerciais, membros do Programa de Proteção à Propriedade Intelectual,
               autoridades e pessoas físicas ou jurídicas que aleguem ter sido lesadas por Usuários.
             </p>
-            <h3>07 - Obrigações dos Usuários</h3>
+            <h5>07 - Obrigações dos Usuários</h5>
             <p>
               <strong>7.1 Obrigações dos Usuários Compradores</strong>
               O Usuário Comprador, após efetuar a compra receberá e-mail da made-in-roca.herokuapp.com que informará as
@@ -199,7 +210,7 @@
               oferecidos
               por terceiros, incluindo, eventualmente, o pagamento de tarifas por utilização de serviços.
             </p>
-            <h3>08 - Violação no sistema ou da base de dados</h3>
+            <h5>08 - Violação no sistema ou da base de dados</h5>
             <p>Não é permitida a utilização de nenhum dispositivo, software ou outro recurso que venha a utilizar,
               reproduzir ou interferir nas atividades e operações do Site, bem como nos anúncios, descrições de
               produtos,
@@ -209,7 +220,7 @@
               condições gerais de uso, tornarão o responsável passível das ações legais pertinentes, bem como das
               sanções
               aqui previstas, sendo ainda responsável pelas indenizações por eventuais danos causados.</p>
-            <h3>09 - Falhas no sistema</h3>
+            <h5>09 - Falhas no sistema</h5>
             <p>O Site não se responsabiliza por qualquer dano, prejuízo ou perda sofridos pelos Usuários em razão de
               falhas
               na internet, no sistema ou no servidor utilizado pelos Usuários, decorrentes de condutas de terceiros,
@@ -219,7 +230,7 @@
               Usuários em decorrência do acesso, utilização ou navegação na internet ou como consequência da
               transferência
               de dados, arquivos, imagens, textos, vídeos ou áudio.</p>
-            <h3>10 - Tarifas e faturamento</h3>
+            <h5>10 - Tarifas e faturamento</h5>
             <p>O cadastro de Usuários nos sites é gratuito.
               O usuário concorda em pagar o Made In Roça os valores correspondentes a qualquer serviço prestado pelo
               Made
@@ -229,7 +240,7 @@
               aumentar ou excluir tarifas vigentes a qualquer momento, observado o estipulado na cláusula 4 ou durante
               promoções e outras formas transitórias de alteração dos preços praticados.
             </p>
-            <h3>11 - Propriedade Intelectual e links</h3>
+            <h5>11 - Propriedade Intelectual e links</h5>
             <p>O uso comercial da expressão "made-in-roca.herokuapp.com”, “Made In Roça”, e “Made In Roça Orgânicos"
               como
               marca, nome empresarial ou nome de domínio, bem como os conteúdos das telas relativas aos serviços da
@@ -247,9 +258,9 @@
               presença de links para outros sites não implica relação de sociedade, de supervisão, de cumplicidade ou
               solidariedade da Prestadora para com esses sites e seus conteúdos.
             </p>
-            <h3>12 - Política de entrega</h3>
-            <p>
-              <br>1. O prazo para entrega dos produtos é informado durante o procedimento de compra, contabilizado em
+            <h5>12 - Política de entrega</h5>
+           
+              1. O prazo para entrega dos produtos é informado durante o procedimento de compra, contabilizado em
               dias
               úteis. A Made In Roça, usualmente, entregará os produtos entre às 7h e 13h, entretanto, poderá, dependendo
               da
@@ -268,13 +279,11 @@
               <br>6. No caso de compra de bebidas alcoólicas a não apresentação de documento oficial de identidade com
               foto,
               com o fim de comprovar a maioridade, implicará na não entrega do produto.
-            </p>
+           
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Não aceito.</button>
-            <button type="button" class="btn btn-entrar"
-                data-dismiss="modal" routerLink='/login' (click)='cadastrar()' (click)='cadastrarCheck()'>Aceito Termos.</button>
+             <button type="button" class="btn btn-termos py-1 px-3" data-dismiss="modal" >Continuar</button>
         </div>
         </div>
       </div>
-    </div>git
+    </div>

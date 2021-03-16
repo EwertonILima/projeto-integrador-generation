@@ -18,15 +18,7 @@
     
 }
 
-.btn-entrar{
 
-    background-color: #57732D;
-    border: solid 2px #57732D;
-    color: white;
-    border-radius: 100px;
-    padding: 0 30px;
-
-}
 
 .btn-danger{
   border: solid 2p #dc3545;
@@ -37,6 +29,16 @@
 
 .form-control {
     background-color: white;
+
+}
+
+.btn-entrar{
+
+  background-color: #57732D;
+  border: solid 2px #57732D;
+  color: white;
+  border-radius: 100px;
+  padding: 0 30px;
 
 }
 .btn-entrar span {
@@ -64,8 +66,24 @@
     right: 0;
   }
 
-  #termo{
+  #termos{
     
       color: #402222;
   
   }
+
+  .termos-link{
+    text-decoration: underline;
+  }
+
+  .btn-termos{
+    
+  border-radius: 100px;
+  background-color: #61635de0;
+  color: white;
+}
+.btn-termos:hover{
+  
+  background: rgba(31, 32, 31, 0.795);
+
+}

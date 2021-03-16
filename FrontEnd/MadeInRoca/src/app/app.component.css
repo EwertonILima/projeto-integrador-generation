@@ -3,7 +3,12 @@ body{
     /* !important= força a fazer a condição */
 }
 
-/* .modal-open{
+.modal-open{
     overflow: auto;
     padding-right: 0 !important;
-} */
+} 
+
+.modal{
+    overflow: auto;
+    padding-right: 0 !important;
+} 
