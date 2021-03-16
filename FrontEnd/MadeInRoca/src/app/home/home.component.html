@@ -39,10 +39,10 @@
         <img class="mx-5 mb-3" src="https://i.imgur.com/IGv2c0n.gif"
           alt="Foto de um celular com a foto de uma mulher do lado esquerdo do celular tem três icones com as redes socias">
       </div>
-      <div class="m-3 d-flex justify-content-center flex-column" style="max-width:500px; max-height: 500px">
-        <h3 class="display-4">Apoie nossa causa</h3>
-        <p class="lead text-justify">Baseado no objetivo 2 dos Objetivos de Desenvolvimento Sustentáveis da ONU, Made In Roça é um E-commerce
-          criado no intuito de ajudar o pequeno produtor, dando um espaço de destaque para os mesmos.</p>
+      <div class="m-3 d-flex justify-content-center flex-column " style="max-width:500px; max-height: 500px">
+        <h3 class="display-4 text-causa" style="color: #573c23;">Apoie nossa causa</h3>
+        <p class="lead text-justify" style="color: #573c23;">Baseado no objetivo 2 dos Objetivos de Desenvolvimento Sustentáveis da ONU, Made In Roça é um E-commerce
+          criado com intuito de ajudar o pequeno produtor, contribuindo com sua renda e trazendo destaque e notoriedade para seus produtos.</p>
       </div>
 
     </div>
@@ -53,7 +53,7 @@
 
 <!-- COMO FUNCIONA -->
 <div class="container-fluid">
-  <div class="row d-flex justify-content-center text-center my-5">
+  <div class="row d-flex justify-content-center text-center my-4">
     <h4 class="title-comofunciona  mb-3" >
       Como funciona?
     </h4>
@@ -380,13 +380,12 @@
 <!-- /PROMOCAO -->
 
 <!-- PARCERIA -->
-<div *ngIf="auth.deslogado()" class="container-fluid equipe-e-parceria mt-4 ">
+<div *ngIf="auth.deslogado()" class="container-fluid equipe-e-parceria mt-4  py-4 ">
   <div class="container " >
     <div class="row d-flex justify-content-center ">
-      <div class="col-md-5 mx-3 p-0 ">
+      <div class="col-md-5 mx-3 ">
         <h2 class="m-1 mt-3" style="max-width: 350px;">Seja um produtor parceiro</h2>
-        <p class="text-justify ">Se cadastre em nossa plataforma e seja um produtor parceiro, e venda nos produtos
-          através desse portal especializado em conectar o pequeno produtor com o cliente final.</p>
+        <p class="text-justify ml-1 ">Se cadastre em nossa plataforma, insira seus produtos e comece a vender! O cadastro é gratuito, é cobrada apenas uma comissão de 12% sobre o total da venda mensal!</p>
         <div class="d-flex justify-content-end mr-5 mb-3">
           <button *ngIf="auth.deslogado()" type="submit " class="btn btn-parceria px-5" routerLink="/cadastrar">
             CADASTRE-SE
@@ -448,7 +447,7 @@
   </div>
 </div>
 
-<div *ngIf="auth.logado()" class="container-fluid equipe-e-parceria my-5">
+<div *ngIf="auth.logado()" class="container-fluid equipe-e-parceria p-3">
   <div class="container">
     <div class="row d-flex justify-content-center">
       <div class="col-md-5 mx-3 p-0">
@@ -520,23 +519,22 @@
 <!-- /PARCERIA -->
 
 <!-- QUEM SOMOS -->
-<div class="container-fluid py-5" style="background-color: #f5f8f0;">
+<div class="container-fluid py-4" style="background-color: #f5f8f0;">
   <div class="container py-3">
     <div class="row d-flex justify-content-center">
       <div class="col-md-5 align-items-center d-flex">
         <img class="rounded img-fluid" src="https://i.imgur.com/E67bOMl.jpg"
           alt="Mão de um homem segura uma cesta com legumes" />
       </div>
-      <div class="col-md-5 mx-4 mt-2 p-0 d-flex flex-column">
+      <div class="col-md-6 mx-4 mt-2 p-0 d-flex flex-column">
         <h1 class="m-0 text-quemsomos">Quem</h1>
         <h2 class="text-quemsomos">Somos?</h2>
-        <p class="text-justify text-quemsomos2">
-          Clique no botão abaixo e se informe sobre o time por trás dessa
-          maravilhosa plataforma.
+        <p class="text-left text-quemsomos2">
+          Clique no botão abaixo e confira o time por trás da plataforma.
         </p>
-        <div class="d-flex justify-content-end mr-5 mb-3">
+        <div class="d-flex justify-content-center pl-5 ml-5 mb-3 mt-3">  
 
-          <button type="submit " class="btn btn-quemsomos px-5" routerLink="/sobre-nos">
+          <button type="submit" class="btn btn-quemsomos px-5 " routerLink="/sobre-nos">
             CONFIRA AQUI
           </button>
           <!-- <button type="submit" class="btn btn-sobre px-5" routerLink="/sobre-nos">
