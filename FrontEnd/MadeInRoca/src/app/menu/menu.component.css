@@ -336,7 +336,6 @@ a:link {
 /* /FUNÇÔES RESPONSIVAS */
 
 /* Modal Cesta */
-
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
@@ -368,7 +367,7 @@ a:link {
   }
 }
 
-.modal-dialog {
+.modal-dialog-div {
   margin: 0;
   height: 100%;
 }
@@ -380,19 +379,19 @@ a:link {
   animation-fill-mode: both;
 }
 
-.modal-title {
+.modal-title-div {
   margin-bottom: 0;
   line-height: 1.5;
   font-weight: bolder;
 }
 
-.modal-header {
+.modal-header-div {
   border-color: black;
   align-items: center;
   padding: 1rem;
 }
 
-.modal-content {
+.modal-content-div {
   border-radius: 0;
   border: 0;
   -webkit-box-shadow: -12px 0 38px -14px rgba(0, 0, 0, 0.25);
@@ -402,7 +401,7 @@ a:link {
   min-height: 100%;
 }
 
-.modal-backdrop {
+.modal-backdrop-div {
   background-color: transparent;
 }
 
@@ -412,7 +411,7 @@ a:link {
   max-width: 500px;
 }
 
-.modal-body {
+.modal-body-div {
   overflow: auto;
   min-height: 100%;
 }
@@ -432,4 +431,10 @@ a:link {
 }
 
 /* /Modal Cesta */
+.preco-unid{
+  display: block;
+  justify-content: space-around;
+  height: 40px;
+  width: 33.3%;
+}
 
