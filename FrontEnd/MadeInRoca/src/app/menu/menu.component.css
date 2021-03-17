@@ -194,6 +194,10 @@ a:link {
   p {
       margin-top: -30px;
   }
+
+  .modal p {
+    margin-top: 0px;
+  }
   .dropdown-menu-search {
       top: 135%!important;
   }
@@ -216,7 +220,7 @@ a:link {
   }
 }
 
-@media(max-width: 950x) {
+@media(max-width: 950px) {
   .dropdown-menu-search {
       top: 120%!important;
   }
