@@ -97,8 +97,8 @@ a:link {
 
 .dropdown-item {
   color: #57732d;
-  padding-left: 2px;
   padding: 0px;
+  padding-left: 3px;
 }
 
 .dropdown-menu {
@@ -116,6 +116,7 @@ a:link {
 .dropdown:hover .dropdown-menu {
   display: block;
   font-weight: 600;
+  
 }
 
 /* /login e cesta */
