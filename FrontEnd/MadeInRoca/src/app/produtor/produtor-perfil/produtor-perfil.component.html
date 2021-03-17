@@ -13,6 +13,8 @@
         <div class="form-group">
           <label for="nome">Nome</label>
           <input type="text" id="nome" class="form-control" [(ngModel)]="produto.nome" />
+          <label for="nome">Descrição</label>
+          <input type="text" id="descricao" class="form-control" [(ngModel)]="produto.descricao" />
           <label for="preco">Preço</label>
           <input type="number" id="preco" min="0" class="form-control" step="0.01" [(ngModel)]="produto.preco" />
           <label for="qtdeEstoque">Quantidade Em Estoque</label>
@@ -319,6 +321,12 @@
                     <label for="titulo">Produto</label>
                     <input [(ngModel)]="produto.nome" type="text" class="form-control" id="titulo"
                       placeholder="Digite o nome do produto" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="titulo">Descrição</label>
+                    <input [(ngModel)]="produto.descricao" type="text" class="form-control" id="descricao"
+                      placeholder="Digite uma descrição para o produto" />
                   </div>
                   <div class="form-group">
                     <label for="texto">Preço</label>
