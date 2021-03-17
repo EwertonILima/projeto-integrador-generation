@@ -163,9 +163,7 @@
                                 </div>
                                 <div class="col-md-4 ml-3 preco-unid d-flex justify-content-center align-items-center">
                                     <p>R$</p>
-
                                     <p style="font-size: 18px;" class="mb-0">{{item.preco | number: '1.2-2'}}</p>
-
                                 </div>
                                 <div class="col-md-2 preco-unid d-flex justify-content-center align-items-center">
                                     <button class="btn btn-danger" (click)="deleteProdutoComprado(item.id)">X</button>
@@ -222,7 +220,7 @@
                 <div class="d-flex justify-content-center mt-5">
                     <h2>Escolha a forma de pagamento</h2>
                 </div>
-                <h3 class="my-3">Total a pagar R${{ valorCestaProdutos | number: '1.2-2'}}</h3>
+                <h3 class="my-3">Total a pagar R${{ valorCestaProdutos | number: '2.2-2' }}</h3>
                 <div class="container mt-3">
                     <div class="pay" #paypal></div>
                 </div>
