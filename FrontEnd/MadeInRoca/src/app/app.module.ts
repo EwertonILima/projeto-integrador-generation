@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
-import { MenuLogadoComponent } from './menu/menu-logado/menu-logado.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
@@ -18,8 +17,6 @@ import { SobreComponent } from './sobre/sobre.component';
 import { HomeComponent } from './home/home.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { ProdutoShopComponent } from './produto-shop/produto-shop.component';
-import { CategoriaDeleteComponent } from './delete/categoria-delete/categoria-delete.component';
-import { CategoriaEditComponent } from './edit/categoria-edit/categoria-edit.component';
 import { ProdutorPerfilComponent } from './produtor/produtor-perfil/produtor-perfil.component';
 import { AlertasComponent } from './alertas/alertas.component';
 
@@ -46,11 +43,8 @@ import {HashLocationStrategy, LocationStrategy} from '@angular/common';
     HomeComponent,
     CategoriaComponent,
     ProdutoShopComponent,
-    CategoriaDeleteComponent,
-    CategoriaEditComponent,
     ProdutorPerfilComponent,
-    AlertasComponent,
-    MenuLogadoComponent
+    AlertasComponent
   ],
   imports: [
     BrowserModule,

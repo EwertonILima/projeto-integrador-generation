@@ -43,6 +43,10 @@ public class Produto {
 
 	@NotNull
 	private String foto;
+	
+	@NotNull
+	@Size(max = 140)
+	private String descricao;
 
 	public String getFoto() {
 		return foto;
@@ -98,6 +102,14 @@ public class Produto {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+	
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 }

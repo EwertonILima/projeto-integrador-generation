@@ -1,64 +1,108 @@
-.fs-20{
-    font-size: 20px;
+.img-container {
+  display: flex;
 }
 
-ul li{
-    list-style:none;
+.card {
+  width: 300px;
 }
 
-.fs-40{
-    font-size: 40px;
+.card-footer {
+  background-color: rgb(238, 235, 235);
+  border-radius: 10px 10px 0 0;
 }
 
-#img-bg1{
-    background-image: url('https://i.imgur.com/32wL316.gif');
-    min-height: 337px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.card .foto-membro {
+  width: 250px;
+  border: white solid 5px;
+  border-radius: 100%;
 }
 
-#img-bg2{
-    background-image: url('https://i.imgur.com/KbaCK21.gif');
-    min-height: 337px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: 0.7s ease;
 }
 
-#img-bg3{
-    background-image: url('https://i.imgur.com/g2U7Gnh.gif');
-    min-height: 337px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.social-icon:hover {
+  transform: translate3d(0, -5px, 0);
 }
 
-#img-bg4{
-    background-image: url('../../assets/img/Team_Teste.gif');
-    min-height: 337px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.card {
+  transition: 0.7s ease;
+}
+.card:hover {
+  color: white;
+  transform: translate3d(0, -5px, 0);
 }
 
-#img-bg5{
-    background-image: url('https://i.imgur.com/IpJv0ma.jpg');
-    min-height: 337px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.card-beatriz {
+  border: solid 3px #008b8b;
+}
+.card-beatriz:hover {
+  background-color: #008b8b;
 }
 
-.min-h{
-    min-height: 240px;
+.card-ewerton {
+  border: solid 3px #d38825;
+}
+.card-ewerton:hover {
+  background-color: #d38825;
 }
 
-.margin-l{
-    margin-right: 130px;
+.card-fernanda {
+  border: solid 3px #1874cd;
+}
+.card-fernanda:hover {
+  background-color: #1874cd;
 }
 
-.fs-20{
-    font-size: 20px;
+.card-heloisa {
+  border: solid 3px #e42e7a;
+}
+.card-heloisa:hover {
+  background-color: #e42e7a;
 }
 
+.card-igor {
+  border: solid 3px #1bb86e;
+}
+.card-igor:hover {
+  background-color: #1bb86e;
+}
+
+.card-jose {
+  border: solid 3px #dada3f;
+}
+.card-jose:hover {
+  background-color: #dada3f;
+}
+
+.div-topicos {
+  background-color: #daf1b2;
+  color: #402222;
+}
+
+.titulo-topicos {
+  font-size: 64px;
+  color: #402222;
+}
+
+.text-generation {
+  padding: 0 30px 0px 0px;
+}
+
+@media (max-width: 767px) {
+  .img-container {
+    display: none;
+  }
+
+  .div-topicos {
+    margin-bottom: 10px;
+  }
+
+  .text-generation {
+    padding: 0 20px 0px 20px;
+  }
+}

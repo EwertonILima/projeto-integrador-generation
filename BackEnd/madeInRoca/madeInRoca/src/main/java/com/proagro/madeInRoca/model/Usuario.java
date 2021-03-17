@@ -27,7 +27,6 @@ public class Usuario {
 	@Size(min = 3, max = 100)
 	private String nome;
 
-//  @NotNull
 	@Size(min = 2, max = 10)
 	private String tipoUsuario;
 
