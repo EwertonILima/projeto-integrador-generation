@@ -149,24 +149,24 @@
                 <div class="modal-body modal-body-div">
                     <div class="row my-3 mx-0" style="border: solid 1px #57732d; border-radius: 10px;"
                         *ngFor="let item of listaCestaCompras">
-                        <div class="col-md-2 d-flex justify-content-center align-items-center">
+                        <div class="col-md-3 d-flex justify-content-center align-items-center">
                             <img style="height: 80px;" class="img-fluid" src="{{item.foto}}" alt="">
                         </div>
                         <div style="font-size: 14px;" class="col-md-3 d-flex justify-content-center align-items-center">
                             <p class="mb-0" style="font-size: 18px;">{{item.nome}}</p>
                         </div>
-                        <div class="col-md-7 ml=2 p-0 d-flex justify-content-center align-items-center">
+                        <div class="col-md-6 ml=2 p-0 d-flex justify-content-center align-items-center">
                             <div class="row m-0 d-flex justify-content-center align-items-center" style="width: 100%;">
-                                <div class="col-md-4 ml-3 preco-unid d-flex justify-content-center align-items-center">
+                                <div class="col-md-4 mr-3 preco-unid d-flex justify-content-center align-items-center">
                                     <p style="font-size: 18px;" class="mb-0">{{item.quantidade}}</p>
                                     <p class="mb-0">item(s)</p>
                                 </div>
-                                <div class="col-md-4 ml-3 preco-unid d-flex justify-content-center align-items-center">
+                                <div class="col-md-4 mr-3 preco-unid d-flex justify-content-center align-items-center">
                                     <p>R$</p>
                                     <p style="font-size: 18px;" class="mb-0">{{item.preco | number: '1.2-2'}}</p>
                                 </div>
                                 <div class="col-md-2 preco-unid d-flex justify-content-center align-items-center">
-                                    <button class="btn btn-danger" (click)="deleteProdutoComprado(item.id)">X</button>
+                                    <a class="text-danger" style="cursor: pointer;" (click)="deleteProdutoComprado(item.id)">X</a>
                                 </div>
                             </div>
                         </div>
