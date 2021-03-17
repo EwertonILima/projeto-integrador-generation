@@ -7,7 +7,7 @@
     </div>
     <div class="col-md-6  d-flex flex-column">
       <h5 class="my-3" style="font-size: 30px;">{{produto.nome}}</h5>
-      <h5 class="visually-hidden">R$ {{produto.preco | number: '2.2-2'}}</h5>
+      <h5 class="visually-hidden">R$ {{produto.preco | number: '1.2-2'}}</h5>
       <div class="comprar-qnt my-3 d-flex justify-content-start align-items-center">
         <div class="form-group my-auto mr-2">
           <input [(ngModel)]="qtdProduto" class="form-control" min="0" value="1" type="number" name="qtdProduto"
@@ -253,7 +253,7 @@
           <h5 class="modal-title" style="font-size: 25px;" id="exampleModalLabel">{{produto.nome}} x {{qtdProduto}}
             UN
           </h5>
-          <h5>Total $ {{totalProduto | number: '2.2-2'}}</h5>
+          <h5>Total $ {{totalProduto | number: '1.2-2'}}</h5>
           <p class="text-center">Produto adicionado a sua cesta com sucesso</p>
         </div>
       </div>
