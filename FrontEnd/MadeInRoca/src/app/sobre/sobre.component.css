@@ -1,115 +1,108 @@
-
-.img-container{
-    display: flex;
+.img-container {
+  display: flex;
 }
 
-.card{
-    width: 300px;
+.card {
+  width: 300px;
 }
 
-.card-footer{
-    background-color: rgb(238, 235, 235);
-    border-radius: 10px 10px 0 0;
+.card-footer {
+  background-color: rgb(238, 235, 235);
+  border-radius: 10px 10px 0 0;
 }
 
-.card .foto-membro{
-    width: 250px;
-    border: white solid 5px;
-    border-radius: 100%;
+.card .foto-membro {
+  width: 250px;
+  border: white solid 5px;
+  border-radius: 100%;
 }
 
-.social-icon{
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
-    transition: .7s ease;
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: 0.7s ease;
 }
 
-.social-icon:hover{
-    transform: translate3d(0,-5px,0);
+.social-icon:hover {
+  transform: translate3d(0, -5px, 0);
 }
 
-.card{
-    transition: .7s ease;
+.card {
+  transition: 0.7s ease;
 }
-.card:hover{
-    color: white;
-    transform: translate3d(0,-5px,0); 
-}
-
-
-.card-beatriz{
-    border: solid 3px #008B8B;
-}
-.card-beatriz:hover{
-    background-color: #008B8B;
+.card:hover {
+  color: white;
+  transform: translate3d(0, -5px, 0);
 }
 
-.card-ewerton{
-    border: solid 3px #d38825;
+.card-beatriz {
+  border: solid 3px #008b8b;
 }
-.card-ewerton:hover{
-    background-color: #d38825;
-}
-
-.card-fernanda{
-    border: solid 3px #1874CD;
-}
-.card-fernanda:hover{
-    background-color: #1874CD;
+.card-beatriz:hover {
+  background-color: #008b8b;
 }
 
-.card-heloisa{
-    border: solid 3px #e42e7a;
+.card-ewerton {
+  border: solid 3px #d38825;
 }
-.card-heloisa:hover{
-    background-color: #e42e7a;
-}
-
-.card-igor{
-    border: solid 3px #1bb86e;
-}
-.card-igor:hover{
-    background-color: #1bb86e;
+.card-ewerton:hover {
+  background-color: #d38825;
 }
 
-.card-jose{
-    border: solid 3px #dada3f;
+.card-fernanda {
+  border: solid 3px #1874cd;
 }
-.card-jose:hover{
-    background-color: #dada3f;
-}
-
-.div-topicos{
-    background-color: #daf1b2;
-    color: #402222;
+.card-fernanda:hover {
+  background-color: #1874cd;
 }
 
-.titulo-topicos{
-    font-size: 64px;
-    color: #402222;
+.card-heloisa {
+  border: solid 3px #e42e7a;
+}
+.card-heloisa:hover {
+  background-color: #e42e7a;
 }
 
-.text-generation{
-    padding: 0 30px 0px 0px;
+.card-igor {
+  border: solid 3px #1bb86e;
+}
+.card-igor:hover {
+  background-color: #1bb86e;
 }
 
-
-
-@media(max-width: 767px){
-    .img-container{
-        display: none;
-    }
-
-    .div-topicos{
-        margin-bottom: 10px;
-    }
-
-    .text-generation{
-        padding: 0 20px 0px 20px;
-    }
+.card-jose {
+  border: solid 3px #dada3f;
+}
+.card-jose:hover {
+  background-color: #dada3f;
 }
 
+.div-topicos {
+  background-color: #daf1b2;
+  color: #402222;
+}
 
+.titulo-topicos {
+  font-size: 64px;
+  color: #402222;
+}
 
+.text-generation {
+  padding: 0 30px 0px 0px;
+}
+
+@media (max-width: 767px) {
+  .img-container {
+    display: none;
+  }
+
+  .div-topicos {
+    margin-bottom: 10px;
+  }
+
+  .text-generation {
+    padding: 0 20px 0px 20px;
+  }
+}
