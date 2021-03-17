@@ -45,7 +45,7 @@ public class Produto {
 	private String foto;
 	
 	@NotNull
-	@Size(max = 140)
+	@Size(max = 255)
 	private String descricao;
 
 	public String getFoto() {
