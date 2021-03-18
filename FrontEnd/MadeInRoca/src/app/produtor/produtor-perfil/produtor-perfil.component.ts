@@ -178,7 +178,6 @@ export class ProdutorPerfilComponent implements OnInit {
     
   }
 
-
   cadastrarCategoria() {
     this.categoriaService.postCategoria(this.categoria).subscribe((resp: Categoria) => {
       this.categoria = resp;

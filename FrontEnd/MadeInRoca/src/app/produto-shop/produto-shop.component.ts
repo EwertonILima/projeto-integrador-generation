@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { CestaCompras } from '../model/CestaCompras';
 import { Produto } from '../model/Produto';
+import { Usuario } from '../model/Usuario';
+import { AuthService } from '../service/auth.service';
 import { CestaComprasService } from '../service/cesta-compras.service';
 import { ProdutoService } from '../service/produto.service';
 
@@ -19,18 +21,21 @@ export class ProdutoShopComponent implements OnInit {
 
   produtoComprado: CestaCompras = new CestaCompras()
 
+  usuario: Usuario = new Usuario();
   userTokin = environment.token
 
   constructor(
     private route: ActivatedRoute,
     private produtoService: ProdutoService,
-    private cestaComprasService: CestaComprasService
+    private cestaComprasService: CestaComprasService,
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
     window.scroll(0, 0)
     let id = this.route.snapshot.params['id']
     this.findByIdProduto(id)
+    this.findUsuarioById()
   }
 
   findByIdProduto(id: number) {
@@ -43,11 +48,18 @@ export class ProdutoShopComponent implements OnInit {
     this.totalProduto = this.produto.preco * this.qtdProduto
   }
 
+  findUsuarioById() {
+    console.log(environment.id);
+    this.authService.getbyIdUser(environment.id).subscribe((resp: Usuario) => {
+      this.usuario = resp;
+    });
+  }
+
   postCestaProdutos(){
     this.somaTotal()
     this.produtoComprado.nome = this.produto.nome
     this.produtoComprado.foto = this.produto.foto
-    this.produtoComprado.usuario = this.produto.usuario
+    this.produtoComprado.usuario = this.usuario;
     this.produtoComprado.preco = this.totalProduto
     this.produtoComprado.quantidade = this.qtdProduto
     this.produtoComprado.categoria = this.produto.categoria.nome

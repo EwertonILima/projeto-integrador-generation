@@ -147,7 +147,7 @@
             </div>
             <ng-container *ngIf="authService.logado(); else elseDeslogado">
                 <div class="modal-body modal-body-div">
-                    <div class="row my-3 mx-0" style="border: solid 1px #57732d; border-radius: 10px;"
+                    <div class="row my-3 mx-0" style="box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); border-top: #CDCDCD solid .5px; border-left: #CDCDCD solid .5px"
                         *ngFor="let item of listaCestaCompras">
                         <div class="col-md-3 d-flex justify-content-center align-items-center">
                             <img style="height: 80px;" class="img-fluid" src="{{item.foto}}" alt="">
