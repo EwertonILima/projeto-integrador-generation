@@ -14,7 +14,7 @@
           <label for="nome">Nome</label>
           <input type="text" id="nome" class="form-control" [(ngModel)]="produto.nome" />
           <label for="nome">Descrição</label>
-          <input type="text" id="descricao" class="form-control" [(ngModel)]="produto.descricao" />
+          <textarea maxlength="240" placeholder="Faça uma descrição para seu produto de até 240 caracteres" id="descricao" name="descricao" class="form-control" [(ngModel)]="produto.descricao" rows="4" cols="50"></textarea>
           <label for="preco">Preço</label>
           <input type="number" id="preco" min="0" class="form-control" step="0.01" [(ngModel)]="produto.preco" />
           <label for="qtdeEstoque">Quantidade Em Estoque</label>
@@ -100,7 +100,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="modalExcluirCategoriaLabel">
-          Título do modal
+          Exclusão de Categoria!
         </h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
@@ -323,8 +323,7 @@
 
                   <div class="form-group">
                     <label for="titulo">Descrição</label>
-                    <input [(ngModel)]="produto.descricao" type="text" class="form-control" id="descricao"
-                      placeholder="Digite uma descrição para o produto" />
+                    <textarea maxlength="280" placeholder="Faça uma descrição para seu produto de até 280 caracteres" id="descricao" name="descricao" class="form-control" [(ngModel)]="produto.descricao" rows="4" cols="50"></textarea>
                   </div>
                   <div class="form-group">
                     <label for="texto">Preço</label>
@@ -512,7 +511,7 @@
               <!-- TODOS OS PRODUTOS -->
               <div class="tab-pane fade" id="nav-produtos" role="tabpanel" aria-labelledby="nav-produtos-tab">
                 <div class="col-md-12 d-flex flex-wrap justify-content-center" style="background-color: white">
-                  <ng-container *ngIf="usuario.produto.length != 0; else elseTemplateAdministrador">
+                  <ng-container *ngIf="tamListaProdutos != 0; else elseTemplateAdministrador">
                   <div *ngFor="let item of listaProdutos" class="d-flex align-items-center justify-content-center m-3">
                     
                     <div class="card efeitoFruta d-flex align-items-center justify-content-center" style="width: 14rem">
@@ -522,7 +521,7 @@
 
                         <div class="mb-2">
                           <p class="card-text negrito">
-                            Preço: R${{ item.preco | number: '2.2-2' }}
+                            Preço: R${{ item.preco | number: '1.2-2' }}
                           </p>
                         </div>
                         <div class="qtd-buy mb-2 d-flex align-items-center justify-content-center"
