@@ -30,6 +30,8 @@ export class ProdutorPerfilComponent implements OnInit {
   idCategoria: number;
   listaCategoria: Categoria[];
 
+  tamListaProdutos: number = 0
+
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -164,10 +166,10 @@ export class ProdutorPerfilComponent implements OnInit {
 
   // GET DE ADM
   getAllProdutos() {
-    console.log(this.listaProdutos);
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
 
       this.listaProdutos = resp
+      this.tamListaProdutos = this.listaProdutos.length
     })
   }
 
@@ -230,5 +232,4 @@ export class ProdutorPerfilComponent implements OnInit {
   }
 
   
-
 }
