@@ -24,14 +24,13 @@
 
 #### **Website**  ([Angular](https://angular.io/)  +  [TypeScript](https://www.typescriptlang.org/))
 
--   **[SweetAlert2](https://sweetalert2.github.io/)**
 -   **[Ngx-bootstrap](https://valor-software.com/ngx-bootstrap/#/)**
 -   **[Ngx-order-pipe](https://www.npmjs.com/package/ngx-order-pipe)**
 -   **[Angular-router](https://angular.io/api/router)**
 -   **[Bootstrap-JQuery-Popper.js]()**
 
 
-#### **Server**  ([NodeJS](https://nodejs.org/en/)  +  [TypeScript](https://www.typescriptlang.org/))
+#### **Server**  
 
 - **[Spring initializer](https://start.spring.io/):**
   [Maven Project](https://www.baeldung.com/spring-with-maven);
@@ -71,7 +70,7 @@
     <td align="center"><a href="https://github.com/martins-bea"><img style="border-radius: 50%;" src="https://i.imgur.com/iUlSEXt.png" width="150px;" alt=""/><br /><sub><b>Beatriz Martins</b></sub></a><br /></td>
     <td align="center"><a href="https://githLimaub.com/EwertonILima"><img style="border-radius: 50%;" src="https://i.imgur.com/6Yt4nle.png" width="150px;" alt=""/><br /><sub><b>Ewerton Lima</b></sub></a><br /></a></td>
     <td align="center"><a href="https://github.com/IgorGato"><img style="border-radius: 50%;" src="https://i.imgur.com/pPTAbFg.png" width="150px;" alt=""/><br /><sub><b>Igor Gato</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/Fer-nanda20"><img style="border-radius: 50%;" src="https://i.imgur.com/aDuWeYG.png" width="150px;" alt=""/><br /><sub><b>Fernanda Agapito</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/Fer-nanda20"><img style="border-radius: 50%;" src="https://i.imgur.com/aDuWeYG.png" width="150px;" alt=""/><br /><sub><b>Fernanda </b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/Helloisa22"><img style="border-radius: 50%;" src="https://i.imgur.com/cRPjZ40.png" width="150px;" alt=""/><br /><sub><b>Heloísa Beatriz</b></sub></a><br /></td> 
     <td align="center"><a href="https://github.com/jorgehauck"><img style="border-radius: 50%;" src=https://i.imgur.com/1jlmyqS.png" width="150px;" alt=""/><br /><sub><b>José Jorge</b></sub></a><br /></td> 
   </tr>
