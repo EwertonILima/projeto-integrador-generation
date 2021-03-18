@@ -269,3 +269,17 @@ h3 {
 .card-text-comofunciona {
   color: #573c23;
 }
+
+ .card-altura-largura{
+  height: 30rem;
+  max-height: 20rem;
+  min-height: 22rem;
+  max-width: 20rem;
+}
+
+.card-img-top {
+  max-width: 100%;
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+  }
