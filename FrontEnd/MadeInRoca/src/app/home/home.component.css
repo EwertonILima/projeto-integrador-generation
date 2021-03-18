@@ -109,7 +109,8 @@
   color: #0e5411;
 }
 
-.fa-arrow-circle-right, .fa-arrow-circle-down {
+.fa-arrow-circle-right,
+.fa-arrow-circle-down {
   font-size: 2rem;
   color: #0e5411;
   margin-left: 10px;
@@ -159,7 +160,8 @@ h3 {
   top: 30%;
 }
 
-.btn-next, .btn-prev {
+.btn-next,
+.btn-prev {
   margin-top: 50px;
   border-radius: 50px;
   background-color: rgba(202, 195, 195, 0.726);
@@ -179,9 +181,6 @@ h3 {
   font-family: "Indie Flower", cursive;
   font-size: 25pt;
   color: #91621def;
-  
-  
-  
 }
 
 .title-comofunciona {
@@ -200,8 +199,6 @@ h3 {
   border: solid 2px #57732d;
   color: white;
 }
-
-
 
 @media (max-width: 768px) {
   .cesta-card-img {
@@ -225,7 +222,8 @@ h3 {
   .sobre-cards {
     flex-direction: column;
   }
-  .fa-arrow-circle-right, .fa-arrow-circle-down {
+  .fa-arrow-circle-right,
+  .fa-arrow-circle-down {
     margin: 0;
   }
 }
@@ -244,7 +242,8 @@ h3 {
   top: 30%;
 }
 
-.btn-next, .btn-prev {
+.btn-next,
+.btn-prev {
   border-radius: 50px;
   background-color: rgba(202, 195, 195, 0.726);
 }
@@ -264,13 +263,11 @@ h3 {
   height: 250px;
 }
 
-
-
 .card-text-comofunciona {
   color: #573c23;
 }
 
- .card-altura-largura{
+.card-altura-largura {
   height: 30rem;
   max-height: 20rem;
   min-height: 22rem;
@@ -282,4 +279,4 @@ h3 {
   width: 350px;
   height: 200px;
   object-fit: cover;
-  }
+}
