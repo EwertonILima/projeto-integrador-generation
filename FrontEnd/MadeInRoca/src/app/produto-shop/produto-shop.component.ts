@@ -22,6 +22,7 @@ export class ProdutoShopComponent implements OnInit {
   produtoComprado: CestaCompras = new CestaCompras()
 
   usuario: Usuario = new Usuario();
+  usuarioCompra: Usuario = new Usuario();
   userTokin = environment.token
 
   constructor(
@@ -59,10 +60,19 @@ export class ProdutoShopComponent implements OnInit {
     this.somaTotal()
     this.produtoComprado.nome = this.produto.nome
     this.produtoComprado.foto = this.produto.foto
-    this.produtoComprado.usuario = this.usuario;
+    
     this.produtoComprado.preco = this.totalProduto
     this.produtoComprado.quantidade = this.qtdProduto
     this.produtoComprado.categoria = this.produto.categoria.nome
+
+    this.usuarioCompra.id = this.usuario.id
+    this.usuarioCompra.nome = this.usuario.nome
+    this.usuarioCompra.email = this.usuario.email
+    this.usuarioCompra.foto = this.usuario.foto
+    this.usuarioCompra.senha = this.usuario.senha
+    this.usuarioCompra.tipoUsuario = this.usuario.tipoUsuario
+
+    this.produtoComprado.usuario = this.usuarioCompra
 
     this.cestaComprasService.postProdutoComprado(this.produtoComprado).subscribe((resp: CestaCompras) => {
       this.produtoComprado =  resp
