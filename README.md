@@ -6,6 +6,8 @@
     <img alt="GetSet E-commerce" href="#" src="https://i.imgur.com/EPv13l4.png" />
 </h1>
 
+##### Confira nosso deploy aqui: https://made-in-roca.herokuapp.com/
+
 <h4 align="center"> 🌽 E-commerce em desenvolvimento - WIP 🌽 </h4>
 
 
